@@ -3,7 +3,7 @@ version: 1.2.0
 
 # Site settings 配置站点
 title: 'Mr WANG'
-description: '个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。'
+description: 'Technics, Experiencies, Solutions, Interesting Things.'
 keyword: 'Sprzwty，Blog of Sprzwty，Python，KRR, ML'
 url: 'sprzwty.github.io' # your host
 
@@ -62,7 +62,7 @@ footer:
 # Author 配置博主信息
 author: 'Wang Tongyu'
 nickname: 'Wang Tongyu'
-bio: '全栈开发者，热爱前端、运维和架构设计'
+bio: 'Master student, AI lover, Dream to be a engineer'
 avatar: '/assets/img/profile.webp'
 
 # Search
@@ -103,8 +103,8 @@ sns:
   # linkedin: 'https://www.linkedin.com/in/wangtongyujaist/'
 
 # Links 友情链接
-links:
-  # 'Mr Li': 'https://lisz.me'
+#links:
+#  # 'Mr Li': 'https://lisz.me'
 
 # Supports 赞助商
 supports:
@@ -112,7 +112,7 @@ supports:
   webify: 
 
 # Beian 备案号
-beian: 'temporally not available'
+beian: 'Temporally not available'
 
 # CC License
 cclicense: true
