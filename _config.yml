@@ -106,8 +106,8 @@ sns:
    linkedin: 'https://www.linkedin.com/in/wangtongyujaist/'
 
 # Links 友情链接
-#links:
-#  # 'Mr Li': 'https://lisz.me'
+links:
+  # 'Mr Li': 'https://lisz.me'
 
 # Supports 赞助商
 supports:
