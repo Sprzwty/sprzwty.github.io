@@ -1,7 +1,7 @@
 ---
-layout: links
-home-title: H2O-ac theme for Jekyll
-description: 基于可能是最好看的 Jekyll 主题 H2O 的学术版主题
+layout: page
+home-title: Homepage of Wang Tongyu
+description: A website of Wang Tongyu. HE IS TRY TO THINK DIFFERENT EVERYDAY
 comments:
   waline: true
 ---

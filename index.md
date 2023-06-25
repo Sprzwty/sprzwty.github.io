@@ -10,8 +10,7 @@ description: A website of Wang Tongyu. HE IS TRY TO THINK DIFFERENT EVERYDAY
 
 # Publications
 
-1. Publication 1 [[DOI]](#)
-2. Publication 2 [[DOI]](#)
+1. Application of Edge Computing in 5g Communications [[DOI 10.1088/1757-899X/740/1/012130]](https://iopscience.iop.org/article/10.1088/1757-899X/740/1/012130/pdf)
 
 # Contact
 

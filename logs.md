@@ -1,6 +1,6 @@
 ---
 layout: page
-home-title: Welcome to zhonger's blog!
+home-title: Welcome to Wang Tongyu's blog!
 description: Writing, writing, writing ...
 cover: 'https://images.unsplash.com/photo-1630824869986-a5b2f513b1f4'
 cover_author: 'Eean Chen'
