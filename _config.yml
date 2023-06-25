@@ -30,10 +30,10 @@ github:
 # PWA
 pwa:
   color: '#99CCFF'
-  short_name: 'Sprzwty'
+  short_name: 'lisz'
 
 # International
-language: en-us
+language: zh-cn
 
 # Navigation links
 nav:
@@ -41,12 +41,8 @@ nav:
   blog: '/blog/index.html'
   archives: '/archives.html'
   tags: '/tags.html'
-  about: '/'
+  about:   
     RSS: '/feed.xml'
-      CV: '/cv.html'
-    tos: '/tos.html'
-    CV: '/cv.html'
-    links: '/links.html'
 
 # Gray for the whole site 全站灰色
 gray: false
@@ -82,7 +78,7 @@ comments:
   waline: false
   waline_url: 'https://h2o-ac-waline.deta.dev/'
   waline_reaction: false
-  waline_locale: "{reaction0: '赞一个', reaction1: '踩一下', reaction2: '有点酷', reaction3: '看不懂', reaction4: '啥玩意', reaction5: '想睡觉'}"
+  waline_locale: 
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
@@ -98,13 +94,13 @@ theme-color: 'default'  # pink or default
 postPatterns: 'circuitBoard'
 
 # SNS settings 配置社交网站
-url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
+# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-   google-scholar: '//scholar.google.com/citations?hl=en&user=_EB-2bUAAAAJ'
-   researchgate: 'https://www.researchgate.net/profile/Wang-Tongyu-2'
-   ORCID: 'https://orcid.org/0009-0003-1989-4761
-   github: 'https://github.com/sprzwty'
-   linkedin: 'https://www.linkedin.com/in/wangtongyujaist/'
+  # google-scholar: 'https://scholar.google.com/citations?hl=en&user=_EB-2bUAAAAJ'
+  # researchgate: 'https://www.researchgate.net/profile/Wang-Tongyu-2'
+  # ORCID: 'https://orcid.org/0009-0003-1989-4761
+  # github: 'https://github.com/sprzwty'
+  # linkedin: 'https://www.linkedin.com/in/wangtongyujaist/'
 
 # Links 友情链接
 #links:
@@ -123,7 +119,7 @@ cclicense: true
 
 # CNZZ Analytics
 # cnzz: 1234567891
-cnzz:
+cnzz: 
 
 # Busuanzi Analytics
 busuanzi: true
@@ -200,7 +196,7 @@ wormhole: false
 
 # Alive time
 alivetime: false
-alivestart: "12/25/2021"
+alivestart: "12/23/2021"
 
 # TOC
 toc: true
