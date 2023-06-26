@@ -2,7 +2,7 @@
 version: 1.2.0
 
 # Site settings 配置站点
-title: 'Mr WANG'
+title: 'Mr. WANG'
 description: 'Technics, Experiencies, Solutions, Interesting Things.'
 keyword: 'Sprzwty，Blog of Sprzwty，Python，KRR, ML'
 url: 'sprzwty.github.io' # your host
@@ -41,8 +41,11 @@ nav:
   blog: '/blog/index.html'
   archives: '/archives.html'
   tags: '/tags.html'
-  about:   
+  about:
+    tos: '/tos.html'
     RSS: '/feed.xml'
+    CV: '/cv.html'
+    links: '/links.html'
 
 # Gray for the whole site 全站灰色
 gray: false

@@ -41,7 +41,6 @@ nav:
   blog: '/blog/index.html'
   archives: '/archives.html'
   tags: '/tags.html'
-  CV: '/cv.html'
   about:   
     logs: '/logs.html'
     tos: '/tos.html'
