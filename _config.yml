@@ -109,10 +109,10 @@ sns:
 #links:
 #  # 'Mr Li': 'https://lisz.me'
 
-# Supports 赞助商
-supports:
-  upyun: 
-  webify: 
+## Supports 赞助商
+#supports:
+#  upyun:
+#  webify:
 
 # Beian 备案号
 beian: 'Temporally not available'
@@ -133,9 +133,9 @@ umami:
   id: 
   js: 
 
-# Google Analytics
-# google_analytics: UA-XXXXXXXXX-X
-google_analytics: 
+## Google Analytics
+## google_analytics: UA-XXXXXXXXX-X
+#google_analytics:
 
 # Google Search
 google_search: 
