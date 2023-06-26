@@ -106,14 +106,14 @@ sns:
    github: 'https://github.com/sprzwty'
    linkedin: 'https://www.linkedin.com/in/wangtongyujaist/'
 
-# Links 友情链接
+## Links 友情链接
 #links:
 #  'Mr Li': 'https://lisz.me'
 
-# Supports 赞助商
-supports:
-  upyun: true
-  webify: 
+## Supports 赞助商
+#supports:
+#  upyun: true
+#  webify:
 
 # Beian 备案号
 beian: 'Temporally not available'
@@ -121,22 +121,22 @@ beian: 'Temporally not available'
 # CC License
 cclicense: true
 
-# CNZZ Analytics
-# cnzz: 1234567891
-cnzz: 
+## CNZZ Analytics
+## cnzz: 1234567891
+#cnzz:
 
 # Busuanzi Analytics
 busuanzi: true
 
-# Umami Analytics
-umami:
-  status: 
-  id: 
-  js: 
+## Umami Analytics
+#umami:
+#  status:
+#  id:
+#  js:
 
-# Google Analytics
-# google_analytics: UA-XXXXXXXXX-X
-google_analytics: 
+## Google Analytics
+## google_analytics: UA-XXXXXXXXX-X
+#google_analytics:
 
 # Google Search
 google_search: 
