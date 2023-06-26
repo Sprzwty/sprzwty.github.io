@@ -2,6 +2,7 @@
 layout: page
 home-title: Homepage of Wang Tongyu
 description: A website of Wang Tongyu. HE IS TRY TO THINK DIFFERENT EVERYDAY
+header-img: assets/img/banner.png
 ---
 
 # About me
