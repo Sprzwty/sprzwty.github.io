@@ -29,7 +29,7 @@ github:
 
 # PWA
 pwa:
-  color: '#99CCFF'
+  color: '#81BBFF'
   short_name: 'lisz'
 
 # International
@@ -199,7 +199,7 @@ wormhole: false
 
 # Alive time
 alivetime: false
-alivestart: "12/23/2021"
+alivestart: "10/21/2022"
 
 # TOC
 toc: true

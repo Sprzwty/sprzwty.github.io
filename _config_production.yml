@@ -4,8 +4,8 @@ version: 1.2.0
 # Site settings 配置站点
 title: 'Tongyu Wang'
 description: 'Technics, Experiencies, Solutions, Interesting Things.'
-keyword: 'Sprzwty，Blog of Sprzwty，Python，KRR, ML'
-url: 'sprzwty.github.io' # your host
+keyword: 'Sprzwty，Blog of Sprzwty, Natural Language Processing, RDF, Description Logics, Python, ML'
+url: 'https://sprzwty.github.io' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
 # 在服务器上建站时，如果你不需要子域名，请将这一格留空
@@ -19,7 +19,7 @@ baseurl: ''
 
 # Internalization 国际化
 languages: ["zh-Hans", "zh-Hant", "en", "ja"]
-default_lang: "zh-Hans"
+default_lang: "en"
 
 # Github
 github:
@@ -29,11 +29,11 @@ github:
 
 # PWA
 pwa:
-  color: '#99CCFF'
+  color: '#81BBFF'
   short_name: 'Sprzwty'
 
-# International
-language: zh-cn
+## International
+#language: zh-cn
 
 # Navigation links
 nav:
@@ -61,7 +61,7 @@ favicon: "/favicon.ico"
 
 # Footer
 footer:
-  since: 2015
+  since: 2022
 
 # Author 配置博主信息
 author: 'Wang Tongyu'
@@ -159,7 +159,7 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
-exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md', '*.gemspec', '*.gem']
+exclude: ['node_modules', 'dev', 'package.json', 'webpack.config.js', '.gitignore', 'README.md', '*.gemspec', '*.gem']
 
 # Markdown
 markdown: kramdown
@@ -201,7 +201,7 @@ wormhole: true
 
 # Alive time
 alivetime: true
-alivestart: "12/23/2021"
+alivestart: "10/21/2022"
 
 # TOC
 toc: true
