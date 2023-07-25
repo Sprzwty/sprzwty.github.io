@@ -30,10 +30,10 @@ github:
 # PWA
 pwa:
   color: '#81BBFF'
-  short_name: 'lisz'
+  short_name: 'Sprzwty'
 
-# International
-language: zh-cn
+## International
+#language: en
 
 # Navigation links
 nav:
@@ -198,7 +198,7 @@ foreverblog: false
 wormhole: false
 
 # Alive time
-alivetime: false
+alivetime: true
 alivestart: "10/21/2022"
 
 # TOC
