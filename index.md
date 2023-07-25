@@ -7,7 +7,7 @@ header-img: assets/img/banner.png
 
 # About me
 
-&emsp;&emsp;I am a Master student from Japan Advanced Institute of Science and Technology (JAIST). I'm now working in the Reasoning & Learning Laboratory（Trustworthy AI Lab） at JAIST.
+&emsp;&emsp;I am a Master student from Japan Advanced Institute of Science and Technology (JAIST). I'm now working in [ReaLearn](https://sites.google.com/view/racharak-lab) (the Reasoning & Learning for Trustworthy AI laboratory) at JAIST.
 
 # Publications
 
@@ -22,7 +22,7 @@ Email: Twang[aaaaatttttt]jaist.ac.jp (Please replace [aaaaatttttt] with @.)
 
 # 关于我
 
-&emsp;&emsp;我是一名来自北陆先端科学技术大学院大学的硕士研究生，现在隶属于该学校推理与学习（可信赖人工智能）研究室。
+&emsp;&emsp;我是一名来自日本北陆先端科学技术大学院大学的硕士研究生，现在隶属于该学校ReaLearn(可信赖人工智能的推理与学习）研究室。
 
 # 论文发表
 
