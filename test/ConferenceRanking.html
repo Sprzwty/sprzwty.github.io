@@ -66,7 +66,7 @@
   <div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
   <![endif]-->
   
-  <div id="all" class="post">
+  <div id="all" class="post" data-theme="default">
   
     <div class="alert-tip" id="no-previous">
       It is already the latest posts!
@@ -74,7 +74,7 @@
     <div class="alert-tip" id="no-next">
       It is already the oldest posts!
     </div>
-    <input id="nm-switch" type="hidden" value="false"> <header class="g-header">
+    <input id="nm-switch" type="hidden" value="false"> <header class="g-header" data-theme="default">
     <div class="g-logo">
       <a href="/" aria-label="logo"></a>
     </div>
@@ -258,7 +258,8 @@
       
       <div class="container">  
         <div class="contents">
-          <article class="markdown-body">
+          <article class="markdown-body post">
+              
             <p>附件是计算机领域的学术会议等级排名情况，分为A+
 , A, B, C, L 共5个档次。其中A+
 属于顶级会议，基本是这个领域全世界大牛们参与和关注最多的会议。国内的研究者能在其中发表论文的话，是很值得骄傲的成就。</p>
@@ -274,7 +275,7 @@
 
 <p>Acronym     Standard Name     Rank</p>
 
-<hr />
+<hr>
 <h2 id="a">A+</h2>
 <p>level ranking list</p>
 
@@ -408,7 +409,7 @@
 
 <p>WWW     International World Wide Web Conference     A+</p>
 
-<hr />
+<hr>
 <h2 id="a-level-conference-list">A level conference list</h2>
 
 <p>ACM-HT    ACM Hypertext Conf     A</p>
@@ -955,7 +956,7 @@
 
 <p>WPHOL     International Conference on Theorem Proving in Higher Order Logics     A</p>
 
-<hr />
+<hr>
 <h2 id="b-level-conference">B level conference</h2>
 
 <p>AAAAECC     International Symposium on Applied Algebra, Algebraic Algorithms and Error-Correcting Codes     B</p>
@@ -1588,7 +1589,7 @@
 
 <p>WSC     Winter Simulation Conference     B</p>
 
-<hr />
+<hr>
 
 <h2 id="c-level-conference">C level conference</h2>
 
@@ -2306,7 +2307,7 @@
               <p>
                 <span>Statement：</span>
                 If no specific statement in the content, the copyright belongs to
-                <a href="https://sprzwty.github.io">Tongyu Wang</a>
+                <a href="https://sprzwty.github.io" class="cplink">Tongyu Wang</a>
                 . Reprint please indicate the link of this article. 
               </p>
               
@@ -2317,14 +2318,14 @@
                 </p>
               
               <p><span>Title：</span>《 Conference Ranking 》</p>
-              <p><span>Link：</span><a href="https://sprzwty.github.io/test/ConferenceRanking.html">https://sprzwty.github.io/test/ConferenceRanking.html</a></p>
+              <p><span>Link：</span><a href="https://sprzwty.github.io/test/ConferenceRanking.html" class="cplink">https://sprzwty.github.io/test/ConferenceRanking.html</a></p>
               <p class="tips">The last update of this article was <span></span> days ago, so it may be outdated!</p>
             </div>
           </article>
         </div>   
         <div class="table-of-contents">
           <h2>Contents</h2>
-          <ul><li><a href="#a">A+</a></li><li><a href="#a-level-conference-list">A level conference list</a></li><li><a href="#b-level-conference">B level conference</a></li><li><a href="#c-level-conference">C level conference</a></li><li><a href="#l-level-conference-list">L level conference list</a></li></ul>
+          <ul><li><a onclick="scrollToAdjust('a+')">A+</a></li><li><a onclick="scrollToAdjust('a-level-conference-list')">A level conference list</a></li><li><a onclick="scrollToAdjust('b-level-conference')">B level conference</a></li><li><a onclick="scrollToAdjust('c-level-conference')">C level conference</a></li><li><a onclick="scrollToAdjust('l-level-conference-list')">L level conference list</a></li></ul>
         </div>
       </div>
       
@@ -2458,56 +2459,64 @@
 
 
 <footer class="g-footer">
-  <section class="links">Tongyu Wang ©
-  
-  
-    2022
-    -
-  
-  2023
-  
-    <a href="https://beian.miit.gov.cn/" target="_blank" class="extlinks">Temporally not available</a>
-  
-  </section>
-  <section class="links">
-    Powered by <a href="//jekyllrb.com" target="_blank" class="extlinks">Jekyll</a> & <a href="https://github.com/zhonger/jekyll-theme-H2O-ac" target="_blank" class="extlinks">H2O-ac</a> (based on <a href="https://github.com/kaeyleo/jekyll-theme-H2O" target="_blank" class="extlinks">H2O</a>)
-     (<a href="https://github.com/zhonger/jekyll-theme-H2O-ac/releases/tag/v.1.2.0" target="_blank" class="extlinks">v1.2.0</a>)  
+  <div class="g-container">
+    <div class="g-left">
+      <section class="links">
+        Powered by <a href="//jekyllrb.com" target="_blank" class="extlinks">Jekyll</a> & <a href="https://github.com/zhonger/jekyll-theme-H2O-ac" target="_blank" class="extlinks">H2O-ac</a> (based on <a href="https://github.com/kaeyleo/jekyll-theme-H2O" target="_blank" class="extlinks">H2O</a>)
+         (<a href="https://github.com/zhonger/jekyll-theme-H2O-ac/releases/tag/v.1.2.1" target="_blank" class="extlinks">v1.2.1</a>)  
+        
+      </section>
+      <section class="links">Tongyu Wang ©
+        
+        
+          2022
+          -
+        
+        2023
+        
+          <a href="https://beian.miit.gov.cn/" target="_blank" class="extlinks">Temporally not available</a>
+        
+      </section>
+      
+      <section>
+        <span id="busuanzi_container_site_pv">
+          👁️ Total Views <span id="busuanzi_value_site_pv"></span> <b>·</b>
+        </span>
+        <span id="busuanzi_container_site_uv">
+          👤 Total Visitors <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </section>
+      
+      <section>
+        
+          This site has been alive for 
+          <span class="alivetime_days"></span> d
+          <span class="alivetime_hours"></span> h
+          <span class="alivetime_minutes"></span> m
+          <span class="alivetime_seconds"></span> s
+        
+      </section>
+    </div>
+    <div class="g-right">
+      
+      
+      <section class="badges">
+        
+          <a href="https://www.foreverblog.cn/" target="_blank" class="foreverblog"> 
+            <img src="https://img.foreverblog.cn/logo_en_default.png" alt=""> 
+          </a>
+        
+        
+          <a href="https://www.foreverblog.cn/go.html" target="_blank" class="wormhole"> 
+            <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" title="穿梭虫洞-随机访问十年之约友链博客">
+          </a>
+        
+        
+      </section>
+      
+    </div>
     
-  </section>
-  
-  
-  <section>
-    <span id="busuanzi_container_site_pv">
-      👁️ Total Views <span id="busuanzi_value_site_pv"></span> <b>·</b>
-    </span>
-    <span id="busuanzi_container_site_uv">
-      👤 Total Visitors <span id="busuanzi_value_site_uv"></span>
-    </span>
-  </section>
-  
-  
-  <section>
-    
-      This site has been alive for 
-      <span class="alivetime_days"></span> d
-      <span class="alivetime_hours"></span> h
-      <span class="alivetime_minutes"></span> m
-      <span class="alivetime_seconds"></span> s
-    
-    
-    <br/>
-    
-    
-      <a href="https://www.foreverblog.cn/" target="_blank" class="foreverblog"> 
-        <img src="https://img.foreverblog.cn/logo_en_default.png" alt=""> 
-      </a>
-    
-    
-      <a href="https://www.foreverblog.cn/go.html" target="_blank" class="wormhole"> 
-        <img src="https://img.foreverblog.cn/wormhole_3.gif" alt="" title="穿梭虫洞-随机访问十年之约友链博客">
-      </a>
-    
-  </section>
+  </div>
 </footer>
 <div class="cookie-tip">
    In order to improve the experience and gurantee necessary functions of our website, we will use the local Cookie. More details in「 <a href="/tos.html">Terms of Service</a> 」page.
@@ -2615,6 +2624,19 @@
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/customParseFormat.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/relativeTime.js"></script>
   <script>
+    /**
+    * Better Scroll Experience
+    */
+    function scrollToAdjust(id){
+      var element = document.getElementById(id);
+      var headerOffset = 90;
+      var elementPosition = element.getBoundingClientRect().top;
+      var offsetPosition = elementPosition + window.scrollY - headerOffset;
+      window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+      });
+    }
       // 给图片添加链接
       $(document).ready(function() {
           var baseurl = $("meta[property='og:baseurl']").attr('content');

@@ -1,51 +1,49 @@
 [
-  
-    {
-      "title"    : "2023.06.28-I226课程相关",
-      "tags"     : "Curricular, Computer network",
-      "url"      : "/curricular/I226%E8%AF%BE%E7%A8%8B%E7%9B%B8%E5%85%B3.html"
-    } ,
-  
-    {
-      "title"    : "2022.10.21-贰拾肆岁生日",
-      "tags"     : "Thought",
-      "url"      : "/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html"
-    } ,
-  
-    {
-      "title"    : "Jaist面试经验",
-      "tags"     : "experience",
-      "url"      : "/experience/Jaist%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.html"
-    } ,
-  
-    {
-      "title"    : "Midterm revising of I226",
-      "tags"     : "Jaist Quiz",
-      "url"      : "/test/I226Revise.html"
-    } ,
-  
-    {
-      "title"    : "Test en",
-      "tags"     : "mathjax",
-      "url"      : "/test/test-en.html"
-    } ,
-  
-    {
-      "title"    : "H2O-ac theme for Jekyll",
-      "tags"     : "jekyll theme",
-      "url"      : "/tech/new-theme-h2o-ac.html"
-    } ,
-  
-    {
-      "title"    : "Conference Ranking",
-      "tags"     : "Conference ranking",
-      "url"      : "/test/ConferenceRanking.html"
-    } ,
-  
-    {
-      "title"    : "MathJax Test",
-      "tags"     : "mathjax",
-      "url"      : "/test/mathjax-test.html"
-    } 
-  
+  {
+    "title"    : "2023.06.28-I226课程相关",
+    "tags"     : "Curricular, Computer network",
+    "url"      : "/curricular/I226%E8%AF%BE%E7%A8%8B%E7%9B%B8%E5%85%B3.html"
+  } ,
+
+  {
+    "title"    : "2022.10.21-贰拾肆岁生日",
+    "tags"     : "Thought",
+    "url"      : "/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html"
+  } ,
+
+  {
+    "title"    : "Jaist面试经验",
+    "tags"     : "experience",
+    "url"      : "/experience/Jaist%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.html"
+  } ,
+
+  {
+    "title"    : "Midterm revising of I226",
+    "tags"     : "Jaist Quiz",
+    "url"      : "/test/I226Revise.html"
+  } ,
+
+  {
+    "title"    : "Test en",
+    "tags"     : "mathjax",
+    "url"      : "/test/test-en.html"
+  } ,
+
+  {
+    "title"    : "H2O-ac theme for Jekyll",
+    "tags"     : "jekyll theme",
+    "url"      : "/tech/new-theme-h2o-ac.html"
+  } ,
+
+  {
+    "title"    : "Conference Ranking",
+    "tags"     : "Conference ranking",
+    "url"      : "/test/ConferenceRanking.html"
+  } ,
+
+  {
+    "title"    : "MathJax Test",
+    "tags"     : "mathjax",
+    "url"      : "/test/mathjax-test.html"
+  } 
 ]
