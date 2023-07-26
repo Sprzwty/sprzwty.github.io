@@ -11,14 +11,7 @@ cover_author_link: 'https://unsplash.com/@inmasantiago'
 tags: 
 - jekyll 
 - theme 
-- blog 
-- ac 
-- develop 
-- 主题 
-- 前端开发 
-- 学术 
-- 运维
-pin: true
+pin: false
 ---
 
 ## 前言
