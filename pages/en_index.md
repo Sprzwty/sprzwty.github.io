@@ -6,7 +6,6 @@ description: A website of Wang Tongyu. HE IS TRY TO THINK DIFFERENT EVERYDAY
 permalink: /en/index.html
 langs: ["zh-Hans", "en"]
 lang: "en"
-header-img: https://images.unsplash.com/photo-1690287363823-b9e864c01b48
 ---
 
 # Introduction
