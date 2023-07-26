@@ -322,7 +322,7 @@ $(document).ready(function () {
         var mode = getCookie("mode");
         if (mode == "") {
             // console.log(mode);
-            if (hour <= 6 || hour >= 18) {
+            if (hour <= 6 || hour >= 17) {
                 // console.log("Start night mode");
                 setCookie("mode", "night", 1)
             }
