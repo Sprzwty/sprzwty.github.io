@@ -5,7 +5,7 @@ description: A website of Wang Tongyu. HE IS TRY TO THINK DIFFERENT EVERYDAY
 permalink: /index.html
 langs: ["zh-Hans", "en"]
 lang: "zh-Hans"
-header-img: https://unsplash.com/photos/x-8JcrlWmhM
+header-img: https://images.unsplash.com/photo-1605198628527-8fce3cf3cb99
 ---
 
 # 自我介绍
