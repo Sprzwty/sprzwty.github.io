@@ -1,7 +1,8 @@
 ---
 layout: page
-home-title: H2O-ac Theme For Jekyll
-description: 基于可能是最好看的 Jekyll 主题 H2O 的学术版主题
+header-img: assets/img/banner.png
+home-title: Homepage of Wang Tongyu
+description: A website of Wang Tongyu. HE IS TRY TO THINK DIFFERENT EVERYDAY
 permalink: /en/index.html
 langs: ["zh-Hans", "en"]
 lang: "en"
@@ -9,15 +10,14 @@ lang: "en"
 
 # Introduction
 
-## About me
+# About me
 
-&emsp;&emsp;I am a PhD student from xxx University.....
+&emsp;&emsp;I am a Master student from Japan Advanced Institute of Science and Technology (JAIST). I'm now working in [ReaLearn](https://sites.google.com/view/racharak-lab) (the Reasoning & Learning for Trustworthy AI laboratory) at JAIST.
 
-## Publications
+# Publications
 
-1. Publication 1 [[DOI]](https://doi.org)
-2. Publication 2 [[DOI]](https://doi.org)
+1. Application of Edge Computing in 5g Communications [[DOI 10.1088/1757-899X/740/1/012130]](https://iopscience.iop.org/article/10.1088/1757-899X/740/1/012130/pdf)
 
-## Contact
+# Contact
 
-Email: zhonger[at]live.cn (Please replace [at] with @.)
+Email: Twang[aaaaatttttt]jaist.ac.jp (Please replace [aaaaatttttt] with @.)
