@@ -1,24 +1,23 @@
 ---
 layout: page
-home-title: Homepage of Wang Tongyu
-description: A website of Wang Tongyu. HE IS TRY TO THINK DIFFERENT EVERYDAY
+home-title: H2O-ac Theme For Jekyll
+description: 基于可能是最好看的 Jekyll 主题 H2O 的学术版主题
 permalink: /index.html
 langs: ["zh-Hans", "en"]
 lang: "zh-Hans"
-header-img: assets/img/banner.png
 ---
 
 # 自我介绍
 
 ## 关于我
 
-&emsp;&emsp;我是一名来自日本北陆先端科学技术大学院大学的硕士研究生，现在隶属于该学校ReaLearn(可信赖人工智能的推理与学习）研究室。
+&emsp;&emsp;我是一名来自xx大学的博士生。。。。。。
 
 ## 论文发表
 
-1. Application of Edge Computing in 5g Communications [[DOI 10.1088/1757-899X/740/1/012130]](https://iopscience.iop.org/article/10.1088/1757-899X/740/1/012130/pdf)
-
+1. 论文1 [[DOI]](https://doi.org)
+2. 论文2 [[DOI]](https://doi.org)
 
 ## 联系我
 
-邮箱：Twang[aaaaatttttt]jaist.ac.jp (请使用@替换[aaaaatttttt])
+邮箱：zhonger[at]live.cn (请使用@替换[at])

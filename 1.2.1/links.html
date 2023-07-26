@@ -1,0 +1,46 @@
+---
+layout: page
+home-title: H2O-ac Theme For Jekyll
+description: 或许是最漂亮的Jekyll主题
+---
+
+{% if site.data.links %}
+<div class="friends">
+    <h2>{% if site.language == "zh-cn" %}链接{% else %}Links{% endif %}</h2>
+    {% for f in site.data.links.links %}
+    <a target="_blank" href="{{ f.url }}" title="{{ f.name }}" class="friendurl">
+        <div class="frienddiv">
+            <div class="frienddivleft">
+                <img class="myfriend" src="{{ f.img }}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2091/2091464.png'; this.removeAttribute('onerror'); this.removeAttribute('onload');"
+                onload="this.removeAttribute('onerror'); this.removeAttribute('onload');">
+            </div>
+            <div class="frienddivright">
+                <div class="friendname">{{ f.name }}</div>
+                <div class="friendinfo">{{ f.info }}</div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+<div class="friends">
+    <h2>{% if site.language == "zh-cn" %}朋友们{% else %}Friends{% endif %}</h2>
+    {% for f in site.data.links.friends %}
+    <a target="_blank" href="{{ f.url }}" title="{{ f.name }}" class="friendurl">
+        <div class="frienddiv">
+            <div class="frienddivleft">
+                <img class="myfriend" src="{{ f.img }}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'; this.removeAttribute('onerror'); this.removeAttribute('onload');"
+  onload="this.removeAttribute('onerror'); this.removeAttribute('onload');">
+            </div>
+            <div class="frienddivright">
+                <div class="friendname">{{ f.name }}</div>
+                <div class="friendinfo">{{ f.info }}</div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+暂无链接
+{% endif %}
+
+{{ content }}

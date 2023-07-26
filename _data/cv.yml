@@ -1,36 +1,39 @@
 - lang: "zh"
-  name: "王童语（Under construction）"
-#  motivation: "工程师"
+  name: "诸葛亮"
+  motivation: "云平台开发工程师"
   photo: "/assets/img/h3.webp"
-  email: "twang@jaist.ac.jp"
-  github: "sprzwty"
-#  linkedin: "zhuge"
+  email: "zhuge@live.cn"
+  github: "zhuge"
+  linkedin: "zhuge"
   website: "https://zhuge.me"
   languages:
-    - idiom: "中文普通话（2甲）"
-    - idiom: "英语（TOEIC 850）"
-    - idiom: "日语（N1）"
+    - idiom: "普通话"
+    - idiom: "闽南语"
   educations:
-    - degree: "本科-自动化"
-      university: "北方工业大学"
-      time: "2017-2021"
-    - degree: "研究生-计算机科学"
-      university: "电气通信大学"
-      time: "2021-2023"
-    - degree: "修士-计算机科学"
-      university: "北陆先端科学技术大学院大学"
-      time: "2023-至今"
+    - degree: "本科-计算机科学与技术"
+      university: "卧龙大学"
+      time: "2012-2016"
+    - degree: "研究生-计算机科学与技术"
+      university: "卧龙大学"
+      time: "2016-2019"
+    - degree: "博士-计算机科学与技术"
+      university: "卧龙大学"
+      time: "2019-至今"
   skills:
     - title: "后端技能"
-      skill:
+      skill: 
+        - GO
         - Python
+        - PHP
         - NodeJS
     - title: "前端技能"
       skill: 
         - HTML/CSS/JS
+        - VueJS
     - title: "运维开发技能"
       skill: 
         - Docker
+        - KVM
   experience:
     - role: "三国鼎立之论"
       company: "科研方向"
@@ -62,7 +65,7 @@
     - title: "开发平台"
       content: "蜀汉建立的元老，为蜀国的发展和强大贡献了力量。（以上内容均为展示效果填充需要，内容请勿当真！！！）"
 - lang: "en"
-  name: "Zhuge Liang(Under construction)"
+  name: "Zhuge Liang"
   motivation: "Cloud Computing Developer"
   photo: "/assets/img/h3.webp"
   email: "zhuge@live.cn"
