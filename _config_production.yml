@@ -2,10 +2,10 @@
 version: 1.2.1
 
 # Site settings 配置站点
-title: 'Mr Li'
-description: '个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。'
-keyword: 'zhonger，zhonger的博客，nodejs，kvm, 机器学习'
-url: 'https://h2o-ac.pages.dev' # your host
+title: 'Mr.Wang'
+description: 'Technics, Experiencies, Solutions, Interesting Things.'
+keyword: 'Sprzwty，Blog of Sprzwty，Python，KRR, ML'
+url: 'https://sprzwty.github.io' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
 # 在服务器上建站时，如果你不需要子域名，请将这一格留空
@@ -19,18 +19,18 @@ baseurl: ''
 
 # Internalization 国际化
 languages: ["zh-Hans", "zh-Hant", "en", "ja"]
-default_lang: "zh-Hans"
+default_lang: "en"
 
 # Github
 github:
   enabled: true
-  owner: zhonger
-  repository: jekyll-theme-H2O-ac
+  owner: sprzwty
+  repository: sprzwty.github.io
 
 # PWA
 pwa:
   color: '#81BBFF'
-  short_name: 'lisz'
+  short_name: 'Sprzwty'
 
 # Navigation links
 nav:
@@ -58,12 +58,12 @@ favicon: "/favicon.ico"
 
 # Footer
 footer:
-  since: 2015
+  since: 2022
 
 # Author 配置博主信息
-author: 'zhonger'
-nickname: 'zhonger'
-bio: '全栈开发者，热爱前端、运维和架构设计'
+author: 'Wang Tongyu'
+nickname: 'TyW'
+bio: 'Master student, AI lover, Dream to be an engineer'
 avatar: '/assets/img/profile.webp'
 
 # Search
@@ -106,8 +106,8 @@ sns:
   segmentfault: 'https://segmentfault.com/u/wuwozhonger'
 
 # Links 友情链接
-links:
-  'Mr Li': 'https://lisz.me'
+#links:
+#  'Mr Li': 'https://lisz.me'
 
 # Supports 赞助商
 supports:
@@ -115,7 +115,7 @@ supports:
   webify: 
 
 # Beian 备案号
-beian: '沪ICP备xxxxxxxx号'
+beian: 'Temporally not available'
 
 # CC License
 cclicense: true
