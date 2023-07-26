@@ -1,9 +1,10 @@
 # jekyll-theme-h2o-ac
-version: 1.2.0
+version: 1.2.1
 
 # Site settings 配置站点
 title: 'Tongyu Wang'
-description: 'Technics, Experiencies, Solutions, Interesting Things.'
+description:
+    'Technics, Experiencies, Solutions, Interesting Things.'
 keyword: 'Sprzwty，Blog of Sprzwty, Natural Language Processing, RDF, Description Logics, Python, ML'
 url: 'https://sprzwty.github.io' # your host
 
@@ -93,6 +94,7 @@ social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
 
 # theme color 主题皮肤
 theme-color: 'default'  # pink or default
+# theme-color: 'pink'  # pink or default
 
 # Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
 postPatterns: 'circuitBoard'

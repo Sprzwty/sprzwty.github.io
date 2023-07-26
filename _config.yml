@@ -1,5 +1,5 @@
 # jekyll-theme-h2o-ac
-version: 1.2.0
+version: 1.2.1
 
 # Site settings 配置站点
 title: 'Mr. WANG'
@@ -19,7 +19,7 @@ baseurl: ''
 
 # Internalization 国际化
 languages: ["zh-Hans", "zh-Hant", "en", "ja"]
-default_lang: "zh-Hans"
+default_lang: "en"
 
 # Github
 github:
@@ -31,9 +31,6 @@ github:
 pwa:
   color: '#81BBFF'
   short_name: 'Sprzwty'
-
-## International
-#language: en
 
 # Navigation links
 nav:

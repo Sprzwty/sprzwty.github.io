@@ -18,9 +18,9 @@
   <div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
   <![endif]-->
   {% if site.gray %}
-  <div id=all class="post gray">
+  <div id=all class="post gray" data-theme="{{ site.theme-color }}">
   {% else %}
-  <div id="all" class="post">
+  <div id="all" class="post" data-theme="{{ site.theme-color }}">
   {% endif %}
     <div class="alert-tip" id="no-previous">
       {{ post.tips.left }}
@@ -111,13 +111,42 @@
       {% if site.toc %}
       <div class="container">  
         <div class="contents">
-          <article class="markdown-body">
-            {{ page.content }}
+          <article class="markdown-body post">
+              {% if page.langs %}
+                <p><b>{{ locales.langs }}</b>
+                {% assign langs = "zh-Hans, zh-Hant, en, ja" | split: ", " %}
+                {% assign langnames = "简中, 繁中, EN, 日本語" | split: ", " %}
+                {% if lang == site.default_lang %}
+                    {% assign url = page.url %}
+                {% else %}
+                    {% assign urls = page.url | split: '/' %}
+                    {% assign url = "" %}
+                    {% for u in urls offset:2 %}
+                        {% assign url = url | append: "/" | append: u %}
+                    {% endfor %}
+                {% endif %}
+                {% for l in page.langs %}
+                    {% for i in (0..4) %}
+                        {% if langs[i] == l %}
+                            {% if l == page.lang %}
+                                {{ langnames[i] }}
+                            {% elsif l == site.default_lang %}
+                                <a href="{{ url }}">{{ langnames[i] }}</a>
+                            {% else %}
+                                {% assign prefix = "/" | append: l %}
+                                <a href="{{ url | prepend: prefix }}">{{ langnames[i] }}</a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                </p>
+            {% endif %}
+            {{ page.content | extlinks }}
             <div class="post-copyright">
               <p>
                 <span>{{ copyright.statement.name }}：</span>
                 {{ copyright.statement.left }}
-                <a href="{{ site.url }}">{{ site.title }}</a>
+                <a href="{{ site.url }}" class="cplink">{{ site.title }}</a>
                 {{ copyright.statement.middle }} 
               </p>
               {% if site.cclicense %}
@@ -128,7 +157,7 @@
                 </p>
               {% endif %}
               <p><span>{{ copyright.title }}：</span>《 {{ page.title }} 》</p>
-              <p><span>{{ copyright.link }}：</span><a href="{{ page.url | prepend: site.url }}">{{ page.url | prepend: site.url }}</a></p>
+              <p><span>{{ copyright.link }}：</span><a href="{{ page.url | prepend: site.url }}" class="cplink">{{ page.url | prepend: site.url }}</a></p>
               <p class="tips">{{ copyright.statement.outdate1 }} <span></span> {{ copyright.statement.outdate2 }}</p>
             </div>
           </article>
@@ -140,13 +169,42 @@
       </div>
       {% else %}
         <article class="markdown-body">
+          {% if page.langs %}
+              <p><b>{{ locales.langs }}</b>
+              {% assign langs = "zh-Hans, zh-Hant, en, ja" | split: ", " %}
+              {% assign langnames = "简中, 繁中, EN, 日本語" | split: ", " %}
+              {% if lang == site.default_lang %}
+                  {% assign url = page.url %}
+              {% else %}
+                  {% assign urls = page.url | split: '/' %}
+                  {% assign url = "" %}
+                  {% for u in urls offset:2 %}
+                      {% assign url = url | append: "/" | append: u %}
+                  {% endfor %}
+              {% endif %}
+              {% for l in page.langs %}
+                  {% for i in (0..4) %}
+                      {% if langs[i] == l %}
+                          {% if l == page.lang %}
+                              {{ langnames[i] }}
+                          {% elsif l == site.default_lang %}
+                              <a href="{{ url }}">{{ langnames[i] }}</a>
+                          {% else %}
+                              {% assign prefix = "/" | append: l %}
+                              <a href="{{ url | prepend: prefix }}">{{ langnames[i] }}</a>
+                          {% endif %}
+                      {% endif %}
+                  {% endfor %}
+              {% endfor %}
+              </p>
+          {% endif %}
           {{ page.content }}
           <div class="post-copyright">
             {% assign copyright = post.copyright %}
             <p>
               <span>{{ copyright.statement.name }}：</span>
               {{ copyright.statement.left }}
-              <a href="{{ site.url }}">{{ site.title }}</a>
+              <a href="{{ site.url }}" class="cplink">{{ site.title }}</a>
               {{ copyright.statement.middle }}
             </p>
             {% if site.cclicense %}
@@ -157,7 +215,7 @@
               </p>
             {% endif %}
             <p><span>{{ copyright.title }}：</span>《 {{ page.title }} 》</p>
-            <p><span>{{ copyright.link }}：</span><a href="{{ page.url | prepend: site.url }}">{{ page.url | prepend: site.url }}</a></p>
+            <p><span>{{ copyright.link }}：</span><a href="{{ page.url | prepend: site.url }}" class="cplink">{{ page.url | prepend: site.url }}</a></p>
             <p class="tips">{{ copyright.statement.outdate1 }} <span></span> {{ copyright.statement.outdate2 }}</p>
           </div>
         </article>
@@ -321,6 +379,19 @@
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/customParseFormat.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/relativeTime.js"></script>
   <script>
+    /**
+    * Better Scroll Experience
+    */
+    function scrollToAdjust(id){
+      var element = document.getElementById(id);
+      var headerOffset = 90;
+      var elementPosition = element.getBoundingClientRect().top;
+      var offsetPosition = elementPosition + window.scrollY - headerOffset;
+      window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+      });
+    }
       // 给图片添加链接
       $(document).ready(function() {
           var baseurl = $("meta[property='og:baseurl']").attr('content');
