@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://sprzwty.github.io/hello-jekyll.html</loc>
-<lastmod>2017-04-18T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://sprzwty.github.io/tech/new-theme-h2o.html</loc>
-<lastmod>2017-04-18T00:00:00+00:00</lastmod>
-</url>
-<url>
 <loc>https://sprzwty.github.io/test/mathjax-test.html</loc>
+<lastmod>2017-07-30T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://sprzwty.github.io/test/ConferenceRanking.html</loc>
 <lastmod>2017-07-30T00:00:00+00:00</lastmod>
 </url>
 <url>
@@ -19,6 +15,22 @@
 <url>
 <loc>https://sprzwty.github.io/test/test-en.html</loc>
 <lastmod>2022-04-29T10:50:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://sprzwty.github.io/test/I226Revise.html</loc>
+<lastmod>2022-06-30T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://sprzwty.github.io/experience/Jaist%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.html</loc>
+<lastmod>2022-10-17T19:18:26+00:00</lastmod>
+</url>
+<url>
+<loc>https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html</loc>
+<lastmod>2022-10-21T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://sprzwty.github.io/curricular/I226%E8%AF%BE%E7%A8%8B%E7%9B%B8%E5%85%B3.html</loc>
+<lastmod>2023-06-28T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://sprzwty.github.io/archives.html</loc>
@@ -49,5 +61,8 @@
 </url>
 <url>
 <loc>https://sprzwty.github.io/blog/</loc>
+</url>
+<url>
+<loc>https://sprzwty.github.io/blog/page2/</loc>
 </url>
 </urlset>

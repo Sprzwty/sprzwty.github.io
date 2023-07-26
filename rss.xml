@@ -5,9 +5,377 @@
     <description>Technics, Experiencies, Solutions, Interesting Things.</description>
     <link>https://sprzwty.github.io//</link>
     <atom:link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 26 Jul 2023 03:28:52 +0000</pubDate>
-    <lastBuildDate>Wed, 26 Jul 2023 03:28:52 +0000</lastBuildDate>
+    <pubDate>Wed, 26 Jul 2023 03:47:16 +0000</pubDate>
+    <lastBuildDate>Wed, 26 Jul 2023 03:47:16 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>2023.06.28-I226课程相关</title>
+        <description>&lt;h2 id=&quot;网络层&quot;&gt;网络层&lt;/h2&gt;
+
+&lt;h3 id=&quot;扩展的以太网&quot;&gt;扩展的以太网&lt;/h3&gt;
+
+&lt;p&gt;一、物理层拓展以太网&lt;/p&gt;
+
+&lt;h4 id=&quot;冲突域&quot;&gt;冲突域&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;==冲突域（Collision Domain）==是一种物理分段，是指网络中一个站点发出的帧会与其他站点发出的帧产生碰撞或冲突的那部分网络。这些站点之间存在介质争用现象。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;广播域&quot;&gt;广播域&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;==广播域==指接收同样广播消息的节点的集合，如：在该集合中的任何一个节点传输一个广播帧，则所有其他能收到这个帧的节点都被认为是该广播帧的一部分&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;用集线器扩展以太网&quot;&gt;用集线器扩展以太网&lt;/h4&gt;
+
+&lt;p&gt;==优点==&lt;/p&gt;
+
+&lt;p&gt;①、使原来属于不同碰撞域的以太网上的计算机能够进行跨碰撞域的通信。&lt;/p&gt;
+
+&lt;p&gt;②、扩大了以太网覆盖的地理范围。&lt;/p&gt;
+
+&lt;p&gt;==缺点==&lt;/p&gt;
+
+&lt;p&gt;①、碰撞域增大了，但总的吞吐量并未提高。&lt;/p&gt;
+
+&lt;p&gt;②、如果不同的碰撞域使用不同的数据率，那么就不能用集线器将它们互连起来。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+        <link>https://sprzwty.github.io/curricular/I226%E8%AF%BE%E7%A8%8B%E7%9B%B8%E5%85%B3.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/curricular/I226%E8%AF%BE%E7%A8%8B%E7%9B%B8%E5%85%B3.html</guid>
+        
+        <category>Curricular,</category>
+        
+        <category>Computer</category>
+        
+        <category>network</category>
+        
+        
+        <category>Curricular</category>
+        
+      </item>
+    
+      <item>
+        <title>2022.10.21-贰拾肆岁生日</title>
+        <description>&lt;h1 id=&quot;致24岁的自己&quot;&gt;致24岁的自己&lt;/h1&gt;
+&lt;h2 id=&quot;不平凡的一岁&quot;&gt;不平凡的一岁&lt;/h2&gt;
+
+&lt;h2 id=&quot;令和四年秋时年弱冠有四壮志饥心遂远行千里离家去纵万般不舍欲留然意有不安亦有迷惘故以尽勉之无庸卑勿自矜固自信判不徒行万里去空道五原归&quot;&gt;令和四年秋，时年弱冠有四。壮志饥心，遂远行千里离家去，纵万般不舍欲留。然意有不安亦有迷惘，故以尽勉之，无庸卑，勿自矜，固自信。判不徒行万里去，空道五原归。&lt;/h2&gt;
+
+&lt;h2 id=&quot;过生日都干了点儿啥&quot;&gt;过生日都干了点儿啥？&lt;/h2&gt;
+
+&lt;p&gt;上边随便瞎说点儿古文，看个乐呵。第一次国外一个人过生日，有点想法，也有点怂。奖励自己睡了个懒觉，然后中午吃个自助火锅喂饱自己，顺路去领个日本个人数字卡，回家路上看看风景，晚上和家里打了电话，隔空吹了蜡烛吃了蛋糕，睡前打开朋友新推荐的游戏玩儿了一把，和大饼打了个视频聊聊天，就这么过完了。平淡but开心。&lt;/p&gt;
+
+&lt;p&gt;收到了很多人送到的祝福，家人，大学的同学，学弟学妹，初高中的同学。。。不多，这些就是他们的身份罢了，除了家人，这些人在我这，都叫朋友。能有这些祝福，一个人在国外醒来翻看手机的时候，心里非常开心。&lt;/p&gt;
+
+&lt;p&gt;特别说一下有个特殊的礼物，今年上半年就送到我手里了，这里得特别提一嘴，用心到这个份上的朋友这年头不多见了，我很自豪我有这样的朋友。&lt;/p&gt;
+
+&lt;h2 id=&quot;gap-year&quot;&gt;Gap Year&lt;/h2&gt;
+
+&lt;p&gt;自己从23走到24，用流行点的词汇说说吧，这是我自己Gap的一年。怎么说呢，对自己刚刚度过的23岁前半是不太满意，但是后半部分逐渐迈上了正轨。23岁的前半沉浸在大学毕业的快乐之中，未曾踏实学习。这半年无所成长，枉费光阴。而23岁后半，逐渐认清了自己。开始读万卷书，也开始行万里路。&lt;/p&gt;
+
+&lt;p&gt;自己在家干点儿什么这个事儿，任谁听来都是很爽的规划，但是干点儿什么，就成为了一个十分值得探讨的话题。至于我，这一年中重新梳理了一下自己的知识体系。学习了一些专业方面的新知识，对NLP方向的研究有了个更深入的认识。但这都是小进步。正是这什么都没干的前半年，让我对’自己在家干点什么’这个事情有了深刻的认识。回头想想，这一年第一次自己搭建了自己的服务器，架设了自己的网站。跑通了网上现成的工程项目，也稍加改造弄清楚了这个项目是怎么运行的。不过这一年终究是慵懒的，这个慵懒让我对人生有了一个没经历过这个阶段的人都不会有的认识。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;自己在家干点什么除了需要自制力，你需要更努力才能与世界接轨，需要更努力创造自己的目标计划，也需要更努力让自己追赶计划。&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;但是这要比在学校上学难太多了。&lt;/p&gt;
+
+&lt;p&gt;本科毕业后，任务导向型的工作在生活中的占比越来越少了。心中只有一个任务：修考成功。在学校这个任务只需要跟着老师上个课再查查资料基本上就完成了，而且在学校本身就是小社会，是很方便与世界接轨的。而自己一个人在家就不一样了。本就与众不同的留学计划加之疫情导致的社交限制，这让本身就稀缺的实体社交变得愈发困难。这意味着机会变少了，成功的难度当然就高了。前半年的我丝毫没认识到这个问题的存在，在家洋洋得意的睡懒觉打游戏虚度光阴。这段时间唯一做的让我发自内心觉得有意义的事情就是，我和妈妈的感情成数倍增加了。当然这也是人生中非常宝贵的财富。&lt;/p&gt;
+
+&lt;p&gt;后半年，按照剧情发展，应该是有件事情触动了我，让我突然意识到这样不行。但是现实生活不是这样的。我在现实生活中对于自己的认识很少存在”突发情况”，一般都是慢慢认识到。&lt;/p&gt;
+
+&lt;p&gt;2月，日本的NAIST修考预审核报名开启。2月16日，惠风和煦，坐在榻榻米上，对着屏幕辛苦一下午，以按下了邮件发送键结束。那个感觉特别好，是久违的努力的感觉。感觉自己要进入良性循环了！于是趁机努力，3月，4月，5月，6月。时间一晃就过去了。时间到了考试的那天。怎么说呢，好紧张，好难，好害怕。虽然我认为比较顺利的考完了。但是由于没能入教授的法眼，导致考试没合格。良性循环被打破了。得知没合格的那天真的难过的差点哭出来，但是这未免太丢脸了，有这精力还不如努努力下次的考试。这样就能合格了吧。截至发稿日，这一天仍还没有到来。我只希望自己能快点结束这种噩梦的备考期，早日合格。&lt;/p&gt;
+
+&lt;p&gt;8月，准备出国的我十分紧张，无论是学习压力还是出行压力都很大的我，不知不觉瘦了10斤。但是久违的一家人去了呼伦贝尔大草原旅游。这绝对是我今年过的最幸福的一段日子。一家人每天都在一起，看不同的风景，吃不一样的美食。时间很快就到了出国的日子。13号中午在家吃过烤牛排后，不舍得离开了家。离开家的时候，我是最后一个出门的。关门之前特意多看了看家里的样子，停顿了数秒，直到爸爸喊我的名字，才不舍得关上了门。下午一家人一同驱车来到T3，其实一路上我都是没有什么开心的心情的。看着四环路上和机场高速上的风景，听着爸爸对我的出国前最后一次当面教导，曾经日常的一切都变得依依不舍了起来。妈妈画了好看的妆，爸爸穿了好看的衣服，妹妹也拿出了最高品位的穿搭出门。这一切当然都是为了让我”体面地出国”。到了航站楼，办完托运，要进去安检了。我心里很清楚，这是一两年之内一家人唯一的一次团聚的时光了。出国学习这件事就算期再期待，也不能抵消掉离别时的情感。我们相拥并合照，珍惜这最后一点时间。&lt;/p&gt;
+
+&lt;p&gt;我哭了。&lt;/p&gt;
+
+&lt;p&gt;当然还是克制住了没有出声的。在疫情当下，很少有人出国，所以这种场面并不多见。全家人都哭了。没记错的话这应该是有史以来第一次全家人一同潸然泪下，到了最后分别的时间，道别过后，刷护照进入闸机，便头也没回坐上了滚梯，前往安检口。&lt;/p&gt;
+
+&lt;p&gt;“从现在开始你就是一个人生活啦！”这样告诉着自己，让自己鼓起勇气，面对即将发生的一切。好在行程顺利，8月14号成功到了东京的酒店，开启了一个人的国外生活。&lt;/p&gt;
+
+&lt;p&gt;10月，盼望已久的考试终于来了。认真准备，使尽浑身解数，完成了考试，盼望结果。&lt;/p&gt;
+
+&lt;p&gt;这一年也就发生了这些事情。可以说是此生最不寻常的一年了吧。&lt;/p&gt;
+
+&lt;h2 id=&quot;24岁的期望&quot;&gt;24岁的期望&lt;/h2&gt;
+
+&lt;p&gt;等到年末再来长篇大论吧，还要准备考试呢。这里就是希望自己可以快快合格有学上！虽然题目是致24岁的自己，但是好像全文都是在总结23岁这一年发生的事情。总结就是最好的”致”用这一年来致自己，诚意满满了。再来一点小期望，真的很舒服。就说这么多，下篇继续。&lt;/p&gt;
+</description>
+        <pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate>
+        <link>https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html</guid>
+        
+        <category>Thought</category>
+        
+        
+        <category>Thought</category>
+        
+      </item>
+    
+      <item>
+        <title>Jaist面试经验</title>
+        <description>&lt;h2 id=&quot;2022-10-15-jaist备考经验总结&quot;&gt;2022-10-15 Jaist备考经验总结&lt;/h2&gt;
+
+&lt;h3 id=&quot;需要准备的东西&quot;&gt;需要准备的东西&lt;/h3&gt;
+
+&lt;p&gt;提前准备好两种颜色的粗头马克笔（面试过程中写在A4纸上给老师解释用），自己准备了一个muji的亚克力纸板夹，为了可以在镜头前写字✍️&lt;/p&gt;
+
+&lt;h3 id=&quot;面试流程&quot;&gt;面试流程&lt;/h3&gt;
+&lt;p&gt;面试考官人数：3人，50-60岁，教授🧑‍🏫&lt;/p&gt;
+
+&lt;p&gt;面试形式：线上面试，使用webex软件💻&lt;/p&gt;
+
+&lt;p&gt;第零部分：先进入准备房间，有考试接待官检查考试环境并确认考试的注意事项与考号等信息。确认完毕后等待考试开始。&lt;/p&gt;
+
+&lt;p&gt;第一部分【7min】：先陈述自己的Slide，时间很严格限制7分钟，在6分钟的时候有老师提醒还剩1分钟。整个过程老师中途不会打断。&lt;/p&gt;
+
+&lt;p&gt;第二部分【23min】：三位教授的自由提问。基本上每个教授都是轮番提问的。&lt;/p&gt;
+
+&lt;h3 id=&quot;面试问题&quot;&gt;面试问题&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;发表相关的问题三位面试官依次提出
+    &lt;ol&gt;
+      &lt;li&gt;这里需要注意教授会针对slide的内容提出自己的想法，整体提问流程会非常长，他们自己会有对你这个东西的想法提出，所以一定要听清楚。听不清楚就直接要求再来一遍。&lt;/li&gt;
+      &lt;li&gt;教授提出的问题如果直接说不明白可以通过在准备好的白纸上通过画图的方式进行解释。&lt;/li&gt;
+      &lt;li&gt;教授会询问可行性的相关问题并对可行性给出自己的意见。&lt;/li&gt;
+      &lt;li&gt;创新点相关的问题比较多，一定要弄清楚自己的研究计划中的创新点在哪里。&lt;/li&gt;
+      &lt;li&gt;你的研究和你的意向教授现在的研究的共同点在哪里。&lt;/li&gt;
+      &lt;li&gt;请你说明你的研究中XXX是什么意思，XXX是怎么定义的？&lt;/li&gt;
+      &lt;li&gt;你这个研究可以解决什么样子的问题，未来可以在那里应用？》&lt;/li&gt;
+      &lt;li&gt;你为什么选择这个作为你的研究对象？&lt;/li&gt;
+      &lt;li&gt;。。。&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;询问与专业相关的问题，包括EntrySheet中提到的大学中最擅长的三门课之一，需要提前复习一下基本概念。&lt;/li&gt;
+  &lt;li&gt;询问最想在Jaist修哪门课程？（这个问题我因为没有提前了解所以没有回答出来）&lt;/li&gt;
+  &lt;li&gt;用英语描述一下你的研究是什么？&lt;/li&gt;
+  &lt;li&gt;。。。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;总计10余个问题，23分钟全部耗尽。&lt;/p&gt;
+
+&lt;h3 id=&quot;面试氛围&quot;&gt;面试氛围&lt;/h3&gt;
+&lt;p&gt;面试官不会故意抛出刁钻的问题进行提问，基本上全部的提问都是围绕着所发表的研究和提出的小论文的。&lt;/p&gt;
+
+&lt;h3 id=&quot;后记&quot;&gt;后记&lt;/h3&gt;
+&lt;p&gt;面试结束之后会直接让你退出房间，你点结束会议的一刹那面试就完成了。。&lt;/p&gt;
+
+&lt;h3 id=&quot;自我反省&quot;&gt;自我反省&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;对于自己的PPT的时间掌握不好，应该整体节奏再加快一点。（最后的总结差一条没说的时候面试官提醒时间到）&lt;/li&gt;
+  &lt;li&gt;没有提前仔细了解学校的课程设置，导致这个问题没有回答上来。以后的种种面试需要避免这个问题。&lt;/li&gt;
+  &lt;li&gt;国外的面试需要尽可能准备好当地语言与英语的双语发言稿，以备不时之需。（临场发挥真的很紧张）&lt;/li&gt;
+  &lt;li&gt;7分钟的发表除去目录页应该把时间控制在8-9页的量比较合适，本次内容量为10页，稍显局促。&lt;/li&gt;
+  &lt;li&gt;所提交的小论文的覆盖面没有slide全面（小论文于面试前15天和出愿材料一并提出）&lt;/li&gt;
+  &lt;li&gt;小论文中没有标出引用参考文献，今后提出的书类文件要全部写明参考文件。&lt;/li&gt;
+  &lt;li&gt;继续反省，后续更新&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ps&quot;&gt;P.s.&lt;/h3&gt;
+&lt;p&gt;希望我的面试能让教授觉得过得去，让我可以合格！！！&lt;/p&gt;
+
+&lt;h2&gt;————————–&lt;/h2&gt;
+&lt;h2 id=&quot;20221031更新&quot;&gt;2022.10.31更新&lt;/h2&gt;
+&lt;h3 id=&quot;北陆先端科学技术大学院大学jaist令和5年4月第二次入试合格&quot;&gt;北陆先端科学技术大学院大学（JAIST）令和5年4月第二次入试合格💮&lt;/h3&gt;
+</description>
+        <pubDate>Mon, 17 Oct 2022 19:18:26 +0000</pubDate>
+        <link>https://sprzwty.github.io/experience/Jaist%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/experience/Jaist%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.html</guid>
+        
+        <category>experience</category>
+        
+        
+        <category>Experience</category>
+        
+      </item>
+    
+      <item>
+        <title>Midterm revising of I226</title>
+        <description>&lt;h2 id=&quot;quiz-01&quot;&gt;Quiz-01&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-通信の形態unicast-multicast-broadcast-anycastについて各々どのようなものか説明してください&quot;&gt;1. 通信の形態(unicast, multicast, broadcast, anycast)について、各々どのようなものか説明してください。&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;unicast:&lt;/strong&gt;　一対一の形で、特定の相手に伝送&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;multicast:&lt;/strong&gt;　特定の論理的にグループのメンバー全体に伝送&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;broadcast:&lt;/strong&gt;　放送の形で、(物理的に)届く範囲すべてに伝送&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;anycast:&lt;/strong&gt;　特定のグループのメンバーのうちどれかに伝送&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-全二重通信半二重通信単方向通信について例をあげて説明してください&quot;&gt;2. 全二重通信、半二重通信、単方向通信について例をあげて説明してください。&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;単方向通信: 一方向にのみデータを伝送&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;全二重通信: 双方向に同時データ伝送が可能&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;半二重通信: 双方向にデータ伝送可能であるが同時には一方向のみ&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-lanでよく使われるトポロジを3つあげ各々の性質を説明してください&quot;&gt;3. LANでよく使われるトポロジを3つあげ、各々の性質を説明してください。&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;バス：物全てのコンピュータが一本の通信路（バス）に接続されます。バス型トポロジは比較的簡単に実装でき、コストも低いです。バスに問題が生じると全体に被害が及ぶ。回線容量を分け合うことになる。&lt;/li&gt;
+  &lt;li&gt;リング：隣のノードとの接続を順次繰り返して輪をつくる，他のノードを経由して通信が行われる，一ケ所でも切れるとリングが成り立たなくなり、被害が全体に及ぶ，ノードの付け外しの際にはリングが切れる。&lt;/li&gt;
+  &lt;li&gt;スター：集線装置(ハブ)にノードを接続，ハブが壊れると全体に被害が及ぶが、線が切れても該 当するノードだけの問題で済む。ノードの付け外しはハブの許す限り自由，回線容量がどうなるかは集線装置次第。&lt;/li&gt;
+  &lt;li&gt;ツリー：集線装置(ハブ, コンセントレータ)にノードを接続し、ハブ を上位のハブに接続。スター同士の接続と考えることも可能だが、上下関係がある、スターと類似した性質だが、枝単位で運命共同体なのと、トラフィックの集約が起る。
+*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;完全結合バス型スター型リング型の各トポロジについてnノードを接続するのに必要なリンクの数を示して下さい&quot;&gt;完全結合、バス型、スター型、リング型の各トポロジについて、nノードを接続するのに必要なリンクの数を示して下さい。&lt;/h3&gt;
+&lt;div align=&quot;center&quot;&gt;    
+&lt;img src=&quot;CleanShot 2023-06-15 at 23.33.46.png&quot; style=&quot;zoom:30%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt;完全結合型は図のようで、n(n-1)になりました；バス型はn、&lt;/p&gt;
+
+&lt;h3 id=&quot;4交換という概念を簡単に説明してください&quot;&gt;4.交換という概念を簡単に説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;5回線交換とパケット交換について説明してください&quot;&gt;5.回線交換とパケット交換について説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;6-回線交換でコネクションレスな例およびパケット交換でコネクションオリエンテッドな例をあげてください&quot;&gt;6. 回線交換でコネクションレスな例、およびパケット交換でコネクションオリエンテッドな例をあげてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;7-lan-wan-manといった分類の基準を述べて下さい&quot;&gt;7. LAN, WAN, MANといった分類の基準を述べて下さい。&lt;/h3&gt;
+
+&lt;h3 id=&quot;8osi参照モデルが明確にした重要な概念にサービスインタフェースプロトコルがありますこれらを説明しその関係を図示して下さい&quot;&gt;8.OSI参照モデルが明確にした重要な概念に、サービス、インタフェース、プロトコルがあります。これらを説明し、その関係を図示して下さい。&lt;/h3&gt;
+
+&lt;h3 id=&quot;プロトコルスタックとは何ですか-またカプセル化という概念はプロトコルスタックでどのように用いられますか&quot;&gt;・プロトコルスタックとは何ですか? また、カプセル化という概念はプロトコルスタックでどのように用いられますか?&lt;/h3&gt;
+
+&lt;h3 id=&quot;osi参照モデルの各層の名前と役割を簡単にあげてください&quot;&gt;・OSI参照モデルの各層の名前と役割を簡単にあげてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;実際のコンピュータネットワークでは5層のモデルがよく使われますこの5層モデルについて各層の名称各層で取り扱うデータの単位各層で利用するアドレス各層の役割をあげてください&quot;&gt;・実際のコンピュータネットワークでは5層のモデルがよく使われます。この5層モデルについて、各層の名称、各層で取り扱うデータの単位、各層で利用するアドレス、各層の役割をあげてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;osi参照モデルにおけるサービスプリミティブについて図を用いて説明してください&quot;&gt;・OSI参照モデルにおけるサービスプリミティブについて図を用いて説明してください。&lt;/h3&gt;
+
+&lt;h2 id=&quot;quiz-02&quot;&gt;Quiz-02&lt;/h2&gt;
+&lt;h3 id=&quot;サンプリング定理とは何か説明してください&quot;&gt;・サンプリング定理とは何か説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;ノイズのある伝送路の最大伝送速度の理論的上限は信号対雑音比がr伝送路の帯域がbのときどのような式であらわされましたか-またこの式からわかることを説明してください&quot;&gt;・ノイズのある伝送路の最大伝送速度の理論的上限は、信号対雑音比がR、伝送路の帯域がBのとき、どのような式であらわされましたか? また、この式からわかることを説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;3khzの帯域を有する電話回線で信号対雑音比30dbのとき最大伝送速度の上限はどれくらいになりますか&quot;&gt;・3KHzの帯域を有する電話回線で信号対雑音比30dBのとき、最大伝送速度の上限はどれくらいになりますか?&lt;/h3&gt;
+
+&lt;h3 id=&quot;ベースバンド伝送方式とブロードバンド伝送方式の違いはどこにありましたかまた各々の特徴について説明して下さい&quot;&gt;・ベースバンド伝送方式とブロードバンド伝送方式の違いはどこにありましたか。また、各々の特徴について説明して下さい。&lt;/h3&gt;
+
+&lt;h3 id=&quot;変調とは何でしたか例を3つ挙げて説明して下さい&quot;&gt;・変調とは何でしたか。例を3つ挙げて説明して下さい。&lt;/h3&gt;
+
+&lt;h3 id=&quot;1シンボル当たりnビットの情報を持つbボーの伝送システムで転送速度をbitsecであらわすといくつになりますか&quot;&gt;・1シンボル当たりnビットの情報を持つbボーの伝送システムで、転送速度をbit/Secであらわすといくつになりますか?&lt;/h3&gt;
+
+&lt;h3 id=&quot;多重化とは何でしたかまた複数の例を挙げ各々について説明してください&quot;&gt;・多重化とは何でしたか。また、複数の例を挙げ、各々について説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;マンチェスタ符号の特徴をrz符号およびnrz符号と比較して述べてください&quot;&gt;・マンチェスタ符号の特徴を、RZ符号およびNRZ符号と比較して述べてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;同軸ケーブルとより対線を比較して特徴をあげてください&quot;&gt;・同軸ケーブルとより対線を比較して特徴をあげてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;光ファイバにはシングルモードファイバと呼ばれるものとマルチモードファイバと呼ばれるものがあります各々の原理と特徴を説明してください&quot;&gt;・光ファイバにはシングルモードファイバと呼ばれるものとマルチモードファイバと呼ばれるものがあります。各々の原理と特徴を説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;衛星通信の特徴を挙げてください&quot;&gt;・衛星通信の特徴を挙げてください。&lt;/h3&gt;
+
+&lt;h2 id=&quot;quiz-03&quot;&gt;Quiz-03&lt;/h2&gt;
+&lt;h3 id=&quot;1-データリンク層の役割を3つ以上挙げそれぞれについて説明してください&quot;&gt;1. データリンク層の役割を3つ以上挙げ、それぞれについて説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;2-ビット列からフレームを形成するためにはどのような方法がありましたか例を挙げて説明してください&quot;&gt;2. ビット列からフレームを形成するためにはどのような方法がありましたか。例を挙げて説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;3-データリンク層プロトコル規格の例を挙げてください&quot;&gt;3. データリンク層プロトコル(規格)の例を挙げてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;4-ieee8023とieee8025のメディアアクセス方式の違いを説明し特徴を挙げてください&quot;&gt;4. IEEE802.3とIEEE802.5のメディアアクセス方式の違いを説明し、特徴を挙げてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;5-ieee8023において最小フレーム長はどのように決定されたのでしょうか-具体的な数値を挙げて説明してください&quot;&gt;5. IEEE802.3において、最小フレーム長はどのように決定されたのでしょうか? 具体的な数値を挙げて説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;6-データリンク層アドレスがどのように使われるかについて説明してください&quot;&gt;6. データリンク層アドレスがどのように使われるかについて説明してください。&lt;/h3&gt;
+&lt;h2 id=&quot;quiz-04&quot;&gt;Quiz-04&lt;/h2&gt;
+&lt;h3 id=&quot;ネットワーク層の役割を説明してください&quot;&gt;・ネットワーク層の役割を説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;ネットワーク層アドレスとデータリンク層アドレスの違いを説明してください&quot;&gt;・ネットワーク層アドレスとデータリンク層アドレスの違いを説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;ipv4アドレスの表記方法について説明してくださいどのような標記が使われまた数値の範囲はどのようになりますか&quot;&gt;・IPv4アドレスの表記方法について説明してください。どのような標記が使われ、また、数値の範囲はどのようになりますか?&lt;/h3&gt;
+
+&lt;h3 id=&quot;ipv4アドレスにおけるクラスとサブネットという概念について各々説明してください&quot;&gt;・IPv4アドレスにおけるクラスとサブネットという概念について各々説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;ルーティングテーブルについて簡単なネットワーク例を挙げて説明してください&quot;&gt;・ルーティングテーブルについて、簡単なネットワーク例を挙げて説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;arpおよびrarpの役割について説明してください&quot;&gt;・ARPおよびRARPの役割について説明してください。&lt;/h3&gt;
+&lt;h2 id=&quot;quiz-05&quot;&gt;Quiz-05&lt;/h2&gt;
+&lt;h3 id=&quot;ルーターブリッジリピーターについて役割や特徴について述べてくださいまた各々プロトコルスタックのどの層の装置と考えることができるでしょうか&quot;&gt;・ルーター、ブリッジ、リピーターについて、役割や特徴について述べてください。また、各々、プロトコルスタックのどの層の装置と考えることができるでしょうか?&lt;/h3&gt;
+
+&lt;h3 id=&quot;ブリッジの動作について説明してください具体的なネットワーク例をあげフォワーディングテーブルがどのように変化するかについても言及してください&quot;&gt;・ブリッジの動作について説明してください。具体的なネットワーク例をあげ、フォワーディングテーブルがどのように変化するかについても言及してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;ルーターの動作をフレームが入ってきてからフレームを送信するまで順を追って説明してください&quot;&gt;・ルーターの動作をフレームが入ってきてからフレームを送信するまで順を追って説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;複数のルーターをまたがってipパケットが転送される様子を順を追って説明してくださいこのとき特にmacアドレスに注意して説明してください&quot;&gt;・複数のルーターをまたがってIPパケットが転送される様子を順を追って説明してください。このとき、特にMACアドレスに注意して説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;ipプロトコルのデフォルトルートという概念について説明しこれがどのような効果をもたらすのか説明してください&quot;&gt;・IPプロトコルのデフォルトルートという概念について説明し、これがどのような効果をもたらすのか説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;samplenetの図を使い以下の問いに答えて下さい&quot;&gt;・”SampleNet”の図を使い、以下の問いに答えて下さい&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;同一のネットワークアドレスを有する範囲を示し、各々アドレスを設定して
+ください。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;図中のブロードキャストドメインとコンテンションドメインを示して下さい。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;各々のルーターについて、1.でつけたアドレスを用いて経路表を作成してください。
+但し、ポートは若い番号のついているものから順に1,2,…,nとしてください。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;host Aではダイナミックルーティングを行なうプログラムが動いており、経
+路表を作成しているとした場合、どのような表ができているでしょうか。3.同様
+に示して下さい。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;この構成のネットワークをルーターを使わず、ブリッジだけで構成すること
+は可能でしょうか? 問題があれば、それを解決するための方法を示して下さい。
+また、ルーターを使った場合との違いを説明してください。&lt;/p&gt;
+    &lt;h2 id=&quot;quiz-06&quot;&gt;Quiz-06&lt;/h2&gt;
+    &lt;h3 id=&quot;1-トランスポート層の役割を説明してください&quot;&gt;1. トランスポート層の役割を説明してください。&lt;/h3&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;2-tcpとudpがアプリケーション層に提供するサービスの違いについて述べてください&quot;&gt;2. TCPとUDPがアプリケーション層に提供するサービスの違いについて述べてください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;3-コネクションのある通信を実現するためにはどのような仕組みが必要となりますか&quot;&gt;3. コネクションのある通信を実現するためには、どのような仕組みが必要となりますか。&lt;/h3&gt;
+
+&lt;h3 id=&quot;4-コネクションの確立や解放が直感的に思われるほど容易ではないのはなぜですか-例を挙げて説明してください&quot;&gt;4. コネクションの確立や解放が直感的に思われるほど容易ではないのはなぜですか? 例を挙げて説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;5-3-way-hand-shakeについて説明してください&quot;&gt;5. 3-way hand shakeについて説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;6-エンドツーエンドのフロー制御と輻輳制御の違いについて説明してください&quot;&gt;6. エンドツーエンドのフロー制御と輻輳制御の違いについて説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;7-tcpにおけるフロー制御および輻輳制御の方法について具体的に説明してください&quot;&gt;7. TCPにおけるフロー制御および輻輳制御の方法について具体的に説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;8-tcpにおけるスループットを決める要因について説明してください&quot;&gt;8. TCPにおけるスループットを決める要因について説明してください。&lt;/h3&gt;
+
+&lt;h3 id=&quot;9-udpの特徴とudpを利用したアプリケーション例をあげ具体的なヘッダの構造を示してください&quot;&gt;9. UDPの特徴と、UDPを利用したアプリケーション例をあげ、具体的なヘッダの構造を示してください。&lt;/h3&gt;
+
+</description>
+        <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+        <link>https://sprzwty.github.io/test/I226Revise.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/test/I226Revise.html</guid>
+        
+        <category>Jaist</category>
+        
+        <category>Quiz</category>
+        
+        
+        <category>test</category>
+        
+      </item>
     
       <item>
         <title>Test en</title>
@@ -497,22 +865,2066 @@
         
         <category>theme</category>
         
-        <category>blog</category>
-        
-        <category>ac</category>
-        
-        <category>develop</category>
-        
-        <category>主题</category>
-        
-        <category>前端开发</category>
-        
-        <category>学术</category>
-        
-        <category>运维</category>
-        
         
         <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Conference Ranking</title>
+        <description>&lt;p&gt;附件是计算机领域的学术会议等级排名情况，分为A+
+, A, B, C, L 共5个档次。其中A+
+属于顶级会议，基本是这个领域全世界大牛们参与和关注最多的会议。国内的研究者能在其中发表论文的话，是很值得骄傲的成就。&lt;/p&gt;
+
+&lt;p&gt;A类也是非常好的会议了，尤其是一些热门的研究方向，A类的会议投稿多录用率低，部分A类会议影响力逐步逼近A+
+类会议。&lt;/p&gt;
+
+&lt;p&gt;B类的会议分两种，一种称为盛会级，参与的人多，发表的论文也多，论文录用难度比上两个级别要低很多，通常是行业内的学者们年度交流的好时机。一种是专业级的小会，圈子往往比较小，但是也有一些相对质量不错的成果发表。另外B类也是一个分水岭，是区分NB成果和普通成果的分界线。&lt;/p&gt;
+
+&lt;p&gt;C类会议知名度就低很多了，而L级的会议更多。如果不是为了注水，而是追求论文的质量多过数量的话，不建议在L级会议上发表论文。除此以外计算机还有更多的会议不在列表内，这些属于更不入流的会议了&lt;/p&gt;
+
+&lt;p&gt;CORE Computer Science Conference Rankings&lt;/p&gt;
+
+&lt;p&gt;Acronym     Standard Name     Rank&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;a&quot;&gt;A+&lt;/h2&gt;
+&lt;p&gt;level ranking list&lt;/p&gt;
+
+&lt;p&gt;AAAI     National Conference of the American Association for Artificial Intelligence     A+&lt;/p&gt;
+
+&lt;p&gt;AAMAS     International Conference on Autonomous Agents and Multiagent Systems     A+&lt;/p&gt;
+
+&lt;p&gt;ACL     Association of Computational Linguistics     A+&lt;/p&gt;
+
+&lt;p&gt;ACMMM    ACM Multimedia Conference     A+&lt;/p&gt;
+
+&lt;p&gt;ASPLOS     Architectural Support for Programming Languages and Operating Systems     A+&lt;/p&gt;
+
+&lt;p&gt;CAV     Computer Aided Verification     A+&lt;/p&gt;
+
+&lt;p&gt;CCS    ACM Conference on Computer and Communications Security     A+&lt;/p&gt;
+
+&lt;p&gt;CHI     International Conference on Human Factors in Computing Systems     A+&lt;/p&gt;
+
+&lt;p&gt;COLT     Annual Conference on Computational Learning Theory     A+&lt;/p&gt;
+
+&lt;p&gt;CRYPTO     Advances in Cryptology     A+&lt;/p&gt;
+
+&lt;p&gt;CSCL     Computer Supported Collaborative Learning     A+&lt;/p&gt;
+
+&lt;p&gt;DCC     IEEE Data Compression Conference     A+&lt;/p&gt;
+
+&lt;p&gt;DSN     International Conference on Dependable Systems     A+&lt;/p&gt;
+
+&lt;p&gt;EuroCrypt     International Conference on the Theory and Application of Cryptographic Techniques     A+&lt;/p&gt;
+
+&lt;p&gt;FOCS     IEEE Symposium on Foundations of Computer Science     A+&lt;/p&gt;
+
+&lt;p&gt;FOGA     Foundations of Genetic Algorithms     A+&lt;/p&gt;
+
+&lt;p&gt;HPCA     IEEE Symposium on High Performance Computer Architecture     A+&lt;/p&gt;
+
+&lt;p&gt;I3DG    ACM-SIGRAPH Interactive 3D Graphics     A+&lt;/p&gt;
+
+&lt;p&gt;ICAPS     International Conference on Automated Planning and Scheduling     A+&lt;/p&gt;
+
+&lt;p&gt;ICCV     IEEE International Conference on Computer Vision     A+&lt;/p&gt;
+
+&lt;p&gt;ICDE     IEEE International Conference on Data Engineering     A+&lt;/p&gt;
+
+&lt;p&gt;ICDM     IEEE International Conference on Data Mining     A+&lt;/p&gt;
+
+&lt;p&gt;ICFP     International Conference on Functional Programming     A+&lt;/p&gt;
+
+&lt;p&gt;ICIS     International Conference on Information Systems     A+&lt;/p&gt;
+
+&lt;p&gt;ICML     International Conference on Machine Learning     A+&lt;/p&gt;
+
+&lt;p&gt;ICSE     International Conference on Software Engineering     A+&lt;/p&gt;
+
+&lt;p&gt;IJCAI     International Joint Conference on Artificial Intelligence     A+&lt;/p&gt;
+
+&lt;p&gt;IJCAR     International Joint Conference on Automated Reasoning     A+&lt;/p&gt;
+
+&lt;p&gt;INFOCOM     Joint Conference of the IEEE Computer and Communications Societies     A+&lt;/p&gt;
+
+&lt;p&gt;InfoVis     IEEE Information Visualization Conference     A+&lt;/p&gt;
+
+&lt;p&gt;IPSN     Information Processing in Sensor Networks     A+&lt;/p&gt;
+
+&lt;p&gt;ISCA    ACM International Symposium on Computer Architecture     A+&lt;/p&gt;
+
+&lt;p&gt;ISMAR     IEEE and ACM International Symposium on Mixed and Augmented Reality     A+&lt;/p&gt;
+
+&lt;p&gt;ISSAC     International. Symposium on Symbolic and Algebraic Computation     A+&lt;/p&gt;
+
+&lt;p&gt;ISWC     IEEE International Symposium on Wearable Computing     A+&lt;/p&gt;
+
+&lt;p&gt;IWQoS     IFIP International Workshop on QoS     A+&lt;/p&gt;
+
+&lt;p&gt;JCDL    ACM Conference on Digital Libraries     A+&lt;/p&gt;
+
+&lt;p&gt;KR     International Conference on Principles of KR &amp;amp; Reasoning     A+&lt;/p&gt;
+
+&lt;p&gt;LICS     IEEE Symposium on Logic in Computer Science     A+&lt;/p&gt;
+
+&lt;p&gt;MOBICOM    ACM International Conferencem on Mobile Computing and Networking     A+&lt;/p&gt;
+
+&lt;p&gt;NIPS     Advances in Neural Information Processing Systems     A+&lt;/p&gt;
+
+&lt;p&gt;OOPSLA    ACM Conference on Object Oriented Programming Systems Languages and Applications     A+&lt;/p&gt;
+
+&lt;p&gt;OSDI     Usenix Symposium on Operating Systems Design and Implementation     A+&lt;/p&gt;
+
+&lt;p&gt;PERCOM     IEEE International Conference on Pervasive Computing and Communications     A+&lt;/p&gt;
+
+&lt;p&gt;PERVASIVE     International Conference on Pervasive Computing     A+&lt;/p&gt;
+
+&lt;p&gt;PLDI    ACM-SIGPLAN Conference on Programming Language Design &amp;amp; Implementation     A+&lt;/p&gt;
+
+&lt;p&gt;PODC    ACM Symposium on Principles of Distributed Computing     A+&lt;/p&gt;
+
+&lt;p&gt;PODS    ACM SIGMOD-SIGACT-SIGART Conferenceon Principles of Database Systems     A+&lt;/p&gt;
+
+&lt;p&gt;POPL    ACM-SIGACT Symposium on Principles of Prog Langs     A+&lt;/p&gt;
+
+&lt;p&gt;RSS     Robotics: Systems and Science     A+&lt;/p&gt;
+
+&lt;p&gt;RTSS     Real Time Systems Symp     A+&lt;/p&gt;
+
+&lt;p&gt;SENSYS    ACM Conference on Embedded Networked Sensor Systems     A+&lt;/p&gt;
+
+&lt;p&gt;SIGCOMM    ACM Conference on Applications, Technologies,Architectures, and Protocols for Computer Communication     A+&lt;/p&gt;
+
+&lt;p&gt;SIGGRAPH    ACM SIG International Conference on Computer Graphics and Interactive Techniques     A+&lt;/p&gt;
+
+&lt;p&gt;SIGIR    ACM International Conference on Research and Development in Information Retrieval     A+&lt;/p&gt;
+
+&lt;p&gt;SIGKDD    ACM International Conference on Knowledge Discovery and Data Mining     A+&lt;/p&gt;
+
+&lt;p&gt;SIGMETRICS    ACM SIG on computer and communications metrics and performance     A+&lt;/p&gt;
+
+&lt;p&gt;SIGMOD    ACM Special Interest Group on Management of Data Conference     A+&lt;/p&gt;
+
+&lt;p&gt;SODA    ACM/SIAM Symposium on Discrete Algorithms     A+&lt;/p&gt;
+
+&lt;p&gt;SOSP    ACM SIGOPS Symposium on Operating Systems Principles     A+&lt;/p&gt;
+
+&lt;p&gt;STOC    ACM Symposium on Theory of Computing     A+&lt;/p&gt;
+
+&lt;p&gt;UAI     Conference in Uncertainty in Artifical Intelligence     A+&lt;/p&gt;
+
+&lt;p&gt;UbiComp     Uniquitous Computing     A+&lt;/p&gt;
+
+&lt;p&gt;VLDB     International Conference on Very Large Databases     A+&lt;/p&gt;
+
+&lt;p&gt;WWW     International World Wide Web Conference     A+&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;a-level-conference-list&quot;&gt;A level conference list&lt;/h2&gt;
+
+&lt;p&gt;ACM-HT    ACM Hypertext Conf     A&lt;/p&gt;
+
+&lt;p&gt;AH     International Conference on Adaptive Hypermedia and Adaptive Web-Based Systems     A&lt;/p&gt;
+
+&lt;p&gt;AID     International Conference on AI in Design     A&lt;/p&gt;
+
+&lt;p&gt;AIED     International Conference on Artificial Intelligence in Education     A&lt;/p&gt;
+
+&lt;p&gt;AIIM     Artificial Intelligence in Medicine     A&lt;/p&gt;
+
+&lt;p&gt;AIME     Artificial Intelligence in Medicine in Europe     A&lt;/p&gt;
+
+&lt;p&gt;AiML     Advances in Modal Logic     A&lt;/p&gt;
+
+&lt;p&gt;ALENEX     Workshop on Algorithm Engineering and Experiments     A&lt;/p&gt;
+
+&lt;p&gt;ALIFE     International Conference on the Simulation and Synthesis of Living Systems     A&lt;/p&gt;
+
+&lt;p&gt;AMAI     Artificial Intelligence and Maths     A&lt;/p&gt;
+
+&lt;p&gt;AMIA     American Medical Informatics Annual Fall Symposium     A&lt;/p&gt;
+
+&lt;p&gt;AOSD     Aspect-Oriented Software Development     A&lt;/p&gt;
+
+&lt;p&gt;APPROX     International Workshop on Approximation Algorithms for Combinatorial Optimization Problems     A&lt;/p&gt;
+
+&lt;p&gt;ASAP     International Conference on Apps for Specific Array Processors     A&lt;/p&gt;
+
+&lt;p&gt;ASE     Automated Software Engineering Conference     A&lt;/p&gt;
+
+&lt;p&gt;ASIACRYPT     International Conference on the Theory and Applications of Cryptology     A&lt;/p&gt;
+
+&lt;p&gt;ASIS&amp;amp;T     Annual conference of American Society for Information Science and Technology     A&lt;/p&gt;
+
+&lt;p&gt;ATVA     International Symposium on Automated Technology for Verification and Analysis     A&lt;/p&gt;
+
+&lt;p&gt;AVSS     Advanced Video and Signal Based Surveillance     A&lt;/p&gt;
+
+&lt;p&gt;BMVC     British Machine Vision Conference     A&lt;/p&gt;
+
+&lt;p&gt;BPM     International Conference in Business Process Management     A&lt;/p&gt;
+
+&lt;p&gt;CADE     International Conference on Automated Deduction     A&lt;/p&gt;
+
+&lt;p&gt;CAIP     International Conference on Computer Analysis of Images and Patterns     A&lt;/p&gt;
+
+&lt;p&gt;CaiSE     International Conference on Advanced Information Systems Engineering     A&lt;/p&gt;
+
+&lt;p&gt;CANIM     Computer Animation     A&lt;/p&gt;
+
+&lt;p&gt;CASES     International Conference on Compilers, Architecture, and Synthesis for Embedded Systems     A&lt;/p&gt;
+
+&lt;p&gt;CBSE     International Symposium Component-Based Software Engineering     A&lt;/p&gt;
+
+&lt;p&gt;CC     International Conference on Compiler Construction     A&lt;/p&gt;
+
+&lt;p&gt;CCC     IEEE Symposium on Computational Complexity     A&lt;/p&gt;
+
+&lt;p&gt;CCGRID     IEEE Symposium on Cluster Computing and the Grid     A&lt;/p&gt;
+
+&lt;p&gt;CDC     IEEE Conference on Decision and Control     A&lt;/p&gt;
+
+&lt;p&gt;CGI     Computer Graphics International     A&lt;/p&gt;
+
+&lt;p&gt;CGO     Code Generation and Optimization     A&lt;/p&gt;
+
+&lt;p&gt;CIDR     Conference on Innovative Data Systems Research     A&lt;/p&gt;
+
+&lt;p&gt;CIKM    ACM International Conference on Information and Knowledge Management     A&lt;/p&gt;
+
+&lt;p&gt;CLUSTER     Cluster Computing Conference     A&lt;/p&gt;
+
+&lt;p&gt;COCOON     International Conference on Computing and Combinatorics     A&lt;/p&gt;
+
+&lt;p&gt;CogSci     Annual Conference of the Cognitive Science Society     A&lt;/p&gt;
+
+&lt;p&gt;COLING     International Conference on Computational Liguistics     A&lt;/p&gt;
+
+&lt;p&gt;CONCUR     International Conference on Concurrency Theory     A&lt;/p&gt;
+
+&lt;p&gt;CoNLL     Conference on Natural Language Learning     A&lt;/p&gt;
+
+&lt;p&gt;CoopIS     International Conference on Cooperative Information Systems     A&lt;/p&gt;
+
+&lt;p&gt;Coordination     International Conference on Coordination Models and Lanuguages     A&lt;/p&gt;
+
+&lt;p&gt;CP     International Conference on Principles &amp;amp; Practice of Constraint Programming     A&lt;/p&gt;
+
+&lt;p&gt;CPAIOR     International Conference on Integration of Artificial Intelligence and Operations Research Techniques in Constraint Programming for Combinatorial Optimization Problems     A&lt;/p&gt;
+
+&lt;p&gt;CSB     IEEE Computational Systems Bioinformatics Conference     A&lt;/p&gt;
+
+&lt;p&gt;CSCW    ACM Conference on Computer Supported Cooperative Work     A&lt;/p&gt;
+
+&lt;p&gt;CSFW     IEEE Computer Security Foundations Workshop     A&lt;/p&gt;
+
+&lt;p&gt;CSSAC     Cognitive Science Society Annual Conference     A&lt;/p&gt;
+
+&lt;p&gt;CVPR     IEEE Conference on Computer Vision and Pattern Recognition     A&lt;/p&gt;
+
+&lt;p&gt;DAC     Design Automation Conf     A&lt;/p&gt;
+
+&lt;p&gt;DAS     International Workshop on Document Analysis Systems     A&lt;/p&gt;
+
+&lt;p&gt;DASFAA     Database Systems for Advanced Applications     A&lt;/p&gt;
+
+&lt;p&gt;DATE     IEEE/ACM Design, Automation &amp;amp; Test in Europe Conference     A&lt;/p&gt;
+
+&lt;p&gt;DEXA     International Conference on Database and Expert Systems Applications     A&lt;/p&gt;
+
+&lt;p&gt;DIGRA     Digital Games Research Conference     A&lt;/p&gt;
+
+&lt;p&gt;DIS     Designing Interactive Systems     A&lt;/p&gt;
+
+&lt;p&gt;DISC     International Symposium on Distributed Computing (ex WDAG)     A&lt;/p&gt;
+
+&lt;p&gt;DocEng    ACM Symposium on Document Engineering     A&lt;/p&gt;
+
+&lt;p&gt;DOOD     Deductive and Object-Oriented Databases     A&lt;/p&gt;
+
+&lt;p&gt;DUX     Design for User Experience     A&lt;/p&gt;
+
+&lt;p&gt;EAAI     Engineering Applications of Artifical Intelligence     A&lt;/p&gt;
+
+&lt;p&gt;EACL     European Association of Computational Linguistics     A&lt;/p&gt;
+
+&lt;p&gt;EASE     International Conference on Evaluation and Assessment in Software Engineering     A&lt;/p&gt;
+
+&lt;p&gt;EC    ACM Conference on Electronic Commerce     A&lt;/p&gt;
+
+&lt;p&gt;ECAI     European Conference on Artificial Intelligence     A&lt;/p&gt;
+
+&lt;p&gt;ECCV     European Conference on Computer Vision     A&lt;/p&gt;
+
+&lt;p&gt;ECDL     European Conference on Digital Libraries     A&lt;/p&gt;
+
+&lt;p&gt;ECIS     European Conference on Information Systems     A&lt;/p&gt;
+
+&lt;p&gt;ECML     European Conference on Machine Learning     A&lt;/p&gt;
+
+&lt;p&gt;ECOOP     European Conference on object-oriented programming     A&lt;/p&gt;
+
+&lt;p&gt;ECRTS     Euromicro Conference on Real-Time Systems     A&lt;/p&gt;
+
+&lt;p&gt;ECSCW     European Conference on Computer Supported Cooperative Work     A&lt;/p&gt;
+
+&lt;p&gt;ECWeb     International Conference on Electronic Commerce and Web Technology     A&lt;/p&gt;
+
+&lt;p&gt;EDBT     Extending Database Technology     A&lt;/p&gt;
+
+&lt;p&gt;EKAW     International Conference on Knowledge Engineering and Knowledge Management     A&lt;/p&gt;
+
+&lt;p&gt;EMMSAD     Exploring Modelling Methods in Systems Analysis and Design     A&lt;/p&gt;
+
+&lt;p&gt;EMNLP     Empirical Methods in Natural Language Processing     A&lt;/p&gt;
+
+&lt;p&gt;EMSOFT    ACM Conference on Embedded Software     A&lt;/p&gt;
+
+&lt;p&gt;ESA     European Symposium on Algorithms     A&lt;/p&gt;
+
+&lt;p&gt;e-science     IEEE International Conference on e-science and Grid Computing     A&lt;/p&gt;
+
+&lt;p&gt;ESEM     Internation Symposium on Empirical Software Engineering and Measurement     A&lt;/p&gt;
+
+&lt;p&gt;ESOP     European Symposium on Programming     A&lt;/p&gt;
+
+&lt;p&gt;ESORICS     European Symposium on Research in Computer Security     A&lt;/p&gt;
+
+&lt;p&gt;ESQARU     International Joint Conference on Qualitative and Quantitative Practical Reasoning     A&lt;/p&gt;
+
+&lt;p&gt;ESWC     European Semantic Web Conference     A&lt;/p&gt;
+
+&lt;p&gt;EuroCOLT     European Conference on Computational Learning Theory     A&lt;/p&gt;
+
+&lt;p&gt;EUROGRAPH     European Graphics Conference     A&lt;/p&gt;
+
+&lt;p&gt;EuroPar     International Conference on Parallel Processing     A&lt;/p&gt;
+
+&lt;p&gt;EuroPVM/MPI     Euopean PVM/MPI Uswers’ Group Conference     A&lt;/p&gt;
+
+&lt;p&gt;EuroSpeech     European Conference on Speech Communication and Technology     A&lt;/p&gt;
+
+&lt;p&gt;EuroSPI     European SPI     A&lt;/p&gt;
+
+&lt;p&gt;EuroSys     Eurosys Conference     A&lt;/p&gt;
+
+&lt;p&gt;EWSN     European conference on Wireless Sensor Networks     A&lt;/p&gt;
+
+&lt;p&gt;FCCM     IEEE Symposium on Field Programmable Custom Computing Machines     A&lt;/p&gt;
+
+&lt;p&gt;FLOPS     International Symposium on Functional and Logic Programming     A&lt;/p&gt;
+
+&lt;p&gt;FME     Formal Methods Europe     A&lt;/p&gt;
+
+&lt;p&gt;FODO     International Conference on Foundation on Data Organization     A&lt;/p&gt;
+
+&lt;p&gt;FORTE     IFIP Joint Int’l Conference on Formal Description Techniques and Protocol Specification, Testing, And Verification     A&lt;/p&gt;
+
+&lt;p&gt;FPSAC     Formal Power Series and Algebraic Combinatorics     A&lt;/p&gt;
+
+&lt;p&gt;FSE    ACM Conference on the Foundations of Software Engineering (inc ESEC-FSE when held joInternationaly [sic])     A&lt;/p&gt;
+
+&lt;p&gt;FSR     International Conference on Field and Service Robotics     A&lt;/p&gt;
+
+&lt;p&gt;FST&amp;amp;TCS     Foundations of Software Technology &amp;amp; Theoretical Computer Science     A&lt;/p&gt;
+
+&lt;p&gt;FUZZ-IEEE     IEEE International Conference on Fuzzy Systems     A&lt;/p&gt;
+
+&lt;p&gt;GD     Graph Drawing     A&lt;/p&gt;
+
+&lt;p&gt;Grid     International Conference on Grid Computing     A&lt;/p&gt;
+
+&lt;p&gt;Group    ACM Special Interest Group on Supporting Group Work (was SIGGRoup)     A&lt;/p&gt;
+
+&lt;p&gt;HiPC     International Conference on High Performance Computing     A&lt;/p&gt;
+
+&lt;p&gt;HOTCHIPS (HCS)     Symposium on High Performance Chips     A&lt;/p&gt;
+
+&lt;p&gt;HOTNETS    ACM Workshop on Hot Topics in Networks     A&lt;/p&gt;
+
+&lt;p&gt;HotOS     USENIX Workshop on Hot Topics in Operating Systems     A&lt;/p&gt;
+
+&lt;p&gt;HPDC     IEEE International Symposium on High Performance Distributed Computing     A&lt;/p&gt;
+
+&lt;p&gt;Hypertext    ACM Conference on Hypertext and Hypermedia     A&lt;/p&gt;
+
+&lt;p&gt;IC3N     International Conference on Computer Communication and Networks     A&lt;/p&gt;
+
+&lt;p&gt;ICADL     International Conference of Asian Digital Libraries     A&lt;/p&gt;
+
+&lt;p&gt;ICALP     International Colloquium on Automata, Languages and Programming     A&lt;/p&gt;
+
+&lt;p&gt;ICALT     IEEE International Conference on Advanced Learning Technologies     A&lt;/p&gt;
+
+&lt;p&gt;ICARCV     International Conference on Control, Automation, Robotics and Vision     A&lt;/p&gt;
+
+&lt;p&gt;ICC     IEEE International Conference on Communications     A&lt;/p&gt;
+
+&lt;p&gt;ICCAD     International Conference on Computer-Aided Design     A&lt;/p&gt;
+
+&lt;p&gt;ICCL     IEEE International Conference on Computer Languages     A&lt;/p&gt;
+
+&lt;p&gt;ICCS     International Conference on Computational Science     A&lt;/p&gt;
+
+&lt;p&gt;ICCS     International Conference on Conceptual Structures     A&lt;/p&gt;
+
+&lt;p&gt;ICDAR     IEEE International Conference on Document Analysis and Recognition     A&lt;/p&gt;
+
+&lt;p&gt;ICDCS     IEEE International Conference on Distributed Computing Systems     A&lt;/p&gt;
+
+&lt;p&gt;ICDT     International Conference on Database Theory     A&lt;/p&gt;
+
+&lt;p&gt;ICECCS     IEEE International Conference on Engineering and Complex Computer Systems     A&lt;/p&gt;
+
+&lt;p&gt;ICER     International Computing Education Research Workshop     A&lt;/p&gt;
+
+&lt;p&gt;ICGG     International Conference on Grid Computing     A&lt;/p&gt;
+
+&lt;p&gt;ICIAP     International Conference on Image Analysis and Processing     A&lt;/p&gt;
+
+&lt;p&gt;ICIP     IEEE International Conference on Image Processing     A&lt;/p&gt;
+
+&lt;p&gt;ICLP     International conference on Logic Programming     A&lt;/p&gt;
+
+&lt;p&gt;ICMAS     International Conference on Multi Agent Systems     A&lt;/p&gt;
+
+&lt;p&gt;ICNN     IEEE International Conference on Neural Networks     A&lt;/p&gt;
+
+&lt;p&gt;ICNP     International Conference on Network Protocols     A&lt;/p&gt;
+
+&lt;p&gt;ICONIP     International Conference on Neural Information Processing     A&lt;/p&gt;
+
+&lt;p&gt;ICPP     International Conference on Parallel Processing     A&lt;/p&gt;
+
+&lt;p&gt;ICPR     International Conference on Pattern Recognition     A&lt;/p&gt;
+
+&lt;p&gt;ICS    ACM International Conference on Supercomputing     A&lt;/p&gt;
+
+&lt;p&gt;ICSC2     International Computer Symposium Conference     A&lt;/p&gt;
+
+&lt;p&gt;ICSM     International. Conferenceon Software Maintenance     A&lt;/p&gt;
+
+&lt;p&gt;ICSOC     International Conference on Service Oriented Computing     A&lt;/p&gt;
+
+&lt;p&gt;ICSP     International Conference on Software Process     A&lt;/p&gt;
+
+&lt;p&gt;ICSPC     International Conference on Security in Pervasive Computing     A&lt;/p&gt;
+
+&lt;p&gt;ICSR     IEEE International Conference on Software Reuse     A&lt;/p&gt;
+
+&lt;p&gt;ICTL     International Coference on Temporal Logic     A&lt;/p&gt;
+
+&lt;p&gt;IDA     Intelligent Data Analysis     A&lt;/p&gt;
+
+&lt;p&gt;IEEE-Alife     IEEE International Symposium on Artificial Life     A&lt;/p&gt;
+
+&lt;p&gt;IEEE-CEC     Congress on Evolutionary Computation     A&lt;/p&gt;
+
+&lt;p&gt;IEEE-MM     IEEE International Conference on Multimedia Computing and Systems     A&lt;/p&gt;
+
+&lt;p&gt;IEEETKDE     IEEE Transactions on Knowledge and Data Engineering     A&lt;/p&gt;
+
+&lt;p&gt;IFIP_WG 11.3     IFIP WG 11.3 Working Conference on Data and Applications Security (was IFIP-DBSEC)     A&lt;/p&gt;
+
+&lt;p&gt;IJCNLP     International Joint Conference on Natural Language Processing     A&lt;/p&gt;
+
+&lt;p&gt;IJCNN     IEEE International Joint Conference on Neural Networks     A&lt;/p&gt;
+
+&lt;p&gt;ILPS     International Logic Programming Symposium     A&lt;/p&gt;
+
+&lt;p&gt;IM     IFIP/IEEE Integrated Management (odd years sharing with NOMS)     A&lt;/p&gt;
+
+&lt;p&gt;IMC     Internet Measurement Conference     A&lt;/p&gt;
+
+&lt;p&gt;INTERACT     IFIP International Conference on Human-Computer Interaction     A&lt;/p&gt;
+
+&lt;p&gt;IPCO     MPS Conference on integer programming &amp;amp; combinatorial optimization     A&lt;/p&gt;
+
+&lt;p&gt;IPDPS     IEEE International Parallel and Distributed Processing Symposium (was IPPS and SPDP)     A&lt;/p&gt;
+
+&lt;p&gt;ISAAC     International Symposium on Algorithms and Computation     A&lt;/p&gt;
+
+&lt;p&gt;ISD     International Conference on Information Systems Development     A&lt;/p&gt;
+
+&lt;p&gt;ISESE     International Symposium on Empirical Software Engineering     A&lt;/p&gt;
+
+&lt;p&gt;ISMB     Intelligent Systems in Molecular Biology     A&lt;/p&gt;
+
+&lt;p&gt;ISR     International Symposium on Robotics     A&lt;/p&gt;
+
+&lt;p&gt;ISSCC     IEEE International Solid-State Circuits Conference     A&lt;/p&gt;
+
+&lt;p&gt;ISSR     International Symposium on Robotics Research     A&lt;/p&gt;
+
+&lt;p&gt;ISSRE     International Symposium on Software Reliability Engineering     A&lt;/p&gt;
+
+&lt;p&gt;ISSTA     Internation Symposium on Software Testing and Analysis     A&lt;/p&gt;
+
+&lt;p&gt;ISTA     International Conference on Information Systems Technology and its Application     A&lt;/p&gt;
+
+&lt;p&gt;ISTCS     Israel Symposium on Theory of Computing and Systems     A&lt;/p&gt;
+
+&lt;p&gt;ISWC     International Semantic Web Conference     A&lt;/p&gt;
+
+&lt;p&gt;ITiCSE     Annual Conference on Integrating Technology into Computer Science Education     A&lt;/p&gt;
+
+&lt;p&gt;ITS     International Conference on Intelligent Tutoring Systems     A&lt;/p&gt;
+
+&lt;p&gt;IUI     Intelligent User Interfaces     A&lt;/p&gt;
+
+&lt;p&gt;IVCNZ     Image and Vision Computing Conference     A&lt;/p&gt;
+
+&lt;p&gt;JELIA     Logics in Artificial Intelligence, European Conference     A&lt;/p&gt;
+
+&lt;p&gt;JICSLP/ICLP/ILPS     International Conference/Symposium on Logic Programming (Joint)     A&lt;/p&gt;
+
+&lt;p&gt;K-CAP     Knowledge capture     A&lt;/p&gt;
+
+&lt;p&gt;LCN     IEEE Conference on Local Computer Networks     A&lt;/p&gt;
+
+&lt;p&gt;LCTES    ACM SIGPLAN Conference on Languages, Tools, and Compilers for Embedded Systems     A&lt;/p&gt;
+
+&lt;p&gt;LPAR     Logic Programming and Automated Reasoning     A&lt;/p&gt;
+
+&lt;p&gt;LPNMR     International Conference on Logic Programming and Non-monotonic Reasoning     A&lt;/p&gt;
+
+&lt;p&gt;MASCOTS     Symposium Model Analysis &amp;amp; Simulation of Computer &amp;amp; Telecommunications Systems     A&lt;/p&gt;
+
+&lt;p&gt;MASS     IEEE International Conference on Mobile Ad-hoc and Sensor Systems     A&lt;/p&gt;
+
+&lt;p&gt;MassPar     Symposium on Frontiers of Massively Parallel Processing     A&lt;/p&gt;
+
+&lt;p&gt;MICRO     International Symposium on Microarchitecture     A&lt;/p&gt;
+
+&lt;p&gt;Middleware    ACM/IFIP/USENIX th International Middleware Conference     A&lt;/p&gt;
+
+&lt;p&gt;MIR    ACM SIGMM International Woekshop on Multimedia Information Retrieval     A&lt;/p&gt;
+
+&lt;p&gt;MMCN    ACM/SPIE Multimedia Computing and Networking     A&lt;/p&gt;
+
+&lt;p&gt;MMSP     International Workshop on Multimedia Signal Processing     A&lt;/p&gt;
+
+&lt;p&gt;MOBIHOC    ACM Symposium of mobile and ad hoc computing     A&lt;/p&gt;
+
+&lt;p&gt;MobileHCI     International Conference on Human-Computer Interaction with Mobile Devices and Services     A&lt;/p&gt;
+
+&lt;p&gt;Mobiquitous     International Conference on Mobile and Ubiquitous Systems: Networks and Services     A&lt;/p&gt;
+
+&lt;p&gt;Mobisys    ACM SIGMOBILE International Conference on mobile systems, applications and services     A&lt;/p&gt;
+
+&lt;p&gt;MODELS     International Conference on the Unified Modeling Language (formerly UML)     A&lt;/p&gt;
+
+&lt;p&gt;MSWIM    ACM/IEEE International Conference on Modelling, Analysis and Simulation of Wireless and Mobile Systems     A&lt;/p&gt;
+
+&lt;p&gt;NAACL     North American Association for Computational Linguistics     A&lt;/p&gt;
+
+&lt;p&gt;NDSS     Usenix Networked and Distributed System Security Symposium     A&lt;/p&gt;
+
+&lt;p&gt;Net Object Days     Includings [sic] MATES, ENASE etc.     A&lt;/p&gt;
+
+&lt;p&gt;NetStore     Network Storage Symposium     A&lt;/p&gt;
+
+&lt;p&gt;Networking 200X     IFIP Networking 200X     A&lt;/p&gt;
+
+&lt;p&gt;NOSSDAV     Network and OS Support for Digital A/V     A&lt;/p&gt;
+
+&lt;p&gt;NSDI     Symposium on Networked Systems, Design and Implementation     A&lt;/p&gt;
+
+&lt;p&gt;OPENARCH     IEEE Conference on Open Architecture and Network Programming     A&lt;/p&gt;
+
+&lt;p&gt;P2P     IEEE International Conference on Peer-toPeer Computing     A&lt;/p&gt;
+
+&lt;p&gt;PACT     International Conference on Parallel Architecture and Compilation Techniques     A&lt;/p&gt;
+
+&lt;p&gt;PADL     Practical Aspects of Declarative Languages     A&lt;/p&gt;
+
+&lt;p&gt;PADS    ACM/IEEE/SCS Workshop on Parallel &amp;amp; Distributed Simulation     A&lt;/p&gt;
+
+&lt;p&gt;PAKDD     Pacific-Asia Conference on Knowledge Discovery and Data Mining     A&lt;/p&gt;
+
+&lt;p&gt;PDC     Participatory Design Conference     A&lt;/p&gt;
+
+&lt;p&gt;PEPM    ACM SIGPLAN Workshop on Partial Evalutation and Program Manipulation     A&lt;/p&gt;
+
+&lt;p&gt;PERFORMANCE     IFIP International Symposium on Computing Performance, Modelling, Measurement and Evaluation     A&lt;/p&gt;
+
+&lt;p&gt;PG     Pacific Graphics     A&lt;/p&gt;
+
+&lt;p&gt;PKDD     European Conference on Principles and Practice of Knowledge Discovery in Databases     A&lt;/p&gt;
+
+&lt;p&gt;PPoPP     Principles and Practice of Parallel Programming     A&lt;/p&gt;
+
+&lt;p&gt;PPSN     Parallel Problem Solving from Nature     A&lt;/p&gt;
+
+&lt;p&gt;PRO-VE     IFIP Working Conferences on Virtual Enterprises     A&lt;/p&gt;
+
+&lt;p&gt;PT     Performance Tools - International Conference on Model Techniques &amp;amp; Tools for CPE     A&lt;/p&gt;
+
+&lt;p&gt;QoSA     Conference on the Quality of Software Architectures     A&lt;/p&gt;
+
+&lt;p&gt;QSIC     International Quality Software Conference     A&lt;/p&gt;
+
+&lt;p&gt;RAID     Symposium on Recent Advances in Intrusion Detection     A&lt;/p&gt;
+
+&lt;p&gt;RANDOM     International Workshop on Randomization and Computation     A&lt;/p&gt;
+
+&lt;p&gt;RE     IEEE Requirements Engineering     A&lt;/p&gt;
+
+&lt;p&gt;RECOMB     Annual International Conferenceon Comp Molecular Biology     A&lt;/p&gt;
+
+&lt;p&gt;RoboCup     Robot Soccer World Cup     A&lt;/p&gt;
+
+&lt;p&gt;RST     International Conference on Reliable Software Technologies     A&lt;/p&gt;
+
+&lt;p&gt;RTA     International Conference on Rewriting Techniques and Applications     A&lt;/p&gt;
+
+&lt;p&gt;RTAS     IEEE Real-Time and Embedded Technology and Applications Symposium     A&lt;/p&gt;
+
+&lt;p&gt;S&amp;amp;P     IEEE Symposium on Security and Privacy     A&lt;/p&gt;
+
+&lt;p&gt;SARA     Symposium on Abstraction, Reformulation and Approximation     A&lt;/p&gt;
+
+&lt;p&gt;SAS     Static Analysis Symposium     A&lt;/p&gt;
+
+&lt;p&gt;SAT     International Conference on Theory and Applications of Satisfiability Testing     A&lt;/p&gt;
+
+&lt;p&gt;SCA    ACM SIGGRAPH/Eurographics Symposium on Computer Animation     A&lt;/p&gt;
+
+&lt;p&gt;SCC     IEEE International Conference on Services Computing     A&lt;/p&gt;
+
+&lt;p&gt;SCG    ACM Symposium on Computational Geometry     A&lt;/p&gt;
+
+&lt;p&gt;SCOPES     International Workshop on Software and Compilers for Embedded Systems     A&lt;/p&gt;
+
+&lt;p&gt;SDM     SIAM International Conference on Data Mining     A&lt;/p&gt;
+
+&lt;p&gt;SDSDI     Unix Symposium on Operating Systems Design and Implementation     A&lt;/p&gt;
+
+&lt;p&gt;SIGCSE    ACM Special Interest Group on Computer Science Education Conference     A&lt;/p&gt;
+
+&lt;p&gt;SMS     IEEE International Symposium on Software Metrics     A&lt;/p&gt;
+
+&lt;p&gt;SPAA     Symposium on Parallelism in Algorithms and Architectures     A&lt;/p&gt;
+
+&lt;p&gt;SPICE     Software Process Improvement and Capability Determination     A&lt;/p&gt;
+
+&lt;p&gt;SRDS     Symposium on Reliable Distributed Systems     A&lt;/p&gt;
+
+&lt;p&gt;SSDBM     International Conference on Scientific and Statistical Data Base Management     A&lt;/p&gt;
+
+&lt;p&gt;SSPR     Structural and Statistical pattern recognition     A&lt;/p&gt;
+
+&lt;p&gt;SSR    ACM Symposium on Software Reusability     A&lt;/p&gt;
+
+&lt;p&gt;SSTD     International Symposium on Spatial Databases     A&lt;/p&gt;
+
+&lt;p&gt;STACS     Symposium on Theoretical Aspects of Computer Science     A&lt;/p&gt;
+
+&lt;p&gt;SUPER    ACM/IEEE Supercomputing Conference     A&lt;/p&gt;
+
+&lt;p&gt;SWAT     Scandinavian Workshop on Algorithm Theory     A&lt;/p&gt;
+
+&lt;p&gt;TABLEAUX     International Conference on Theorem Proving with Analytic Tableaux and Related Methods     A&lt;/p&gt;
+
+&lt;p&gt;TACAS     Tools and Algorithms for Construction and Analysis of Systems     A&lt;/p&gt;
+
+&lt;p&gt;TARK     Theoretical Aspects of Rationality and Knowledge     A&lt;/p&gt;
+
+&lt;p&gt;TIME     International Symposium on Temporal Representation and Reasoning     A&lt;/p&gt;
+
+&lt;p&gt;TREC     Text Retrieval Conference     A&lt;/p&gt;
+
+&lt;p&gt;UIST    ACM Symposium on User Interface Software and Technology     A&lt;/p&gt;
+
+&lt;p&gt;UM     International Conference on User Modelling     A&lt;/p&gt;
+
+&lt;p&gt;USENIX     USENIX Annual Technical Conference     A&lt;/p&gt;
+
+&lt;p&gt;USENIX-Security     Usenix Security     A&lt;/p&gt;
+
+&lt;p&gt;USITS     Unix Symposium on Internet Technologies     A&lt;/p&gt;
+
+&lt;p&gt;VCIP     SPIE International Conference on Visual Communications and Image Processing     A&lt;/p&gt;
+
+&lt;p&gt;VIS     IEEE Visualization     A&lt;/p&gt;
+
+&lt;p&gt;VL/HCC     IEEE Symposium on Visual Languages and Human-Centric Computing (was VL)     A&lt;/p&gt;
+
+&lt;p&gt;VLSI     IEEE Symposium VLSI Circuits     A&lt;/p&gt;
+
+&lt;p&gt;VMCAI     Verification, Model Checking and Abstract Interpretation     A&lt;/p&gt;
+
+&lt;p&gt;WACV     IEEE Workshop on Apps of Computer Vision     A&lt;/p&gt;
+
+&lt;p&gt;WADS     Workshop on Algorithms and Data Structures     A&lt;/p&gt;
+
+&lt;p&gt;WICSA     EEE/IFIP Working Conference on Software Architecture     A&lt;/p&gt;
+
+&lt;p&gt;WISE     International Conference on Web Information Systems Engineering     A&lt;/p&gt;
+
+&lt;p&gt;WoWMoM     IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks     A&lt;/p&gt;
+
+&lt;p&gt;WPHOL     International Conference on Theorem Proving in Higher Order Logics     A&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;b-level-conference&quot;&gt;B level conference&lt;/h2&gt;
+
+&lt;p&gt;AAAAECC     International Symposium on Applied Algebra, Algebraic Algorithms and Error-Correcting Codes     B&lt;/p&gt;
+
+&lt;p&gt;AAIM     Conference on Algorithmic Aspects in Information and Management     B&lt;/p&gt;
+
+&lt;p&gt;ACAL     Australian Conference on Artificial Life     B&lt;/p&gt;
+
+&lt;p&gt;ACCV     Asian Conference on Computer Vision     B&lt;/p&gt;
+
+&lt;p&gt;ACE     Australasian Conference on Computer Science Education     B&lt;/p&gt;
+
+&lt;p&gt;ACIS     Australasian Conference on Information Systems     B&lt;/p&gt;
+
+&lt;p&gt;ACISP     Australasian Conference on Information Security and Privacy     B&lt;/p&gt;
+
+&lt;p&gt;ACIVS     Advanced Concepts for Intelligent Vision Systems     B&lt;/p&gt;
+
+&lt;p&gt;ACOSM     Australian Conference on Software Metrics     B&lt;/p&gt;
+
+&lt;p&gt;ACRA     Australian Conference on Robotics and Automation     B&lt;/p&gt;
+
+&lt;p&gt;ACS     Australian Supercomputing Conf     B&lt;/p&gt;
+
+&lt;p&gt;ACSAC     Australasian Computer Systems Architecture Conference (now Asia-Pacific Computer Systems Architecture Conference)     B&lt;/p&gt;
+
+&lt;p&gt;ACSC     Australasian Computer Science Conference     B&lt;/p&gt;
+
+&lt;p&gt;ACSD     Application of Concurrency to System Design     B&lt;/p&gt;
+
+&lt;p&gt;ADBIS     Symposium on Advances in DB and Information Systems     B&lt;/p&gt;
+
+&lt;p&gt;ADC     Australasian Database Conference     B&lt;/p&gt;
+
+&lt;p&gt;ADCS     Australasian Document Computing Symposium     B&lt;/p&gt;
+
+&lt;p&gt;ADHOC-NOW     International Conference on AD-HOC Networks &amp;amp; Wireless     B&lt;/p&gt;
+
+&lt;p&gt;ADTI     International Symposium on Advanced DB Technologies and Integration     B&lt;/p&gt;
+
+&lt;p&gt;AI*IA     Congress of the Italian Assoc for AI     B&lt;/p&gt;
+
+&lt;p&gt;AINA     International Conference on Advanced Information Networking and Applications (was ICOIN)     B&lt;/p&gt;
+
+&lt;p&gt;AISP     Australasia Conference on Information Security and Privacy     B&lt;/p&gt;
+
+&lt;p&gt;ALEX     Algorithms and Experiments     B&lt;/p&gt;
+
+&lt;p&gt;ALG     ENGG Workshop on Algorithm Engineering     B&lt;/p&gt;
+
+&lt;p&gt;ALP     International Conference on Algebraic and Logic Programming     B&lt;/p&gt;
+
+&lt;p&gt;ALTAW     Australasian Language Techology Association Workshop     B&lt;/p&gt;
+
+&lt;p&gt;AMCIS     Americas Conference on Information Systems     B&lt;/p&gt;
+
+&lt;p&gt;AMOC     Asian International Mobile Computing Conferrence     B&lt;/p&gt;
+
+&lt;p&gt;ANALCO     Workshop on Analytic Algorithms and Combinatorics     B&lt;/p&gt;
+
+&lt;p&gt;ANNIE     Artificial Neural Networks in Engineering Conference     B&lt;/p&gt;
+
+&lt;p&gt;ANTS     International Workshop on Ant Colony     B&lt;/p&gt;
+
+&lt;p&gt;ANZIIS     Australian and New Zealand Intelligent Information Systems Conference     B&lt;/p&gt;
+
+&lt;p&gt;AofA     Conference on Analysis of Algorithms     B&lt;/p&gt;
+
+&lt;p&gt;AOIR     Internet Research     B&lt;/p&gt;
+
+&lt;p&gt;AOIS     Agent-Oriented Information Systems Workshop     B&lt;/p&gt;
+
+&lt;p&gt;AOSE     Agent-Oriented Software Engineering Workshop     B&lt;/p&gt;
+
+&lt;p&gt;APAMI     Asia Pacific Association for Medical Informatics Conference     B&lt;/p&gt;
+
+&lt;p&gt;APBC     Asia-Pacific Bioinformatics Conference     B&lt;/p&gt;
+
+&lt;p&gt;APCC     IEEE Asia Pacific Conference on Communications     B&lt;/p&gt;
+
+&lt;p&gt;APCHI     Asia-Pacific Conference on Computer Human Interaction     B&lt;/p&gt;
+
+&lt;p&gt;APLAS     ASIAN Symposium on Programming Languages and Systems     B&lt;/p&gt;
+
+&lt;p&gt;APNOMS     Asia-Pacific Network Operations and Management Symposium     B&lt;/p&gt;
+
+&lt;p&gt;APSEC     Asia-Pacific Software Engineering Conference     B&lt;/p&gt;
+
+&lt;p&gt;APWEB     Asia Pacific Web Conference     B&lt;/p&gt;
+
+&lt;p&gt;ARA     National Conference of the Australian Robot Association     B&lt;/p&gt;
+
+&lt;p&gt;ARES     International Conference on Availability, Reliability and Security     B&lt;/p&gt;
+
+&lt;p&gt;ASADM     Chicago ASA Data Mining Conference- A Hard Look at DM     B&lt;/p&gt;
+
+&lt;p&gt;ASIAN     Asian Computing Science Conference     B&lt;/p&gt;
+
+&lt;p&gt;ASS     IEEE Annual Simulation Symposium     B&lt;/p&gt;
+
+&lt;p&gt;ASWEC     Australian Software Engineering Conference     B&lt;/p&gt;
+
+&lt;p&gt;ASWEC     Australian Software Engineering Conference     B&lt;/p&gt;
+
+&lt;p&gt;AUIC     Australasian User Interface Conference     B&lt;/p&gt;
+
+&lt;p&gt;AusAI     Australian Joint Conference on Artificial Intelligence     B&lt;/p&gt;
+
+&lt;p&gt;AusDM     Australian Data Mining Conference     B&lt;/p&gt;
+
+&lt;p&gt;AusWIT     Australian Women in IT Conference     B&lt;/p&gt;
+
+&lt;p&gt;AWOCA     Australasian Workshop on Combinatorial Algorithms     B&lt;/p&gt;
+
+&lt;p&gt;AWRE     Australian Workshop on Requirements Engineering     B&lt;/p&gt;
+
+&lt;p&gt;AWTI     Argentine Workshop on Theoretical Informatics     B&lt;/p&gt;
+
+&lt;p&gt;BASYS     IEEE/IFIP International Conference on Information Technology for Balanced Automation Systems     B&lt;/p&gt;
+
+&lt;p&gt;BNCOD     British National Conference on Databases     B&lt;/p&gt;
+
+&lt;p&gt;Broadnets     International Conference on Broadband Communications, Networks and Systems     B&lt;/p&gt;
+
+&lt;p&gt;CAAI     Canadian Artificial Intelligence Conference     B&lt;/p&gt;
+
+&lt;p&gt;CAAN     Workshop on Combinatorial and Algorithmic Aspects of Networking     B&lt;/p&gt;
+
+&lt;p&gt;CACSD     IEEE/IFAC Joint Symposium on Intelligent Control     B&lt;/p&gt;
+
+&lt;p&gt;CAIA     Conference on Artificial Intelligence for Applications     B&lt;/p&gt;
+
+&lt;p&gt;CATS     Computing: The Australasian Theory Symposium     B&lt;/p&gt;
+
+&lt;p&gt;CCA     IEEE International Conference on Control Applications     B&lt;/p&gt;
+
+&lt;p&gt;CCCG     Canadian Conferenceon Computational Geometry     B&lt;/p&gt;
+
+&lt;p&gt;CCW     IEEE Computer Communications Workshop     B&lt;/p&gt;
+
+&lt;p&gt;CD     IFIP/ACM Working Conference on Component Deployment     B&lt;/p&gt;
+
+&lt;p&gt;CEAS     International Conference on Email and Anti-Spam     B&lt;/p&gt;
+
+&lt;p&gt;CEC/EEE     IEEE Conference on Electronic Commerce Technology and Enterprise Computing, e_Commerce and e-Services     B&lt;/p&gt;
+
+&lt;p&gt;CGA     Workshop on Computational Geometry and Applications     B&lt;/p&gt;
+
+&lt;p&gt;CHES     Cryptographic Hardware and Embedded Systems     B&lt;/p&gt;
+
+&lt;p&gt;CIAA     International Conference on Implementation and Application of Automata     B&lt;/p&gt;
+
+&lt;p&gt;CIAC     Italian Conference on Algorithms and Complexity     B&lt;/p&gt;
+
+&lt;p&gt;CICLING     Conference on Intelligent Text Processing and Computational Linguistics     B&lt;/p&gt;
+
+&lt;p&gt;CISTM     Conference on Information Science, Technology and Management     B&lt;/p&gt;
+
+&lt;p&gt;CITB     Complexity and information-theoretic approaches to biology     B&lt;/p&gt;
+
+&lt;p&gt;COCOA     Conference on Combinatorial Optimization and Applications     B&lt;/p&gt;
+
+&lt;p&gt;COMAD     International Conference on Management of Data     B&lt;/p&gt;
+
+&lt;p&gt;COMMONSENSE     Symposium on Logical Formalizations of Commonsense Reasoning     B&lt;/p&gt;
+
+&lt;p&gt;CompLife     International Symposium on Computational Life Science     B&lt;/p&gt;
+
+&lt;p&gt;COMPSAC     International Computer Software and Applications Conference     B&lt;/p&gt;
+
+&lt;p&gt;CONPAR     International Conference on Vector and Parallel Processing     B&lt;/p&gt;
+
+&lt;p&gt;CPM     Combinatorial Pattern Matching     B&lt;/p&gt;
+
+&lt;p&gt;CSL,     2 th Annual Conference on Computer Science Logic     B&lt;/p&gt;
+
+&lt;p&gt;DAC     Digital Arts and Culture     B&lt;/p&gt;
+
+&lt;p&gt;DAFX     Digital Audio Effects Conference     B&lt;/p&gt;
+
+&lt;p&gt;DAIS     IFIP International Conference on Distributed Applications and Inoperable Systems     B&lt;/p&gt;
+
+&lt;p&gt;DaWaK     Data Warehousing and Knowledge Discovery     B&lt;/p&gt;
+
+&lt;p&gt;DB&amp;amp;IS     International Baltic Conference on Databases and Information Systems     B&lt;/p&gt;
+
+&lt;p&gt;DCOSS     IEEE Conference on Distributed Computing in Sensor Systems     B&lt;/p&gt;
+
+&lt;p&gt;DICTA     Australian Pattern Recognition Society Conference     B&lt;/p&gt;
+
+&lt;p&gt;DISRA     IEEE International Workshop on Distributed Intelligent Simululation and Real-Time Applications     B&lt;/p&gt;
+
+&lt;p&gt;DITW     Internationale Tagung Wirtschaftsinformatik     B&lt;/p&gt;
+
+&lt;p&gt;DLT     Developments in Language Theory     B&lt;/p&gt;
+
+&lt;p&gt;DMTCS     International Conference on Discrete Mathematics and Theoretical Computer Science     B&lt;/p&gt;
+
+&lt;p&gt;DNA     Meeting on DNA Based Computers     B&lt;/p&gt;
+
+&lt;p&gt;DSOM     IFIP/IEEE International Workshop on Distributed Systems Operations and Management     B&lt;/p&gt;
+
+&lt;p&gt;DS-RT     Distributed Simulation and Real-time Applications     B&lt;/p&gt;
+
+&lt;p&gt;DSS     Distributed Simulation Symposium     B&lt;/p&gt;
+
+&lt;p&gt;DX     Diagnostics     B&lt;/p&gt;
+
+&lt;p&gt;DYSPAN     IEEE Dynamic Spectrum Access Networks     B&lt;/p&gt;
+
+&lt;p&gt;ECAIM     European Conference on AI in Medicine     B&lt;/p&gt;
+
+&lt;p&gt;ECAL     European Conferene on Artificial Life     B&lt;/p&gt;
+
+&lt;p&gt;ECBS     Annual IEEE International Conference and Workshop on the Engineering of Computer Based Systems     B&lt;/p&gt;
+
+&lt;p&gt;ECCB     European Conference on Computational Biology     B&lt;/p&gt;
+
+&lt;p&gt;ECEG     Eurpopean Conference on e-Government     B&lt;/p&gt;
+
+&lt;p&gt;ECIME     European Conference on Information Management and Evaluation     B&lt;/p&gt;
+
+&lt;p&gt;ECIR     European Conference on Information Retrieval     B&lt;/p&gt;
+
+&lt;p&gt;ED-MEDIA     World Conference on Educational Multimedia, Hypermedia and Telecommunications     B&lt;/p&gt;
+
+&lt;p&gt;EDOC     The Enterprise Computing Conference     B&lt;/p&gt;
+
+&lt;p&gt;EEE     IEEE e-technology, e-service and e-commerce conference     B&lt;/p&gt;
+
+&lt;p&gt;EGC     European Grid Conference     B&lt;/p&gt;
+
+&lt;p&gt;Emnets     IEEE Embedded Sensor Networks Worskhop     B&lt;/p&gt;
+
+&lt;p&gt;EPIA     Portuguese Conference on Artificial Intelligence     B&lt;/p&gt;
+
+&lt;p&gt;ER     International Conference on Conceptual Modeling     B&lt;/p&gt;
+
+&lt;p&gt;ERCIM/CSCLPERCIM     Annual Workshop on Constraint Solving and Contraint Logic Programming     B&lt;/p&gt;
+
+&lt;p&gt;ESEA     Euromicro International Conference on software engineering and applications     B&lt;/p&gt;
+
+&lt;p&gt;ESEC     European Software Engineering Conference     B&lt;/p&gt;
+
+&lt;p&gt;ESM     European Simulation Multiconference     B&lt;/p&gt;
+
+&lt;p&gt;ESS     European Simulation Symposium     B&lt;/p&gt;
+
+&lt;p&gt;EuAda     Ada-Europe International Conference on Reliable Software Technologies     B&lt;/p&gt;
+
+&lt;p&gt;EUROGP     European Conference on Genetic Programming     B&lt;/p&gt;
+
+&lt;p&gt;EuroPDP     EUROMICRO Conference on Parallel, Distributed and Network-Based processing     B&lt;/p&gt;
+
+&lt;p&gt;EUSIPCO     European Signal Processing Conference     B&lt;/p&gt;
+
+&lt;p&gt;EWLR     European Workshop on Learning Robots     B&lt;/p&gt;
+
+&lt;p&gt;FASE     Fundamental Approaches to Software Engineering     B&lt;/p&gt;
+
+&lt;p&gt;FCKAML     French Conference on Knowledge Acquisition &amp;amp; Machine Learning     B&lt;/p&gt;
+
+&lt;p&gt;FCT     Fundamentals of Computation Theory     B&lt;/p&gt;
+
+&lt;p&gt;FEM     International Conference on Formal Engineering Methods     B&lt;/p&gt;
+
+&lt;p&gt;FEWFDB     Far East Workshop on Future DB Systems     B&lt;/p&gt;
+
+&lt;p&gt;FIE     Frontiers in Education     B&lt;/p&gt;
+
+&lt;p&gt;FINCRY     Financial Cryptography     B&lt;/p&gt;
+
+&lt;p&gt;FOSSACS     Foundations of Software Science and Computational Structures     B&lt;/p&gt;
+
+&lt;p&gt;FSENCRY     Fast Software Encryption     B&lt;/p&gt;
+
+&lt;p&gt;FTP     International Workshops on First-Order Theorem Proving     B&lt;/p&gt;
+
+&lt;p&gt;FTRTFT     Formal Techniques in Real-Time and Fault Tolerant Systems     B&lt;/p&gt;
+
+&lt;p&gt;FUN     Conference on fun with algorithms     B&lt;/p&gt;
+
+&lt;p&gt;GECCO     Genetic and Evolutionary Computations     B&lt;/p&gt;
+
+&lt;p&gt;GLOBECOM     IEEE Global Telecommunications Conference     B&lt;/p&gt;
+
+&lt;p&gt;GMP     Geometry Modeling and Processing     B&lt;/p&gt;
+
+&lt;p&gt;GPCE     International Conference on Generative Programming and Component Engineering     B&lt;/p&gt;
+
+&lt;p&gt;HASE     IEEE International Symposiumon High Assurance Systems Engineering     B&lt;/p&gt;
+
+&lt;p&gt;HICSS     Hawaii International Conference on System Sciences     B&lt;/p&gt;
+
+&lt;p&gt;HLT     Human Language Technologies     B&lt;/p&gt;
+
+&lt;p&gt;HPCN     International Conference on High Performance Computing and Networking     B&lt;/p&gt;
+
+&lt;p&gt;HPSR     IEEE Workshop on High Performance Switching and Routing     B&lt;/p&gt;
+
+&lt;p&gt;IAAI     Innovative Applications in AI     B&lt;/p&gt;
+
+&lt;p&gt;ICA3PP     IEEE International Conference on Algorithms and Architectures for Parallel Processing     B&lt;/p&gt;
+
+&lt;p&gt;ICAIL     International Conference on Artificial Intelligence and Law     B&lt;/p&gt;
+
+&lt;p&gt;ICANN     International Conference on Artificial Neural Networks     B&lt;/p&gt;
+
+&lt;p&gt;ICASSP     IEEE International Conference on Acoustics, Speech and Signal Processing     B&lt;/p&gt;
+
+&lt;p&gt;ICATPN     International Conference on the Application and Theory of Petri Nets     B&lt;/p&gt;
+
+&lt;p&gt;ICCB     International Conference on Case-Based Reasoning     B&lt;/p&gt;
+
+&lt;p&gt;ICCBSS     IEEE International Conference on COTS-Based Software Systems     B&lt;/p&gt;
+
+&lt;p&gt;ICCE     International Conference on Computers in Education     B&lt;/p&gt;
+
+&lt;p&gt;ICCI     International Conference on Computing and Information     B&lt;/p&gt;
+
+&lt;p&gt;ICDCN     IEEE International Conference on Distributed Computing and Networking     B&lt;/p&gt;
+
+&lt;p&gt;ICEBE     IEEE Conference on e-Business Engineering     B&lt;/p&gt;
+
+&lt;p&gt;ICEIMT     International Confernce on Enterprise Integration and Modelling Technology     B&lt;/p&gt;
+
+&lt;p&gt;ICEIS     International Conference on Enterprise Information Systems     B&lt;/p&gt;
+
+&lt;p&gt;ICGA     International Conference on Genetic Algorithms     B&lt;/p&gt;
+
+&lt;p&gt;ICGT     International Conference on Graph Transformations     B&lt;/p&gt;
+
+&lt;p&gt;ICICSec     International Conference on Information and Communications Security     B&lt;/p&gt;
+
+&lt;p&gt;ICME     IEEE International Conference on Multimedia &amp;amp; Expo     B&lt;/p&gt;
+
+&lt;p&gt;ICMS     International Conference on Multiagent Systems     B&lt;/p&gt;
+
+&lt;p&gt;ICON     IEEE International Conference on Networks     B&lt;/p&gt;
+
+&lt;p&gt;ICPADS     IEEE International Conference on Parallel and Distributed Systems     B&lt;/p&gt;
+
+&lt;p&gt;ICRA     IEEE International Conference on Robotics and Automation     B&lt;/p&gt;
+
+&lt;p&gt;ICSC     International Computer Science Conference     B&lt;/p&gt;
+
+&lt;p&gt;ICSEA     International Conference on Software Engineering Advances     B&lt;/p&gt;
+
+&lt;p&gt;ICSEC     International Conferenceon Information and Communications Security     B&lt;/p&gt;
+
+&lt;p&gt;IC-Soft     International Conference on Software and Data Technologies     B&lt;/p&gt;
+
+&lt;p&gt;ICTAC     International Colloquium on Theoretical Ascpects of Computing     B&lt;/p&gt;
+
+&lt;p&gt;ICTAI     IEEE International Conference on Tools with Artificial Intelligence     B&lt;/p&gt;
+
+&lt;p&gt;ICWS     IEEE International Conference on Web Services     B&lt;/p&gt;
+
+&lt;p&gt;IDEAS     International Database Engineering and Applications Symposium     B&lt;/p&gt;
+
+&lt;p&gt;IE     Interactive Entertainment     B&lt;/p&gt;
+
+&lt;p&gt;IEAAI     International Conference on Industrial and Engineering Applications of Artificial Intelligence and Expert Systems     B&lt;/p&gt;
+
+&lt;p&gt;IEEE RFID     IEEE International Conference on Remote Frequency Identification     B&lt;/p&gt;
+
+&lt;p&gt;IEEE-IV     Intelligent Vehicles Conference     B&lt;/p&gt;
+
+&lt;p&gt;IFM     Integrated Formal Methods     B&lt;/p&gt;
+
+&lt;p&gt;IFSA     IFSA World Congress     B&lt;/p&gt;
+
+&lt;p&gt;IJCNLP2     International Joint Conference on Computational Linguistics     B&lt;/p&gt;
+
+&lt;p&gt;ILP     Inductive Logic Programming     B&lt;/p&gt;
+
+&lt;p&gt;IN     IEEE Intell Network Workshop     B&lt;/p&gt;
+
+&lt;p&gt;INBS     IEEE International Symposium on Intelleligence in Neural &amp;amp; Biological Systems     B&lt;/p&gt;
+
+&lt;p&gt;INET     Internet Society Conference     B&lt;/p&gt;
+
+&lt;p&gt;INFH     Workshop on Information Hiding     B&lt;/p&gt;
+
+&lt;p&gt;InSITE     Informing Science and IT Education Conference     B&lt;/p&gt;
+
+&lt;p&gt;IPCCC     IEEE International Performance Computing and Communications Conference     B&lt;/p&gt;
+
+&lt;p&gt;IRIS     Information Systems Research Seminar in Scandinavia     B&lt;/p&gt;
+
+&lt;p&gt;IRMA     Information Resources Management Association International Conference     B&lt;/p&gt;
+
+&lt;p&gt;IROS     IEEE/RSJ International Conference on Intelligent Robots and Systems     B&lt;/p&gt;
+
+&lt;p&gt;ISCC     IEEE Symposium on Computers &amp;amp; Communications     B&lt;/p&gt;
+
+&lt;p&gt;ISCIS     International Symposium on Computer and Information Sciences     B&lt;/p&gt;
+
+&lt;p&gt;ISEAT     Integration of Software Engineering and Agent Technology     B&lt;/p&gt;
+
+&lt;p&gt;ISIC     IEEE International Symposium on Intelligent Control     B&lt;/p&gt;
+
+&lt;p&gt;ISMM     International Symposium on Memory Management     B&lt;/p&gt;
+
+&lt;p&gt;ITC     IEEE International Test Conference     B&lt;/p&gt;
+
+&lt;p&gt;IWANN     International Work-Conference on Artificial and Natural Neural Networks     B&lt;/p&gt;
+
+&lt;p&gt;IWCASE     International Workshop on Cumpter-Aided Software Eng     B&lt;/p&gt;
+
+&lt;p&gt;IWCMC    ACM International Wireless Communications and Mobile Computing Conference     B&lt;/p&gt;
+
+&lt;p&gt;IWPEC     International Workshop on Parameterized and Exact Computation     B&lt;/p&gt;
+
+&lt;p&gt;JCSC     Journal of Computing Science in Colleges (conference proceedings)     B&lt;/p&gt;
+
+&lt;p&gt;JMLC     Joint Modular Languages Conference     B&lt;/p&gt;
+
+&lt;p&gt;KES     International Conference on Knowledge-Based and Intelligent Information and Engineering Systems     B&lt;/p&gt;
+
+&lt;p&gt;KI     German AI conference     B&lt;/p&gt;
+
+&lt;p&gt;Koli     Calling Baltic Sea Conference on Computing Education Research     B&lt;/p&gt;
+
+&lt;p&gt;LATIN     International Symposium on Latin American Theoretical Informatics     B&lt;/p&gt;
+
+&lt;p&gt;LDTA     Language Descriptions, Tools and Applications     B&lt;/p&gt;
+
+&lt;p&gt;LENLS     Logic &amp;amp; Engineering of Natural Language Semantics     B&lt;/p&gt;
+
+&lt;p&gt;LFCS     Logical Foundations of Computer Science     B&lt;/p&gt;
+
+&lt;p&gt;LOPSTR     International Symposium on Logic-based Program Synthesis and Transformation     B&lt;/p&gt;
+
+&lt;p&gt;LPMA     International Workshop on Logic Programming and Multi-Agents     B&lt;/p&gt;
+
+&lt;p&gt;M2VIP     Mechatronics and Machine Vision in Practice     B&lt;/p&gt;
+
+&lt;p&gt;MATES     German conference on Multi-Agent system Technologies     B&lt;/p&gt;
+
+&lt;p&gt;MCU     Universal Machines and Computations     B&lt;/p&gt;
+
+&lt;p&gt;MDM     International Conference on Mobile Data Access/Management (MDA/MDM)     B&lt;/p&gt;
+
+&lt;p&gt;MEDINFO     World Congeress on Medical Informatics     B&lt;/p&gt;
+
+&lt;p&gt;MEGA     Methods Effectives en Geometrie Algebrique     B&lt;/p&gt;
+
+&lt;p&gt;MFCS     Mathematical Foundations of Computer Science     B&lt;/p&gt;
+
+&lt;p&gt;MLMI     Joint workshop on Multimodal Interaction and Related Machine Learnig Algorithms     B&lt;/p&gt;
+
+&lt;p&gt;MMM     Multimedia Modelling     B&lt;/p&gt;
+
+&lt;p&gt;MPC     Mathematics of Program Construction     B&lt;/p&gt;
+
+&lt;p&gt;MPCS     International Conference on Massively Parallel Computing Systems     B&lt;/p&gt;
+
+&lt;p&gt;MPPOI     Massively Parallel Processing Using Optional Interconnections     B&lt;/p&gt;
+
+&lt;p&gt;NCC     National Conference Communications     B&lt;/p&gt;
+
+&lt;p&gt;NGDB     International Symposium on Next Generation Data Base Systems and Applications     B&lt;/p&gt;
+
+&lt;p&gt;NOMS     IEEE Network Operations and Management Symposium     B&lt;/p&gt;
+
+&lt;p&gt;NORDCHI     Norwegian Computer Human Interaction     B&lt;/p&gt;
+
+&lt;p&gt;ODP     IFIP International Conference on Open Distributed Processing     B&lt;/p&gt;
+
+&lt;p&gt;OPODIS     International Conference on Principles of Distributed Systems     B&lt;/p&gt;
+
+&lt;p&gt;OZCHI     Australian Computer Human Interaction Conference     B&lt;/p&gt;
+
+&lt;p&gt;PACES     Pacific Asian Conference on Expert Systems     B&lt;/p&gt;
+
+&lt;p&gt;PACIS     Pacific Asia Conference on Information Systems     B&lt;/p&gt;
+
+&lt;p&gt;PACLIC     Pacific Asia Conference on Language, Information and Computation     B&lt;/p&gt;
+
+&lt;p&gt;PACLING     Conference of the Pacific Association for Computational Linguistics     B&lt;/p&gt;
+
+&lt;p&gt;PAM     Passive and Active Measurement Conference     B&lt;/p&gt;
+
+&lt;p&gt;PASTE    ACM SIGSOFT Workshop on Program Analysis for Software Tools and Engineering     B&lt;/p&gt;
+
+&lt;p&gt;PATAT     Practice and Theory of Automated Timetabling     B&lt;/p&gt;
+
+&lt;p&gt;PDCAT     International Conference on Parallel and Distributed Computing, Applications and Technologies     B&lt;/p&gt;
+
+&lt;p&gt;PIMRC     IEEE International Symposium on Personal and Indoor Mobile Radio Conference     B&lt;/p&gt;
+
+&lt;p&gt;PKAW     Pacific Rim Knowledge Acquisition Workshop     B&lt;/p&gt;
+
+&lt;p&gt;PKC     Public Key Cryptosystems     B&lt;/p&gt;
+
+&lt;p&gt;PLILP     Symposium on Programming Language Implementation and Logic Programming     B&lt;/p&gt;
+
+&lt;p&gt;PPDP     International Conference on Principles and Practice of Declarative Programming     B&lt;/p&gt;
+
+&lt;p&gt;PPIG     Annual PPIG Workshop     B&lt;/p&gt;
+
+&lt;p&gt;PRICAI     Pacific Rim International Conference on Artificial Intelligence     B&lt;/p&gt;
+
+&lt;p&gt;PRIMA     Pacific Rim International Workshop on Multi-Agents     B&lt;/p&gt;
+
+&lt;p&gt;PROFES     Product Focused Software Process Improvement     B&lt;/p&gt;
+
+&lt;p&gt;PROSim     International Workshop on Software Process Simulation and Modeling     B&lt;/p&gt;
+
+&lt;p&gt;PSI     Ershov conference     B&lt;/p&gt;
+
+&lt;p&gt;Qsine     International Conference on Quality of Service in Heterogeneous Wired/Wireless Networks     B&lt;/p&gt;
+
+&lt;p&gt;QualIT     International Conference on Qualitative Research in IT &amp;amp; IT in Qualitative Research     B&lt;/p&gt;
+
+&lt;p&gt;REFSQ     International Workshop on Requirements Engineering: Foundation for Software Quality     B&lt;/p&gt;
+
+&lt;p&gt;RIDE     International Workshop on Research Issues in Data Engineering     B&lt;/p&gt;
+
+&lt;p&gt;RSA     RSA Conference (a security conference)     B&lt;/p&gt;
+
+&lt;p&gt;RTCSA     International Conference on Real-Time and Embedded Computing Systems and Applications     B&lt;/p&gt;
+
+&lt;p&gt;SAC    ACM Symposium on Applied Computing     B&lt;/p&gt;
+
+&lt;p&gt;SAFECOMP     International Conference on Computer Safety, Reliability and Security     B&lt;/p&gt;
+
+&lt;p&gt;SAFEProcess     IFAC Symposioum on Fault Detection, Supervision and Safety of Technical Processes     B&lt;/p&gt;
+
+&lt;p&gt;SAGA     Symposium on Stochastic Algorithms, Foundations, and Applications     B&lt;/p&gt;
+
+&lt;p&gt;SBBD     Brazilian Symposium on Databases     B&lt;/p&gt;
+
+&lt;p&gt;SCAI     Scandinavian Conference on Artifical Intelligence     B&lt;/p&gt;
+
+&lt;p&gt;SCRAA     Smart Card Research and Advanced Application Conference     B&lt;/p&gt;
+
+&lt;p&gt;SCSC     Summer Computer Simulation Conference     B&lt;/p&gt;
+
+&lt;p&gt;SEAL     Asia-Pacific Conference on Simulated Evolution &amp;amp; Learning     B&lt;/p&gt;
+
+&lt;p&gt;SEC     IFIP International Information Security Conference     B&lt;/p&gt;
+
+&lt;p&gt;SECON     IEEE Conference on Sensor, Mesh and Ad Hoc Communications and Networks     B&lt;/p&gt;
+
+&lt;p&gt;SecureComm     IEEE/CreateNet International Conference on Security and Privacy in Communication Networks     B&lt;/p&gt;
+
+&lt;p&gt;SECURITY     Usenix Security Symposium     B&lt;/p&gt;
+
+&lt;p&gt;SEEP     International Conference on Software Engineering: Education and Practice     B&lt;/p&gt;
+
+&lt;p&gt;SEFM     International Conference on Software Engineering and Formal Methods     B&lt;/p&gt;
+
+&lt;p&gt;SEKE     International Conference on Software Engineering and Knowledge Engineering     B&lt;/p&gt;
+
+&lt;p&gt;SEQAPP     International Conference on Sequences and their Applications     B&lt;/p&gt;
+
+&lt;p&gt;SIGCHI-NZ     International NZ Conference on Computer-Human Interaction     B&lt;/p&gt;
+
+&lt;p&gt;SIGOPS-EW    ACM SIGOPS European Workshops     B&lt;/p&gt;
+
+&lt;p&gt;SIROCCO     Colloquium on Structural Information and Communication Complexity     B&lt;/p&gt;
+
+&lt;p&gt;SMC     IEEE Conference on Systems, Man and Cybernetics     B&lt;/p&gt;
+
+&lt;p&gt;SOFTCOMM     Conferenceon Software in Tcomms and Comp Networks     B&lt;/p&gt;
+
+&lt;p&gt;SoMeT     International Conference on Software Methods and Tools     B&lt;/p&gt;
+
+&lt;p&gt;SPEC     Workshop on Security and Privacy in E-commerce     B&lt;/p&gt;
+
+&lt;p&gt;SPICIS     Singapore International Conferenceon Intelligent System     B&lt;/p&gt;
+
+&lt;p&gt;SPIRE     International Symposium on String Processing and Information Retrieval     B&lt;/p&gt;
+
+&lt;p&gt;SST     Australasian Speech Science &amp;amp; Technology     B&lt;/p&gt;
+
+&lt;p&gt;STEP     Software Technology and Engineering Practice Conference     B&lt;/p&gt;
+
+&lt;p&gt;SWDC     International Conference on Software Development     B&lt;/p&gt;
+
+&lt;p&gt;TOOLS     Technology of object-oriented languages and systems     B&lt;/p&gt;
+
+&lt;p&gt;UKAIS     UK Academy of Information Systems conference     B&lt;/p&gt;
+
+&lt;p&gt;UKSS     United Kingdom Systems Society     B&lt;/p&gt;
+
+&lt;p&gt;UMC     Unconventional Models of Computation     B&lt;/p&gt;
+
+&lt;p&gt;UML     Unified Modelling Language     B&lt;/p&gt;
+
+&lt;p&gt;VAPP     Vector and Parallel Processing     B&lt;/p&gt;
+
+&lt;p&gt;VDB     Visual Database Systems     B&lt;/p&gt;
+
+&lt;p&gt;VEE     International Conference on Virtual Execution Environments     B&lt;/p&gt;
+
+&lt;p&gt;VTC     IEEE Vehicular Technology Conference     B&lt;/p&gt;
+
+&lt;p&gt;WABI     Workshop on Algorithms in Bioinformatics     B&lt;/p&gt;
+
+&lt;p&gt;WAE     Workshop on Algorithm Engineering     B&lt;/p&gt;
+
+&lt;p&gt;WAIS     International Workshop on Artificial Intelligence and Statistics     B&lt;/p&gt;
+
+&lt;p&gt;WCES     World Congress on Expert Systems     B&lt;/p&gt;
+
+&lt;p&gt;WCNC     IEEE Wireless Communications and Networking Conference     B&lt;/p&gt;
+
+&lt;p&gt;WCNN     World Congress on Neural Networks     B&lt;/p&gt;
+
+&lt;p&gt;WCRE     IEEE Working Conference on Reverse Engineering     B&lt;/p&gt;
+
+&lt;p&gt;WCSS     World Congress on Systems Simulation     B&lt;/p&gt;
+
+&lt;p&gt;WCW     Web Caching Workshop     B&lt;/p&gt;
+
+&lt;p&gt;WDAG     Workshop on Distributed Algorithms (DISC since 1998)     B&lt;/p&gt;
+
+&lt;p&gt;WG     Workshop on Graph Theory     B&lt;/p&gt;
+
+&lt;p&gt;WI     IEEE/WIC/ACM International Conference on Web Intelligence     B&lt;/p&gt;
+
+&lt;p&gt;WiOpt     International. Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks     B&lt;/p&gt;
+
+&lt;p&gt;WoLLIC     Workshop on Logic, Language, Information and Computation     B&lt;/p&gt;
+
+&lt;p&gt;WORDS     International Workshop on Object-Oriented Real-Time Dependable Systems     B&lt;/p&gt;
+
+&lt;p&gt;WSC     Winter Simulation Conference     B&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;c-level-conference&quot;&gt;C level conference&lt;/h2&gt;
+
+&lt;p&gt;AdCom     International Conference on Advanced Computing and Communications     C&lt;/p&gt;
+
+&lt;p&gt;AEN     IASTED International Conferenceon AI, Exp Sys &amp;amp; Neural Networks     C&lt;/p&gt;
+
+&lt;p&gt;AI     IASTED International Conference on Applied Informatics     C&lt;/p&gt;
+
+&lt;p&gt;AIA     Artificial Intelligence and Applications Conference     C&lt;/p&gt;
+
+&lt;p&gt;AIL     International Conference on Artificial Intelligence and Law     C&lt;/p&gt;
+
+&lt;p&gt;AIS     Advances in Intelligent Systems     C&lt;/p&gt;
+
+&lt;p&gt;AIS SIGED:IAIM     International Academy for Information Management) International Conference on Informatics Education &amp;amp; Research     C&lt;/p&gt;
+
+&lt;p&gt;AISAT     International Conference on Artificial Intelligence in Science and Technology     C&lt;/p&gt;
+
+&lt;p&gt;AMAST     Algebraic Methodology and Software Technology     C&lt;/p&gt;
+
+&lt;p&gt;ANNES     Conference on Artificial Neural Networks and Expert systems     C&lt;/p&gt;
+
+&lt;p&gt;APCOMin     Application of Computers and Operations Research in the Minerals Industries     C&lt;/p&gt;
+
+&lt;p&gt;APORS     Conference of the Association of Asian-Pacific Operational Research Societies     C&lt;/p&gt;
+
+&lt;p&gt;APPIA/GULP/PRODE     Joint Conference on Declarative Programming APPIA-GULP-PRODE     C&lt;/p&gt;
+
+&lt;p&gt;AQSDT     Symposium on Assessment of Quality S/W Dev Tools     C&lt;/p&gt;
+
+&lt;p&gt;ARTDB     Active and Real-Time Database Systems     C&lt;/p&gt;
+
+&lt;p&gt;ARVLSI     Advanced Research in VLSI     C&lt;/p&gt;
+
+&lt;p&gt;ASC     IASTED International Conference on Artificial Intelligence and Soft Computing     C&lt;/p&gt;
+
+&lt;p&gt;ASM     IASTED International Conference on Applied Simulation and Modelling     C&lt;/p&gt;
+
+&lt;p&gt;BC     IFIP International Conference on Broadband Communications     C&lt;/p&gt;
+
+&lt;p&gt;BECC     Bled Electronic Commerce Conference     C&lt;/p&gt;
+
+&lt;p&gt;BIBE     IEEE Bioinformatics and Bioengineering     C&lt;/p&gt;
+
+&lt;p&gt;CAADRIA     Conference on Computer Aided Architectural Design Research in Asia     C&lt;/p&gt;
+
+&lt;p&gt;CAINE     ISCA International Conference on Computer Applications in Industry and Engineering     C&lt;/p&gt;
+
+&lt;p&gt;CATA     International Conference on Computers and their Applications     C&lt;/p&gt;
+
+&lt;p&gt;CATE     IASTED International Conference on Computers and Advanced Technology in Education     C&lt;/p&gt;
+
+&lt;p&gt;CCRTS     International Command and Control Research and Technology Symposium     C&lt;/p&gt;
+
+&lt;p&gt;CCTAF     Intelligent Multimedia, Computing and Communications Technologies and Applications of the Future     C&lt;/p&gt;
+
+&lt;p&gt;CDB     Constraint Databases and Applications     C&lt;/p&gt;
+
+&lt;p&gt;CHPC     International Conference on High Performance Computing     C&lt;/p&gt;
+
+&lt;p&gt;CIBCB     IEEE Symposium on Computational Intelligence in Bioinformatics and Computational Biology     C&lt;/p&gt;
+
+&lt;p&gt;CIEAEM     Conference of the Commission Internationale pour l’Etude et l’Amelioration de l’Enseignement des Mathematiques     C&lt;/p&gt;
+
+&lt;p&gt;CIMCA     International Conference on Computational Intelligence for Modelling, Control and Automation     C&lt;/p&gt;
+
+&lt;p&gt;CIRSYS     International Symposium on Circuits and Systems     C&lt;/p&gt;
+
+&lt;p&gt;CISST     International Conference Image Science, Systems and Technology     C&lt;/p&gt;
+
+&lt;p&gt;CODAS     International Symposium on Cooperative Database Systems for Advanced Applications     C&lt;/p&gt;
+
+&lt;p&gt;CollECTeR     Collaborative Electronic Commerce Technology and Research     C&lt;/p&gt;
+
+&lt;p&gt;COMPDES     International Symposium on Computer Design     C&lt;/p&gt;
+
+&lt;p&gt;COMSWARE     te-Net/ICST International Conference on COMmunication System softWAre and MiddlewaRE     C&lt;/p&gt;
+
+&lt;p&gt;CPD     Constraint Programming Day     C&lt;/p&gt;
+
+&lt;p&gt;CryPAC     Cryptography Policy and Algorithms Conference     C&lt;/p&gt;
+
+&lt;p&gt;CSEE     Conference on Software Engineering Education     C&lt;/p&gt;
+
+&lt;p&gt;CSICC     International CSI Computer Conference     C&lt;/p&gt;
+
+&lt;p&gt;CTAC     Computational Techniques and Applications Conference     C&lt;/p&gt;
+
+&lt;p&gt;CxS     International Conference on Complex Systems     C&lt;/p&gt;
+
+&lt;p&gt;DASD     Symposium on Design, Analysis, and Simulation of Distributed Systems     C&lt;/p&gt;
+
+&lt;p&gt;DASWIS     Data Semantics in Web Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;DBPL     Databases and Programming Language     C&lt;/p&gt;
+
+&lt;p&gt;Dcw     Distributed Communities on the Web Workshop     C&lt;/p&gt;
+
+&lt;p&gt;DICTA/IVCNZ     Joint DICTA &amp;amp; IVCNZ     C&lt;/p&gt;
+
+&lt;p&gt;DMDW     Design and Management of Data Warehouses     C&lt;/p&gt;
+
+&lt;p&gt;DMKD     Workshop on Research Issues in Data Mining and Knowledge Discovery     C&lt;/p&gt;
+
+&lt;p&gt;DOLAP     International Workshop on Data Warehousing and OLAP     C&lt;/p&gt;
+
+&lt;p&gt;DSAA     International Conference on Database Systems for Advanced Applications     C&lt;/p&gt;
+
+&lt;p&gt;DSI     Annual Meeting of the Decision Sciences Institute     C&lt;/p&gt;
+
+&lt;p&gt;DSLSE     Domain - Specific Languages for Software Engineering     C&lt;/p&gt;
+
+&lt;p&gt;DSTKM     International Conference on Decision Support Through Knowledge Management     C&lt;/p&gt;
+
+&lt;p&gt;DTVE     Workshop on Database Technology for Virtual Enterprises     C&lt;/p&gt;
+
+&lt;p&gt;DVAT     Information Systems &amp;amp;Technologies /SPIE Conference on Digital Video Compression Algorithms &amp;amp; Techniques     C&lt;/p&gt;
+
+&lt;p&gt;EFIS/EFDBS     Engineering Federated Information (Database) Systems     C&lt;/p&gt;
+
+&lt;p&gt;EFTF/IFCS     Joint Meeting of the European Frequency and Time Forum and the Institute of Electrical and Electronics Engineers In     C&lt;/p&gt;
+
+&lt;p&gt;EICAR     European Institute for Computer Anti-Virus ResearchEICAR Conference     C&lt;/p&gt;
+
+&lt;p&gt;EKM     European Conference on Knowledge Management     C&lt;/p&gt;
+
+&lt;p&gt;EMBC     The Annual International Conference of the IEEE Engineering in Medicine and Biology Society     C&lt;/p&gt;
+
+&lt;p&gt;EMCIS     European Mediterranean Info Systems     C&lt;/p&gt;
+
+&lt;p&gt;EP     Annual Conference on Evolutionary Programming     C&lt;/p&gt;
+
+&lt;p&gt;ESCAPE     Symposium On Combinatorics, Algorithms, Probabilistic and Experimental Methodologies     C&lt;/p&gt;
+
+&lt;p&gt;ETHICOMP     International Conference on the Social and Ethical Impacts of Information and Communication Technologies     C&lt;/p&gt;
+
+&lt;p&gt;EUFIT     European Congress on Intelligent Techniques and Soft Computing     C&lt;/p&gt;
+
+&lt;p&gt;EuroBot     European Workshop on Advanced Mobile Robots     C&lt;/p&gt;
+
+&lt;p&gt;EWCG     European Workshop on Computational Geometry     C&lt;/p&gt;
+
+&lt;p&gt;FATES     A Satellite workshop on Formal Approaches to Testing of Software     C&lt;/p&gt;
+
+&lt;p&gt;FIRA     FIRA Robot World Congress     C&lt;/p&gt;
+
+&lt;p&gt;FMICS     Int. Workshop on Formal Methods for Industrial Critical Systems     C&lt;/p&gt;
+
+&lt;p&gt;FMOOD     International Conference on Formal Methods for Open Object-Based Distributed Systems     C&lt;/p&gt;
+
+&lt;p&gt;FMP     Formal Methods Pacific     C&lt;/p&gt;
+
+&lt;p&gt;FMSEDS     Formal Methods in Software Engineering and Defence Systems Workshop     C&lt;/p&gt;
+
+&lt;p&gt;FOOL     International Workshop on Foundations of Object-Oriented Languages     C&lt;/p&gt;
+
+&lt;p&gt;FQAS     Flexible Query-Answering Systems     C&lt;/p&gt;
+
+&lt;p&gt;FTJP     Workshop on Formal Techniques for Java Programs     C&lt;/p&gt;
+
+&lt;p&gt;FUSION     International Conference on Information Fusion     C&lt;/p&gt;
+
+&lt;p&gt;GeoComp     International Conference on GeoComputation     C&lt;/p&gt;
+
+&lt;p&gt;GOR     Conference on Operations Research     C&lt;/p&gt;
+
+&lt;p&gt;HASKELL     Haskell Workshop     C&lt;/p&gt;
+
+&lt;p&gt;HCI     International Conference on Human-Computer Interaction     C&lt;/p&gt;
+
+&lt;p&gt;HealthCom     International Workshop on Enterprise Networking and Computing in Health Care Industry     C&lt;/p&gt;
+
+&lt;p&gt;HIC     Health Informatics Conference     C&lt;/p&gt;
+
+&lt;p&gt;HLPP     International workshop on High-level parallel programming and applications     C&lt;/p&gt;
+
+&lt;p&gt;HPC     International Conference and Exhibition on High Performance Computing in the Asia-Pacific Region     C&lt;/p&gt;
+
+&lt;p&gt;IADIS AC     IADIS International Conference Applied Computing     C&lt;/p&gt;
+
+&lt;p&gt;IAIF     International Workshop on Image Analysis and Information Fusion     C&lt;/p&gt;
+
+&lt;p&gt;IAIM     Annual Conference of the International Academy for Information Management     C&lt;/p&gt;
+
+&lt;p&gt;IAS     IEEE Industry Applications Society Annual Conference     C&lt;/p&gt;
+
+&lt;p&gt;IAT    ACM International Conference on Intelligent Agent Technology     C&lt;/p&gt;
+
+&lt;p&gt;IAWTIC     International Conference on Intelligent Agents, Web Technologies, and Internet Commerce     C&lt;/p&gt;
+
+&lt;p&gt;IBIMA     International Business Information Management     C&lt;/p&gt;
+
+&lt;p&gt;IC     International Conference on Internet Computing     C&lt;/p&gt;
+
+&lt;p&gt;ICA     IFAC Conference on Automation     C&lt;/p&gt;
+
+&lt;p&gt;IC-AI     International Conference on Artificial Intelligence     C&lt;/p&gt;
+
+&lt;p&gt;ICANNGA     International Conference on Artificial Neural Networks and Genetic Algorithms     C&lt;/p&gt;
+
+&lt;p&gt;ICAPRDT     International Conference on Advances in Pattern Recognition and Digital Techniques     C&lt;/p&gt;
+
+&lt;p&gt;ICCIMA     International Conference on Computational Intelligence and Multimedia Applications     C&lt;/p&gt;
+
+&lt;p&gt;ICCIT     International Conference on Computer and Information Technology     C&lt;/p&gt;
+
+&lt;p&gt;ICCSA     International Conference on Communication Systems and Applications     C&lt;/p&gt;
+
+&lt;p&gt;ICEB     International Conference on e-Business     C&lt;/p&gt;
+
+&lt;p&gt;ICEC     IEEE International Conference on Evolutionary Computation     C&lt;/p&gt;
+
+&lt;p&gt;ICEComm     International Conference on Electronic Commerce     C&lt;/p&gt;
+
+&lt;p&gt;ICEE     International Conference on Engineering Education     C&lt;/p&gt;
+
+&lt;p&gt;ICIL     International Conference on Intelligent Systems     C&lt;/p&gt;
+
+&lt;p&gt;ICITA     International Conference on Information Technology and Applications     C&lt;/p&gt;
+
+&lt;p&gt;ICMSO     International Conference on Modelling, Simulation and Optimisation     C&lt;/p&gt;
+
+&lt;p&gt;ICOTA     International Conference on Optimization: Techniques And Applications     C&lt;/p&gt;
+
+&lt;p&gt;ICSRIC     International Conference on Systems Research, Informatics and Cybernetics     C&lt;/p&gt;
+
+&lt;p&gt;ICSSEA     International Conference “Software and Systems Engineering and their Applications”     C&lt;/p&gt;
+
+&lt;p&gt;ICTT     International Conference on Information and Communication Technologies in Tourism     C&lt;/p&gt;
+
+&lt;p&gt;ICVS     International Conference on Virtual Storytelling     C&lt;/p&gt;
+
+&lt;p&gt;IDC     IEEE Conference on Information, Decision and Control     C&lt;/p&gt;
+
+&lt;p&gt;IDEAL     International Conference on Intelligent Data Engineering and Automated Learning     C&lt;/p&gt;
+
+&lt;p&gt;IDFC     IDF Congress     C&lt;/p&gt;
+
+&lt;p&gt;iEMSs     Intenational Environmental Modelling and Software Society     C&lt;/p&gt;
+
+&lt;p&gt;IFAC     International Federation of Automatic Control World Congress     C&lt;/p&gt;
+
+&lt;p&gt;IGARSS     IEEE International Geoscience and Remote Sensing Symposium     C&lt;/p&gt;
+
+&lt;p&gt;IICISA     International ICSC Congress on Intelligent Systems and Applications     C&lt;/p&gt;
+
+&lt;p&gt;IICS     Innovative Internet Computer Systems     C&lt;/p&gt;
+
+&lt;p&gt;IIWAS     Information Integration and Web-based Applications and Services     C&lt;/p&gt;
+
+&lt;p&gt;IMSA     IASTED International Conference on Internet, Multimedia Systems and Applications     C&lt;/p&gt;
+
+&lt;p&gt;INAP     International Conference on Applications of Prolog     C&lt;/p&gt;
+
+&lt;p&gt;Interspeech     Interspeech     C&lt;/p&gt;
+
+&lt;p&gt;IPMU     International Conference on Information Processing and Management of Uncertainty     C&lt;/p&gt;
+
+&lt;p&gt;IPS     IEEE International Conference on Intelligent Processing Systems     C&lt;/p&gt;
+
+&lt;p&gt;IPythC     International Python Conference     C&lt;/p&gt;
+
+&lt;p&gt;IRITA     International Information Technology in Regional Areas Conference     C&lt;/p&gt;
+
+&lt;p&gt;ISAS-SCI     World Multiconference on Systemics, Cybernetics and Informatics     C&lt;/p&gt;
+
+&lt;p&gt;ISAVIIA     International Symposium on Audio, Video, Image Processing and Intelligent Applications     C&lt;/p&gt;
+
+&lt;p&gt;ISC     IASTED International Conference on Intelligent Systems and Control     C&lt;/p&gt;
+
+&lt;p&gt;ISDSS     Conference of the International Society for Decision Support Systems     C&lt;/p&gt;
+
+&lt;p&gt;ISECON     Information Systems Education Conference     C&lt;/p&gt;
+
+&lt;p&gt;ISFST     International Symposium on Future Software Technology     C&lt;/p&gt;
+
+&lt;p&gt;ISIMP     International Symposium on Intelligent Multimedia, Video and Speech Processing     C&lt;/p&gt;
+
+&lt;p&gt;ISITA     IEEE International Symposium on Information Theory and Its Applications     C&lt;/p&gt;
+
+&lt;p&gt;ISORC     IEEE International Symposium on Object-Oriented Real-Time Distributed Computing     C&lt;/p&gt;
+
+&lt;p&gt;I-SPAN     International Symposium on Parallel Architectures, Algorithms and Networks     C&lt;/p&gt;
+
+&lt;p&gt;ISSA     International Symposium on Static Analysis     C&lt;/p&gt;
+
+&lt;p&gt;ISSDI     International Symposium on Spatial Data Infrastructures     C&lt;/p&gt;
+
+&lt;p&gt;ISSDQ     International Symposium on Spatial Data Quality     C&lt;/p&gt;
+
+&lt;p&gt;ISSS     International Symposium on System Synthesis     C&lt;/p&gt;
+
+&lt;p&gt;ISW     Information Security Workshop     C&lt;/p&gt;
+
+&lt;p&gt;ITHET     International Conference on IT Based Higher Education and Training     C&lt;/p&gt;
+
+&lt;p&gt;ITiRA     Information Technology in Regional Areas Conference     C&lt;/p&gt;
+
+&lt;p&gt;ITIS     Symposium on Information Technology and Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;ITW     IEEE Information Theory Workshop on Detection, Estimation, Classification and Imaging     C&lt;/p&gt;
+
+&lt;p&gt;IWC     International Web conference     C&lt;/p&gt;
+
+&lt;p&gt;IWCC     IEEE International Workshop on Cluster Computing and the Grid     C&lt;/p&gt;
+
+&lt;p&gt;IWDOM     International Workshop on Distributed Object Management     C&lt;/p&gt;
+
+&lt;p&gt;IW-MMDBMS     Int. Workshop on Multi-Media Data Base Management Systems     C&lt;/p&gt;
+
+&lt;p&gt;JCIS     Joint Conference on Information Sciences     C&lt;/p&gt;
+
+&lt;p&gt;JECGI     Joint European Conference and Exhibition on Geographical Information     C&lt;/p&gt;
+
+&lt;p&gt;JFPLC     International French Speaking Conference on Logic and Constraint Programming     C&lt;/p&gt;
+
+&lt;p&gt;JHPC     Workshop On Java For High-Performance Computing     C&lt;/p&gt;
+
+&lt;p&gt;JURIX     International Conference on Legal Knowledge-based Systems     C&lt;/p&gt;
+
+&lt;p&gt;KAW     Knowledge Acquisition, Modeling and Management Workshop     C&lt;/p&gt;
+
+&lt;p&gt;KDDMBD     Knowledge Discovery and Data Mining in Biological Databases Meeting     C&lt;/p&gt;
+
+&lt;p&gt;KDEEW     IEEE Knowledge and Data Engineering Exchange Workshop     C&lt;/p&gt;
+
+&lt;p&gt;KDEX     Knowledge and Data Engineering Exchange Workshop     C&lt;/p&gt;
+
+&lt;p&gt;KRDB     Knowledge Representation Meets Databases     C&lt;/p&gt;
+
+&lt;p&gt;L&amp;amp;L     Workshop on Logic and Learning     C&lt;/p&gt;
+
+&lt;p&gt;LANMAN     IEEE LAN/MAN Workshop     C&lt;/p&gt;
+
+&lt;p&gt;LARC     NASA LaRC Formal Methods Workshop     C&lt;/p&gt;
+
+&lt;p&gt;LawTech     IASTED International conference Law and Technology     C&lt;/p&gt;
+
+&lt;p&gt;LCCS     International Workshop on Logic and Complexity in Computer Science     C&lt;/p&gt;
+
+&lt;p&gt;LI     Law via the Internet     C&lt;/p&gt;
+
+&lt;p&gt;LOCALGOS     Workshop on Localized Alg. and Protocols for Wireless     C&lt;/p&gt;
+
+&lt;p&gt;LREC     Language Resources and Evaluatin Conference     C&lt;/p&gt;
+
+&lt;p&gt;MDDS     Mobility in Databases and Distributed Systems     C&lt;/p&gt;
+
+&lt;p&gt;MDSRIA     International Workshop on Multimedia Data Storage, Retrieval, Integration and Applications     C&lt;/p&gt;
+
+&lt;p&gt;METRICS     (several conferences of these name - can’t rank)     C&lt;/p&gt;
+
+&lt;p&gt;MEWS     Mining for Enhanced Web Search     C&lt;/p&gt;
+
+&lt;p&gt;MIC     IASTED International Conference on Modelling, Identification, and Control     C&lt;/p&gt;
+
+&lt;p&gt;MME     IEEE International Conference on Multimedia in Education     C&lt;/p&gt;
+
+&lt;p&gt;MobiDE     Workshop on Data Engineering for Wireless and Mobile Access     C&lt;/p&gt;
+
+&lt;p&gt;MODSIM     International Congress on Modelling and Simulation     C&lt;/p&gt;
+
+&lt;p&gt;MODSS     Multiple Objective Decision Support System Conference     C&lt;/p&gt;
+
+&lt;p&gt;MPOOL     Workshop on Multiparadigm Programming with OO Languages     C&lt;/p&gt;
+
+&lt;p&gt;MS     IASTED International Conference on Modelling and Simulation     C&lt;/p&gt;
+
+&lt;p&gt;MSO     IASTED International Conference on Modelling, Simulation and Optimization     C&lt;/p&gt;
+
+&lt;p&gt;MTNS     International Symposium on the Mathematical Theory of Networks and Systems     C&lt;/p&gt;
+
+&lt;p&gt;MVSP     Intelligent Multimedia, Video and Speech Processing Symposium     C&lt;/p&gt;
+
+&lt;p&gt;NAFIPS     North American Fuzzy Information Processing Society Conference     C&lt;/p&gt;
+
+&lt;p&gt;NAISO     NAISO Congress on Autonomous Intelligent System     C&lt;/p&gt;
+
+&lt;p&gt;NCA     ?     C&lt;/p&gt;
+
+&lt;p&gt;NCCIS     National Conference on Computer and Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;NDB     National Database Conference (China)     C&lt;/p&gt;
+
+&lt;p&gt;NeMLaP     Joint Conference on New Methods in Language Processing and Computational Natural Language Learning     C&lt;/p&gt;
+
+&lt;p&gt;NFM     The Northern Formal Methods Workshops     C&lt;/p&gt;
+
+&lt;p&gt;NHIC     National Health Informatics Conference     C&lt;/p&gt;
+
+&lt;p&gt;NLDB     Applications of Natural Language to Data Bases     C&lt;/p&gt;
+
+&lt;p&gt;NNSP     IEEE International Workshop on Neural Networks for Signal Processing     C&lt;/p&gt;
+
+&lt;p&gt;NPDP     Annual IASTED International Conference on Networks, Parallel and Distributed Processing and Applications     C&lt;/p&gt;
+
+&lt;p&gt;NPSC     International Conference on Neural, Parallel and Scientific Computations     C&lt;/p&gt;
+
+&lt;p&gt;NRDM     Workshop on Network-Related Data Management     C&lt;/p&gt;
+
+&lt;p&gt;OASIS     Organisations and Society in Information Systems Workshop     C&lt;/p&gt;
+
+&lt;p&gt;OESS/IOCC/ACOFT     Joint OECC, IOCC &amp;amp; ACOFT     C&lt;/p&gt;
+
+&lt;p&gt;OODBS     Workshop on Object-Oriented Database Systems     C&lt;/p&gt;
+
+&lt;p&gt;OOIS     International Conference on Object Oriented Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;ORPA     Conference on Operational Research Practice in Africa     C&lt;/p&gt;
+
+&lt;p&gt;OTA     Optimization: Techniques And Applications     C&lt;/p&gt;
+
+&lt;p&gt;P&amp;amp;I     PACES &amp;amp; ICIL     C&lt;/p&gt;
+
+&lt;p&gt;PAAM     Practical Application of Intelligent Agents and Multi-Agent Technology Conference     C&lt;/p&gt;
+
+&lt;p&gt;PADO     Symposium on Programs as Data Objects     C&lt;/p&gt;
+
+&lt;p&gt;PAP/PACT     Practical Aspects of PROLOG/Constraint Technology     C&lt;/p&gt;
+
+&lt;p&gt;PARCO     Parallel Computing     C&lt;/p&gt;
+
+&lt;p&gt;PAWEC     Pacific-Asia Workshop on Electronic Commerce     C&lt;/p&gt;
+
+&lt;p&gt;PCNS     SPIE - Conference on Performance and Control of Network Systems     C&lt;/p&gt;
+
+&lt;p&gt;PCS     International Picture Coding Symposium     C&lt;/p&gt;
+
+&lt;p&gt;PCW     International Parallel Computing Workshop     C&lt;/p&gt;
+
+&lt;p&gt;PDCN     IASTED International Conference on Parallel and Distributed Computing and Networks     C&lt;/p&gt;
+
+&lt;p&gt;PDCS     IASTED International Conference on Parallel and Distributed Computing and Systems     C&lt;/p&gt;
+
+&lt;p&gt;PDIS     Parallel and Distributed Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;PDP     International Parallel and Distributed Processing Symposium     C&lt;/p&gt;
+
+&lt;p&gt;PDPTA     International Conference on Parallel and Distributed Processing Techniques and Applications     C&lt;/p&gt;
+
+&lt;p&gt;PEC&amp;amp;CON     Joint AUPEC &amp;amp; EECON     C&lt;/p&gt;
+
+&lt;p&gt;PHYSDES     International Symposium on Physical Design     C&lt;/p&gt;
+
+&lt;p&gt;PMIP     IEEE Pacific-Rim Conference on Multimedia     C&lt;/p&gt;
+
+&lt;p&gt;PPCIS     Pan Pacific Conference on Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;PSB     Pacific Symposium on Biocomputing     C&lt;/p&gt;
+
+&lt;p&gt;PSOR     International Conference on Probability, Statistics and Operational Research     C&lt;/p&gt;
+
+&lt;p&gt;PTPC     International Workshop on Practice and Theory in Public-Key Cryptography     C&lt;/p&gt;
+
+&lt;p&gt;QuantCom     International Conference on Experimental Implementation of Quantum Computation     C&lt;/p&gt;
+
+&lt;p&gt;RFF     International Conference on CAD/CAM, Robotics &amp;amp; Factories of the Future     C&lt;/p&gt;
+
+&lt;p&gt;RM     IASTED International Conference on Robotics and Manufacturing     C&lt;/p&gt;
+
+&lt;p&gt;ROVPIA     International Conference on Robotics     C&lt;/p&gt;
+
+&lt;p&gt;RS     Annual Convention for Survey, Mapping and Remote Sensing     C&lt;/p&gt;
+
+&lt;p&gt;RTDB     Workshop on Real-Time Databases     C&lt;/p&gt;
+
+&lt;p&gt;SARC     International Symposium on Automation and Robotics in Construction     C&lt;/p&gt;
+
+&lt;p&gt;SCW     IEEE Workshop on Speech Coding     C&lt;/p&gt;
+
+&lt;p&gt;SE     IASTED International Conference on Software Engineering     C&lt;/p&gt;
+
+&lt;p&gt;SEA     IASTED International Conference on Software Engineering and Applications     C&lt;/p&gt;
+
+&lt;p&gt;SECRYPT     International Conference on Information Security and Cryptology     C&lt;/p&gt;
+
+&lt;p&gt;SEET     Software Engineering Education and Training Conference     C&lt;/p&gt;
+
+&lt;p&gt;SELCRYP     Annual Workshop on Selected Areas in Cryptography     C&lt;/p&gt;
+
+&lt;p&gt;Sensor Networks     Sensor Networks     C&lt;/p&gt;
+
+&lt;p&gt;SFP     Scottish Functional Programming Workshop     C&lt;/p&gt;
+
+&lt;p&gt;SimTecT     Simulation Technology and Training Conference     C&lt;/p&gt;
+
+&lt;p&gt;SInT     IEEE International Symposium on Information Theory     C&lt;/p&gt;
+
+&lt;p&gt;SIP     IASTED International Conference on Signal and Image Processing     C&lt;/p&gt;
+
+&lt;p&gt;SIRC     Spatial Information Research Centre Colloquium     C&lt;/p&gt;
+
+&lt;p&gt;SIST     Spatial Information Science and Technology Conference     C&lt;/p&gt;
+
+&lt;p&gt;SITE     Society for Information Technology and Teacher Education Conference     C&lt;/p&gt;
+
+&lt;p&gt;SPDS    ACM Symposium on Principles of Database Systems     C&lt;/p&gt;
+
+&lt;p&gt;SQC     Software Quality Conference     C&lt;/p&gt;
+
+&lt;p&gt;SQM     International Conference on Software Quality Management     C&lt;/p&gt;
+
+&lt;p&gt;SREIS     Symposium on Requirements Engineering for Information Security     C&lt;/p&gt;
+
+&lt;p&gt;SRIG-ET     Software Education Conference     C&lt;/p&gt;
+
+&lt;p&gt;SSC     IFAC Conference on System Structure and Control     C&lt;/p&gt;
+
+&lt;p&gt;SSGRR     International Conference on Advances in Infrastructure for Electronic Business, Science, and Education on the Internet     C&lt;/p&gt;
+
+&lt;p&gt;SSS     Symposium on Stabilization, Safety, and Security of Distributed Systems     C&lt;/p&gt;
+
+&lt;p&gt;STM     International Conference on Systems Thinking in Management     C&lt;/p&gt;
+
+&lt;p&gt;SYSSYN     International Symposium on System Synthesis     C&lt;/p&gt;
+
+&lt;p&gt;TAKMA     Theory and Applications of Knowledge MAnagement     C&lt;/p&gt;
+
+&lt;p&gt;TE     International Conference on Technology Education     C&lt;/p&gt;
+
+&lt;p&gt;TENCON     IEEE Region Ten Conference     C&lt;/p&gt;
+
+&lt;p&gt;TIDSE     Technology for Interactive Digital Storytelling     C&lt;/p&gt;
+
+&lt;p&gt;VDbS     IFIP Working Conference on Visual Database Systems     C&lt;/p&gt;
+
+&lt;p&gt;VDEA     SPIE Conference on Visual Data Exploration and Analysis     C&lt;/p&gt;
+
+&lt;p&gt;VIIP     IASTED International Conference on Visualization, Imaging, and Image Processing     C&lt;/p&gt;
+
+&lt;p&gt;VIP     Pan-Sydney Area Workshop on Visual Information Processing     C&lt;/p&gt;
+
+&lt;p&gt;VISUAL     International Conference on Visual Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;VLFM     Visual Languages and Formal Methods     C&lt;/p&gt;
+
+&lt;p&gt;VLSID     International Conference on VLSI Design     C&lt;/p&gt;
+
+&lt;p&gt;VSMM     International Conference on Virtual Systems and MultiMedia     C&lt;/p&gt;
+
+&lt;p&gt;W2GIS     International Workshop on Web and Wireless Geographical Information Systems     C&lt;/p&gt;
+
+&lt;p&gt;WAIM     Interational Conference on Web Age Information Management     C&lt;/p&gt;
+
+&lt;p&gt;WALCOM     Workshop on Algorithms and Computation     C&lt;/p&gt;
+
+&lt;p&gt;WAW     Workshop on Algorithms and Models for the Web-Graph     C&lt;/p&gt;
+
+&lt;p&gt;WCC     World Computer Congress     C&lt;/p&gt;
+
+&lt;p&gt;WCCE     World Conference on Computers in Education     C&lt;/p&gt;
+
+&lt;p&gt;WDSI     Western Decision Sciences Institute Conference     C&lt;/p&gt;
+
+&lt;p&gt;WebDB     International Workshop on the Web and Databases     C&lt;/p&gt;
+
+&lt;p&gt;WEBIST     International conference on Web Information Systems and Technologies     C&lt;/p&gt;
+
+&lt;p&gt;WebNet     World Conference on the WWW and Internet     C&lt;/p&gt;
+
+&lt;p&gt;WEC     International Workshop on Entertainment Computing     C&lt;/p&gt;
+
+&lt;p&gt;WFLP     International Workshop on Functional and (Constraint) Logic Programming     C&lt;/p&gt;
+
+&lt;p&gt;WHIS     Workshop on Hybrid Intelligent Systems     C&lt;/p&gt;
+
+&lt;p&gt;WICS     International Computer Symposium Workshop     C&lt;/p&gt;
+
+&lt;p&gt;WIDM    ACM Workshop on Web Information and Data Mangement     C&lt;/p&gt;
+
+&lt;p&gt;WMSCI     World Multiconfs on Systems, Cybernetics &amp;amp; Informatics     C&lt;/p&gt;
+
+&lt;p&gt;WoPP     IEEE International Conference on Parallel Processing Workshops     C&lt;/p&gt;
+
+&lt;p&gt;WORLDCOMP     World Congress in Computer Science, Computer Engineering, and Applied Computing     C&lt;/p&gt;
+
+&lt;p&gt;WTASA     Workshop on Theoretical and Algorithmic Aspects of Sensor and Ad-hoc Networks     C&lt;/p&gt;
+
+&lt;p&gt;WWCA     International Conference on Worldwide Computing and Its Applications     C&lt;/p&gt;
+
+&lt;p&gt;ZB     International Conference of Z and B Users     C&lt;/p&gt;
+
+&lt;p&gt;ZUM     International Conference of Z Users     C&lt;/p&gt;
+
+&lt;p&gt;ZUSER     International Conference of Z Users     C&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  Informatics in Education (journal, congress, symposium, etc all under this name - can&apos;t rank)     C
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;l-level-conference-list&quot;&gt;L level conference list&lt;/h2&gt;
+&lt;p&gt;ACAC     Australasian Computer Architecture Conference     L&lt;/p&gt;
+
+&lt;p&gt;ACCMCC     Australasian Conference on Combinatorial Mathematics and Combinatorial Computing     L&lt;/p&gt;
+
+&lt;p&gt;ACEC     Australasian Computers in Education Conference     L&lt;/p&gt;
+
+&lt;p&gt;ACID     Algorithms and Complexity in Durham     L&lt;/p&gt;
+
+&lt;p&gt;ACKMIDS     Australian Conference for Knowledge Management and Intelligent Decision Support     L&lt;/p&gt;
+
+&lt;p&gt;ACMA     Australasian Computer Music Conference     L&lt;/p&gt;
+
+&lt;p&gt;ACNN     Australian Conference on Neural Networks     L&lt;/p&gt;
+
+&lt;p&gt;ACSSC     Asilomar Conference on Signals, Systems and Computing     L&lt;/p&gt;
+
+&lt;p&gt;AFETE     Asia-Pacific Forum on Engineering and Technology Education     L&lt;/p&gt;
+
+&lt;p&gt;AICE     Australian Institute of Computer Ethics Conference     L&lt;/p&gt;
+
+&lt;p&gt;AICEC     AICEC Conference     L&lt;/p&gt;
+
+&lt;p&gt;AJWIES     Australia-Japan Joint Workshop on Intelligent and Evolutionary Systems     L&lt;/p&gt;
+
+&lt;p&gt;AKAW     Australian Knowledge Acquisition Workshop     L&lt;/p&gt;
+
+&lt;p&gt;ANZMODS     The Modelling and Simulation Society of Australia and New Zealand Meeting     L&lt;/p&gt;
+
+&lt;p&gt;APCHDL     Asia Pacific Conference on Hardware Description Languages     L&lt;/p&gt;
+
+&lt;p&gt;APDSI     Asia Pacific Decision Science Institute Conference     L&lt;/p&gt;
+
+&lt;p&gt;APRTS     Australasian Conference on Parallel and Real-Time Systems     L&lt;/p&gt;
+
+&lt;p&gt;APSEC/ICSC     Asia-Pacific Software Engineering Conference and International Computer Science Conference     L&lt;/p&gt;
+
+&lt;p&gt;ARSC     Australasian Remote Sensing Conference     L&lt;/p&gt;
+
+&lt;p&gt;ASCILITE     Annual Conference of the Australasian Society for Computers in Learning in Tertiary Education     L&lt;/p&gt;
+
+&lt;p&gt;ASDAC     Asia Pacific Design Automation Conference     L&lt;/p&gt;
+
+&lt;p&gt;ASIV     Australian Symposium on Information Visualisation     L&lt;/p&gt;
+
+&lt;p&gt;ASOR     National Conference of The Australian Society for Operations Research     L&lt;/p&gt;
+
+&lt;p&gt;ATNAC     Australian Telecommunication Networks and Applications Conference     L&lt;/p&gt;
+
+&lt;p&gt;AUCADC     Apple University Consortium Academic &amp;amp; Developers Conference     L&lt;/p&gt;
+
+&lt;p&gt;AuCSS     Australasian Cognitive Science Society Conference     L&lt;/p&gt;
+
+&lt;p&gt;AURISA     Australasian Urban and Regional Information Systems Association Conference     L&lt;/p&gt;
+
+&lt;p&gt;AuRW     Australasian Refinement Workshop     L&lt;/p&gt;
+
+&lt;p&gt;AusWeb     Australian World Wide Web Conference     L&lt;/p&gt;
+
+&lt;p&gt;AUUG     Australian UNIX Users Group National Conference     L&lt;/p&gt;
+
+&lt;p&gt;AUUG/APWEB     Joint Australian Unix Users’ Group and Asia Pacific World Wide Web Conference     L&lt;/p&gt;
+
+&lt;p&gt;AWOCA     Australasian Workshop on Combinatorial Algorithms     L&lt;/p&gt;
+
+&lt;p&gt;AWSA     Australian Workshop on Software Architecture     L&lt;/p&gt;
+
+&lt;p&gt;BCS-FMW     British Computer Society Formal Aspects of Computing Science Specialist Group Workshop     L&lt;/p&gt;
+
+&lt;p&gt;CanaDAM     Canadian Discrete and Algorithmic Mathematics Conference     L&lt;/p&gt;
+
+&lt;p&gt;CEG     Computing in Education Group of Victoria Conference     L&lt;/p&gt;
+
+&lt;p&gt;COMPUMOD     Australasian Compumod Users’ Conference     L&lt;/p&gt;
+
+&lt;p&gt;CSR     Computer Science Symposium in Russia     L&lt;/p&gt;
+
+&lt;p&gt;DITAM     Doing IT at Melbourne     L&lt;/p&gt;
+
+&lt;p&gt;DIVC     Joint Australia and New Zealand Biennial Conference on Digital Image and Vision Computing     L&lt;/p&gt;
+
+&lt;p&gt;FlAIRS     Florida Artificial Intelligence Research Society Conference     L&lt;/p&gt;
+
+&lt;p&gt;GCCCE     Global Chinese Conference on Computers in Education     L&lt;/p&gt;
+
+&lt;p&gt;ICCC     International Conference on Chinese Computing     L&lt;/p&gt;
+
+&lt;p&gt;ICTCS     Italian Conference on Theoretical Computer Science     L&lt;/p&gt;
+
+&lt;p&gt;IDC(W)     International Database Conference (HK CS)     L&lt;/p&gt;
+
+&lt;p&gt;IDEAW     Integrated Data Environments Australia Workshop     L&lt;/p&gt;
+
+&lt;p&gt;INDOCRYPT     International Conference on Cryptology in India     L&lt;/p&gt;
+
+&lt;p&gt;MADYMO     Australian MADYMO Users Meeting     L&lt;/p&gt;
+
+&lt;p&gt;MATLAB     Australian MATLAB Conference     L&lt;/p&gt;
+
+&lt;p&gt;MCDA     Australian Workshop on Mobile Computing, Databases and Applications     L&lt;/p&gt;
+
+&lt;p&gt;MCSpo     Australian Conference on Mathematics and Computers in Sport     L&lt;/p&gt;
+
+&lt;p&gt;MICC/ISPACS     Joint IEEE Malaysia International Conference on Communications and IEEE International Workshop on Intelligent Signal Processing and Communication Systems     L&lt;/p&gt;
+
+&lt;p&gt;NACCQ     National Advisory Committee on Computing Qualifications     L&lt;/p&gt;
+
+&lt;p&gt;NORDSEC     Nordic Workshop on Secure IT Systems     L&lt;/p&gt;
+
+&lt;p&gt;ODLA     Open and Distance Learning Association of Australia Bienniel Forum     L&lt;/p&gt;
+
+&lt;p&gt;PACCS     Post-Graduate ADFA Conference on Computer Science     L&lt;/p&gt;
+
+&lt;p&gt;SCSS     Australian Workshop on Safety Critical Systems and Software     L&lt;/p&gt;
+
+&lt;p&gt;UWACS     University of Western Australia Computer Science Research Conference     L&lt;/p&gt;
+
+&lt;p&gt;WarSec     Australian Information Warfare &amp;amp; Security Conference     L&lt;/p&gt;
+
+&lt;p&gt;WAWISR     Western Australian Workshop on Information Systems Research     L&lt;/p&gt;
+
+&lt;p&gt;WIC     Australasian Women in Computing Workshop     L&lt;/p&gt;
+</description>
+        <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+        <link>https://sprzwty.github.io/test/ConferenceRanking.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/test/ConferenceRanking.html</guid>
+        
+        <category>Conference</category>
+        
+        <category>ranking</category>
+        
+        
+        <category>test</category>
         
       </item>
     
@@ -547,172 +2959,6 @@
         
         
         <category>test</category>
-        
-      </item>
-    
-      <item>
-        <title>H2O theme for Jekyll</title>
-        <description>&lt;p&gt;正如我在&lt;a href=&quot;http://weibo.com/1374146504/profile?topnav=1&amp;amp;wvr=6&quot;&gt;微博&lt;/a&gt;上所说的，使用&lt;a href=&quot;http://jekyll.com.cn/&quot;&gt;Jekyll&lt;/a&gt;半年以来一直没有令我满意的主题模板，所以开始计划自己写一套好看又好用的主题模板。设计之初就明确了极简主义，风格采用扁平化了，通过卡片式设计来进行区块分明的布局，参考了Medium的ui样式和知乎专栏的视觉风格。&lt;/p&gt;
-
-&lt;h2 id=&quot;h2o&quot;&gt;H2O&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/kaeyleo/jekyll-theme-H2O&quot;&gt;源码及使用文档 →&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-realhome.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;新主题名叫”H2O”，基于Jekyll 3.0.x（使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem update jekyll&lt;/code&gt;升级Jekyll），Markdown的代码高亮不再支持pygments转而使用rouge，咱已经默认配置了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;highlighter: rouge&lt;/code&gt; 。用到的技术栈也很简单：引入jQuery类库，使用Sass编写样式，使用Gulp来编译Sass、合并压缩css、js，开源在&lt;a href=&quot;https://github.com/kaeyleo/jekyll-theme-H2O&quot;&gt;Github&lt;/a&gt;上，稍作配置即可用于你的Jekyll博客上。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-sketchdesign.png&quot; alt=&quot;Design with Sketch&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;使用Sketch完成H2O主题的原型设计&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-vs.jpg&quot; alt=&quot;My Jekyll themes&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;比之前漂亮不少吧，下面聊聊H2O的新特性。&lt;/p&gt;
-
-&lt;h2 id=&quot;新特性&quot;&gt;新特性&lt;/h2&gt;
-
-&lt;h3 id=&quot;主题配色&quot;&gt;主题配色&lt;/h3&gt;
-
-&lt;p&gt;支持两种主题配色——蓝色和粉色。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/kaeyleo/jekyll-theme-H2O/blob/master/screenshot/jekyll-theme-h2o-themecolor.jpg?raw=true&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;侧边栏&quot;&gt;侧边栏&lt;/h3&gt;
-
-&lt;p&gt;相比自己上一个版本的博客主题，首页增加了侧边栏，方便展示博主的个人信息和文章标签。&lt;/p&gt;
-
-&lt;h3 id=&quot;社交图标&quot;&gt;社交图标&lt;/h3&gt;
-
-&lt;p&gt;使用阿里的图标管理平台&lt;a href=&quot;http://iconfont.cn/&quot;&gt;Iconfont&lt;/a&gt;整理了一套&lt;strike&gt;墙内外&lt;/strike&gt;常用的社交图标，包括微博、知乎、掘金、简书、Github等十多个网站，鼠标悬停会显示该站的主题色。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-snstext.jpg&quot; alt=&quot;social iconfont&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;前后文导航&quot;&gt;前后文导航&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-nextpostnav.png&quot; alt=&quot;Next post navigator&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;自定义文章封面&quot;&gt;自定义文章封面&lt;/h3&gt;
-
-&lt;p&gt;在Markdown的&lt;a href=&quot;http://jekyll.com.cn/docs/frontmatter/&quot;&gt;文章头信息&lt;/a&gt;里添加cover参数来配置文章的封面图片，如果没有配置封面，则默认【主题色+底纹】的组合作为文章封面。值得一提的是，H2O有两种（粉、蓝）主题色和六种底纹（电路板、食物、云海、钻石等等）供你选择。&lt;/p&gt;
-
-&lt;h3 id=&quot;头图个性化底纹&quot;&gt;头图个性化底纹&lt;/h3&gt;
-
-&lt;p&gt;在没有图片的情况下单纯显示颜色会不会太无趣了点？于是想到了加入底纹元素，底纹素材是SVG格式的（保存在css样式里），加载比图片快很多。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-headerpatterns.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;代码高亮&quot;&gt;代码高亮&lt;/h3&gt;
-
-&lt;p&gt;模板引入了&lt;a href=&quot;http://prismjs.com&quot;&gt;Prism.js&lt;/a&gt;，一款轻量、可扩展的代码语法高亮库。&lt;/p&gt;
-
-&lt;p&gt;很多知名网站如&lt;a href=&quot;https://developer.mozilla.org/&quot;&gt;MDN&lt;/a&gt;、&lt;a href=&quot;https://css-tricks.com/&quot;&gt;css-tricks&lt;/a&gt;也在用它，JavaScript 之父 &lt;a href=&quot;https://brendaneich.com/&quot;&gt;Brendan Eich&lt;/a&gt; 也在个人博客上使用。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-highlight.png&quot; alt=&quot;代码高亮&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;遵循 &lt;a href=&quot;https://www.w3.org/TR/html5/grouping-content.html#the-pre-element&quot;&gt;HTML5&lt;/a&gt; 标准，Prism 使用语义化的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 元素和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt; 元素来标记代码区块：&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&amp;gt;&amp;lt;code&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;language-css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;p { color: red }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在Markdown中你可以这样写：&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;css
-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;```&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;支持语言：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-  &lt;li&gt;Sass&lt;/li&gt;
-  &lt;li&gt;JavaScript&lt;/li&gt;
-  &lt;li&gt;CoffeeScript&lt;/li&gt;
-  &lt;li&gt;Java&lt;/li&gt;
-  &lt;li&gt;C-like&lt;/li&gt;
-  &lt;li&gt;Swift&lt;/li&gt;
-  &lt;li&gt;PHP&lt;/li&gt;
-  &lt;li&gt;Go&lt;/li&gt;
-  &lt;li&gt;Python&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;第三方评论&quot;&gt;第三方评论&lt;/h3&gt;
-
-&lt;p&gt;由于多说关闭，又对国内其他第三方评论插件无感，所以将&lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;列为首选（目前模板也只提供了这个），请自备梯子。&lt;/p&gt;
-
-&lt;h3 id=&quot;移动端优化&quot;&gt;移动端优化&lt;/h3&gt;
-
-&lt;p&gt;响应式设计，对手机和平板等移动设备做了优化。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-realm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;关于阅读体验&quot;&gt;关于阅读体验&lt;/h3&gt;
-
-&lt;p&gt;我认为在内容质量相同的情况下，出色的沉浸式阅读体验是博客的核心。&lt;/p&gt;
-
-&lt;p&gt;H2O在这方面还有很多需要完善的地方，比如：&lt;strike&gt;代码高亮&lt;/strike&gt;、夜间模式、查看大图…&lt;/p&gt;
-
-&lt;h3 id=&quot;其他特性&quot;&gt;其他特性：&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;网页标题SEO优化&lt;/li&gt;
-  &lt;li&gt;标签索引，点击标签跳转到标签目录，即可查看对应的全部文章&lt;/li&gt;
-  &lt;li&gt;漂亮&lt;/li&gt;
-  &lt;li&gt;好看&lt;/li&gt;
-  &lt;li&gt;美&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
-
-&lt;p&gt;本想趁这次机会将整站https化的，但折腾了半天发现弹性web托管并不支持，所以暂时搁置https的想法。另外，博客统计工具一直使用的是&lt;a href=&quot;https://tongji.baidu.com&quot;&gt;百度统计&lt;/a&gt;，这次新增了Google Analytics。&lt;/p&gt;
-
-&lt;p&gt;这次从0到1，独自设计、开发再到发布大约用了一周时间，也算完成一个小小的开源项目了，后续也将持续完善和更新，欢迎&lt;a href=&quot;https://github.com/kaeyleo/jekyll-theme-H2O&quot;&gt;Star&lt;/a&gt;。&lt;/p&gt;
-</description>
-        <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-        <link>https://sprzwty.github.io/tech/new-theme-h2o.html</link>
-        <guid isPermaLink="true">https://sprzwty.github.io/tech/new-theme-h2o.html</guid>
-        
-        <category>jekyll</category>
-        
-        <category>前端开发</category>
-        
-        <category>设计</category>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello Jekyll</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Transform your plain text into static websites and blogs.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;welcome&quot;&gt;Welcome&lt;/h3&gt;
-
-&lt;p&gt;This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself.&lt;/p&gt;
-
-&lt;h3 id=&quot;so-what-is-jekyll-exactlypermalink&quot;&gt;So what is Jekyll, exactly?Permalink&lt;/h3&gt;
-
-&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;) and our &lt;a href=&quot;https://github.com/Shopify/liquid/wiki&quot;&gt;Liquid&lt;/a&gt; renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.&lt;/p&gt;
-
-&lt;h3 id=&quot;helpful-hintspermalink&quot;&gt;Helpful HintsPermalink&lt;/h3&gt;
-
-&lt;p&gt;Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for.&lt;/p&gt;
-
-&lt;h3 id=&quot;video-test&quot;&gt;Video Test&lt;/h3&gt;
-
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;https://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-        <link>https://sprzwty.github.io/hello-jekyll.html</link>
-        <guid isPermaLink="true">https://sprzwty.github.io/hello-jekyll.html</guid>
-        
-        <category>jekyll</category>
-        
         
       </item>
     
