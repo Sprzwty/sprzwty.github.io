@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-26T14:34:06+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-26T14:37:15+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
 <h2 id="应用功能部分">应用功能部分</h2>
 <h3 id="1-提示应用无法打开或开发者签名无效等问题">1. 提示应用无法打开或开发者签名无效等问题</h3>
 
@@ -48,11 +48,11 @@ defaults write com.apple.screencapture disable-shadow -bool false&amp;&amp;killa
 </code></pre></div></div>
 <h3 id="8-虚拟内存">8. 虚拟内存</h3>
 <!--mac电脑是将内存当作虚拟内存的，通常是不启用的，启用会降低电脑运行速度-->
-<h3 id="81-启用命令">8.1 启用命令</h3>
+<h4 id="81-启用命令">8.1 启用命令</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 </code></pre></div></div>
 <!--虚拟内存容量无法设置。-->
-<h3 id="82-禁用命令">8.2 禁用命令</h3>
+<h4 id="82-禁用命令">8.2 禁用命令</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 </code></pre></div></div>
 

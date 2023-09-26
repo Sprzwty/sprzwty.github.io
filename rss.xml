@@ -5,8 +5,8 @@
     <description>Technics, Experiencies, Solutions, Interesting Things.</description>
     <link>https://sprzwty.github.io//</link>
     <atom:link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Sep 2023 14:34:06 +0000</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2023 14:34:06 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Sep 2023 14:37:15 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Sep 2023 14:37:15 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -61,11 +61,11 @@ defaults write com.apple.screencapture disable-shadow -bool false&amp;amp;&amp;a
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;8-虚拟内存&quot;&gt;8. 虚拟内存&lt;/h3&gt;
 &lt;!--mac电脑是将内存当作虚拟内存的，通常是不启用的，启用会降低电脑运行速度--&gt;
-&lt;h3 id=&quot;81-启用命令&quot;&gt;8.1 启用命令&lt;/h3&gt;
+&lt;h4 id=&quot;81-启用命令&quot;&gt;8.1 启用命令&lt;/h4&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;!--虚拟内存容量无法设置。--&gt;
-&lt;h3 id=&quot;82-禁用命令&quot;&gt;8.2 禁用命令&lt;/h3&gt;
+&lt;h4 id=&quot;82-禁用命令&quot;&gt;8.2 禁用命令&lt;/h4&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 

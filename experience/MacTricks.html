@@ -306,11 +306,11 @@ defaults write com.apple.screencapture disable-shadow -bool false&amp;&amp;killa
 </code></pre></div></div>
 <h3 id="8-虚拟内存">8. 虚拟内存</h3>
 <!--mac电脑是将内存当作虚拟内存的，通常是不启用的，启用会降低电脑运行速度-->
-<h3 id="81-启用命令">8.1 启用命令</h3>
+<h4 id="81-启用命令">8.1 启用命令</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 </code></pre></div></div>
 <!--虚拟内存容量无法设置。-->
-<h3 id="82-禁用命令">8.2 禁用命令</h3>
+<h4 id="82-禁用命令">8.2 禁用命令</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 </code></pre></div></div>
 
@@ -348,7 +348,7 @@ defaults write com.apple.screencapture disable-shadow -bool false&amp;&amp;killa
         </div>   
         <div class="table-of-contents">
           <h2>目录</h2>
-          <ul><li><a onclick="scrollToAdjust('macos通用命令')">macOS通用命令</a><ul><li><a onclick="scrollToAdjust('应用功能部分')">应用功能部分</a><ul><li><a onclick="scrollToAdjust('1.-提示应用无法打开或开发者签名无效等问题')">1. 提示应用无法打开或开发者签名无效等问题</a></li><li><a onclick="scrollToAdjust('2.-打开任意来源安装应用')">2. 打开任意来源安装应用</a></li><li><a onclick="scrollToAdjust('3.-time-machine-全速备份指令')">3. Time Machine 全速备份指令</a></li><li><a onclick="scrollToAdjust('4.-开盖开机')">4. 开盖开机</a><ul><li><a onclick="scrollToAdjust('4.1-开启开盖开机')">4.1 开启开盖开机</a></li><li><a onclick="scrollToAdjust('4.2-关闭开盖开机')">4.2 关闭开盖开机</a></li></ul></li><li><a onclick="scrollToAdjust('5.-开机启动声音')">5. 开机启动声音</a><ul><li><a onclick="scrollToAdjust('5.1-关闭开机启动声音')">5.1 关闭开机启动声音</a></li><li><a onclick="scrollToAdjust('5.2-恢复开机启动声音')">5.2 恢复开机启动声音</a></li></ul></li><li><a onclick="scrollToAdjust('6.-macos清除更新角标')">6. Macos清除更新角标</a></li><li><a onclick="scrollToAdjust('7.-⌘-+⇧-+5截图阴影开启&amp;关闭指令')">7. ⌘ +⇧ +5截图阴影开启&amp;关闭指令</a></li><li><a onclick="scrollToAdjust('8.-虚拟内存')">8. 虚拟内存</a></li><li><a onclick="scrollToAdjust('8.1-启用命令')">8.1 启用命令</a></li><li><a onclick="scrollToAdjust('8.2-禁用命令')">8.2 禁用命令</a></li><li><a onclick="scrollToAdjust('9.-macos-terminal默认shell为bash时自动加载.bashrc的方式')">9. macOS terminal默认shell为bash时自动加载.bashrc的方式</a></li></ul></li></ul></li></ul>
+          <ul><li><a onclick="scrollToAdjust('macos通用命令')">macOS通用命令</a><ul><li><a onclick="scrollToAdjust('应用功能部分')">应用功能部分</a><ul><li><a onclick="scrollToAdjust('1.-提示应用无法打开或开发者签名无效等问题')">1. 提示应用无法打开或开发者签名无效等问题</a></li><li><a onclick="scrollToAdjust('2.-打开任意来源安装应用')">2. 打开任意来源安装应用</a></li><li><a onclick="scrollToAdjust('3.-time-machine-全速备份指令')">3. Time Machine 全速备份指令</a></li><li><a onclick="scrollToAdjust('4.-开盖开机')">4. 开盖开机</a><ul><li><a onclick="scrollToAdjust('4.1-开启开盖开机')">4.1 开启开盖开机</a></li><li><a onclick="scrollToAdjust('4.2-关闭开盖开机')">4.2 关闭开盖开机</a></li></ul></li><li><a onclick="scrollToAdjust('5.-开机启动声音')">5. 开机启动声音</a><ul><li><a onclick="scrollToAdjust('5.1-关闭开机启动声音')">5.1 关闭开机启动声音</a></li><li><a onclick="scrollToAdjust('5.2-恢复开机启动声音')">5.2 恢复开机启动声音</a></li></ul></li><li><a onclick="scrollToAdjust('6.-macos清除更新角标')">6. Macos清除更新角标</a></li><li><a onclick="scrollToAdjust('7.-⌘-+⇧-+5截图阴影开启&amp;关闭指令')">7. ⌘ +⇧ +5截图阴影开启&amp;关闭指令</a></li><li><a onclick="scrollToAdjust('8.-虚拟内存')">8. 虚拟内存</a><ul><li><a onclick="scrollToAdjust('8.1-启用命令')">8.1 启用命令</a></li><li><a onclick="scrollToAdjust('8.2-禁用命令')">8.2 禁用命令</a></li></ul></li><li><a onclick="scrollToAdjust('9.-macos-terminal默认shell为bash时自动加载.bashrc的方式')">9. macOS terminal默认shell为bash时自动加载.bashrc的方式</a></li></ul></li></ul></li></ul>
         </div>
       </div>
       
