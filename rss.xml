@@ -5,25 +5,41 @@
     <description>Technics, Experiencies, Solutions, Interesting Things.</description>
     <link>https://sprzwty.github.io//</link>
     <atom:link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Sep 2023 14:05:16 +0000</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2023 14:05:16 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Sep 2023 14:20:39 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Sep 2023 14:20:39 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
         <title>2023.09.25-MacTricks</title>
         <description>&lt;h1 id=&quot;macos通用命令&quot;&gt;macOS通用命令&lt;/h1&gt;
-&lt;p&gt;##应用功能部分&lt;/p&gt;
+&lt;h2 id=&quot;应用功能部分&quot;&gt;应用功能部分&lt;/h2&gt;
 &lt;h3 id=&quot;1-提示应用无法打开或开发者签名无效等问题&quot;&gt;1. 提示应用无法打开或开发者签名无效等问题&lt;/h3&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo xattr -rd com.apple.quarantine &lt;/code&gt;+应用路径&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo xattr -rd com.apple.quarantine 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;+
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;应用路径&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;例如：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;2-打开任意来源安装应用&quot;&gt;2. 打开任意来源安装应用&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo spctl --master-disable&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo spctl --master-disable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;3-time-machine-全速备份指令&quot;&gt;3. Time Machine 全速备份指令&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo sysctl debug.lowpri\_throttle_enabled=0&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo sysctl debug.lowpri\_throttle_enabled=0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-开盖开机&quot;&gt;4. 开盖开机&lt;/h3&gt;
+&lt;h4 id=&quot;41-开启开盖开机&quot;&gt;4.1 开启开盖开机&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram AutoBoot=%03
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;42-关闭开盖开机&quot;&gt;4.2 关闭开盖开机&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram AutoBoot=%00
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
         <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
         <link>https://sprzwty.github.io/experience/MacTricks.html</link>
@@ -123,11 +139,9 @@
         <link>https://sprzwty.github.io/curricular/I226%E8%AF%BE%E7%A8%8B%E7%9B%B8%E5%85%B3.html</link>
         <guid isPermaLink="true">https://sprzwty.github.io/curricular/I226%E8%AF%BE%E7%A8%8B%E7%9B%B8%E5%85%B3.html</guid>
         
-        <category>Curricular,</category>
+        <category>Jaist</category>
         
-        <category>Computer</category>
-        
-        <category>network</category>
+        <category>Quiz</category>
         
         
         <category>Curricular</category>
@@ -263,7 +277,7 @@
         <link>https://sprzwty.github.io/experience/Jaist%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.html</link>
         <guid isPermaLink="true">https://sprzwty.github.io/experience/Jaist%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.html</guid>
         
-        <category>experience</category>
+        <category>Experience</category>
         
         
         <category>Experience</category>

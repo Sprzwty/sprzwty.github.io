@@ -1,16 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-26T14:05:16+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
-<p>##应用功能部分</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-26T14:20:39+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
+<h2 id="应用功能部分">应用功能部分</h2>
 <h3 id="1-提示应用无法打开或开发者签名无效等问题">1. 提示应用无法打开或开发者签名无效等问题</h3>
 
-<p><code class="language-plaintext highlighter-rouge">sudo xattr -rd com.apple.quarantine </code>+应用路径</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo xattr -rd com.apple.quarantine 
+</code></pre></div></div>
+<p>+
+<code class="language-plaintext highlighter-rouge">应用路径</code></p>
 
-<p>例如：<code class="language-plaintext highlighter-rouge">sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app</code></p>
+<p>例如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
+</code></pre></div></div>
 
 <h3 id="2-打开任意来源安装应用">2. 打开任意来源安装应用</h3>
-<p><code class="language-plaintext highlighter-rouge">sudo spctl --master-disable</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo spctl --master-disable
+</code></pre></div></div>
 
 <h3 id="3-time-machine-全速备份指令">3. Time Machine 全速备份指令</h3>
-<p><code class="language-plaintext highlighter-rouge">sudo sysctl debug.lowpri\_throttle_enabled=0</code></p>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="Experience" /><summary type="html"><![CDATA[macOS通用命令 ##应用功能部分 1. 提示应用无法打开或开发者签名无效等问题]]></summary></entry><entry><title type="html">2023.07.26 一些些小想法</title><link href="https://sprzwty.github.io/thought/Some-thought230726.html" rel="alternate" type="text/html" title="2023.07.26 一些些小想法" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/Some-thought230726</id><content type="html" xml:base="https://sprzwty.github.io/thought/Some-thought230726.html"><![CDATA[<h3 id="for-those-who-do-not-understand-chinese">For those who do not understand Chinese</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo sysctl debug.lowpri\_throttle_enabled=0
+</code></pre></div></div>
+
+<h3 id="4-开盖开机">4. 开盖开机</h3>
+<h4 id="41-开启开盖开机">4.1 开启开盖开机</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%03
+</code></pre></div></div>
+<h4 id="42-关闭开盖开机">4.2 关闭开盖开机</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%00
+</code></pre></div></div>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="Experience" /><summary type="html"><![CDATA[macOS通用命令 应用功能部分 1. 提示应用无法打开或开发者签名无效等问题]]></summary></entry><entry><title type="html">2023.07.26 一些些小想法</title><link href="https://sprzwty.github.io/thought/Some-thought230726.html" rel="alternate" type="text/html" title="2023.07.26 一些些小想法" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/Some-thought230726</id><content type="html" xml:base="https://sprzwty.github.io/thought/Some-thought230726.html"><![CDATA[<h3 id="for-those-who-do-not-understand-chinese">For those who do not understand Chinese</h3>
 
 <p>Because this page is talking about my thoughts of my daily life, so the English and Japanese is not available. If you want to read, Please use the ‘translate’ function provided by your web browser or your own translate services. If you’d like to challenge your Chinese level, Please feel free to read this page. :～)</p>
 
@@ -74,7 +89,7 @@
 
 <p>①、碰撞域增大了，但总的吞吐量并未提高。</p>
 
-<p>②、如果不同的碰撞域使用不同的数据率，那么就不能用集线器将它们互连起来。</p>]]></content><author><name>Wang Tongyu</name></author><category term="Curricular" /><category term="Curricular," /><category term="Computer" /><category term="network" /><summary type="html"><![CDATA[网络层]]></summary></entry><entry><title type="html">2022.10.21-贰拾肆岁生日</title><link href="https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html" rel="alternate" type="text/html" title="2022.10.21-贰拾肆岁生日" /><published>2022-10-21T00:00:00+00:00</published><updated>2022-10-21T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5</id><content type="html" xml:base="https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html"><![CDATA[<h1 id="致24岁的自己">致24岁的自己</h1>
+<p>②、如果不同的碰撞域使用不同的数据率，那么就不能用集线器将它们互连起来。</p>]]></content><author><name>Wang Tongyu</name></author><category term="Curricular" /><category term="Jaist" /><category term="Quiz" /><summary type="html"><![CDATA[网络层]]></summary></entry><entry><title type="html">2022.10.21-贰拾肆岁生日</title><link href="https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html" rel="alternate" type="text/html" title="2022.10.21-贰拾肆岁生日" /><published>2022-10-21T00:00:00+00:00</published><updated>2022-10-21T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5</id><content type="html" xml:base="https://sprzwty.github.io/thought/%E8%B4%B0%E6%8B%BE%E8%82%86%E5%B2%81%E7%94%9F%E6%97%A5.html"><![CDATA[<h1 id="致24岁的自己">致24岁的自己</h1>
 <h2 id="不平凡的一岁">不平凡的一岁</h2>
 
 <h2 id="令和四年秋时年弱冠有四壮志饥心遂远行千里离家去纵万般不舍欲留然意有不安亦有迷惘故以尽勉之无庸卑勿自矜固自信判不徒行万里去空道五原归">令和四年秋，时年弱冠有四。壮志饥心，遂远行千里离家去，纵万般不舍欲留。然意有不安亦有迷惘，故以尽勉之，无庸卑，勿自矜，固自信。判不徒行万里去，空道五原归。</h2>
@@ -180,7 +195,7 @@
 
 <h2>————————–</h2>
 <h2 id="20221031更新">2022.10.31更新</h2>
-<h3 id="北陆先端科学技术大学院大学jaist令和5年4月第二次入试合格">北陆先端科学技术大学院大学（JAIST）令和5年4月第二次入试合格💮</h3>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="experience" /><summary type="html"><![CDATA[2022-10-15 Jaist备考经验总结]]></summary></entry><entry><title type="html">Midterm revising of I226</title><link href="https://sprzwty.github.io/test/I226Revise.html" rel="alternate" type="text/html" title="Midterm revising of I226" /><published>2022-06-30T00:00:00+00:00</published><updated>2022-06-30T00:00:00+00:00</updated><id>https://sprzwty.github.io/test/I226Revise</id><content type="html" xml:base="https://sprzwty.github.io/test/I226Revise.html"><![CDATA[<h2 id="quiz-01">Quiz-01</h2>
+<h3 id="北陆先端科学技术大学院大学jaist令和5年4月第二次入试合格">北陆先端科学技术大学院大学（JAIST）令和5年4月第二次入试合格💮</h3>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="Experience" /><summary type="html"><![CDATA[2022-10-15 Jaist备考经验总结]]></summary></entry><entry><title type="html">Midterm revising of I226</title><link href="https://sprzwty.github.io/test/I226Revise.html" rel="alternate" type="text/html" title="Midterm revising of I226" /><published>2022-06-30T00:00:00+00:00</published><updated>2022-06-30T00:00:00+00:00</updated><id>https://sprzwty.github.io/test/I226Revise</id><content type="html" xml:base="https://sprzwty.github.io/test/I226Revise.html"><![CDATA[<h2 id="quiz-01">Quiz-01</h2>
 
 <h3 id="1-通信の形態unicast-multicast-broadcast-anycastについて各々どのようなものか説明してください">1. 通信の形態(unicast, multicast, broadcast, anycast)について、各々どのようなものか説明してください。</h3>
 <ul>

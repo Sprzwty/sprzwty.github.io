@@ -212,7 +212,7 @@
                 <use xlink:href="#icon-words"></use>
               </svg>
               
-              本文总共  249  字
+              本文总共  313  字
             </span>
             <span class="post-meta-item">
               <svg class="icon time" aria-hidden="true">
@@ -257,18 +257,34 @@
           <article class="markdown-body post">
               
             <h1 id="macos通用命令">macOS通用命令</h1>
-<p>##应用功能部分</p>
+<h2 id="应用功能部分">应用功能部分</h2>
 <h3 id="1-提示应用无法打开或开发者签名无效等问题">1. 提示应用无法打开或开发者签名无效等问题</h3>
 
-<p><code class="language-plaintext highlighter-rouge">sudo xattr -rd com.apple.quarantine </code>+应用路径</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo xattr -rd com.apple.quarantine 
+</code></pre></div></div>
+<p>+
+<code class="language-plaintext highlighter-rouge">应用路径</code></p>
 
-<p>例如：<code class="language-plaintext highlighter-rouge">sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app</code></p>
+<p>例如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
+</code></pre></div></div>
 
 <h3 id="2-打开任意来源安装应用">2. 打开任意来源安装应用</h3>
-<p><code class="language-plaintext highlighter-rouge">sudo spctl --master-disable</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo spctl --master-disable
+</code></pre></div></div>
 
 <h3 id="3-time-machine-全速备份指令">3. Time Machine 全速备份指令</h3>
-<p><code class="language-plaintext highlighter-rouge">sudo sysctl debug.lowpri\_throttle_enabled=0</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo sysctl debug.lowpri\_throttle_enabled=0
+</code></pre></div></div>
+
+<h3 id="4-开盖开机">4. 开盖开机</h3>
+<h4 id="41-开启开盖开机">4.1 开启开盖开机</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%03
+</code></pre></div></div>
+<h4 id="42-关闭开盖开机">4.2 关闭开盖开机</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%00
+</code></pre></div></div>
+
 
             <div class="post-copyright">
               <p>
@@ -292,7 +308,7 @@
         </div>   
         <div class="table-of-contents">
           <h2>目录</h2>
-          <ul><li><a onclick="scrollToAdjust('macos通用命令')">macOS通用命令</a><ul><li><a onclick="scrollToAdjust('1.-提示应用无法打开或开发者签名无效等问题')">1. 提示应用无法打开或开发者签名无效等问题</a></li><li><a onclick="scrollToAdjust('2.-打开任意来源安装应用')">2. 打开任意来源安装应用</a></li><li><a onclick="scrollToAdjust('3.-time-machine-全速备份指令')">3. Time Machine 全速备份指令</a></li></ul></li></ul></li></ul>
+          <ul><li><a onclick="scrollToAdjust('macos通用命令')">macOS通用命令</a><ul><li><a onclick="scrollToAdjust('应用功能部分')">应用功能部分</a><ul><li><a onclick="scrollToAdjust('1.-提示应用无法打开或开发者签名无效等问题')">1. 提示应用无法打开或开发者签名无效等问题</a></li><li><a onclick="scrollToAdjust('2.-打开任意来源安装应用')">2. 打开任意来源安装应用</a></li><li><a onclick="scrollToAdjust('3.-time-machine-全速备份指令')">3. Time Machine 全速备份指令</a></li><li><a onclick="scrollToAdjust('4.-开盖开机')">4. 开盖开机</a><ul><li><a onclick="scrollToAdjust('4.1-开启开盖开机')">4.1 开启开盖开机</a></li><li><a onclick="scrollToAdjust('4.2-关闭开盖开机')">4.2 关闭开盖开机</a></li></ul></li></ul></li></ul></li></ul>
         </div>
       </div>
       
