@@ -15,15 +15,37 @@ pin: true
 ---
 
 # macOS通用命令
-##应用功能部分
+## 应用功能部分
 ### 1. 提示应用无法打开或开发者签名无效等问题
 
-`sudo xattr -rd com.apple.quarantine `+应用路径
+```
+sudo xattr -rd com.apple.quarantine 
+``` 
++
+`应用路径`
 
-例如：`sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app`
+例如：
+```
+sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
+```
 
 ### 2. 打开任意来源安装应用
-`sudo spctl --master-disable`
+```
+sudo spctl --master-disable
+```
 
 ### 3. Time Machine 全速备份指令
-`sudo sysctl debug.lowpri\_throttle_enabled=0`
+```
+sudo sysctl debug.lowpri\_throttle_enabled=0
+```
+
+### 4. 开盖开机
+#### 4.1 开启开盖开机
+```
+sudo nvram AutoBoot=%03
+```
+#### 4.2 关闭开盖开机
+```
+sudo nvram AutoBoot=%00
+```
+
