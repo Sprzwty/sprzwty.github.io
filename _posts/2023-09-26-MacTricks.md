@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: 2023.09.25-MacTricks
 subtitle: "随时更新，不断丰富"
@@ -9,9 +8,9 @@ author: Wang Tongyu
 cover: https://images.unsplash.com/photo-1577609703810-dd98726bf6a8
 cover_author: 'Kalen Emsley'
 cover_author_link: 'https://unsplash.com/@kalenemsley'
-tags: Experience
+tags: 
+- Experience
 pin: true
-
 ---
 
 # macOS通用命令
@@ -74,12 +73,12 @@ defaults write com.apple.screencapture disable-shadow -bool false&&killall Syste
 ```
 ### 8. 虚拟内存
 <!--mac电脑是将内存当作虚拟内存的，通常是不启用的，启用会降低电脑运行速度-->
-### 8.1 启用命令
+#### 8.1 启用命令
 ```
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 ```
 <!--虚拟内存容量无法设置。-->
-### 8.2 禁用命令
+#### 8.2 禁用命令
 ```
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 ```
