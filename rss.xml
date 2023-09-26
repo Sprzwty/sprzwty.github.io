@@ -5,8 +5,8 @@
     <description>Technics, Experiencies, Solutions, Interesting Things.</description>
     <link>https://sprzwty.github.io//</link>
     <atom:link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Sep 2023 14:20:39 +0000</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2023 14:20:39 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Sep 2023 14:34:06 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Sep 2023 14:34:06 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -21,6 +21,7 @@
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;应用路径&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;例如：&lt;/p&gt;
+
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -40,6 +41,44 @@
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram AutoBoot=%00
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h3 id=&quot;5-开机启动声音&quot;&gt;5. 开机启动声音&lt;/h3&gt;
+&lt;h4 id=&quot;51-关闭开机启动声音&quot;&gt;5.1 关闭开机启动声音&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram SystemAudioVolume=%00
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;52-恢复开机启动声音&quot;&gt;5.2 恢复开机启动声音&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram -d SystemAudioVolume
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;6-macos清除更新角标&quot;&gt;6. Macos清除更新角标&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.appstored BadgeCount 0
+killall Dock
+rm ~/Library/Preferences/com.apple.appstored.plist
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+killall Dock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;7---5截图阴影开启关闭指令&quot;&gt;7. ⌘ +⇧ +5截图阴影开启&amp;amp;关闭指令&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.screencapture disable-shadow -bool true&amp;amp;&amp;amp;killall SystemUIServer
+defaults write com.apple.screencapture disable-shadow -bool false&amp;amp;&amp;amp;killall SystemUIServer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;8-虚拟内存&quot;&gt;8. 虚拟内存&lt;/h3&gt;
+&lt;!--mac电脑是将内存当作虚拟内存的，通常是不启用的，启用会降低电脑运行速度--&gt;
+&lt;h3 id=&quot;81-启用命令&quot;&gt;8.1 启用命令&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;!--虚拟内存容量无法设置。--&gt;
+&lt;h3 id=&quot;82-禁用命令&quot;&gt;8.2 禁用命令&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;9-macos-terminal默认shell为bash时自动加载bashrc的方式&quot;&gt;9. macOS terminal默认shell为bash时自动加载.bashrc的方式&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;在用户文件夹下找到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt;文件&lt;/li&gt;
+  &lt;li&gt;打开并在最后插入以下代码
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; if [ -f ~/.bashrc ] 
+ . ~/.bashrc
+ fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
         <link>https://sprzwty.github.io/experience/MacTricks.html</link>

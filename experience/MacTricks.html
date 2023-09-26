@@ -212,13 +212,13 @@
                 <use xlink:href="#icon-words"></use>
               </svg>
               
-              本文总共  313  字
+              本文总共  1.1k  字
             </span>
             <span class="post-meta-item">
               <svg class="icon time" aria-hidden="true">
                 <use xlink:href="#icon-time"></use>
               </svg>
-              阅读全文大约需要 1 分钟
+              阅读全文大约需要 4 分钟
             </span>
             
               <span class="post-meta-item">
@@ -266,6 +266,7 @@
 <code class="language-plaintext highlighter-rouge">应用路径</code></p>
 
 <p>例如：</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
 </code></pre></div></div>
 
@@ -285,6 +286,45 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%00
 </code></pre></div></div>
 
+<h3 id="5-开机启动声音">5. 开机启动声音</h3>
+<h4 id="51-关闭开机启动声音">5.1 关闭开机启动声音</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram SystemAudioVolume=%00
+</code></pre></div></div>
+<h4 id="52-恢复开机启动声音">5.2 恢复开机启动声音</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram -d SystemAudioVolume
+</code></pre></div></div>
+<h3 id="6-macos清除更新角标">6. Macos清除更新角标</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.appstored BadgeCount 0
+killall Dock
+rm ~/Library/Preferences/com.apple.appstored.plist
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+killall Dock
+</code></pre></div></div>
+<h3 id="7---5截图阴影开启关闭指令">7. ⌘ +⇧ +5截图阴影开启&amp;关闭指令</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.screencapture disable-shadow -bool true&amp;&amp;killall SystemUIServer
+defaults write com.apple.screencapture disable-shadow -bool false&amp;&amp;killall SystemUIServer
+</code></pre></div></div>
+<h3 id="8-虚拟内存">8. 虚拟内存</h3>
+<!--mac电脑是将内存当作虚拟内存的，通常是不启用的，启用会降低电脑运行速度-->
+<h3 id="81-启用命令">8.1 启用命令</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+</code></pre></div></div>
+<!--虚拟内存容量无法设置。-->
+<h3 id="82-禁用命令">8.2 禁用命令</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+</code></pre></div></div>
+
+<h3 id="9-macos-terminal默认shell为bash时自动加载bashrc的方式">9. macOS terminal默认shell为bash时自动加载.bashrc的方式</h3>
+<ol>
+  <li>在用户文件夹下找到<code class="language-plaintext highlighter-rouge">.bash_profile</code>文件</li>
+  <li>打开并在最后插入以下代码
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> if [ -f ~/.bashrc ] 
+ . ~/.bashrc
+ fi
+</code></pre></div>    </div>
+  </li>
+</ol>
 
             <div class="post-copyright">
               <p>
@@ -308,7 +348,7 @@
         </div>   
         <div class="table-of-contents">
           <h2>目录</h2>
-          <ul><li><a onclick="scrollToAdjust('macos通用命令')">macOS通用命令</a><ul><li><a onclick="scrollToAdjust('应用功能部分')">应用功能部分</a><ul><li><a onclick="scrollToAdjust('1.-提示应用无法打开或开发者签名无效等问题')">1. 提示应用无法打开或开发者签名无效等问题</a></li><li><a onclick="scrollToAdjust('2.-打开任意来源安装应用')">2. 打开任意来源安装应用</a></li><li><a onclick="scrollToAdjust('3.-time-machine-全速备份指令')">3. Time Machine 全速备份指令</a></li><li><a onclick="scrollToAdjust('4.-开盖开机')">4. 开盖开机</a><ul><li><a onclick="scrollToAdjust('4.1-开启开盖开机')">4.1 开启开盖开机</a></li><li><a onclick="scrollToAdjust('4.2-关闭开盖开机')">4.2 关闭开盖开机</a></li></ul></li></ul></li></ul></li></ul>
+          <ul><li><a onclick="scrollToAdjust('macos通用命令')">macOS通用命令</a><ul><li><a onclick="scrollToAdjust('应用功能部分')">应用功能部分</a><ul><li><a onclick="scrollToAdjust('1.-提示应用无法打开或开发者签名无效等问题')">1. 提示应用无法打开或开发者签名无效等问题</a></li><li><a onclick="scrollToAdjust('2.-打开任意来源安装应用')">2. 打开任意来源安装应用</a></li><li><a onclick="scrollToAdjust('3.-time-machine-全速备份指令')">3. Time Machine 全速备份指令</a></li><li><a onclick="scrollToAdjust('4.-开盖开机')">4. 开盖开机</a><ul><li><a onclick="scrollToAdjust('4.1-开启开盖开机')">4.1 开启开盖开机</a></li><li><a onclick="scrollToAdjust('4.2-关闭开盖开机')">4.2 关闭开盖开机</a></li></ul></li><li><a onclick="scrollToAdjust('5.-开机启动声音')">5. 开机启动声音</a><ul><li><a onclick="scrollToAdjust('5.1-关闭开机启动声音')">5.1 关闭开机启动声音</a></li><li><a onclick="scrollToAdjust('5.2-恢复开机启动声音')">5.2 恢复开机启动声音</a></li></ul></li><li><a onclick="scrollToAdjust('6.-macos清除更新角标')">6. Macos清除更新角标</a></li><li><a onclick="scrollToAdjust('7.-⌘-+⇧-+5截图阴影开启&amp;关闭指令')">7. ⌘ +⇧ +5截图阴影开启&amp;关闭指令</a></li><li><a onclick="scrollToAdjust('8.-虚拟内存')">8. 虚拟内存</a></li><li><a onclick="scrollToAdjust('8.1-启用命令')">8.1 启用命令</a></li><li><a onclick="scrollToAdjust('8.2-禁用命令')">8.2 禁用命令</a></li><li><a onclick="scrollToAdjust('9.-macos-terminal默认shell为bash时自动加载.bashrc的方式')">9. macOS terminal默认shell为bash时自动加载.bashrc的方式</a></li></ul></li></ul></li></ul>
         </div>
       </div>
       

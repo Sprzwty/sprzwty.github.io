@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-26T14:20:39+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-26T14:34:06+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
 <h2 id="应用功能部分">应用功能部分</h2>
 <h3 id="1-提示应用无法打开或开发者签名无效等问题">1. 提示应用无法打开或开发者签名无效等问题</h3>
 
@@ -8,6 +8,7 @@
 <code class="language-plaintext highlighter-rouge">应用路径</code></p>
 
 <p>例如：</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
 </code></pre></div></div>
 
@@ -25,7 +26,46 @@
 </code></pre></div></div>
 <h4 id="42-关闭开盖开机">4.2 关闭开盖开机</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%00
-</code></pre></div></div>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="Experience" /><summary type="html"><![CDATA[macOS通用命令 应用功能部分 1. 提示应用无法打开或开发者签名无效等问题]]></summary></entry><entry><title type="html">2023.07.26 一些些小想法</title><link href="https://sprzwty.github.io/thought/Some-thought230726.html" rel="alternate" type="text/html" title="2023.07.26 一些些小想法" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/Some-thought230726</id><content type="html" xml:base="https://sprzwty.github.io/thought/Some-thought230726.html"><![CDATA[<h3 id="for-those-who-do-not-understand-chinese">For those who do not understand Chinese</h3>
+</code></pre></div></div>
+
+<h3 id="5-开机启动声音">5. 开机启动声音</h3>
+<h4 id="51-关闭开机启动声音">5.1 关闭开机启动声音</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram SystemAudioVolume=%00
+</code></pre></div></div>
+<h4 id="52-恢复开机启动声音">5.2 恢复开机启动声音</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram -d SystemAudioVolume
+</code></pre></div></div>
+<h3 id="6-macos清除更新角标">6. Macos清除更新角标</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.appstored BadgeCount 0
+killall Dock
+rm ~/Library/Preferences/com.apple.appstored.plist
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+killall Dock
+</code></pre></div></div>
+<h3 id="7---5截图阴影开启关闭指令">7. ⌘ +⇧ +5截图阴影开启&amp;关闭指令</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.screencapture disable-shadow -bool true&amp;&amp;killall SystemUIServer
+defaults write com.apple.screencapture disable-shadow -bool false&amp;&amp;killall SystemUIServer
+</code></pre></div></div>
+<h3 id="8-虚拟内存">8. 虚拟内存</h3>
+<!--mac电脑是将内存当作虚拟内存的，通常是不启用的，启用会降低电脑运行速度-->
+<h3 id="81-启用命令">8.1 启用命令</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+</code></pre></div></div>
+<!--虚拟内存容量无法设置。-->
+<h3 id="82-禁用命令">8.2 禁用命令</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+</code></pre></div></div>
+
+<h3 id="9-macos-terminal默认shell为bash时自动加载bashrc的方式">9. macOS terminal默认shell为bash时自动加载.bashrc的方式</h3>
+<ol>
+  <li>在用户文件夹下找到<code class="language-plaintext highlighter-rouge">.bash_profile</code>文件</li>
+  <li>打开并在最后插入以下代码
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> if [ -f ~/.bashrc ] 
+ . ~/.bashrc
+ fi
+</code></pre></div>    </div>
+  </li>
+</ol>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="Experience" /><summary type="html"><![CDATA[macOS通用命令 应用功能部分 1. 提示应用无法打开或开发者签名无效等问题]]></summary></entry><entry><title type="html">2023.07.26 一些些小想法</title><link href="https://sprzwty.github.io/thought/Some-thought230726.html" rel="alternate" type="text/html" title="2023.07.26 一些些小想法" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/Some-thought230726</id><content type="html" xml:base="https://sprzwty.github.io/thought/Some-thought230726.html"><![CDATA[<h3 id="for-those-who-do-not-understand-chinese">For those who do not understand Chinese</h3>
 
 <p>Because this page is talking about my thoughts of my daily life, so the English and Japanese is not available. If you want to read, Please use the ‘translate’ function provided by your web browser or your own translate services. If you’d like to challenge your Chinese level, Please feel free to read this page. :～)</p>
 
