@@ -25,37 +25,37 @@ sudo xattr -rd com.apple.quarantine
 
 例如：
 
-```
+```zsh
 sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
 ```
 
 ### 2. 打开任意来源安装应用
-```
+```zsh
 sudo spctl --master-disable
 ```
 
 ### 3. Time Machine 全速备份指令
-```
+```zsh
 sudo sysctl debug.lowpri\_throttle_enabled=0
 ```
 
 ### 4. 开盖开机
 #### 4.1 开启开盖开机
-```
+```zsh
 sudo nvram AutoBoot=%03
 ```
 #### 4.2 关闭开盖开机
-```
+```zsh
 sudo nvram AutoBoot=%00
 ```
 
 ### 5. 开机启动声音
 #### 5.1 关闭开机启动声音
-```
+```zsh
 sudo nvram SystemAudioVolume=%00
 ```
 #### 5.2 恢复开机启动声音
-```
+```zsh
 sudo nvram -d SystemAudioVolume
 ```
 ### 6. Macos清除更新角标
@@ -91,3 +91,70 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.pl
 	. ~/.bashrc
 	fi
 	```
+	
+### 10. 解决mds_store占用高资源CPU—关闭md服务
+```zsh
+sudo mdutil -a -i off
+sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"
+change nvram to server performanc emode
+就是serverinfo —setperfmode 1
+```
+
+### 11. Mac防止自动激活conda环境
+```zsh
+conda config --set auto_activate_base false
+```
+
+### 12. 刷新quicklook列表
+```zsh
+qlmanage -r
+```
+### 13. 打开App Store debug目录
+```zsh
+defaults write com.apple.appstore ShowDebugMenu -bool true
+```
+
+### 14. 去掉资源库文件夹的隐藏属性
+
+#### 14.1 关闭隐藏属性：
+```zsh
+chflags nohidden ~/Library/
+```
+#### 14.2 打开隐藏属性：
+```zsh
+chflags hidden ~/Library/
+```
+### 15. 去除（base）字样而不影响使用conda
+【通过.condarc文件来控制显示（此文件在~/.condarc下）】
+在文件最后加入「`changeps1: False`」
+
+### 16. 开启Touch ID强认证模式
+```file
+/private/etc/pam.d/sudo
+```
+
+这个文件中添加
+
+```zsh
+auth sufficient pam_tid.so
+```
+
+### 17. TXT文件字数统计
+```zsh
+wc -lc 文档.txt
+```
+
+### 18. 正则表达式处理TXT
+#### 18.1 最前面添加东西：使用「＾」符号进行替换
+#### 18.2 最后面添加东西：使用「$」符号进行替换
+
+下载各个版本的macos
+—————App Store—————
+* [macOS Big Sur version 11](https://apps.apple.com/gb/app/macos-big-sur/id1526878132?mt=12)
+* macOS Catalina 10.15
+* macOS Mojave 10.14
+* macOS High Sierra 10.13
+* —————直链——————
+* macOS 10.10 Yosemite
+* macOS 10.11 El Capitan
+* macOS 10.12 Sierra
