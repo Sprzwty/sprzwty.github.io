@@ -5,8 +5,8 @@
     <description>Technics, Experiencies, Solutions, Interesting Things.</description>
     <link>https://sprzwty.github.io//</link>
     <atom:link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Sep 2023 15:28:07 +0000</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2023 15:28:07 +0000</lastBuildDate>
+    <pubDate>Wed, 27 Sep 2023 13:11:33 +0000</pubDate>
+    <lastBuildDate>Wed, 27 Sep 2023 13:11:33 +0000</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -22,31 +22,31 @@
 
 &lt;p&gt;例如：&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;xattr &lt;span class=&quot;nt&quot;&gt;-rd&lt;/span&gt; com.apple.quarantine /Applications/Safari Technology Preview.app
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;2-打开任意来源安装应用&quot;&gt;2. 打开任意来源安装应用&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo spctl --master-disable
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;spctl &lt;span class=&quot;nt&quot;&gt;--master-disable&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;3-time-machine-全速备份指令&quot;&gt;3. Time Machine 全速备份指令&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo sysctl debug.lowpri\_throttle_enabled=0
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;sysctl debug.lowpri&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;throttle_enabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;4-开盖开机&quot;&gt;4. 开盖开机&lt;/h3&gt;
 &lt;h4 id=&quot;41-开启开盖开机&quot;&gt;4.1 开启开盖开机&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram AutoBoot=%03
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nvram &lt;span class=&quot;nv&quot;&gt;AutoBoot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%03
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h4 id=&quot;42-关闭开盖开机&quot;&gt;4.2 关闭开盖开机&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram AutoBoot=%00
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nvram &lt;span class=&quot;nv&quot;&gt;AutoBoot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%00
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;5-开机启动声音&quot;&gt;5. 开机启动声音&lt;/h3&gt;
 &lt;h4 id=&quot;51-关闭开机启动声音&quot;&gt;5.1 关闭开机启动声音&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram SystemAudioVolume=%00
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nvram &lt;span class=&quot;nv&quot;&gt;SystemAudioVolume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%00
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h4 id=&quot;52-恢复开机启动声音&quot;&gt;5.2 恢复开机启动声音&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nvram -d SystemAudioVolume
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nvram &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; SystemAudioVolume
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;6-macos清除更新角标&quot;&gt;6. Macos清除更新角标&lt;/h3&gt;
 &lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.appstored BadgeCount 0
@@ -79,6 +79,66 @@ defaults write com.apple.screencapture disable-shadow &lt;span class=&quot;nt&qu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h3 id=&quot;10-解决mds_store占用高资源cpu关闭md服务&quot;&gt;10. 解决mds_store占用高资源CPU—关闭md服务&lt;/h3&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mdutil &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; off
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nvram boot-args&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;serverperfmode=1 &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;nvram boot-args 2&amp;gt;/dev/null | &lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; 2-&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+change nvram to server performanc emode
+就是serverinfo —setperfmode 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;11-mac防止自动激活conda环境&quot;&gt;11. Mac防止自动激活conda环境&lt;/h3&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda config &lt;span class=&quot;nt&quot;&gt;--set&lt;/span&gt; auto_activate_base &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;12-刷新quicklook列表&quot;&gt;12. 刷新quicklook列表&lt;/h3&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;qlmanage &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;13-打开app-store-debug目录&quot;&gt;13. 打开App Store debug目录&lt;/h3&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.appstore ShowDebugMenu &lt;span class=&quot;nt&quot;&gt;-bool&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;14-去掉资源库文件夹的隐藏属性&quot;&gt;14. 去掉资源库文件夹的隐藏属性&lt;/h3&gt;
+
+&lt;h4 id=&quot;141-关闭隐藏属性&quot;&gt;14.1 关闭隐藏属性：&lt;/h4&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chflags nohidden ~/Library/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;142-打开隐藏属性&quot;&gt;14.2 打开隐藏属性：&lt;/h4&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chflags hidden ~/Library/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;15-去除base字样而不影响使用conda&quot;&gt;15. 去除（base）字样而不影响使用conda&lt;/h3&gt;
+&lt;p&gt;【通过.condarc文件来控制显示（此文件在~/.condarc下）】
+在文件最后加入「&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changeps1: False&lt;/code&gt;」&lt;/p&gt;
+
+&lt;h3 id=&quot;16-开启touch-id强认证模式&quot;&gt;16. 开启Touch ID强认证模式&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-file&quot;&gt;/private/etc/pam.d/sudo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这个文件中添加&lt;/p&gt;
+
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;auth sufficient pam_tid.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;17-txt文件字数统计&quot;&gt;17. TXT文件字数统计&lt;/h3&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-lc&lt;/span&gt; 文档.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;18-正则表达式处理txt&quot;&gt;18. 正则表达式处理TXT&lt;/h3&gt;
+&lt;h4 id=&quot;181-最前面添加东西使用符号进行替换&quot;&gt;18.1 最前面添加东西：使用「＾」符号进行替换&lt;/h4&gt;
+&lt;h4 id=&quot;182-最后面添加东西使用符号进行替换&quot;&gt;18.2 最后面添加东西：使用「$」符号进行替换&lt;/h4&gt;
+
+&lt;p&gt;下载各个版本的macos
+—————App Store—————&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://apps.apple.com/gb/app/macos-big-sur/id1526878132?mt=12&quot;&gt;macOS Big Sur version 11&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;macOS Catalina 10.15&lt;/li&gt;
+  &lt;li&gt;macOS Mojave 10.14&lt;/li&gt;
+  &lt;li&gt;macOS High Sierra 10.13&lt;/li&gt;
+  &lt;li&gt;—————直链——————&lt;/li&gt;
+  &lt;li&gt;macOS 10.10 Yosemite&lt;/li&gt;
+  &lt;li&gt;macOS 10.11 El Capitan&lt;/li&gt;
+  &lt;li&gt;macOS 10.12 Sierra&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
         <link>https://sprzwty.github.io/experience/MacTricks.html</link>

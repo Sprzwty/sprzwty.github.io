@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-26T15:28:07+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sprzwty.github.io/" rel="alternate" type="text/html" /><updated>2023-09-27T13:11:33+00:00</updated><id>https://sprzwty.github.io/feed.xml</id><title type="html">Mr.Wang</title><subtitle>Technics, Experiencies, Solutions, Interesting Things.</subtitle><author><name>Wang Tongyu</name></author><entry><title type="html">2023.09.25-MacTricks</title><link href="https://sprzwty.github.io/experience/MacTricks.html" rel="alternate" type="text/html" title="2023.09.25-MacTricks" /><published>2023-09-25T00:00:00+00:00</published><updated>2023-09-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/experience/MacTricks</id><content type="html" xml:base="https://sprzwty.github.io/experience/MacTricks.html"><![CDATA[<h1 id="macos通用命令">macOS通用命令</h1>
 <h2 id="应用功能部分">应用功能部分</h2>
 <h3 id="1-提示应用无法打开或开发者签名无效等问题">1. 提示应用无法打开或开发者签名无效等问题</h3>
 
@@ -9,31 +9,31 @@
 
 <p>例如：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo xattr -rd com.apple.quarantine /Applications/Safari Technology Preview.app
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>xattr <span class="nt">-rd</span> com.apple.quarantine /Applications/Safari Technology Preview.app
 </code></pre></div></div>
 
 <h3 id="2-打开任意来源安装应用">2. 打开任意来源安装应用</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo spctl --master-disable
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>spctl <span class="nt">--master-disable</span>
 </code></pre></div></div>
 
 <h3 id="3-time-machine-全速备份指令">3. Time Machine 全速备份指令</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo sysctl debug.lowpri\_throttle_enabled=0
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>sysctl debug.lowpri<span class="se">\_</span><span class="nv">throttle_enabled</span><span class="o">=</span>0
 </code></pre></div></div>
 
 <h3 id="4-开盖开机">4. 开盖开机</h3>
 <h4 id="41-开启开盖开机">4.1 开启开盖开机</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%03
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nvram <span class="nv">AutoBoot</span><span class="o">=</span>%03
 </code></pre></div></div>
 <h4 id="42-关闭开盖开机">4.2 关闭开盖开机</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram AutoBoot=%00
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nvram <span class="nv">AutoBoot</span><span class="o">=</span>%00
 </code></pre></div></div>
 
 <h3 id="5-开机启动声音">5. 开机启动声音</h3>
 <h4 id="51-关闭开机启动声音">5.1 关闭开机启动声音</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram SystemAudioVolume=%00
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nvram <span class="nv">SystemAudioVolume</span><span class="o">=</span>%00
 </code></pre></div></div>
 <h4 id="52-恢复开机启动声音">5.2 恢复开机启动声音</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvram -d SystemAudioVolume
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nvram <span class="nt">-d</span> SystemAudioVolume
 </code></pre></div></div>
 <h3 id="6-macos清除更新角标">6. Macos清除更新角标</h3>
 <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.appstored BadgeCount 0
@@ -65,7 +65,67 @@ defaults write com.apple.screencapture disable-shadow <span class="nt">-bool</sp
  <span class="k">fi</span>
 </code></pre></div>    </div>
   </li>
-</ol>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="Experience" /><summary type="html"><![CDATA[macOS通用命令 应用功能部分 1. 提示应用无法打开或开发者签名无效等问题]]></summary></entry><entry><title type="html">2023.07.26 一些些小想法</title><link href="https://sprzwty.github.io/thought/Some-thought230726.html" rel="alternate" type="text/html" title="2023.07.26 一些些小想法" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/Some-thought230726</id><content type="html" xml:base="https://sprzwty.github.io/thought/Some-thought230726.html"><![CDATA[<h3 id="for-those-who-do-not-understand-chinese">For those who do not understand Chinese</h3>
+</ol>
+
+<h3 id="10-解决mds_store占用高资源cpu关闭md服务">10. 解决mds_store占用高资源CPU—关闭md服务</h3>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mdutil <span class="nt">-a</span> <span class="nt">-i</span> off
+<span class="nb">sudo </span>nvram boot-args<span class="o">=</span><span class="s2">"serverperfmode=1 </span><span class="si">$(</span>nvram boot-args 2&gt;/dev/null | <span class="nb">cut</span> <span class="nt">-f</span> 2-<span class="si">)</span><span class="s2">"</span>
+change nvram to server performanc emode
+就是serverinfo —setperfmode 1
+</code></pre></div></div>
+
+<h3 id="11-mac防止自动激活conda环境">11. Mac防止自动激活conda环境</h3>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda config <span class="nt">--set</span> auto_activate_base <span class="nb">false</span>
+</code></pre></div></div>
+
+<h3 id="12-刷新quicklook列表">12. 刷新quicklook列表</h3>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>qlmanage <span class="nt">-r</span>
+</code></pre></div></div>
+<h3 id="13-打开app-store-debug目录">13. 打开App Store debug目录</h3>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults write com.apple.appstore ShowDebugMenu <span class="nt">-bool</span> <span class="nb">true</span>
+</code></pre></div></div>
+
+<h3 id="14-去掉资源库文件夹的隐藏属性">14. 去掉资源库文件夹的隐藏属性</h3>
+
+<h4 id="141-关闭隐藏属性">14.1 关闭隐藏属性：</h4>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chflags nohidden ~/Library/
+</code></pre></div></div>
+<h4 id="142-打开隐藏属性">14.2 打开隐藏属性：</h4>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chflags hidden ~/Library/
+</code></pre></div></div>
+<h3 id="15-去除base字样而不影响使用conda">15. 去除（base）字样而不影响使用conda</h3>
+<p>【通过.condarc文件来控制显示（此文件在~/.condarc下）】
+在文件最后加入「<code class="language-plaintext highlighter-rouge">changeps1: False</code>」</p>
+
+<h3 id="16-开启touch-id强认证模式">16. 开启Touch ID强认证模式</h3>
+<pre><code class="language-file">/private/etc/pam.d/sudo
+</code></pre>
+
+<p>这个文件中添加</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>auth sufficient pam_tid.so
+</code></pre></div></div>
+
+<h3 id="17-txt文件字数统计">17. TXT文件字数统计</h3>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">wc</span> <span class="nt">-lc</span> 文档.txt
+</code></pre></div></div>
+
+<h3 id="18-正则表达式处理txt">18. 正则表达式处理TXT</h3>
+<h4 id="181-最前面添加东西使用符号进行替换">18.1 最前面添加东西：使用「＾」符号进行替换</h4>
+<h4 id="182-最后面添加东西使用符号进行替换">18.2 最后面添加东西：使用「$」符号进行替换</h4>
+
+<p>下载各个版本的macos
+—————App Store—————</p>
+<ul>
+  <li><a href="https://apps.apple.com/gb/app/macos-big-sur/id1526878132?mt=12">macOS Big Sur version 11</a></li>
+  <li>macOS Catalina 10.15</li>
+  <li>macOS Mojave 10.14</li>
+  <li>macOS High Sierra 10.13</li>
+  <li>—————直链——————</li>
+  <li>macOS 10.10 Yosemite</li>
+  <li>macOS 10.11 El Capitan</li>
+  <li>macOS 10.12 Sierra</li>
+</ul>]]></content><author><name>Wang Tongyu</name></author><category term="Experience" /><category term="Experience" /><summary type="html"><![CDATA[macOS通用命令 应用功能部分 1. 提示应用无法打开或开发者签名无效等问题]]></summary></entry><entry><title type="html">2023.07.26 一些些小想法</title><link href="https://sprzwty.github.io/thought/Some-thought230726.html" rel="alternate" type="text/html" title="2023.07.26 一些些小想法" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://sprzwty.github.io/thought/Some-thought230726</id><content type="html" xml:base="https://sprzwty.github.io/thought/Some-thought230726.html"><![CDATA[<h3 id="for-those-who-do-not-understand-chinese">For those who do not understand Chinese</h3>
 
 <p>Because this page is talking about my thoughts of my daily life, so the English and Japanese is not available. If you want to read, Please use the ‘translate’ function provided by your web browser or your own translate services. If you’d like to challenge your Chinese level, Please feel free to read this page. :～)</p>
 
