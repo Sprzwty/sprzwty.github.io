@@ -1,30 +1,29 @@
 - lang: "zh"
-  name: "诸葛亮"
-  motivation: "云平台开发工程师"
-  photo: "/assets/img/h3.webp"
-  email: "zhuge@live.cn"
-  github: "zhuge"
-  linkedin: "zhuge"
-  website: "https://zhuge.me"
+  name: "王童语"
+  motivation: "人工智能领域工程师"
+  photo: "/assets/img/pi.webp"
+  email: "sprzwty[‘at’]gmail.com"
+  github: "Sprzwty"
+  linkedin: "wangtongyujaist"
+  website: "https://sprzwty.github.io"
   languages:
-    - idiom: "普通话"
-    - idiom: "闽南语"
+    - idiom: "中文普通话"
+    - idiom: "英语"
+    - idiom: "日语"
   educations:
-    - degree: "本科-计算机科学与技术"
-      university: "卧龙大学"
-      time: "2012-2016"
-    - degree: "研究生-计算机科学与技术"
-      university: "卧龙大学"
-      time: "2016-2019"
-    - degree: "博士-计算机科学与技术"
-      university: "卧龙大学"
-      time: "2019-至今"
+    - degree: "本科-自动化系物联网控制方向"
+      university: "北方工业大学，中国"
+      time: "2017-2021"
+    - degree: "RS-网络情报系人工智能方向"
+      university: "电气通信大学，日本"
+      time: "2021-2023"
+    - degree: "硕士研究生-先端技术研究科信息科学方向"
+      university: "北陆先端科学技术大学院大学，日本"
+      time: "2023-至今"
   skills:
     - title: "后端技能"
       skill: 
-        - GO
         - Python
-        - PHP
         - NodeJS
     - title: "前端技能"
       skill: 
@@ -33,36 +32,33 @@
     - title: "运维开发技能"
       skill: 
         - Docker
-        - KVM
   experience:
-    - role: "三国鼎立之论"
-      company: "科研方向"
-      time: "2017.10 - 2019.6"
-      details: "分析吴蜀魏三国鼎立的内因、外因，并预测未来三国的发展趋势。"
-      tech: "技术：Python，常用机器学习算法（SVM，RF，DT，KNN）"
-    - role: "吴蜀联盟"
+    - role : "基于机器视觉的高精度搬运及传送控制系统设计"
+      company: "程序设计"
+      time: "2018.6 - 2018.12"
+      details: "主要负责了设计了机械臂高精度运动的程序与物品识别程序。"
+      tech: "技术：西门子博途PLC编程，汇编语言，PLC语言"
+    - role: "中国智能机器人格斗比赛仿人视觉对抗赛"
+      company: "视觉算法设计"
+      time: "2020.9-2020.11"
+      details: "通过自行设计机器人（硬件+软件），通过传感器获取位置及姿态信息并在对抗赛中击败对手并获得胜利"
+      tech: "技术：Linux系统，硬件间通信协议设计应用，机器人形态设计"
+    - role: "中国智能机器人创新大赛"
       company: "主要负责人"
-      time: "2017.10 - 2019.6"
-      details: "前往东吴舌战群儒，借东风火烧连营，草船借箭。"
-      tech: "技术：Linux，KVM，Docker，PHP，VueJS"
-    - role : "七擒孟获"
-      company: "主要负责人"
-      time: "2018.6 - 2018.10"
-      details: "主要负责了制定抓孟获的思路和方案，七擒七纵终于收服了孟获。"
-      tech: "技术：HTML/CSS/JS，AMAP，REST API"
+      time: "2021.12-2021.1 "
+      details: "通过对统一机器人进行算法设计及软件烧录，通过视觉信息实现机器人高速自适应巡航并在赛道内按照规划路径抵达终点"
+      tech: "技术：Python，常用机器学习算法及CV算法（SVM，RF，DT，KNN）"
   honors:
-    - 2019 年卧龙大学优秀毕业生
-    - 2012~至今 卧龙大学学业奖学金/每年
-    - 2016 年卧龙大学校长奖学金
-    - 2016 年卧龙大学优秀毕业生
+    - 2021 年 北方工业大学优秀毕业设计
+    - 2017-2021 年 北方工业大学学习，思想品德，科学素养奖学金/每年
+    - 2018 年 北方工业大学优秀学生干部
   publications:
-    - "<b>诸葛亮</b>, 关羽, 张飞, 赵云, 刘备*. 《七出岐山的必要性》. 三国志快报, 2021(1):110-118."
-    - "<b>诸葛亮</b>, 周瑜, 关羽, 黄盖, 鲁肃, 孙权*, 刘备*. 《吴蜀联盟为什么行》. 三国志简报, 2020(1):110-118."
-    - "<b>诸葛亮</b>, 周瑜, 荀彧, 曹操*, 孙权*, 刘备*. 《三个国家的浪漫史》. 三国志综述, 2022(1):110-118."
+    - "<b>Wang, T.</b>,  , “Application of Edge Computing in 5g Communications”, in <i>Materials Science and Engineering Conference Series</i>, 2020, vol. 740, no. 1, p. 012130. doi:10.1088/1757-899X/740/1/012130."
+    - "<b>TONGYU WANG </b>, SUN, WENJIA ; NIE, WENCHANG ; WANG, TONGYU ; YUAN, YIJUN ; ZENG, YANRAN ; ZHANG, ZIHAO,   A consortium block chain system using proof of work computing ability to realize valuable calculation(Australian Patent No. AU 2020100045).IP Australia.http://pericles.ipaustralia.gov.au/ols/auspat/applicationDetails.do?applicationNo=2020100045#"
   introduction:
-    - title: "研究内容"
-      content: "研究生期间主要从事三国鼎立的研究，在本人的帮助下发展了吴蜀联盟 <sup>[2]</sup>；在后期针对魏国的强大作出了七出岐山的决定 <sup>[1]</sup>；与三国主要负责人合作完成了《三个国家的浪漫史》 <sup>[3]</sup>。"
-    - title: "开发平台"
+    - title: "基于点评网站的评论情感分析算法的构筑"
+      content: "本科最后一年研究方向为基于深度网络的自然语言处理技术的应用，研究内容是通过获取到的点评类信息数据，进行数据清洗与标注后，使用RNN，LSTM以及大规模语言模型BERT与GPT分别实现基于文本分类技术的五极性情感分析并进行效果对比。"
+    - title: "多模态情感分析以及"
       content: "蜀汉建立的元老，为蜀国的发展和强大贡献了力量。（以上内容均为展示效果填充需要，内容请勿当真！！！）"
 - lang: "en"
   name: "Zhuge Liang"

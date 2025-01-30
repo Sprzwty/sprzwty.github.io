@@ -148,13 +148,25 @@ wc -lc 文档.txt
 #### 18.1 最前面添加东西：使用「＾」符号进行替换
 #### 18.2 最后面添加东西：使用「$」符号进行替换
 
-下载各个版本的macos
-—————App Store—————
+### 19. 下载各个版本的macos
+
+#### —————App Store—————
 * [macOS Big Sur version 11](https://apps.apple.com/gb/app/macos-big-sur/id1526878132?mt=12)
-* macOS Catalina 10.15
-* macOS Mojave 10.14
-* macOS High Sierra 10.13
-* —————直链——————
-* macOS 10.10 Yosemite
-* macOS 10.11 El Capitan
-* macOS 10.12 Sierra
+
+* [macOS Catalina 10.15](https://apps.apple.com/gb/app/macos-catalina/id1466841314?mt=12)
+
+
+* [macOS Mojave 10.14](https://apps.apple.com/gb/app/macos-mojave/id1398502828?mt=12)
+
+
+* [macOS High Sierra 10.13](https://apps.apple.com/us/app/macos-high-sierra/id1246284741?mt=12)
+
+
+#### * —————直链——————
+* [macOS 10.10 Yosemite](http://updates-http.cdn-apple.com/2019/cert/061-41343-20191023-02465f92-3ab5-4c92-bfe2-b725447a070d/InstallMacOSX.dmg)
+
+
+* [macOS 10.11 El Capitan](http://updates-http.cdn-apple.com/2019/cert/061-41424-20191024-218af9ec-cf50-4516-9011-228c78eda3d2/InstallMacOSX.dmg)
+
+
+* [macOS 10.12 Sierra](http://updates-http.cdn-apple.com/2019/cert/061-39476-20191023-48f365f4-0015-4c41-9f44-39d3d2aca067/InstallOS.dmg)
