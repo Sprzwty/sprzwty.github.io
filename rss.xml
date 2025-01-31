@@ -5,9 +5,29 @@
     <description>Technics, Experiencies, Solutions, Interesting Things.</description>
     <link>https://sprzwty.github.io//</link>
     <atom:link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 Sep 2023 13:11:33 +0000</pubDate>
-    <lastBuildDate>Wed, 27 Sep 2023 13:11:33 +0000</lastBuildDate>
-    <generator>Jekyll v4.3.2</generator>
+    <pubDate>Fri, 31 Jan 2025 04:37:39 +0000</pubDate>
+    <lastBuildDate>Fri, 31 Jan 2025 04:37:39 +0000</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>2023.09.25-MacTricks</title>
+        <description>&lt;h2 id=&quot;曾经很爱的歌能唤起回忆的一些音乐&quot;&gt;曾经很爱的歌–能唤起回忆的一些音乐&lt;/h2&gt;
+
+&lt;p&gt;从小，就有这种感觉。听到某一首歌，脑子里就能播放出来那会儿的画面，大家说的什么，我在干什么，环境是什么样的等等。感觉很有意思，还是记下来吧&lt;/p&gt;
+
+&lt;h3 id=&quot;夜曲&quot;&gt;夜曲&lt;/h3&gt;
+&lt;p&gt;这首歌算是当时听过之后就跟喜欢的一首歌儿了。关于这首歌儿的记忆就是：一家人一起去怀柔玩，准备回家的路上，我们想要去一家吃炖鱼的餐厅吃饭。然后外面下起来倾盆大雨，雨刷器开到最快也看不清前面的路。当时车里面唱的就是夜曲。虽然当时的感受和这首歌所表达的意思毫无关系，但是我对这首歌的记忆尤为深刻。“爸爸妈妈在的话就不会有问题”以及“只要是爸爸妈妈在的地方就是家在的地方”的那种很强烈的安全感直接就在身上了。但是后来因为雨实在是下的太大了，然后我们两辆车就停下来了，当时也没有什么视频通话，我们在车里面的交流都是靠对讲机，然后我们就一起拿着对讲机唱歌，大家彼此都唱一段。感觉真的是很开心的时候留下的这个回忆。随后到了餐厅，每一盘菜都变得格外好吃。那会儿大家出去玩，也不喝酒，两边的妈妈也都很年轻，那个时候，好想念。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
+        <link>https://sprzwty.github.io/experience/%E5%90%AC%E5%88%B0%E9%82%A3%E9%A6%96%E6%9B%BE%E7%BB%8F%E6%9C%80%E7%88%B1%E7%9A%84%E6%AD%8C.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/experience/%E5%90%AC%E5%88%B0%E9%82%A3%E9%A6%96%E6%9B%BE%E7%BB%8F%E6%9C%80%E7%88%B1%E7%9A%84%E6%AD%8C.html</guid>
+        
+        <category>Experience</category>
+        
+        
+        <category>Experience</category>
+        
+      </item>
     
       <item>
         <title>2023.09.25-MacTricks</title>
@@ -127,17 +147,35 @@ change nvram to server performanc emode
 &lt;h4 id=&quot;181-最前面添加东西使用符号进行替换&quot;&gt;18.1 最前面添加东西：使用「＾」符号进行替换&lt;/h4&gt;
 &lt;h4 id=&quot;182-最后面添加东西使用符号进行替换&quot;&gt;18.2 最后面添加东西：使用「$」符号进行替换&lt;/h4&gt;
 
-&lt;p&gt;下载各个版本的macos
-—————App Store—————&lt;/p&gt;
+&lt;h3 id=&quot;19-下载各个版本的macos&quot;&gt;19. 下载各个版本的macos&lt;/h3&gt;
+
+&lt;h4 id=&quot;app-store&quot;&gt;—————App Store—————&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://apps.apple.com/gb/app/macos-big-sur/id1526878132?mt=12&quot;&gt;macOS Big Sur version 11&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;macOS Catalina 10.15&lt;/li&gt;
-  &lt;li&gt;macOS Mojave 10.14&lt;/li&gt;
-  &lt;li&gt;macOS High Sierra 10.13&lt;/li&gt;
-  &lt;li&gt;—————直链——————&lt;/li&gt;
-  &lt;li&gt;macOS 10.10 Yosemite&lt;/li&gt;
-  &lt;li&gt;macOS 10.11 El Capitan&lt;/li&gt;
-  &lt;li&gt;macOS 10.12 Sierra&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://apps.apple.com/gb/app/macos-big-sur/id1526878132?mt=12&quot;&gt;macOS Big Sur version 11&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://apps.apple.com/gb/app/macos-catalina/id1466841314?mt=12&quot;&gt;macOS Catalina 10.15&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://apps.apple.com/gb/app/macos-mojave/id1398502828?mt=12&quot;&gt;macOS Mojave 10.14&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://apps.apple.com/us/app/macos-high-sierra/id1246284741?mt=12&quot;&gt;macOS High Sierra 10.13&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;-直链&quot;&gt;* —————直链——————&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://updates-http.cdn-apple.com/2019/cert/061-41343-20191023-02465f92-3ab5-4c92-bfe2-b725447a070d/InstallMacOSX.dmg&quot;&gt;macOS 10.10 Yosemite&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://updates-http.cdn-apple.com/2019/cert/061-41424-20191024-218af9ec-cf50-4516-9011-228c78eda3d2/InstallMacOSX.dmg&quot;&gt;macOS 10.11 El Capitan&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://updates-http.cdn-apple.com/2019/cert/061-39476-20191023-48f365f4-0015-4c41-9f44-39d3d2aca067/InstallOS.dmg&quot;&gt;macOS 10.12 Sierra&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
@@ -3111,40 +3149,6 @@ change nvram to server performanc emode
         <category>Conference</category>
         
         <category>ranking</category>
-        
-        
-        <category>test</category>
-        
-      </item>
-    
-      <item>
-        <title>MathJax Test</title>
-        <description>&lt;p&gt;mathjax in markdown :)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;这是一个不&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;的公式&lt;/strong&gt;：&lt;/p&gt;
-
-\[\forall \alpha \in A, \quad a \cdot b = 0\]
-
-&lt;p&gt;&lt;strong&gt;这是一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;的公式&lt;/strong&gt;：&lt;/p&gt;
-
-\[\begin{align}
-    \Phi(0,x) = \max_{u \in \mathcal{D}} \bigg[
-        \mathbb{E} &amp;amp; \Phi\left(1, 
-        x + \int_0^1 \sigma^2(s) \, \zeta(s) \, u_s \, ds
-        + \int_0^1 \sigma(s) \, dW_s
-    \right) \\
-        &amp;amp;- \frac{1}{2} \int_0^1 \sigma^2(s) \, \zeta(s) \,
-        \mathbb{E} u_s^2  \, ds
-    \bigg].
-\end{align}\]
-
-&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;公式块要想有较好的显示效果，必须在公式块标记符&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$$&lt;/code&gt;&lt;strong&gt;前后&lt;/strong&gt;留有空行，否则公式将不能正常居中。行内公式无此问题。&lt;/p&gt;
-</description>
-        <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
-        <link>https://sprzwty.github.io/test/mathjax-test.html</link>
-        <guid isPermaLink="true">https://sprzwty.github.io/test/mathjax-test.html</guid>
-        
-        <category>mathjax</category>
         
         
         <category>test</category>
