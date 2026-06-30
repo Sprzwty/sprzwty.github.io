@@ -7,6 +7,8 @@ Personal blog of Wang Tongyu, built with [Jekyll](https://jekyllrb.com/) and the
 
 **操作说明 →** [docs/OPERATIONS.md](docs/OPERATIONS.md)（环境、代理、GitHub 认证、写作、发布流程）
 
+**Notion 同步 →** [docs/NOTION_SYNC.md](docs/NOTION_SYNC.md)（在 Notion 写作，自动发布到博客）
+
 **主题管理 →** [docs/THEME.md](docs/THEME.md)（gem 依赖、override、升级流程）
 
 ---

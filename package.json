@@ -10,7 +10,8 @@
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch",
-    "serve": "npm run build && bundle exec jekyll serve --livereload"
+    "serve": "npm run build && bundle exec jekyll serve --livereload",
+    "notion:sync": "node scripts/sync-notion.mjs"
   },
   "author": "Wang Tongyu",
   "license": "MIT",
@@ -20,6 +21,8 @@
     "sass": "^1.101.0",
     "sass-loader": "^17.0.0",
     "webpack": "^5.108.0",
-    "webpack-cli": "^7.0.0"
+    "webpack-cli": "^7.0.0",
+    "@notionhq/client": "^2.2.15",
+    "notion-to-md": "^3.1.1"
   }
 }
