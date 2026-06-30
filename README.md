@@ -7,6 +7,8 @@ Personal blog of Wang Tongyu, built with [Jekyll](https://jekyllrb.com/) and the
 
 **操作说明 →** [docs/OPERATIONS.md](docs/OPERATIONS.md)（环境、代理、GitHub 认证、写作、发布流程）
 
+**主题管理 →** [docs/THEME.md](docs/THEME.md)（gem 依赖、override、升级流程）
+
 ---
 
 ## Stack
@@ -14,7 +16,7 @@ Personal blog of Wang Tongyu, built with [Jekyll](https://jekyllrb.com/) and the
 | Layer | Tool |
 |-------|------|
 | Static site generator | Jekyll 4.x |
-| Theme | jekyll-theme-H2O-ac (inline) |
+| Theme | [jekyll-theme-h2o-ac](https://github.com/zhonger/jekyll-theme-H2O-ac) gem @ 1.2.1 |
 | CSS / JS build | Webpack 5 + Sass |
 | CI / Deploy | GitHub Actions → GitHub Pages |
 | Ruby version | 3.3 (see `.tool-versions`) |
@@ -40,6 +42,9 @@ bundle install       # install Ruby gems → generates Gemfile.lock
 
 ### Build frontend assets
 
+Webpack compiles `dev/` → `assets/css/*.min.css` and `assets/js/*.min.js`.
+These files are **gitignored**; CI builds them before Jekyll. Run locally after clone or when editing `dev/`:
+
 ```bash
 npm run build        # one-shot production build
 npm run watch        # rebuild on every SCSS/JS change
@@ -48,7 +53,9 @@ npm run watch        # rebuild on every SCSS/JS change
 ### Run the dev server
 
 ```bash
+npm run build        # required once if assets/*.min.* are missing
 bundle exec jekyll serve --livereload
+# or: npm run serve
 ```
 
 Browse to <http://localhost:4000>.

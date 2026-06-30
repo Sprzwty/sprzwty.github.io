@@ -7,7 +7,7 @@ permalink: /tos.html
 
 # 本站使用条款
 
-&emsp;&emsp;Mr. WANG's Blog（[https://sprzwty.github.io](https://sprzwty.github.io)），以下简称"本站"。
+&emsp;&emsp;Wang Tongyu's Blog（[https://sprzwty.github.io](https://sprzwty.github.io)），以下简称"本站"。
 
 ## 隐私政策
 
@@ -21,7 +21,6 @@ permalink: /tos.html
 
 - **阿里 CDN （iconfont）**会收集您的访问信息
 - **JSDelivr（前端依赖）**会收集您的访问信息
-- **Busuanzi（页面统计）**会收集您的访问信息
 
 &emsp;&emsp;本站仅出于以下目的，使用您的个人信息：
 

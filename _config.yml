@@ -1,14 +1,16 @@
 # =====================================================================
 # Site: sprzwty.github.io
-# Built on jekyll-theme-H2O-ac  v1.2.1
+# Theme: jekyll-theme-h2o-ac @ 1.2.1 (see Gemfile + docs/THEME.md)
 # =====================================================================
+
+theme: jekyll-theme-h2o-ac
 
 # ---------------------
 # Site settings
 # ---------------------
-title: 'Mr. WANG'
-description: 'Technics, Experiences, Solutions, Interesting Things.'
-keyword: 'Sprzwty, Blog of Sprzwty, Python, KRR, ML'
+title: 'Wang Tongyu'
+description: 'Personal blog — AI research, tech notes, and life.'
+keyword: 'Wang Tongyu, Sprzwty, AI, KRR, ML, Python'
 url: 'https://sprzwty.github.io'
 
 # Leave blank for username.github.io repos (no subdirectory)
@@ -19,13 +21,14 @@ baseurl: ''
 # ---------------------
 languages: ["zh-Hans", "en"]
 default_lang: "zh-Hans"
+# Removed: zh-Hant, ja (no content or locale files)
 
 # ---------------------
 # GitHub integration
 # ---------------------
 github:
   enabled: true
-  owner: sprzwty
+  owner: Sprzwty
   repository: sprzwty.github.io
 
 # ---------------------
@@ -126,7 +129,7 @@ comments:
 # ---------------------
 # Analytics
 # ---------------------
-busuanzi: true
+busuanzi: false
 cnzz:
 google_analytics:
 umami:

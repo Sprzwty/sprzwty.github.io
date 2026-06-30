@@ -5,7 +5,13 @@
 # Node
 node_modules/
 
-# Webpack intermediate output (committed artifacts are in assets/)
+# Webpack build output (generated from dev/ — do not commit)
+assets/css/*.min.css
+assets/css/*.min.css.map
+assets/js/*.min.js
+assets/js/*.min.js.map
+
+# Webpack intermediate output
 dist/
 
 # Jekyll build output
