@@ -12,12 +12,12 @@ sprzwty.github.io/
 ├── _posts/              # 博客文章（你主要写这里）
 ├── pages/               # 独立页面（首页、CV、归档入口等）
 ├── _data/               # 结构化数据（CV、友链、多语言文案）
-├── _layouts/            # 页面布局模板（一般不改，除非改主题）
-├── _includes/           # 可复用 HTML 片段
+├── _includes/head.html  # 唯一主题 override（其余来自 gem）
 ├── _config.yml          # 站点全局配置（改后需重启 Jekyll）
 ├── dev/                 # 前端源码（SCSS / JS）— 唯一真相来源
-├── assets/              # 静态资源 + webpack 产物（*.min.* 不提交 Git）
+├── assets/img/          # 站点图片；icons 与 layouts 来自 gem
 ├── scripts/             # 本地辅助脚本（代理、GitHub 认证）
+├── docs/THEME.md        # 主题 gem 管理与升级
 └── .github/workflows/   # CI/CD
 ```
 
@@ -27,8 +27,9 @@ sprzwty.github.io/
 |------|------|----------|
 | 内容 | `_posts/`, `pages/`, `_data/cv.yml`, `_data/links.yml` | 写文章、改首页/CV/友链 |
 | 配置 | `_config.yml` | 改导航、作者信息、功能开关 |
-| 主题 | `_layouts/`, `_includes/`, `dev/sass/` | 改样式或页面结构 |
-| 构建 | `package.json`, `webpack.config.js`, `Gemfile` | 升级依赖或改构建 |
+| 主题 override | `_includes/head.html` | 改 CDN、Prism、Waline 等 head 资源 |
+| 样式构建 | `dev/`, `webpack.config.js` | 改 SCSS/JS（详见 [THEME.md](./THEME.md)） |
+| 主题升级 | `Gemfile` | bump `jekyll-theme-h2o-ac` 版本 |
 
 ---
 
@@ -273,7 +274,9 @@ lang: zh-Hans
 
 ---
 
-## 11. 布局模板：`_layouts/`
+## 11. 布局模板
+
+布局文件（`_layouts/`）来自 gem `jekyll-theme-h2o-ac`，不在本仓库维护。完整列表与升级方式见 [THEME.md](./THEME.md)。
 
 | layout | 用途 |
 |--------|------|
@@ -287,7 +290,7 @@ lang: zh-Hans
 | `links.html` | 友链页 |
 | `search.html` | 搜索页 |
 
-写文章用 `layout: post`；新建独立页面一般用 `layout: page`。
+写文章用 `layout: post`；新建独立页面一般用 `layout: page`。若要改布局，在本仓库添加同名 `_layouts/xxx.html` 即可覆盖 gem。
 
 ---
 
@@ -334,5 +337,6 @@ CI 在 Jekyll 构建前自动执行 `npm run build`。本地改 `dev/` 后只需
 ## 14. 相关链接
 
 - 线上站点：<https://sprzwty.github.io>
+- 主题管理：[docs/THEME.md](./THEME.md)
 - 主题上游：<https://github.com/zhonger/jekyll-theme-H2O-ac>
 - Issue 跟踪：<https://github.com/Sprzwty/sprzwty.github.io/issues>

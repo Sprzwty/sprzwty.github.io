@@ -1,7 +1,9 @@
 # =====================================================================
 # Site: sprzwty.github.io
-# Built on jekyll-theme-H2O-ac  v1.2.1
+# Theme: jekyll-theme-h2o-ac @ 1.2.1 (see Gemfile + docs/THEME.md)
 # =====================================================================
+
+theme: jekyll-theme-h2o-ac
 
 # ---------------------
 # Site settings

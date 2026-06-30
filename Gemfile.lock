@@ -54,6 +54,14 @@ GEM
       sass-embedded (~> 1.75)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-theme-h2o-ac (1.2.1)
+      bundler (~> 2.3)
+      h2o-ac-jekyll-extlinks (~> 0.0)
+      jekyll-feed (~> 0.17.0)
+      jekyll-paginate-v2 (~> 3.0.0)
+      jekyll-sitemap (~> 1.4.0)
+      premonition (~> 4.0.2)
+      webrick (~> 1.8.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.20.0)
@@ -92,7 +100,7 @@ GEM
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.6.0)
-    webrick (1.9.2)
+    webrick (1.8.2)
 
 PLATFORMS
   x64-mingw-ucrt
@@ -104,6 +112,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.17)
   jekyll-paginate-v2 (~> 3.0)
   jekyll-sitemap (~> 1.4)
+  jekyll-theme-h2o-ac (= 1.2.1)
   nokogiri
   premonition (~> 4.0)
   webrick (~> 1.8)
@@ -112,7 +121,6 @@ CHECKSUMS
   addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
   bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
-  bundler (4.0.15) sha256=a4ceb882fe94a0e0ac63cd0813932bbfd631a14e5ac0b7975189b19a4d28d9e7
   colorator (1.1.0) sha256=e2f85daf57af47d740db2a32191d1bdfb0f6503a0dfbc8327d0c9154d5ddfc38
   concurrent-ruby (1.3.7) sha256=4412caec3a5ea2e5fdc52076724c071a81f2c0593d83b2ac8cbb8ca63b3151b0
   csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
@@ -131,6 +139,7 @@ CHECKSUMS
   jekyll-paginate-v2 (3.0.0) sha256=001be6c1963caa41fed9c2f43b0d47201defa0395381eb8830487c1c2fc4f4e3
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
   jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
+  jekyll-theme-h2o-ac (1.2.1) sha256=20fe49fbe076bb8b19356e65141c05fc58aa66180228cfa5b74cc78c7a38aa6e
   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
   json (2.20.0) sha256=9362bc6e55a952b056abf9167cf053358181c904cb70cd6eee0808ea830fc32b
   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
@@ -155,7 +164,7 @@ CHECKSUMS
   sass-embedded (1.101.0-x86_64-linux-gnu) sha256=ff48452b2351eaaf4e6e02f59de0e9e35f6f163e8456d520db49b4d87cf73c27
   terminal-table (3.0.2) sha256=f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91
   unicode-display_width (2.6.0) sha256=12279874bba6d5e4d2728cef814b19197dbb10d7a7837a869bab65da943b7f5a
-  webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
+  webrick (1.8.2) sha256=431746a349199546ff9dd272cae10849c865f938216e41c402a6489248f12f21
 
 BUNDLED WITH
-  4.0.15
+   2.7.2
