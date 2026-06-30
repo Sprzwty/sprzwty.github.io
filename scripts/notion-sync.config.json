@@ -1,0 +1,18 @@
+{
+  "postsDir": "_posts/notion",
+  "author": "Wang Tongyu",
+  "timezone": "+0900",
+  "defaults": {
+    "layout": "post",
+    "pin": false
+  },
+  "properties": {
+    "title": "Title",
+    "date": "Date",
+    "categories": "Category",
+    "publish": "Publish",
+    "tags": "Tags",
+    "subtitle": "Subtitle",
+    "pin": "Pin"
+  }
+}

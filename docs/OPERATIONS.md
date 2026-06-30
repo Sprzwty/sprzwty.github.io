@@ -217,6 +217,12 @@ git push origin 0.2.0
 
 ## 9. 写作：`_posts/`
 
+### 9.1 在 Notion 写作（推荐）
+
+若已配置 Notion 同步（见 [NOTION_SYNC.md](./NOTION_SYNC.md)），在 **个人知识库 → 中文写作能力复兴计划** 数据库里编辑即可；GitHub Actions 会同步到 `_posts/notion/`。
+
+### 9.2 本地手写
+
 在 `_posts/` 新建文件，命名格式：
 
 ```
@@ -338,5 +344,6 @@ CI 在 Jekyll 构建前自动执行 `npm run build`。本地改 `dev/` 后只需
 
 - 线上站点：<https://sprzwty.github.io>
 - 主题管理：[docs/THEME.md](./THEME.md)
+- Notion 同步：[docs/NOTION_SYNC.md](./NOTION_SYNC.md)
 - 主题上游：<https://github.com/zhonger/jekyll-theme-H2O-ac>
 - Issue 跟踪：<https://github.com/Sprzwty/sprzwty.github.io/issues>

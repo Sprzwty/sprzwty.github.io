@@ -2,6 +2,8 @@
 
 本文是写博客文章时的快速参考。详细的环境搭建与发布流程见 [OPERATIONS.md](./OPERATIONS.md)。
 
+**从 Notion 同步：** 若在 Notion 数据库写作，见 [NOTION_SYNC.md](./NOTION_SYNC.md)（无需 MCP，使用 Notion API）。
+
 ---
 
 ## 1. 创建新文章
