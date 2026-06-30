@@ -25,7 +25,7 @@
 |------|------|------|
 | 主题 | `Gemfile` → gem | 布局、模板、默认静态资源 |
 | 博客 | 本仓库 | 文章、页面、站点配置、CV 数据 |
-| 覆盖 | `_includes/head.html` | Prism 1.29、Waline 条件加载、去掉 head 内 jQuery |
+| 覆盖 | `_includes/layouts/head.html` 或 `plugins/*` | 1.5.x 起 include 路径已重构，见升级 PR |
 | 构建 | `dev/` + webpack | 编译 SCSS/JS → `assets/*.min.*`（gitignore） |
 
 Jekyll 规则：**同路径文件以本仓库为准**，覆盖 gem 内对应文件。
