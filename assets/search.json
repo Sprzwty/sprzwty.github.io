@@ -42,26 +42,8 @@
   } ,
 
   {
-    "title"    : "Test en",
-    "tags"     : "mathjax",
-    "url"      : "/test/test-en.html"
-  } ,
-
-  {
-    "title"    : "H2O-ac theme for Jekyll",
-    "tags"     : "jekyll theme",
-    "url"      : "/tech/new-theme-h2o-ac.html"
-  } ,
-
-  {
     "title"    : "Conference Ranking",
     "tags"     : "Conference ranking",
     "url"      : "/test/ConferenceRanking.html"
-  } ,
-
-  {
-    "title"    : "MathJax Test",
-    "tags"     : "mathjax",
-    "url"      : "/test/mathjax-test.html"
   } 
 ]
