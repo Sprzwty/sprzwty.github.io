@@ -1,7 +1,7 @@
 {
   "lang": "",
   "dir": "",
-  "name": "Mr.Wang",
+  "name": "Mr. WANG",
   "short_name": "Sprzwty",
   "icons": [
     {
@@ -27,8 +27,8 @@
       "purpose": "maskable"
     }
   ], 
-  "theme_color": "#81BBFF",
-  "background_color": "#81BBFF",
+  "theme_color": "#5A80AA",
+  "background_color": "#5A80AA",
   "start_url": "/",
   "display": "standalone",
   "orientation": "natural"
