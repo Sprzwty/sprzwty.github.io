@@ -40,6 +40,9 @@ bundle install       # install Ruby gems → generates Gemfile.lock
 
 ### Build frontend assets
 
+Webpack compiles `dev/` → `assets/css/*.min.css` and `assets/js/*.min.js`.
+These files are **gitignored**; CI builds them before Jekyll. Run locally after clone or when editing `dev/`:
+
 ```bash
 npm run build        # one-shot production build
 npm run watch        # rebuild on every SCSS/JS change
@@ -48,7 +51,9 @@ npm run watch        # rebuild on every SCSS/JS change
 ### Run the dev server
 
 ```bash
+npm run build        # required once if assets/*.min.* are missing
 bundle exec jekyll serve --livereload
+# or: npm run serve
 ```
 
 Browse to <http://localhost:4000>.

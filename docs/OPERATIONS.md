@@ -15,8 +15,8 @@ sprzwty.github.io/
 ├── _layouts/            # 页面布局模板（一般不改，除非改主题）
 ├── _includes/           # 可复用 HTML 片段
 ├── _config.yml          # 站点全局配置（改后需重启 Jekyll）
-├── dev/                 # 前端源码（SCSS / JS）
-├── assets/              # 编译后的 CSS/JS（由 webpack 生成）
+├── dev/                 # 前端源码（SCSS / JS）— 唯一真相来源
+├── assets/              # 静态资源 + webpack 产物（*.min.* 不提交 Git）
 ├── scripts/             # 本地辅助脚本（代理、GitHub 认证）
 └── .github/workflows/   # CI/CD
 ```
@@ -57,13 +57,17 @@ npm run build
 
 ## 4. 本地开发
 
+> **构建产物策略**：`dev/` 是源码，`assets/css/*.min.css` 和 `assets/js/*.min.js` 由 webpack 生成，**不提交 Git**。CI 在部署前自动 `npm run build`；本地首次克隆或改 `dev/` 后需先构建。
+
 ### 4.1 修改样式 / JS
+
+终端 1：
 
 ```powershell
 npm run watch          # 监听 dev/，自动编译到 assets/
 ```
 
-另开终端：
+终端 2：
 
 ```powershell
 bundle exec jekyll serve --livereload
@@ -75,13 +79,23 @@ bundle exec jekyll serve --livereload
 
 ### 4.2 只改文章或页面
 
-通常只需：
+首次克隆或 `assets/` 下没有 `*.min.*` 时，先执行一次：
+
+```powershell
+npm run build
+```
+
+然后：
 
 ```powershell
 bundle exec jekyll serve --livereload
 ```
 
-若未改过 `dev/`，且 `assets/` 已是最新，可不跑 webpack。
+或一条命令（构建 + 启动）：
+
+```powershell
+npm run serve
+```
 
 ---
 
@@ -309,7 +323,7 @@ lang: zh-Hans
 
 ### 改了 SCSS 线上样式没变
 
-CI 会跑 `npm run build`。本地改 `dev/` 后需 `npm run build` 并提交 `assets/`，或依赖 CI 在 push 时自动编译。
+CI 在 Jekyll 构建前自动执行 `npm run build`。本地改 `dev/` 后只需 commit 源码，**不必** commit `assets/*.min.*`。
 
 ### push 用了错误账号
 

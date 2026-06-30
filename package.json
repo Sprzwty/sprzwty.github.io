@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "serve": "npm run build && bundle exec jekyll serve --livereload"
   },
   "author": "Wang Tongyu",
   "license": "MIT",
