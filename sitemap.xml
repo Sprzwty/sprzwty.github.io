@@ -37,14 +37,7 @@
 <lastmod>2026-01-23T03:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://sprzwty.github.io/untitled.html</loc>
-<lastmod>2026-06-30T03:00:00+00:00</lastmod>
-</url>
-<url>
 <loc>https://sprzwty.github.io/archives.html</loc>
-</url>
-<url>
-<loc>https://sprzwty.github.io/blog/</loc>
 </url>
 <url>
 <loc>https://sprzwty.github.io/categories.html</loc>
@@ -69,5 +62,11 @@
 </url>
 <url>
 <loc>https://sprzwty.github.io/tos.html</loc>
+</url>
+<url>
+<loc>https://sprzwty.github.io/blog/</loc>
+</url>
+<url>
+<loc>https://sprzwty.github.io/blog/page2/</loc>
 </url>
 </urlset>

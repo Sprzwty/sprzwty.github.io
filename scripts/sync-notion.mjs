@@ -206,10 +206,13 @@ async function buildPost(page, existingPath) {
     categories,
     author: config.author,
     tags: Array.isArray(tags) ? tags : tags ? [tags] : categories ? [categories] : undefined,
-    pin: typeof pin === "boolean" ? pin : config.defaults.pin,
     notion_page_id: page.id,
     notion_synced_at: new Date().toISOString(),
   };
+
+  if (pin === true) {
+    frontMatter.pin = true;
+  }
 
   const body = await pageToMarkdown(page.id);
   const content = `${buildFrontMatter(frontMatter)}\n\n${body}\n`;
