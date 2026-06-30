@@ -1,7 +1,7 @@
 ---
 layout: page
-home-title: Homepage of Wang Tongyu
-description: A website of Wang Tongyu — AI researcher, engineer in training.
+home-title: Wang Tongyu
+description: Personal blog — AI research, tech notes, and life.
 permalink: /en/index.html
 langs: ["zh-Hans", "en"]
 lang: "en"

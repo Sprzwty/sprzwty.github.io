@@ -21,7 +21,7 @@ title: '文章标题'
 subtitle: '副标题（可选）'
 date: 2026-01-01 12:00:00 +0900
 categories: tech          # 单个分类字符串
-author: Sprzwty
+author: Wang Tongyu
 cover: 'https://images.unsplash.com/photo-xxxx?w=1600&q=900'
 cover_author: 'Author Name'
 cover_author_link: 'https://unsplash.com/@xxx'
@@ -127,11 +127,12 @@ bundle exec jekyll serve --livereload
 
 ## 7. Front Matter 中的 categories 说明
 
-本站目前使用的分类（尽量保持一致）：
+本站目前使用的分类：
 
 | 分类 | 用途 |
 |------|------|
-| `tech` | 技术笔记、工具介绍 |
-| `life` | 生活随笔 |
+| `Experience` | 经历、面试、工具使用 |
+| `Thought` | 随笔、思考 |
+| `Curricular` | 课程笔记 |
 | `research` | 学术、论文相关 |
-| `notes` | 课程、会议笔记 |
+| `tech` | 技术笔记 |
