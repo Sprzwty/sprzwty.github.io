@@ -5,9 +5,35 @@
     <description>Personal blog — AI research, tech notes, and life.</description>
     <link>https://sprzwty.github.io//</link>
     <atom:link href="https://sprzwty.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 30 Jun 2026 07:58:49 +0000</pubDate>
-    <lastBuildDate>Tue, 30 Jun 2026 07:58:49 +0000</lastBuildDate>
+    <pubDate>Tue, 30 Jun 2026 08:14:24 +0000</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2026 08:14:24 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Untitled</title>
+        <description>
+</description>
+        <pubDate>Tue, 30 Jun 2026 03:00:00 +0000</pubDate>
+        <link>https://sprzwty.github.io/untitled.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/untitled.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>2026.01.23 晚上去心斋桥2小时畅饮的冷晴天</title>
+        <description>&lt;p&gt;已经感觉很长时间没写了，确实，一看已经十天了。这十天真的就是在过普通人的生活。上班吃饭下班健身睡觉。十个字就可以说尽这十天在干的事情也是一件令人感到甚是惊讶的事情。单着不过也只是站在一个对生活没什么热情的人的眼中的想法了。这十天宿舍的西条买了鸡尾酒的摇杯，是不是回到宿舍能有一杯五颜六色的鸡尾酒喝；和葛覃每天聊天聊的更多了，她换到新公司每天好像都很无语，然后单位的椅子也不舒服，弄得她的腰也不舒服。不过这对我来说倒是一个很好的可以和她聊天的小契机。今天晚上一会儿下班之后跟着年轻的日本人一起去喝喝酒聊聊天。不知道他们在一起会聊什么呢。&lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 Jan 2026 03:00:00 +0000</pubDate>
+        <link>https://sprzwty.github.io/diary/2026-01-23-%E6%99%9A%E4%B8%8A%E5%8E%BB%E5%BF%83%E6%96%8B%E6%A1%A52%E5%B0%8F%E6%97%B6%E7%95%85%E9%A5%AE%E7%9A%84%E5%86%B7%E6%99%B4%E5%A4%A9.html</link>
+        <guid isPermaLink="true">https://sprzwty.github.io/diary/2026-01-23-%E6%99%9A%E4%B8%8A%E5%8E%BB%E5%BF%83%E6%96%8B%E6%A1%A52%E5%B0%8F%E6%97%B6%E7%95%85%E9%A5%AE%E7%9A%84%E5%86%B7%E6%99%B4%E5%A4%A9.html</guid>
+        
+        <category>Diary</category>
+        
+        
+        <category>Diary</category>
+        
+      </item>
     
       <item>
         <title>2023.09.25-MacTricks</title>

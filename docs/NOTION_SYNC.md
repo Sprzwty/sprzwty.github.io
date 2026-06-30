@@ -50,16 +50,24 @@
 
 ## 4. 获取 Database ID
 
-在浏览器打开该数据库（表格视图），URL 类似：
+在浏览器打开该数据库（表格视图），URL 常见两种格式：
 
+**格式 A（app.notion.com）：**
+```
+https://app.notion.com/p/38fe2eb12d4d80578273c52fcb7442e0?v=38fe2eb12d4d805ba66a000cecd1e963
+```
+
+取 **`/p/` 后面** 那一段（不是 `v=` 后面的）：
+
+```
+38fe2eb1-2d4d-8057-8273-c52fcb7442e0
+```
+
+插入连字符规则：8-4-4-4-12 位一组。`v=` 后面的是**视图 ID**，不要用作 Database ID。
+
+**格式 B（notion.so）：**
 ```
 https://www.notion.so/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?v=...
-```
-
-或：
-
-```
-https://www.notion.so/workspace/中文写作能力复兴计划/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 其中 **32 位** 十六进制字符串（可含 `-`）即为 Database ID。  
