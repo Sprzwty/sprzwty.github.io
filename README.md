@@ -5,6 +5,8 @@ Personal blog of Wang Tongyu, built with [Jekyll](https://jekyllrb.com/) and the
 
 **Live site →** <https://sprzwty.github.io>
 
+**操作说明 →** [docs/OPERATIONS.md](docs/OPERATIONS.md)（环境、代理、GitHub 认证、写作、发布流程）
+
 ---
 
 ## Stack
@@ -21,6 +23,8 @@ Personal blog of Wang Tongyu, built with [Jekyll](https://jekyllrb.com/) and the
 ---
 
 ## Local Development
+
+> 完整流程（含公司网络代理、双 GitHub 账号）见 **[docs/OPERATIONS.md](docs/OPERATIONS.md)**。
 
 ### Prerequisites
 
