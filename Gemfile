@@ -11,4 +11,4 @@ gem "nokogiri"
 
 # Theme: layouts / includes / default assets come from the gem.
 # Site repo keeps only overrides — see docs/THEME.md
-gem "jekyll-theme-h2o-ac", "1.2.1"
+gem "jekyll-theme-h2o-ac", "1.5.3"

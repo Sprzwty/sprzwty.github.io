@@ -54,8 +54,8 @@ GEM
       sass-embedded (~> 1.75)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-theme-h2o-ac (1.2.1)
-      bundler (~> 2.3)
+    jekyll-theme-h2o-ac (1.5.3)
+      bundler (~> 2.5)
       h2o-ac-jekyll-extlinks (~> 0.0)
       jekyll-feed (~> 0.17.0)
       jekyll-paginate-v2 (~> 3.0.0)
@@ -112,7 +112,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.17)
   jekyll-paginate-v2 (~> 3.0)
   jekyll-sitemap (~> 1.4)
-  jekyll-theme-h2o-ac (= 1.2.1)
+  jekyll-theme-h2o-ac (= 1.5.3)
   nokogiri
   premonition (~> 4.0)
   webrick (~> 1.8)
@@ -139,7 +139,7 @@ CHECKSUMS
   jekyll-paginate-v2 (3.0.0) sha256=001be6c1963caa41fed9c2f43b0d47201defa0395381eb8830487c1c2fc4f4e3
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
   jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
-  jekyll-theme-h2o-ac (1.2.1) sha256=20fe49fbe076bb8b19356e65141c05fc58aa66180228cfa5b74cc78c7a38aa6e
+  jekyll-theme-h2o-ac (1.5.3) sha256=d3945e359f53977fdee04722e95f58ef25d8255e6b5ee24a6cc5051b55c0b3cb
   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
   json (2.20.0) sha256=9362bc6e55a952b056abf9167cf053358181c904cb70cd6eee0808ea830fc32b
   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
