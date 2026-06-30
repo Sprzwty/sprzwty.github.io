@@ -1,15 +1,15 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: {
         app: "./dev/app.js",
-        cv: "./dev/cv.js",
+        cv:  "./dev/cv.js",
     },
+    // JS goes directly to assets/js/ — no intermediate dist/ or CopyPlugin needed
     output: {
         filename: "[name].min.js",
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "assets/js"),
     },
     module: {
         rules: [
@@ -18,31 +18,29 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader",
-                ]
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sassOptions: {
+                                // Suppress @import deprecation warnings from theme SCSS.
+                                // The theme uses @import throughout; migrating to @use is a
+                                // separate task and not required for the build to succeed.
+                                silenceDeprecations: ["import"],
+                            },
+                        },
+                    },
+                ],
             },
         ],
     },
     plugins: [
+        // CSS goes to assets/css/ relative to the JS output path
         new MiniCssExtractPlugin({
-            filename: "[name].min.css",
-        }),
-        new CopyPlugin({
-            patterns: [
-              { from: "dist/app.min.css", to: "../assets/css/app.min.css" },
-              { from: "dist/app.min.css.map", to: "../assets/css/app.min.css.map" },
-              { from: "dist/cv.min.css", to: "../assets/css/cv.min.css" },
-              { from: "dist/cv.min.css.map", to: "../assets/css/cv.min.css.map" },
-              { from: "dist/app.min.js", to: "../assets/js/app.min.js" },
-              { from: "dist/app.min.js.map", to: "../assets/js/app.min.js.map" },
-            ],
-            options: {
-              concurrency: 100,
-            },
+            filename: "../css/[name].min.css",
         }),
     ],
-    devtool: 'source-map',
+    devtool: "source-map",
     watchOptions: {
-        ignored: /node_modules/
+        ignored: /node_modules/,
     },
 };

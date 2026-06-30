@@ -1,13 +1,13 @@
 ---
 layout: page
-home-title: Welcome to zhonger's blog!
-description: Writing, writing, writing ...
+home-title: 使用条款
+description: 本站隐私政策与使用条款
 permalink: /tos.html
 ---
 
 # 本站使用条款
 
-&emsp;&emsp;H2O-ac（[https://h2o-ac.pages.dev](https://h2o-ac.pages.dev)），以下简称“本站”。
+&emsp;&emsp;Mr. WANG's Blog（[https://sprzwty.github.io](https://sprzwty.github.io)），以下简称"本站"。
 
 ## 隐私政策
 
@@ -21,10 +21,6 @@ permalink: /tos.html
 
 - **阿里 CDN （iconfont）**会收集您的访问信息
 - **JSDelivr（前端依赖）**会收集您的访问信息
-- **Google Analytics** 会收集您的访问信息
-- **Umami（监控）**会收集您的访问信息
-- **Disqus（评论）**会收集您的访问信息和评论内容
-- **Waline（评论）**会收集您的访问信息和评论内容
 - **Busuanzi（页面统计）**会收集您的访问信息
 
 &emsp;&emsp;本站仅出于以下目的，使用您的个人信息：
@@ -35,7 +31,7 @@ permalink: /tos.html
 
 ### 如何使用 Cookie 和本地 LocalStorage 存储
 
-&emsp;&emsp;由于本站会基于 Cookie 中的相关信息来为您提供“深色模式切换”、“同意使用 Cookie 提示”功能，该部分 Cookie 会保存在您的浏览器本地。除此之外，本站提供的 PWA 功能会将您访问过的本站页面和图片缓存在设备本地，以便提升您的使用体验。对于这里所有的 Cookie 和 LocalStorage，您都可以随时清除。
+&emsp;&emsp;由于本站会基于 Cookie 中的相关信息来为您提供"深色模式切换"、"同意使用 Cookie 提示"功能，该部分 Cookie 会保存在您的浏览器本地。除此之外，本站提供的 PWA 功能会将您访问过的本站页面和图片缓存在设备本地，以便提升您的使用体验。对于这里所有的 Cookie 和 LocalStorage，您都可以随时清除。
 
 &emsp;&emsp;至于如何清除这些内容，您可以根据您所使用的浏览器类型查找相应的方法。
 
@@ -45,7 +41,7 @@ permalink: /tos.html
 
 ## 版权声明
 
-&emsp;&emsp;本站采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 协议共享所有内容，但如对本站进行转载、复制、翻译等行为，请务必注明原文链接地址以及遵守协议规定的其他条件。
+&emsp;&emsp;本站采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议共享所有内容，但如对本站进行转载、复制、翻译等行为，请务必注明原文链接地址以及遵守协议规定的其他条件。
 
 ## 链接到本站
 
@@ -64,7 +60,7 @@ permalink: /tos.html
 
 ## 关于本站的问题或意见
 
-&emsp;&emsp;如发现某些文章内容存在问题或有什么意见，欢迎在主站使用评论的方式直接发表。也可以通过首页公开的私人邮箱发送邮件联系，或者创建 [Github Issue](https://github.com/zhonger/jekyll-theme-H2O-ac/issues/new) 的方式联系。但是，考虑到某些情况，您所反映的问题或者意见可能不会公开发表或补充在本站。
+&emsp;&emsp;如发现某些文章内容存在问题或有什么意见，欢迎在主站使用评论的方式直接发表，或通过首页公开的邮箱联系。
 
 ## 免责声明
 

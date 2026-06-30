@@ -1,20 +1,45 @@
-name: Jekyll site CI
+name: Deploy Blog
 
-on: [push, pull_request]
+# Only deploy when pushing to master. PRs are NOT deployed.
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    steps: 
-      - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
+      # ── Frontend ────────────────────────────────────────────────────
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          ruby-version: '3.1.0'
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Build frontend assets (CSS / JS)
+        run: npm ci && npm run build
+
+      # ── Jekyll ──────────────────────────────────────────────────────
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
           bundler-cache: true
-      - run: bundle exec jekyll build --config _config_production.yml
-      - uses: peaceiris/actions-gh-pages@v3.7.3
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      # ── Deploy ──────────────────────────────────────────────────────
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+          # If you add a custom domain later, uncomment and set it here:
+          # cname: your-custom-domain.com

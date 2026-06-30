@@ -1,13 +1,19 @@
+# OS
 .DS_Store
 */.DS_Store
 
-node_modules
-package-lock.json
-Gemfile.lock
-.jekyll-cache
+# Node
+node_modules/
 
-_site
+# Webpack intermediate output (committed artifacts are in assets/)
+dist/
 
+# Jekyll build output
+_site/
+.jekyll-cache/
+
+# Gem build artifacts
 *.gem
 
-dist
+# NOTE: Gemfile.lock and package-lock.json are intentionally NOT ignored.
+# Committing lockfiles ensures reproducible CI builds.
