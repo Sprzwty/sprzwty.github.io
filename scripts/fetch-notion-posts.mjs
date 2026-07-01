@@ -20,7 +20,6 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { Client } from "@notionhq/client";
-import { NotionToMarkdown } from "notion-to-md";
 import {
   readProperty,
   fetchAllPages,
@@ -31,6 +30,7 @@ import {
   excerptFromMarkdown,
   estimateReadTimeMin,
   toTs,
+  createNotionToMd,
 } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -62,7 +62,7 @@ const AUTHOR = {
 };
 
 const FALLBACK_THUMBNAIL =
-  "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800";
+  "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800";
 
 if (!NOTION_TOKEN || !DATABASE_ID) {
   console.error(
@@ -72,7 +72,7 @@ if (!NOTION_TOKEN || !DATABASE_ID) {
 }
 
 const notion = new Client({ auth: NOTION_TOKEN });
-const n2m = new NotionToMarkdown({ notionClient: notion });
+const n2m = createNotionToMd(notion, ROOT);
 
 function shouldPublish(props) {
   if (!props[PROPERTIES.publish]) return true;
@@ -87,6 +87,7 @@ async function buildPost(page) {
   const subtitle = readProperty(props, PROPERTIES.subtitle);
   const pin = readProperty(props, PROPERTIES.pin) === true;
   const body = (await pageToMarkdown(n2m, page.id)) || "";
+  const cover = await pageCoverUrl(page, ROOT);
 
   return {
     id: `notion-${page.id}`,
@@ -95,7 +96,7 @@ async function buildPost(page) {
     excerpt: { en: subtitle || excerptFromMarkdown(body) },
     body: { en: body },
     category,
-    thumbnailUrl: pageCoverUrl(page) || FALLBACK_THUMBNAIL,
+    thumbnailUrl: cover || FALLBACK_THUMBNAIL,
     author: AUTHOR,
     publishedAt: formatDateOnly(dateRaw),
     readTimeMin: estimateReadTimeMin(body),

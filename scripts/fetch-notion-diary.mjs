@@ -15,7 +15,6 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { Client } from "@notionhq/client";
-import { NotionToMarkdown } from "notion-to-md";
 import {
   readProperty,
   fetchAllPages,
@@ -23,6 +22,7 @@ import {
   formatDateOnly,
   pageCoverUrl,
   toTs,
+  createNotionToMd,
 } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -47,7 +47,7 @@ if (!NOTION_TOKEN || !DATABASE_ID) {
 }
 
 const notion = new Client({ auth: NOTION_TOKEN });
-const n2m = new NotionToMarkdown({ notionClient: notion });
+const n2m = createNotionToMd(notion, ROOT);
 
 function shouldPublish(props) {
   if (!props[PROPERTIES.publish]) return true;
@@ -61,7 +61,7 @@ async function buildEntry(page) {
   const [year, month, day] = formatDateOnly(dateRaw).split("-").map(Number);
   const category = readProperty(props, PROPERTIES.category) || "Diary";
   const description = await pageToMarkdown(n2m, page.id);
-  const imageUrl = pageCoverUrl(page);
+  const imageUrl = await pageCoverUrl(page, ROOT);
 
   return {
     id: `notion-${page.id}`,

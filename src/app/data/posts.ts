@@ -59,7 +59,7 @@ export const posts: Post[] = [
       ja: '## 新しい基盤\n\nここの記事は Notion で執筆され、自動的に同期されます。ブログ用データベースが接続されると、この仮の記事は実際のコンテンツに置き換わります。',
     },
     category: 'Meta',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800',
     author: wang,
     publishedAt: '2026-07-01',
     readTimeMin: 2,
