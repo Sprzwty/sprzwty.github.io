@@ -1,0 +1,42 @@
+name: Migrate Legacy Posts to Notion
+
+# One-off helper: run manually (Actions tab → "Run workflow", pick this branch)
+# after the blog Notion database is shared with the integration. Safe to
+# re-run — the script skips posts whose title is already in Notion.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (parse only, write nothing to Notion)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run migration
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_BLOG_DATABASE_ID: ${{ secrets.NOTION_BLOG_DATABASE_ID }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            npm run migrate:legacy -- --dry-run
+          else
+            npm run migrate:legacy
+          fi

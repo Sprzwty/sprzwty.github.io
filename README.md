@@ -1,128 +1,54 @@
 # sprzwty.github.io
 
-Personal blog of Wang Tongyu, built with [Jekyll](https://jekyllrb.com/) and the
-[H2O-ac](https://github.com/zhonger/jekyll-theme-H2O-ac) theme.
+Personal blog of Wang Tongyu — a React SPA driven entirely by two Notion databases (diary + articles). There is no in-app editor; writing happens in Notion, and GitHub Actions syncs it to static data files and deploys the built site.
 
 **Live site →** <https://sprzwty.github.io>
 
-**操作说明 →** [docs/OPERATIONS.md](docs/OPERATIONS.md)（环境、代理、GitHub 认证、写作、发布流程）
-
-**Notion 同步 →** [docs/NOTION_SYNC.md](docs/NOTION_SYNC.md)（在 Notion 写作，自动发布到博客）
-
-**主题管理 →** [docs/THEME.md](docs/THEME.md)（gem 依赖、override、升级流程）
+**Notion 创作工作流 →** [docs/NOTION_SYNC.md](docs/NOTION_SYNC.md)
 
 ---
 
 ## Stack
 
 | Layer | Tool |
-|-------|------|
-| Static site generator | Jekyll 4.x |
-| Theme | [jekyll-theme-h2o-ac](https://github.com/zhonger/jekyll-theme-H2O-ac) gem @ 1.2.1 |
-| CSS / JS build | Webpack 5 + Sass |
-| CI / Deploy | GitHub Actions → GitHub Pages |
-| Ruby version | 3.3 (see `.tool-versions`) |
-| Node version | 20 (see `.tool-versions`) |
+|---|---|
+| Framework | React 18 + Vite 6 + TypeScript |
+| Routing | react-router (hash-based, GitHub Pages friendly) |
+| Styling | Tailwind CSS v4 + shadcn/ui |
+| Content source | Notion (2 databases) via `@notionhq/client` + `notion-to-md` |
+| Markdown rendering | `react-markdown` + remark-gfm/math + rehype-katex/highlight |
+| CI / Deploy | GitHub Actions → `gh-pages` branch |
+| Node version | 20+ |
 
----
-
-## Local Development
-
-> 完整流程（含公司网络代理、双 GitHub 账号）见 **[docs/OPERATIONS.md](docs/OPERATIONS.md)**。
-
-### Prerequisites
-
-- [asdf](https://asdf-vm.com/) or rbenv/nvm matching `.tool-versions`
-- Bundler: `gem install bundler`
-
-### First-time setup
+## Local development
 
 ```bash
-npm install          # install JS build dependencies → generates package-lock.json
-bundle install       # install Ruby gems → generates Gemfile.lock
+npm install
+npm run dev          # http://localhost:5173
 ```
 
-### Build frontend assets
-
-Webpack compiles `dev/` → `assets/css/*.min.css` and `assets/js/*.min.js`.
-These files are **gitignored**; CI builds them before Jekyll. Run locally after clone or when editing `dev/`:
+The repo ships with placeholder content in `src/app/data/posts.ts` / `life-events.ts`, so `npm run dev` works out of the box without any Notion credentials. To pull your real content:
 
 ```bash
-npm run build        # one-shot production build
-npm run watch        # rebuild on every SCSS/JS change
+$env:NOTION_TOKEN = "secret_xxx"
+$env:NOTION_DIARY_DATABASE_ID = "..."
+$env:NOTION_BLOG_DATABASE_ID = "..."
+npm run sync
 ```
 
-### Run the dev server
+See [docs/NOTION_SYNC.md](docs/NOTION_SYNC.md) for the full authoring workflow and field reference.
+
+## Build
 
 ```bash
-npm run build        # required once if assets/*.min.* are missing
-bundle exec jekyll serve --livereload
-# or: npm run serve
+npm run build         # outputs to dist/
+npm run preview        # preview the production build locally
 ```
-
-Browse to <http://localhost:4000>.
-
-> **Tip:** You only need to restart the server when you change `_config.yml`.
-> All other file changes are picked up automatically via `--livereload`.
-
----
-
-## Writing a Post
-
-1. Create `_posts/YYYY-MM-DD-slug.md`
-2. Add front matter:
-
-```yaml
----
-layout: post
-title: 'My Post Title'
-tags: [tag1, tag2]
----
-```
-
-3. Write Markdown below the `---`.
-4. Commit and push to `master` — CI builds and deploys automatically.
-
----
-
-## Configuration
-
-All site settings are in `_config.yml`. Key sections:
-
-| Section | Purpose |
-|---------|---------|
-| `title` / `author` / `bio` | Site identity |
-| `sns` | Social links shown in sidebar |
-| `comments` | Enable Waline or Disqus (bring your own URL) |
-| `nav` | Top navigation links |
-| `pagination` | Posts per page |
-| `prism` | Code highlight theme |
-
----
 
 ## Deployment
 
-Pushing to `master` triggers `.github/workflows/jekyll.yml`, which:
-
-1. Runs `npm ci && npm run build` (rebuilds CSS/JS)
-2. Runs `bundle exec jekyll build`
-3. Pushes `_site/` to the `gh-pages` branch via `peaceiris/actions-gh-pages`
-
-GitHub Pages serves the `gh-pages` branch.
-
----
-
-## Custom Domain
-
-If you add a custom domain later:
-
-1. Add a `CNAME` file in the repo root containing your domain (e.g. `blog.example.com`)
-2. Uncomment the `cname:` line in `.github/workflows/jekyll.yml`
-3. Configure the DNS record with your registrar
-
----
+`.github/workflows/deploy.yml` runs on push to `master`, on a 6-hour schedule, and on demand (`workflow_dispatch`). Each run: syncs both Notion databases → commits changed data files → `npm run build` → publishes `dist/` to the `gh-pages` branch via `peaceiris/actions-gh-pages`.
 
 ## License
 
-Blog content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-Theme code is licensed under [MIT](https://github.com/zhonger/jekyll-theme-H2O-ac/blob/master/LICENSE).
+Blog content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). UI code adapted from a Figma Make export using [shadcn/ui](https://ui.shadcn.com/) components (MIT) — see [ATTRIBUTIONS.md](ATTRIBUTIONS.md).

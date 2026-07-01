@@ -1,0 +1,67 @@
+name: Sync Notion & Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+  schedule:
+    # Every 6 hours (UTC) — keeps the site in sync with Notion without manual pushes.
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync content from Notion
+        id: sync
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DIARY_DATABASE_ID: ${{ secrets.NOTION_DIARY_DATABASE_ID }}
+          NOTION_BLOG_DATABASE_ID: ${{ secrets.NOTION_BLOG_DATABASE_ID }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ]; then
+            echo "NOTION_TOKEN not configured; skipping sync, building with existing data/*.ts."
+            exit 0
+          fi
+          if [ -n "$NOTION_DIARY_DATABASE_ID" ]; then
+            npm run sync:diary
+          fi
+          if [ -n "$NOTION_BLOG_DATABASE_ID" ]; then
+            npm run sync:posts
+          fi
+
+      - name: Commit synced content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/app/data/life-events.ts src/app/data/posts.ts
+          if git diff --staged --quiet; then
+            echo "No content changes from Notion."
+          else
+            git commit -m "chore(content): sync diary and posts from Notion"
+            git push
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
