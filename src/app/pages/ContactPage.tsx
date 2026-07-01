@@ -23,8 +23,7 @@ export function ContactPage() {
     setEmail('');
   };
 
-  // TODO: replace with a real contact email once confirmed.
-  const CONTACT_EMAIL = 'contact@example.com';
+  const CONTACT_EMAIL = 'sprzwty@gmail.com';
 
   const rows = [
     { icon: Mail, label: t.contact.email, value: CONTACT_EMAIL },
