@@ -76,8 +76,13 @@ async function buildEntry(page) {
 }
 
 async function main() {
+  console.log(`Querying diary database ${DATABASE_ID}...`);
   const pages = await fetchAllPages(notion, DATABASE_ID);
+  console.log(`Fetched ${pages.length} page(s) from the database.`);
   const published = pages.filter((page) => shouldPublish(page.properties));
+  if (published.length < pages.length) {
+    console.log(`${pages.length - published.length} page(s) skipped (Publish unchecked).`);
+  }
   const entries = await Promise.all(published.map(buildEntry));
 
   entries.sort((a, b) => new Date(b.year, b.month - 1, b.day) - new Date(a.year, a.month - 1, a.day));
