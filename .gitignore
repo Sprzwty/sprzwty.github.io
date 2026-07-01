@@ -5,21 +5,9 @@
 # Node
 node_modules/
 
-# Webpack build output (generated from dev/ — do not commit)
-assets/css/*.min.css
-assets/css/*.min.css.map
-assets/js/*.min.js
-assets/js/*.min.js.map
-
-# Webpack intermediate output
+# Vite build output
 dist/
+.vite/
 
-# Jekyll build output
-_site/
-.jekyll-cache/
-
-# Gem build artifacts
-*.gem
-
-# NOTE: Gemfile.lock and package-lock.json are intentionally NOT ignored.
-# Committing lockfiles ensures reproducible CI builds.
+# NOTE: package-lock.json is intentionally NOT ignored.
+# Committing the lockfile ensures reproducible CI builds.

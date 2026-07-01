@@ -1,155 +1,78 @@
-# Notion → Jekyll 同步
+# Notion 创作工作流
 
-在 Notion 数据库里写作，由 GitHub Actions 自动同步到 `_posts/notion/`，再经现有 CI 部署到 GitHub Pages。
+本站完全由 Notion 驱动：日记和博客文章分别存放在两个 Notion 数据库，写作只在 Notion 里发生，网站本身没有任何编辑入口。GitHub Actions 定时把两个数据库同步成静态数据文件，Vite 构建后发布到 `gh-pages`。
 
-**不需要 Cursor MCP**，只用 Notion 官方 API + Integration Token。
+## 两个数据库
 
----
+| | 用途 | 对应脚本 | 生成文件 |
+|---|---|---|---|
+| **日记数据库** | `Life` 页面的时间线（只读） | `scripts/fetch-notion-diary.mjs` | `src/app/data/life-events.ts` |
+| **博客数据库** | `Articles` 页面的文章列表 | `scripts/fetch-notion-posts.mjs` | `src/app/data/posts.ts` |
 
-## 1. 你的数据库
+两个数据库都需要连接同一个 Notion 集成（Integration）：在数据库页面右上角 `···` → `Connections` → 添加你的集成。这一步必须在 Notion 里手动完成一次，API 无法代为授权。
 
-当前字段（可逐步扩展）：
+## 字段说明
 
-| Notion 列 | Jekyll front matter |
-|-----------|---------------------|
-| Title | `title` |
-| Date | `date` |
-| Category | `categories` / `tags` |
+两个数据库使用相同的精简字段约定：
 
-建议以后新增：
+| 属性 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+| `Title` | Title | ✅ | 标题 |
+| `Date` | Date | 否 | 不填则用页面创建时间 |
+| `Category` | Select | 否 | 自由文本，不再是固定枚举；不填日记默认 `Diary`，文章默认 `Uncategorized` |
+| `Tags` | Multi-select | 否 | 仅博客数据库使用（当前网站尚未展示，可先记录备用） |
+| `Subtitle` | Text | 否 | 仅博客数据库；作为摘要，不填则自动取正文前 ~160 字 |
+| `Pin` | Checkbox | 否 | 仅博客数据库；对应首页「精选文章」(`featured`) |
+| `Publish` | Checkbox | 否 | 不勾选则跳过同步；不建这个属性等同于「全部发布」 |
 
-| Notion 列 | 类型 | 作用 |
-|-----------|------|------|
-| Publish | Checkbox | 仅勾选时才同步到博客 |
-| Tags | Multi-select | 文章标签 |
-| Subtitle | Text | 副标题 |
-| Pin | Checkbox | 是否置顶 |
+**自动生成，无需手填：**
 
-新增列后，在 `scripts/notion-sync.config.json` 的 `properties` 里填 Notion 列名即可（已预留 `Publish`、`Tags` 等键）。
+- **Slug**：由 `Title` 自动 slugify。
+- **摘要（excerpt）**：`Subtitle` 留空时，自动取正文前 ~160 字（去除 Markdown 语法）。
+- **封面图**：直接用 Notion 页面自带的 Cover（页面左上角「添加封面」），不需要额外的图片属性。
+- **阅读时长**：按正文字数估算（中日文按字符、英文按单词）。
+- **作者**：固定写死为 Wang Tongyu，不设 Author 属性。
 
----
+正文支持 Notion 的全部常见格式——标题、列表、代码块（含语言高亮）、引用、表格、图片、行内/块级公式（`$...$` / `$$...$$`）——同步时通过 [`notion-to-md`](https://github.com/souvikinator/notion-to-md) 转成 Markdown，前端用 `<MarkdownContent>` 统一渲染成 HTML。
 
-## 2. 创建 Notion Integration
+## 图片怎么嵌入
 
-1. 打开 <https://www.notion.so/my-integrations>
-2. **New integration** → 名称如 `sprzwty-blog-sync`
-3. 关联到你的 Workspace（Internal integration）
-4. 复制 **Internal Integration Secret**（形如 `ntn_...` 或 `secret_...`）
+两种方式都会被**自动识别**，不需要额外配置：
 
----
+1. **页面封面**（Cover）→ 自动映射成文章缩略图 / 日记配图。
+2. **正文里插入图片块**（`/image`，直接粘贴或拖拽上传，也支持粘贴外部图片链接）→ 自动转成 Markdown 图片、随正文一起渲染。
 
-## 3. 把 Integration 连到数据库
+背后有个坑已经处理掉了：如果你是**直接把图片文件拖进 Notion**（而不是粘贴一个外部链接），Notion API 返回的是一个大约 1 小时后就会失效的临时签名 URL。因为同步是每 6 小时跑一次，这类图片如果直接原样写进生成的 `.ts` 文件，过一会儿就会在网站上裂图。
 
-1. 打开 Notion：**个人知识库 → 中文写作能力复兴计划 → 数据库**
-2. 点击右上角 **⋯** → **Connections** / **连接**
-3. 选择刚创建的 `sprzwty-blog-sync`
+同步脚本（`scripts/lib/notion-helpers.mjs` 里的 `rehostNotionFile`）会自动检测这种情况：只要发现是 Notion 直接托管的文件（封面或正文图片），就会在同步时把图片下载下来，存进仓库的 `public/notion-images/` 目录，并把链接替换成永久的本地路径。如果你插入图片时用的是**外部链接**（比如已经传到别处的图床/CDN），则不受影响，直接原样使用那个永久链接。
 
-未连接时 API 会返回 404。
+也就是说：**怎么方便就怎么插入图片，拖拽上传或粘贴链接都行，不用自己操心链接会不会失效**。唯一的例外是——如果你把同一个图片块里的图片换掉（同一个块，换了张图），脚本会因为按块 ID 缓存而认为本地已经有文件、不会重新下载；这种情况需要手动去 `public/notion-images/` 里删掉对应文件，触发下次同步重新拉取。
 
----
+## 新建一篇文章 / 一条日记
 
-## 4. 获取 Database ID
+1. 打开对应数据库，新建一行。
+2. 填 `Title`，正常写正文（想怎么排版就怎么排版）。
+3. 想立刻上线就勾上 `Publish`（如果这个属性存在）；否则等 6 小时定时同步，或者去 Actions 里手动跑一次 workflow。
+4. 想置顶/加入首页精选，勾 `Pin`（仅博客数据库）。
 
-在浏览器打开该数据库（表格视图），URL 常见两种格式：
+## 同步频率
 
-**格式 A（app.notion.com）：**
-```
-https://app.notion.com/p/38fe2eb12d4d80578273c52fcb7442e0?v=38fe2eb12d4d805ba66a000cecd1e963
-```
+`.github/workflows/deploy.yml` 每 6 小时自动跑一次：拉取两个数据库 → 若数据文件有变化则提交 → `npm run build` → 部署到 `gh-pages`。也可以在 GitHub 的 Actions 标签页手动触发（`workflow_dispatch`），不用等 6 小时。
 
-取 **`/p/` 后面** 那一段（不是 `v=` 后面的）：
-
-```
-38fe2eb1-2d4d-8057-8273-c52fcb7442e0
-```
-
-插入连字符规则：8-4-4-4-12 位一组。`v=` 后面的是**视图 ID**，不要用作 Database ID。
-
-**格式 B（notion.so）：**
-```
-https://www.notion.so/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?v=...
-```
-
-其中 **32 位** 十六进制字符串（可含 `-`）即为 Database ID。  
-也可在 **Copy link** 后从链接中提取。
-
----
-
-## 5. 配置 GitHub Secrets
-
-仓库 **Settings → Secrets and variables → Actions → New repository secret**：
-
-| Secret | 值 |
-|--------|-----|
-| `NOTION_TOKEN` | Integration Secret |
-| `NOTION_DATABASE_ID` | 上一步的 Database ID |
-
-配置完成后，Actions 里的 **Sync Notion Posts** 才会运行（未配置时 workflow 自动跳过）。
-
----
-
-## 6. 触发同步
-
-- **手动**：GitHub → Actions → **Sync Notion Posts** → **Run workflow**
-- **定时**：默认每 6 小时（见 `.github/workflows/notion-sync.yml`）
-
-同步成功后会把 Markdown 写入 `_posts/notion/`，并自动 commit；随后 push 到 `master` 会触发站点部署。
-
----
-
-## 7. 本地测试（可选）
+## 本地开发时手动同步
 
 ```powershell
-.\scripts\set-proxy-px.ps1   # 公司网络需要
+$env:NOTION_TOKEN = "secret_xxx"
+$env:NOTION_DIARY_DATABASE_ID = "..."
+$env:NOTION_BLOG_DATABASE_ID = "..."
 
-$env:NOTION_TOKEN = "你的_integration_secret"
-$env:NOTION_DATABASE_ID = "你的_database_id"
-
-npm install
-npm run notion:sync
+npm run sync          # 等价于 sync:diary + sync:posts
+npm run dev
 ```
 
-生成文件在 `_posts/notion/`。确认无误后再 push；Secrets 只需配在 GitHub 上供 Action 使用。
+不设置这些环境变量也能跑 `npm run dev`——`src/app/data/*.ts` 里保留了占位内容，方便看界面效果。
 
----
+## 已知的暂时限制
 
-## 8. 行为说明
-
-- **只管理** `_posts/notion/` 下带 `notion_page_id` 的文件
-- **`_posts/` 里其他文章**（手写、历史稿）不会被修改
-- 尚无 **Publish** 列时：**数据库里所有条目都会同步**
-- 加上 **Publish** 列后：仅 `Publish = true` 的条目会同步
-- 不会自动删除 Notion 里已删的行（避免误删；后续可加归档策略）
-
----
-
-## 9. 扩展字段
-
-编辑 `scripts/notion-sync.config.json`：
-
-```json
-{
-  "properties": {
-    "title": "Title",
-    "date": "Date",
-    "categories": "Category",
-    "publish": "Publish",
-    "tags": "Tags",
-    "subtitle": "Subtitle",
-    "pin": "Pin"
-  }
-}
-```
-
-左侧为脚本内部键，右侧必须与 Notion **列名完全一致**（区分大小写）。
-
----
-
-## 10. 故障排查
-
-| 现象 | 处理 |
-|------|------|
-| `object_not_found` | Integration 未连接到该数据库 |
-| `Missing NOTION_TOKEN` | 未配置 GitHub Secrets 或本地环境变量 |
-| 中文标题 URL 较长 | 正常；permalink 使用 title 字段 |
-| 图片不显示 | Notion 图片为临时 URL；后续可改为下载到 `assets/img/` |
+- 目前同步脚本只写入 `en`（英文）字段；`zh`/`ja` 版本界面会自动 fallback 显示英文内容，暂时需要在生成的 `.ts` 文件里手动补充多语言版本才会生效（下次同步会被覆盖）。
+- 新界面还没有 RSS / Sitemap / 归档页 / 标签页 / 评论区，见迁移计划中的「已知限制」章节。
