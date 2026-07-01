@@ -11,6 +11,12 @@ on:
 permissions:
   contents: write
 
+# Push/schedule/manual-dispatch can overlap; queue runs instead of racing on the
+# "Commit synced content" push (two runs committing at once = rejected push).
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   sync-build-deploy:
     runs-on: ubuntu-latest
@@ -55,6 +61,7 @@ jobs:
             echo "No content changes from Notion."
           else
             git commit -m "chore(content): sync diary and posts from Notion"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           fi
 
