@@ -167,6 +167,47 @@ export function excerptFromMarkdown(markdown, maxLen = 160) {
   return `${plain.slice(0, maxLen).trim()}…`;
 }
 
+const LANG_MARKER_RE = /^---LANG:(EN|ZH|JA)---[ \t]*$/gim;
+
+/**
+ * Splits a single page's Markdown into per-language sections using explicit
+ * `---LANG:EN---` / `---LANG:ZH---` / `---LANG:JA---` marker lines typed as their own
+ * paragraph in Notion (see docs/NOTION_SYNC.md). Pages that don't use any markers are
+ * treated as a single un-tagged block and returned entirely under `en` — content isn't
+ * lost, it's just not localized yet, which keeps older un-tagged pages working as-is.
+ */
+export function splitLocalizedMarkdown(markdown) {
+  const matches = [...markdown.matchAll(LANG_MARKER_RE)];
+  if (matches.length === 0) {
+    return { en: markdown.trim() };
+  }
+
+  const sections = {};
+  for (let i = 0; i < matches.length; i++) {
+    const lang = matches[i][1].toLowerCase();
+    const start = matches[i].index + matches[i][0].length;
+    const end = i + 1 < matches.length ? matches[i + 1].index : markdown.length;
+    const text = markdown.slice(start, end).trim();
+    if (text) sections[lang] = text;
+  }
+
+  // LocalizedText requires `en` as the guaranteed fallback — if the author only tagged
+  // ZH/JA sections, borrow one of those rather than leaving `en` empty.
+  if (!sections.en) {
+    sections.en = sections.zh || sections.ja || "";
+  }
+
+  return sections;
+}
+
+/** Combine a required base string with optional ZH/JA overrides into a `LocalizedText`. */
+export function buildLocalizedText(base, zh, ja) {
+  const result = { en: base };
+  if (zh) result.zh = zh;
+  if (ja) result.ja = ja;
+  return result;
+}
+
 /** Rough reading-time estimate (~200 words/min for English; ~400 chars/min for CJK). */
 export function estimateReadTimeMin(markdown) {
   const cjkChars = (markdown.match(/[\u3000-\u9fff\uf900-\ufaff]/g) || []).length;

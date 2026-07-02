@@ -21,7 +21,7 @@ export interface Translations {
   footer: { tagline: string; navigation: string; follow: string; copyright: string };
   notFound: { title: string; desc: string; goHome: string };
   search: { noResults: string };
-  life: { title: string; subtitle: string; views: { impact: string; normal: string } };
+  life: { title: string; subtitle: string; views: { impact: string; normal: string }; entryCount: (n: number) => string; expand: string; collapse: string };
   diary: { empty: string };
   readMore: string;
   minRead: (n: number) => string;
@@ -39,7 +39,7 @@ const en: Translations = {
   footer: { tagline: 'Notes on AI research, engineering, and everyday life.', navigation: 'Navigation', follow: 'Follow Along', copyright: '© 2026 Wang Tongyu. All rights reserved.' },
   notFound: { title: 'Page not found', desc: 'The page you\'re looking for doesn\'t exist or has been moved.', goHome: 'Go Home' },
   search: { noResults: 'No results found.' },
-  life: { title: 'My Life', subtitle: 'A timeline of moments, milestones, and memories.', views: { impact: 'Impact', normal: 'Normal' } },
+  life: { title: 'My Life', subtitle: 'A timeline of moments, milestones, and memories.', views: { impact: 'Impact', normal: 'Normal' }, entryCount: (n) => `${n} ${n === 1 ? 'entry' : 'entries'}`, expand: 'Read more', collapse: 'Show less' },
   diary: { empty: 'No entries yet.' },
   readMore: 'Read Article →',
   minRead: (n) => `${n} min read`,
@@ -57,7 +57,7 @@ const zh: Translations = {
   footer: { tagline: '记录 AI 研究、工程实践与日常生活。', navigation: '导航', follow: '关注我', copyright: '© 2026 Wang Tongyu 版权所有。' },
   notFound: { title: '页面未找到', desc: '您访问的页面不存在或已被移动。', goHome: '返回首页' },
   search: { noResults: '未找到相关结果。' },
-  life: { title: '我的生活', subtitle: '记录时光里的每一个片刻与里程碑。', views: { impact: '大图', normal: '时间轴' } },
+  life: { title: '我的生活', subtitle: '记录时光里的每一个片刻与里程碑。', views: { impact: '大图', normal: '时间轴' }, entryCount: (n) => `${n} 篇`, expand: '展开全文', collapse: '收起' },
   diary: { empty: '暂无日记条目。' },
   readMore: '阅读全文 →',
   minRead: (n) => `${n} 分钟阅读`,
@@ -75,7 +75,7 @@ const ja: Translations = {
   footer: { tagline: 'AI 研究、エンジニアリング、日々の生活についての記録。', navigation: 'ナビゲーション', follow: 'フォロー', copyright: '© 2026 Wang Tongyu. All rights reserved.' },
   notFound: { title: 'ページが見つかりません', desc: 'お探しのページは存在しないか、移動されました。', goHome: 'ホームへ戻る' },
   search: { noResults: '結果が見つかりませんでした。' },
-  life: { title: '私の人生', subtitle: '瞬間、マイルストーン、思い出のタイムライン。', views: { impact: 'インパクト', normal: '通常' } },
+  life: { title: '私の人生', subtitle: '瞬間、マイルストーン、思い出のタイムライン。', views: { impact: 'インパクト', normal: '通常' }, entryCount: (n) => `${n} 件`, expand: '続きを読む', collapse: '閉じる' },
   diary: { empty: 'まだエントリがありません。' },
   readMore: '記事を読む →',
   minRead: (n) => `${n} 分で読めます`,
@@ -90,12 +90,35 @@ export const localeFontFamily: Record<Locale, string> = {
   ja: '"Noto Sans JP", system-ui, sans-serif',
 };
 
+/** Reading typeface for long-form content (see <MarkdownContent>): Source Serif 4 (Latin) paired
+ * with Source Han Serif's SC/JP cuts — Google Fonts hosts the exact same Source Han Serif glyphs
+ * under the "Noto Serif SC/JP" name (Adobe and Google co-developed and dual-published this CJK
+ * family), so this is the real Source Han Serif, not a reskin. Source Serif 4 is loaded eagerly in
+ * index.html; the SC/JP cuts are lazy-loaded per-locale so we don't ship CJK glyph tables to
+ * readers who never see CJK content. */
+export const localeSerifFontFamily: Record<Locale, string> = {
+  en: '"Source Serif 4", Georgia, "Times New Roman", serif',
+  zh: '"Noto Serif SC", "Source Serif 4", serif',
+  ja: '"Noto Serif JP", "Source Serif 4", serif',
+};
+
+/** Extra tracking for CJK reading copy. CJK glyphs sit in a fixed-width em-box, so unlike Latin
+ * text, "cramped" CJK body copy is a spacing problem you fix by hand — this isn't an official
+ * Apple HIG value (their published tracking specs are for Latin SF Pro and are actually negative),
+ * it matches the small positive tracking (~0.05em) commonly used on Apple's own zh/ja marketing
+ * pages and in Chinese web-typography conventions for a more open, less crowded feel. */
+export const localeReadingLetterSpacing: Record<Locale, string> = {
+  en: 'normal',
+  zh: '0.05em',
+  ja: '0.05em',
+};
+
 const LOCALE_HTML_LANG: Record<Locale, string> = { en: 'en', zh: 'zh-CN', ja: 'ja' };
 
 const CJK_FONT_HREF: Record<Locale, string | null> = {
   en: null,
-  zh: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap',
-  ja: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap',
+  zh: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap',
+  ja: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap',
 };
 
 interface I18nContextValue {

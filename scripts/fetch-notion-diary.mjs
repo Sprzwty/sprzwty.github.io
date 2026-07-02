@@ -8,7 +8,12 @@
  *
  * Notion properties expected (same convention as the old Jekyll sync):
  *   Title (title), Date (date), Category (select), Publish (checkbox, optional).
- * The full page body is converted to Markdown and rendered by <MarkdownContent>.
+ *   Title (ZH), Title (JA) (rich_text, optional) — non-English titles; falls back to Title.
+ * The full page body is converted to Markdown and rendered by <MarkdownContent>. To provide
+ * the entry in more than one language, tag sections in the page body with their own paragraph
+ * reading exactly `---LANG:EN---` / `---LANG:ZH---` / `---LANG:JA---` — see docs/NOTION_SYNC.md.
+ * Untagged pages are treated as a single language and shown regardless of site locale (unchanged
+ * legacy behavior).
  */
 
 import fs from "fs";
@@ -23,6 +28,8 @@ import {
   pageCoverUrl,
   toTs,
   createNotionToMd,
+  splitLocalizedMarkdown,
+  buildLocalizedText,
 } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -34,6 +41,8 @@ const DATABASE_ID = process.env.NOTION_DIARY_DATABASE_ID || process.env.NOTION_D
 
 const PROPERTIES = {
   title: "Title",
+  titleZh: "Title (ZH)",
+  titleJa: "Title (JA)",
   date: "Date",
   category: "Category",
   publish: "Publish",
@@ -57,10 +66,12 @@ function shouldPublish(props) {
 async function buildEntry(page) {
   const props = page.properties;
   const title = readProperty(props, PROPERTIES.title) || "Untitled";
+  const titleZh = readProperty(props, PROPERTIES.titleZh);
+  const titleJa = readProperty(props, PROPERTIES.titleJa);
   const dateRaw = readProperty(props, PROPERTIES.date) || page.created_time;
   const [year, month, day] = formatDateOnly(dateRaw).split("-").map(Number);
   const category = readProperty(props, PROPERTIES.category) || "Diary";
-  const description = await pageToMarkdown(n2m, page.id);
+  const rawBody = await pageToMarkdown(n2m, page.id);
   const imageUrl = await pageCoverUrl(page, ROOT);
 
   return {
@@ -68,8 +79,8 @@ async function buildEntry(page) {
     year,
     month,
     day,
-    title: { en: title },
-    description: { en: description || "" },
+    title: buildLocalizedText(title, titleZh, titleJa),
+    description: splitLocalizedMarkdown(rawBody),
     category,
     imageUrl,
   };

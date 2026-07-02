@@ -11,9 +11,14 @@
  *   Category (select, optional — defaults to "Uncategorized"), Tags (multi_select, optional),
  *   Subtitle (rich_text, optional — used as excerpt if set), Pin (checkbox, optional — maps to `featured`),
  *   Publish (checkbox, optional — unchecked pages are skipped; missing property = always published).
+ *   Title (ZH) / Title (JA), Subtitle (ZH) / Subtitle (JA) (rich_text, optional) — non-English
+ *   title/excerpt overrides; fall back to the English value when left blank.
  *
  * Slug, excerpt, cover image, and read time are all auto-derived when not explicitly set,
- * so writing a new post only ever requires a Title and a body.
+ * so writing a new post only ever requires a Title and a body. To provide the body in more
+ * than one language, tag sections with their own paragraph reading exactly `---LANG:EN---` /
+ * `---LANG:ZH---` / `---LANG:JA---` — see docs/NOTION_SYNC.md. Untagged posts are treated as a
+ * single language and shown regardless of site locale (unchanged legacy behavior).
  */
 
 import fs from "fs";
@@ -31,6 +36,8 @@ import {
   estimateReadTimeMin,
   toTs,
   createNotionToMd,
+  splitLocalizedMarkdown,
+  buildLocalizedText,
 } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -42,10 +49,14 @@ const DATABASE_ID = process.env.NOTION_BLOG_DATABASE_ID;
 
 const PROPERTIES = {
   title: "Title",
+  titleZh: "Title (ZH)",
+  titleJa: "Title (JA)",
   date: "Date",
   category: "Category",
   tags: "Tags",
   subtitle: "Subtitle",
+  subtitleZh: "Subtitle (ZH)",
+  subtitleJa: "Subtitle (JA)",
   pin: "Pin",
   publish: "Publish",
 };
@@ -79,27 +90,45 @@ function shouldPublish(props) {
   return readProperty(props, PROPERTIES.publish) === true;
 }
 
+/** Per-language excerpt: an explicit Subtitle override wins, otherwise auto-derived from that language's body section. */
+function buildLocalizedExcerpt(body, subtitleEn, subtitleZh, subtitleJa) {
+  const excerpt = {};
+  if (subtitleEn) excerpt.en = subtitleEn;
+  else if (body.en) excerpt.en = excerptFromMarkdown(body.en);
+  if (subtitleZh) excerpt.zh = subtitleZh;
+  else if (body.zh) excerpt.zh = excerptFromMarkdown(body.zh);
+  if (subtitleJa) excerpt.ja = subtitleJa;
+  else if (body.ja) excerpt.ja = excerptFromMarkdown(body.ja);
+  if (!excerpt.en) excerpt.en = "";
+  return excerpt;
+}
+
 async function buildPost(page) {
   const props = page.properties;
   const title = readProperty(props, PROPERTIES.title) || "Untitled";
+  const titleZh = readProperty(props, PROPERTIES.titleZh);
+  const titleJa = readProperty(props, PROPERTIES.titleJa);
   const dateRaw = readProperty(props, PROPERTIES.date) || page.created_time;
   const category = readProperty(props, PROPERTIES.category) || "Uncategorized";
   const subtitle = readProperty(props, PROPERTIES.subtitle);
+  const subtitleZh = readProperty(props, PROPERTIES.subtitleZh);
+  const subtitleJa = readProperty(props, PROPERTIES.subtitleJa);
   const pin = readProperty(props, PROPERTIES.pin) === true;
-  const body = (await pageToMarkdown(n2m, page.id)) || "";
+  const rawBody = (await pageToMarkdown(n2m, page.id)) || "";
+  const body = splitLocalizedMarkdown(rawBody);
   const cover = await pageCoverUrl(page, ROOT);
 
   return {
     id: `notion-${page.id}`,
     slug: slugify(title),
-    title: { en: title },
-    excerpt: { en: subtitle || excerptFromMarkdown(body) },
-    body: { en: body },
+    title: buildLocalizedText(title, titleZh, titleJa),
+    excerpt: buildLocalizedExcerpt(body, subtitle, subtitleZh, subtitleJa),
+    body,
     category,
     thumbnailUrl: cover || FALLBACK_THUMBNAIL,
     author: AUTHOR,
     publishedAt: formatDateOnly(dateRaw),
-    readTimeMin: estimateReadTimeMin(body),
+    readTimeMin: estimateReadTimeMin(body.en || body.zh || body.ja || ""),
     featured: pin,
   };
 }
