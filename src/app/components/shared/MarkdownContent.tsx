@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -6,15 +7,86 @@ import rehypeHighlight from 'rehype-highlight';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useI18n, localeSerifFontFamily, localeReadingLetterSpacing } from '../../context/i18n';
 import 'katex/dist/katex.min.css';
-import 'highlight.js/styles/github.css';
+import '../../../styles/code-highlight.css';
 
 /** Monospace stays on the system stack even inside serif reading copy. */
 const MONO_STACK = 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+
+const REHYPE_HIGHLIGHT_OPTIONS = {
+  detect: true,
+  aliases: {
+    shell: 'bash',
+    sh: 'bash',
+    zsh: 'bash',
+    plain: 'plaintext',
+    text: 'plaintext',
+    'plain-text': 'plaintext',
+    js: 'javascript',
+    ts: 'typescript',
+    py: 'python',
+    yml: 'yaml',
+    md: 'markdown',
+    'c++': 'cpp',
+    h: 'c',
+  },
+} as const;
+
+const LANG_LABELS: Record<string, string> = {
+  bash: 'Shell',
+  shell: 'Shell',
+  javascript: 'JavaScript',
+  typescript: 'TypeScript',
+  python: 'Python',
+  c: 'C',
+  cpp: 'C++',
+  plaintext: 'Plain Text',
+  markdown: 'Markdown',
+  json: 'JSON',
+  yaml: 'YAML',
+  html: 'HTML',
+  css: 'CSS',
+  sql: 'SQL',
+  rust: 'Rust',
+  go: 'Go',
+  java: 'Java',
+};
+
+function formatLangLabel(lang: string): string {
+  const key = lang.toLowerCase();
+  return LANG_LABELS[key] ?? lang.charAt(0).toUpperCase() + lang.slice(1);
+}
+
+function extractLang(className?: string): string | null {
+  if (!className) {
+    return null;
+  }
+  const match = /language-([^\s]+)/.exec(className);
+  return match?.[1] ?? null;
+}
 
 interface MarkdownContentProps {
   /** Markdown source pulled from Notion (via notion-to-md). */
   content: string;
   className?: string;
+}
+
+function CodeBlock({ className, children }: { className?: string; children: ReactNode }) {
+  const lang = extractLang(className);
+
+  return (
+    <div className="code-block mb-5 last:mb-0 not-prose">
+      {lang && (
+        <div className="code-block-header" aria-hidden="true">
+          {formatLangLabel(lang)}
+        </div>
+      )}
+      <pre className="code-block-pre">
+        <code className={className} style={{ fontFamily: MONO_STACK, letterSpacing: 'normal' }}>
+          {children}
+        </code>
+      </pre>
+    </div>
+  );
 }
 
 /**
@@ -34,7 +106,7 @@ export function MarkdownContent({ content, className }: MarkdownContentProps) {
     >
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeKatex, rehypeHighlight]}
+        rehypePlugins={[[rehypeKatex], [rehypeHighlight, REHYPE_HIGHLIGHT_OPTIONS]]}
         components={{
           h1: ({ children }) => (
             <h2 style={{ color: 'var(--foreground)', fontWeight: 600, lineHeight: 1.3 }} className="text-2xl mt-10 mb-4 first:mt-0">{children}</h2>
@@ -65,29 +137,21 @@ export function MarkdownContent({ content, className }: MarkdownContentProps) {
               {children}
             </blockquote>
           ),
+          pre: ({ children }) => <>{children}</>,
           code: ({ className: codeClassName, children, ...props }) => {
-            const isBlock = /language-/.test(codeClassName ?? '');
-            if (!isBlock) {
-              return (
-                <code
-                  className="rounded px-1.5 py-0.5 text-sm"
-                  style={{ background: 'var(--muted)', color: 'var(--foreground)', fontFamily: MONO_STACK, letterSpacing: 'normal' }}
-                  {...props}
-                >
-                  {children}
-                </code>
-              );
+            const isBlock = codeClassName?.includes('hljs') ?? false;
+            if (isBlock) {
+              return <CodeBlock className={codeClassName}>{children}</CodeBlock>;
             }
-            return <code className={codeClassName} style={{ fontFamily: MONO_STACK, letterSpacing: 'normal' }}>{children}</code>;
+            return (
+              <code
+                style={{ fontFamily: MONO_STACK, letterSpacing: 'normal' }}
+                {...props}
+              >
+                {children}
+              </code>
+            );
           },
-          pre: ({ children }) => (
-            <pre
-              className="rounded-lg p-4 mb-5 last:mb-0 overflow-x-auto text-sm"
-              style={{ background: 'var(--muted)', color: 'var(--foreground)', fontFamily: MONO_STACK, letterSpacing: 'normal' }}
-            >
-              {children}
-            </pre>
-          ),
           img: ({ src, alt }) => (
             <span className="block rounded-lg overflow-hidden my-6">
               <ImageWithFallback src={src ?? ''} alt={alt ?? ''} className="w-full h-auto" />

@@ -1,0 +1,184 @@
+/* Scoped syntax-highlighting theme (GitHub-inspired, light/dark via CSS variables). */
+
+.markdown-content {
+  --hljs-bg: #f6f8fa;
+  --hljs-fg: #24292f;
+  --hljs-border: rgba(0, 0, 0, 0.12);
+  --hljs-header-bg: #eef1f4;
+  --hljs-header-fg: #57606a;
+  --hljs-keyword: #cf222e;
+  --hljs-entity: #8250df;
+  --hljs-constant: #0550ae;
+  --hljs-string: #0a3069;
+  --hljs-variable: #953800;
+  --hljs-comment: #6e7781;
+  --hljs-tag: #116329;
+  --hljs-heading: #0550ae;
+  --hljs-list: #953800;
+  --hljs-insert-bg: #dafbe1;
+  --hljs-insert-fg: #116329;
+  --hljs-delete-bg: #ffebe9;
+  --hljs-delete-fg: #82071e;
+}
+
+.dark .markdown-content {
+  --hljs-bg: #161b22;
+  --hljs-fg: #e6edf3;
+  --hljs-border: oklch(0.35 0 0);
+  --hljs-header-bg: #21262d;
+  --hljs-header-fg: #8b949e;
+  --hljs-keyword: #ff7b72;
+  --hljs-entity: #d2a8ff;
+  --hljs-constant: #79c0ff;
+  --hljs-string: #a5d6ff;
+  --hljs-variable: #ffa657;
+  --hljs-comment: #8b949e;
+  --hljs-tag: #7ee787;
+  --hljs-heading: #1f6feb;
+  --hljs-list: #f2cc60;
+  --hljs-insert-bg: #033a16;
+  --hljs-insert-fg: #aff5b4;
+  --hljs-delete-bg: #67060c;
+  --hljs-delete-fg: #ffdcd7;
+}
+
+.markdown-content .code-block {
+  border: 1px solid var(--hljs-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--hljs-bg);
+}
+
+.markdown-content .code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--hljs-header-fg);
+  background: var(--hljs-header-bg);
+  border-bottom: 1px solid var(--hljs-border);
+}
+
+.markdown-content pre.code-block-pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  background: transparent;
+}
+
+.markdown-content pre.code-block-pre > code.hljs {
+  display: block;
+  padding: 1rem 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  tab-size: 4;
+  background: transparent;
+  color: var(--hljs-fg);
+}
+
+/* Token colors */
+.markdown-content .hljs {
+  color: var(--hljs-fg);
+  background: var(--hljs-bg);
+}
+
+.markdown-content .hljs-doctag,
+.markdown-content .hljs-keyword,
+.markdown-content .hljs-meta .hljs-keyword,
+.markdown-content .hljs-template-tag,
+.markdown-content .hljs-template-variable,
+.markdown-content .hljs-type,
+.markdown-content .hljs-variable.language_ {
+  color: var(--hljs-keyword);
+}
+
+.markdown-content .hljs-title,
+.markdown-content .hljs-title.class_,
+.markdown-content .hljs-title.class_.inherited__,
+.markdown-content .hljs-title.function_ {
+  color: var(--hljs-entity);
+}
+
+.markdown-content .hljs-attr,
+.markdown-content .hljs-attribute,
+.markdown-content .hljs-literal,
+.markdown-content .hljs-meta,
+.markdown-content .hljs-number,
+.markdown-content .hljs-operator,
+.markdown-content .hljs-variable,
+.markdown-content .hljs-selector-attr,
+.markdown-content .hljs-selector-class,
+.markdown-content .hljs-selector-id {
+  color: var(--hljs-constant);
+}
+
+.markdown-content .hljs-regexp,
+.markdown-content .hljs-string,
+.markdown-content .hljs-meta .hljs-string {
+  color: var(--hljs-string);
+}
+
+.markdown-content .hljs-built_in,
+.markdown-content .hljs-symbol {
+  color: var(--hljs-variable);
+}
+
+.markdown-content .hljs-comment,
+.markdown-content .hljs-code,
+.markdown-content .hljs-formula {
+  color: var(--hljs-comment);
+  font-style: normal;
+}
+
+.markdown-content .hljs-name,
+.markdown-content .hljs-quote,
+.markdown-content .hljs-selector-tag,
+.markdown-content .hljs-selector-pseudo {
+  color: var(--hljs-tag);
+}
+
+.markdown-content .hljs-subst {
+  color: var(--hljs-fg);
+}
+
+.markdown-content .hljs-section {
+  color: var(--hljs-heading);
+  font-weight: 600;
+}
+
+.markdown-content .hljs-bullet {
+  color: var(--hljs-list);
+}
+
+.markdown-content .hljs-emphasis {
+  color: var(--hljs-fg);
+  font-style: italic;
+}
+
+.markdown-content .hljs-strong {
+  color: var(--hljs-fg);
+  font-weight: 600;
+}
+
+.markdown-content .hljs-addition {
+  color: var(--hljs-insert-fg);
+  background-color: var(--hljs-insert-bg);
+}
+
+.markdown-content .hljs-deletion {
+  color: var(--hljs-delete-fg);
+  background-color: var(--hljs-delete-bg);
+}
+
+.markdown-content code:not(.hljs) {
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875em;
+  background: var(--muted);
+  color: var(--foreground);
+}
