@@ -19,6 +19,21 @@ export interface LifeEvent {
 
 export const lifeEvents: LifeEvent[] = [
   {
+    id: "notion-391e2eb1-2d4d-802d-b036-cba412ec8608",
+    year: 2026,
+    month: 7,
+    day: 2,
+    title: {
+      en: "2026-07-02 潮潮的雨转晒晒的晴",
+    },
+    description: {
+      en: "Today, while scrolling through Instagram, I came across an English word: **susurration**. The moment I understood what it meant, I couldn’t help but smile.\n\n\n**Susurration** _(noun)_\n\n\nA soft, whispering, rustling, or murmuring sound—especially one made by wind, leaves, water, or a crowd speaking quietly.\n\n\nI think this was the first English word I’d encountered that felt genuinely onomatopoeic. Much like many Chinese words, it vividly captures a particular sound. In Chinese, one of its closest equivalents would probably be _xīxī-sūsū_ (窸窸窣窣)—the gentle rustling of leaves, fabric, or footsteps.\n\n\nIt felt like a small coincidence that I discovered this word while resting between sets during chest day at the gym. Most of the English I deal with every day consists of technical terms for work or conversations with AI. Stumbling upon such a charming and expressive word in my free time somehow eased the fatigue that comes from using English professionally every day.\n\n\nWhen I got home in the evening, there was still some tomato beef stew waiting in the fridge. But I decided to give myself a break for one night and went out for ramen with a colleague instead. We ended up at ラーメン大栄. As for what makes the place special, I’ll save that story for another day.\n\n\nI have work again tomorrow, so it’s time to get a good night’s rest.",
+      zh: "今天刷Instagram的时候刷到了一个英文单词，写作susurration。理解了这个单词的含义之后觉得甚是惊喜。\n\n> \n>\n> **Susurration** _(noun)_\n>\n>\n> **Pronunciation:** /ˌsuː.səˈreɪ.ʃən/ (soo-suh-RAY-shən)\n>\n>\n> **Meaning:**\n>\n>\n> A soft, whispering, rustling, or murmuring sound—especially one made by wind, leaves, water, or a crowd speaking quietly.\n>\n>\n> Examples:\n>\n> - _The susurration of the leaves made the forest feel peaceful._\n>\n\n这大抵是我第一次遇到拟声的英文单词，像是中文的一样，生动地表达了一个声音。所以这个单词的其中一部分含义翻译为中文也许就对应的是“窸窸窣窣”吧。\n\n\n说来也算是缘分，一边在健身房推胸，一边在组间休息的间歇遇到了这个单词。除了每天工作遇到的技术型英文单词，在闲暇之余可以遇到了这么可爱又生动的英文单词，极大程度缓解了上班使用英语和AI交流的疲惫。\n\n\n晚上下班回来，虽然冰箱里还有炖好的西红柿牛肉，但今晚就偷懒一天吧，和同事去吃了ラーメン大栄。至于这家店的特色，就留到下次再说吧。明天还要上班，今晚要好好休息了。\n\n\n突然想起来中午和同事小姐姐一起去吃了一顿健康饭！还挺不错的，这段也留给以后说好了！",
+      ja: "今日はInstagramを眺めていたときに、**susurration** という英単語に出会った。意味を知った瞬間、「なんて素敵な言葉なんだろう」と思わず感心してしまった。\n\n\n**Susurration**\n\n\n風や木の葉、水の流れ、人々の小さな話し声などが生み出す、ささやくような、さらさら・ざわざわとした柔らかな音。\n\n\nおそらく、こんなにも擬音語らしい印象を受けた英単語に出会ったのは初めてだった。中国語の擬音語のように、音そのものを生き生きと表現している言葉だ。中国語に訳すなら、「窸窸窣窣」という表現が一番近いのかもしれない。\n\n\n面白いことに、この単語に出会ったのはジムで胸のトレーニングをしていて、セット間の休憩中だった。普段、仕事で触れる英語は技術用語やAIとのやり取りばかりだ。そんな日常の中で、こんなにも可愛らしく、表情豊かな単語に偶然出会えたことが、仕事で英語を使い続ける疲れを少し和らげてくれた気がする。\n\n\n夜、家に帰ると冷蔵庫には作り置きのトマト牛肉煮がまだ残っていた。でも今夜くらいは少し手を抜こうと思い、同僚と一緒に「ラーメン大栄」へ行くことにした。このお店の魅力については、また別の機会に書こうと思う。\n\n\n明日も仕事なので、今夜はゆっくり休むことにしよう。",
+    },
+    category: "Diary",
+  },
+  {
     id: "notion-390e2eb1-2d4d-8080-8f9b-fefa1381fa17",
     year: 2026,
     month: 7,
