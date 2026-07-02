@@ -34,6 +34,21 @@ export const lifeEvents: LifeEvent[] = [
     category: "Diary",
   },
   {
+    id: "notion-391e2eb1-2d4d-80b5-95a7-d07c4c5cd45f",
+    year: 2026,
+    month: 1,
+    day: 9,
+    title: {
+      en: "2026-01-09 大阴天但是准备迎接三连休的氛围太浓了所以下午转晴了",
+    },
+    description: {
+      en: "It was a Friday at work. I grabbed a cup of coffee in the morning and started my shift, but there was nothing to do.",
+      zh: "是周五上班的一天，早上接了一杯咖啡就开始上班但是什么事情都没得干。",
+      ja: "金曜日の仕事の日だった。朝、コーヒーを一杯飲んで仕事を始めたが、やることが何一つなかった。",
+    },
+    category: "Diary",
+  },
+  {
     id: "notion-390e2eb1-2d4d-803f-8cae-f4026c2f3701",
     year: 2026,
     month: 1,
