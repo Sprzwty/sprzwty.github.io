@@ -29,6 +29,40 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    id: "notion-391e2eb1-2d4d-80f7-9cb6-db7e187ace17",
+    slug: "dame-moji-how-one-0x5c-byte-wrecks-your-code",
+    title: {
+      en: "Dame-moji: How One 0x5C Byte Wrecks Your Code",
+      zh: "ダメ文字：缅怀被 0x5C 耽误的时间",
+      ja: "ダメ文字：たった1バイトの 0x5C が起こす惨劇",
+    },
+    excerpt: {
+      en: "Dame moji: How One 0x5C Byte Wrecks Your Code TL;DR : The kanji 能 is 0x94 0x5C in Shift JIS. That second byte, 0x5C , is the ASCII backslash \\ . The character i…",
+      zh: "ダメ文字：缅怀被 0x5C 耽误的时间 结论先行 ：像 能 这样的汉字，在 Shift JIS 里是 0x94 0x5C ，第二字节 0x5C 就是 ASCII 的反斜杠 \\ 。它本身不是注释符，但 隐藏的反斜杠会劫持字符串和注释 。 为什么会中招 Shift JIS 是变长编码，双字节字符的第二字节可能落在 ASCI…",
+      ja: "ダメ文字：たった1バイトの 0x5C が起こす惨劇 結論 ： 能 はShift JISで 0x94 0x5C 。2バイト目の 0x5C はASCIIの \\ （バックスラッシュ）そのもの。文字自体はコメント記号ではないが、 内部の \\ が文字列とコメントを乗っ取る のが「ダメ文字」問題。 原因 Shift JISは可変長…",
+    },
+    body: {
+      en: "# Dame-moji: How One 0x5C Byte Wrecks Your Code\n\n\n**TL;DR**: The kanji `能` is `0x94 0x5C` in Shift-JIS. That second byte, `0x5C`, is the ASCII backslash `\\`. The character isn't a comment marker, but the **hidden backslash hijacks strings and comments**.\n\n\n## Why it happens\n\n\nShift-JIS is variable-length. Trailing bytes overlap with meaningful ASCII, and `0x5C` is the worst offender. Encoding-unaware compilers treat it as a real backslash. Japanese devs call these **dame-moji** (\"bad characters\"): `能, 表, 十, 構, 暴, ソ, 予, 申, 貼, 禄` — the katakana `ソ` is the most infamous.\n\n\n## Two classic bugs\n\n\n```c\n// Bug 1: string literal breaks\nchar *s = \"能\";   // bytes: 94 5C 22\n                  // compiler sees: 94, then \\\" (escaped quote)\n                  // → closing quote consumed → error\n\n// Bug 2: line comment swallows the next line\n// last char of this comment is 能\ndelete_everything();   // ← silently becomes part of the comment above!\n```\n\n\nBug 2 is the killer: `0x5C + \\n` is a line-continuation, so the next line joins the comment — **no warning, no diagnostic**.\n\n\n## How to avoid it\n\n- GCC/Clang: `finput-charset=cp932 -fexec-charset=utf-8`\n- MSVC: `/source-charset:utf-8`\n- **Best practice**: put every source file in UTF-8. UTF-8 multi-byte sequences never contain `0x5C`\n> \"`能` will never become a comment marker. But the backslash hiding inside it can absolutely hijack your comments and your strings.\"",
+      zh: "# ダメ文字：缅怀被 0x5C 耽误的时间\n\n\n**结论先行**：像 `能` 这样的汉字，在 Shift-JIS 里是 `0x94 0x5C`，第二字节 `0x5C` 就是 ASCII 的反斜杠 `\\`。它本身不是注释符，但**隐藏的反斜杠会劫持字符串和注释**。\n\n\n## 为什么会中招\n\n\nShift-JIS 是变长编码，双字节字符的第二字节可能落在 ASCII 可见范围。不感知编码的编译器会把 `0x5C` 当真反斜杠。日语里管这个叫「ダメ文字」——`能、表、十、構、暴、ソ、予、申、貼、禄` 都是常客，其中 `ソ` 最出名。\n\n\n## 两种典型翻车\n\n\n```c\n// 坑1：字符串字面量\nchar *s = \"能\";   // 字节流: 94 5C 22\n                  // 编译器读到: 94, 然后 \\\" ← 引号被转义\n                  // → 结束引号被吃掉，报错\n\n// 坑2：行注释被\"续行\"吞掉下一行\n// 注释的最后一个字是能\ndelete_everything();   // ← 这行悄悄变成上面注释的一部分！\n```\n\n\n第二个坑最阴险：`0x5C + \\n` = 行续行符，下一行代码被吃进注释里，**没有任何警告**。\n\n\n## 怎么防\n\n- GCC/Clang：`finput-charset=cp932 -fexec-charset=utf-8`\n- MSVC：`/source-charset:utf-8`\n- **最佳实践**：源码统一 UTF-8，从根源上杜绝 `0x5C` 出现在多字节序列里\n> \"`能` 不会变成注释符号，但它藏着一根反斜杠，能一刀劫持你的注释和字符串。\"",
+      ja: "# ダメ文字：たった1バイトの 0x5C が起こす惨劇\n\n\n**結論**：`能` はShift-JISで `0x94 0x5C`。2バイト目の `0x5C` はASCIIの `\\`（バックスラッシュ）そのもの。文字自体はコメント記号ではないが、**内部の** **`\\`** **が文字列とコメントを乗っ取る**のが「ダメ文字」問題。\n\n\n## 原因\n\n\nShift-JISは可変長。2バイト目がASCIIの意味ある領域と重なることがあり、`0x5C` が最悪。エンコーディング非対応のコンパイラは、これを本物の `\\` と誤認する。`能、表、十、構、暴、ソ、予、申、貼、禄` が代表例。特に `ソ` は有名。\n\n\n## 実害の2パターン\n\n\n```c\n// パターン1：文字列リテラルが壊れる\nchar *s = \"能\";   // バイト列: 94 5C 22\n                  // コンパイラの解釈: 94 → \\\" (エスケープされた引用符)\n                  // → 閉じ引用符が消える → コンパイルエラー\n\n// パターン2：行コメントが次行を飲み込む\n// コメント末尾が能\ndelete_everything();   // ← この行がコメントの続きになる！\n```\n\n\n`0x5C + 改行` は行継続扱いされ、**警告なしで**次行がコメント化されるのが恐ろしい。\n\n\n## 対策\n\n- GCC/Clang：`finput-charset=cp932 -fexec-charset=utf-8`\n- MSVC：`/source-charset:utf-8`\n- **ベストプラクティス**：ソースは全部UTF-8。UTF-8のマルチバイト列に `0x5C` は絶対出ない\n> 「`能` はコメント記号にならない。だが中に潜むバックスラッシュが、あなたのコメントと文字列を刺しにくる。」",
+    },
+    category: "Experience",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-02",
+    readTimeMin: 1,
+    featured: false,
+  },
+  {
     id: "notion-390e2eb1-2d4d-8173-8b48-e12c2fce5e00",
     slug: "听到那首曾经最爱的歌",
     title: {
