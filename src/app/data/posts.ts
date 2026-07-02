@@ -58,9 +58,9 @@ export const posts: Post[] = [
   },
   {
     id: "notion-390e2eb1-2d4d-8136-b034-c8e22d1c1567",
-    slug: "2023-09-25-mactricks",
+    slug: "mac-tricks",
     title: {
-      en: "2023.09.25-MacTricks",
+      en: "Mac Tricks",
     },
     excerpt: {
       en: "随时更新，不断丰富",
