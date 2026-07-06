@@ -11,72 +11,196 @@ function getInitialLocale(): Locale {
 }
 
 export interface Translations {
-  nav: { home: string; articles: string; life: string; about: string; contact: string; search: string; searchPlaceholder: string };
-  hero: { badge: string; title: string; subtitle: string };
-  home: { featured: string; latest: string; viewAll: string };
+  nav: { home: string; articles: string; life: string; about: string; contact: string; changelog: string; search: string; searchPlaceholder: string };
+  hero: { badge: string; title: string; subtitle: string; ctaFeatured: string; ctaAbout: string };
+  home: {
+    featured: string;
+    latest: string;
+    viewAll: string;
+    lanes: {
+      research: { title: string; description: string };
+      engineering: { title: string; description: string };
+      life: { title: string; description: string };
+    };
+  };
   articles: { title: string; subtitle: (count: number) => string; all: string; empty: string };
   postDetail: { back: string; notFound: string };
   about: { role: string; bio1: string; bio2: string; bio3: string; recentWriting: string; viewAll: string };
   contact: { title: string; subtitle: string; email: string; responseTime: string; responseTimeValue: string; openTo: string; openToValue: string; send: string; newsletterTitle: string; newsletterDesc: string; emailPlaceholder: string; subscribe: string; subscribed: string; invalidEmail: string };
-  footer: { tagline: string; navigation: string; follow: string; copyright: string };
+  footer: { tagline: string; navigation: string; follow: string; copyright: string; nowLabel: string; nowText: string };
   notFound: { title: string; desc: string; goHome: string };
   search: { noResults: string };
   life: { title: string; subtitle: string; views: { impact: string; normal: string }; entryCount: (n: number) => string; expand: string; collapse: string };
   diary: { empty: string };
+  changelog: {
+    title: string;
+    subtitle: string;
+    latest: string;
+    versionLabel: string;
+    changeTypes: { added: string; changed: string; fixed: string; removed: string };
+  };
   readMore: string;
   minRead: (n: number) => string;
   theme: { toggle: string };
 }
 
 const en: Translations = {
-  nav: { home: 'Home', articles: 'Articles', life: 'Life', about: 'About', contact: 'Contact', search: 'Search', searchPlaceholder: 'Search articles…' },
-  hero: { badge: 'Personal Blog', title: 'Ideas Worth Sharing', subtitle: 'Notes on AI research, engineering, and life — written in Notion, published automatically.' },
-  home: { featured: 'Featured Post', latest: 'Latest Articles', viewAll: 'View All Articles' },
+  nav: { home: 'Home', articles: 'Articles', life: 'Life', about: 'About', contact: 'Contact', changelog: 'Changelog', search: 'Search', searchPlaceholder: 'Search articles…' },
+  hero: {
+    badge: 'AI Research · Engineering · Life',
+    title: 'Tongyu Wang',
+    subtitle: 'Software engineer at ARKRAY. I write measurement algorithms for medical devices and build the GUIs around them. Blog covers engineering, AI experiments, and life.',
+    ctaFeatured: 'Read featured',
+    ctaAbout: 'About me',
+  },
+  home: {
+    featured: 'Featured Post',
+    latest: 'Latest Articles',
+    viewAll: 'View All Articles',
+    lanes: {
+      research: { title: 'AI Research', description: 'Experiments, papers, and ideas on trustworthy AI.' },
+      engineering: { title: 'Engineering', description: 'Measurement algorithms, GUI work, and notes from building medical device software.' },
+      life: { title: 'Life', description: 'Moments, milestones, and everyday notes from Japan.' },
+    },
+  },
   articles: { title: 'All Articles', subtitle: (n) => `${n} articles across design, development, and beyond.`, all: 'All', empty: 'No articles in this category yet.' },
   postDetail: { back: '← Back to Articles', notFound: 'Post not found' },
-  about: { role: 'AI Researcher · JAIST Master\'s Student', bio1: 'Hi, I\'m Wang Tongyu — a master\'s student at JAIST researching trustworthy AI, knowledge representation, and description-logic learning.', bio2: 'This blog is where I write up research notes, engineering learnings, and the occasional life update. All of it is written in Notion and synced here automatically.', bio3: 'Outside of research, you\'ll usually find me tinkering with side projects or exploring somewhere new.', recentWriting: 'My Recent Writing', viewAll: 'View All Articles →' },
+  about: {
+    role: 'Software Engineer · ARKRAY',
+    bio1: "Wang Tongyu, software engineer at ARKRAY. Medical device software — measurement algorithms and the interfaces people actually use.",
+    bio2: 'Posts here are mostly engineering notes, AI experiments I\'m trying, and occasional life updates.',
+    bio3: 'Off hours: side projects and exploring new places.',
+    recentWriting: 'My Recent Writing',
+    viewAll: 'View All Articles →',
+  },
   contact: { title: 'Get in Touch', subtitle: 'Have a question, a collaboration idea, or just want to say hello? I\'d love to hear from you.', email: 'Email', responseTime: 'Response Time', responseTimeValue: 'Usually within 2–3 business days', openTo: 'What I\'m open to', openToValue: 'Research discussions, collaboration ideas, and reader questions.', send: 'Send an Email', newsletterTitle: 'Subscribe to the newsletter', newsletterDesc: 'Get new articles delivered to your inbox. No spam, unsubscribe anytime.', emailPlaceholder: 'you@example.com', subscribe: 'Subscribe', subscribed: 'Thanks for subscribing!', invalidEmail: 'Please enter a valid email address.' },
-  footer: { tagline: 'Notes on AI research, engineering, and everyday life.', navigation: 'Navigation', follow: 'Follow Along', copyright: '© 2026 Wang Tongyu. All rights reserved.' },
+  footer: {
+    tagline: 'Notes on AI research, engineering, and everyday life.',
+    navigation: 'Navigation',
+    follow: 'Follow Along',
+    copyright: '© 2026 Wang Tongyu. All rights reserved.',
+    nowLabel: 'Now',
+    nowText: 'Working on personal blog v2',
+  },
   notFound: { title: 'Page not found', desc: 'The page you\'re looking for doesn\'t exist or has been moved.', goHome: 'Go Home' },
   search: { noResults: 'No results found.' },
   life: { title: 'My Life', subtitle: 'A timeline of moments, milestones, and memories.', views: { impact: 'Impact', normal: 'Normal' }, entryCount: (n) => `${n} ${n === 1 ? 'entry' : 'entries'}`, expand: 'Read more', collapse: 'Show less' },
   diary: { empty: 'No entries yet.' },
+  changelog: {
+    title: 'Changelog',
+    subtitle: 'A timeline of site versions and what changed in each release.',
+    latest: 'Latest',
+    versionLabel: 'Version',
+    changeTypes: { added: 'Added', changed: 'Changed', fixed: 'Fixed', removed: 'Removed' },
+  },
   readMore: 'Read Article →',
   minRead: (n) => `${n} min read`,
   theme: { toggle: 'Toggle theme' },
 };
 
 const zh: Translations = {
-  nav: { home: '首页', articles: '文章', life: '生活', about: '关于', contact: '联系', search: '搜索', searchPlaceholder: '搜索文章…' },
-  hero: { badge: '个人博客', title: '值得分享的想法', subtitle: '关于 AI 研究、工程与生活的记录——在 Notion 中写作，自动发布。' },
-  home: { featured: '精选文章', latest: '最新文章', viewAll: '查看全部文章' },
+  nav: { home: '首页', articles: '文章', life: '生活', about: '关于', contact: '联系', changelog: '更新说明', search: '搜索', searchPlaceholder: '搜索文章…' },
+  hero: {
+    badge: 'AI 研究 · 工程 · 生活',
+    title: '王童语',
+    subtitle: 'ARKRAY 软件工程师。做医疗设备测量算法，也写界面。博客记工程、AI 尝试和生活。',
+    ctaFeatured: '阅读精选',
+    ctaAbout: '关于我',
+  },
+  home: {
+    featured: '精选文章',
+    latest: '最新文章',
+    viewAll: '查看全部文章',
+    lanes: {
+      research: { title: 'AI 研究', description: '可信赖 AI 实验、论文阅读与思考笔记。' },
+      engineering: { title: '工程实践', description: '医疗设备算法、界面开发，以及做这些时的记录。' },
+      life: { title: '生活', description: '日常点滴、里程碑与在日本的见闻。' },
+    },
+  },
   articles: { title: '全部文章', subtitle: (n) => `共 ${n} 篇关于设计、开发等主题的文章。`, all: '全部', empty: '该分类暂无文章。' },
   postDetail: { back: '← 返回文章列表', notFound: '文章未找到' },
-  about: { role: 'AI 研究者 · JAIST 硕士生', bio1: '你好，我是王童语 —— JAIST 的硕士研究生，研究方向为可信赖人工智能、知识表示与描述逻辑学习。', bio2: '这个博客用来记录研究笔记、工程实践与生活点滴。全部内容都在 Notion 中撰写，并自动同步到这里。', bio3: '研究之外，我通常在折腾一些个人项目，或者探索没去过的地方。', recentWriting: '我的近期文章', viewAll: '查看全部文章 →' },
+  about: {
+    role: 'ARKRAY 软件工程师',
+    bio1: '在 ARKRAY 做医疗设备软件——算法和界面都做。',
+    bio2: '博客写在做的东西、折腾的 AI 和生活碎片。',
+    bio3: '下班后会捣鼓个人项目，到处走走。',
+    recentWriting: '我的近期文章',
+    viewAll: '查看全部文章 →',
+  },
   contact: { title: '联系我', subtitle: '有问题、合作想法，或者只是想打个招呼？我很乐意收到你的消息。', email: '邮件', responseTime: '回复时间', responseTimeValue: '通常在 2–3 个工作日内', openTo: '开放合作', openToValue: '研究交流、合作想法及读者问题。', send: '发送邮件', newsletterTitle: '订阅新闻邮件', newsletterDesc: '新文章将直接送达你的邮箱。绝无垃圾邮件，可随时退订。', emailPlaceholder: 'you@example.com', subscribe: '订阅', subscribed: '感谢订阅！', invalidEmail: '请输入有效的邮箱地址。' },
-  footer: { tagline: '记录 AI 研究、工程实践与日常生活。', navigation: '导航', follow: '关注我', copyright: '© 2026 Wang Tongyu 版权所有。' },
+  footer: {
+    tagline: '记录 AI 研究、工程实践与日常生活。',
+    navigation: '导航',
+    follow: '关注我',
+    copyright: '© 2026 Wang Tongyu 版权所有。',
+    nowLabel: '近况',
+    nowText: '在折腾个人博客 v2',
+  },
   notFound: { title: '页面未找到', desc: '您访问的页面不存在或已被移动。', goHome: '返回首页' },
   search: { noResults: '未找到相关结果。' },
   life: { title: '我的生活', subtitle: '记录时光里的每一个片刻与里程碑。', views: { impact: '大图', normal: '时间轴' }, entryCount: (n) => `${n} 篇`, expand: '展开全文', collapse: '收起' },
   diary: { empty: '暂无日记条目。' },
+  changelog: {
+    title: '更新说明',
+    subtitle: '以时间轴记录网站各版本的更新内容。',
+    latest: '最新',
+    versionLabel: '版本',
+    changeTypes: { added: '新增', changed: '变更', fixed: '修复', removed: '移除' },
+  },
   readMore: '阅读全文 →',
   minRead: (n) => `${n} 分钟阅读`,
   theme: { toggle: '切换主题' },
 };
 
 const ja: Translations = {
-  nav: { home: 'ホーム', articles: '記事', life: '人生', about: 'について', contact: 'お問い合わせ', search: '検索', searchPlaceholder: '記事を検索…' },
-  hero: { badge: 'パーソナルブログ', title: '共有する価値のあるアイデア', subtitle: 'AI 研究、エンジニアリング、生活についての記録。Notion で執筆し、自動的に公開されます。' },
-  home: { featured: '注目の記事', latest: '最新の記事', viewAll: 'すべての記事を見る' },
+  nav: { home: 'ホーム', articles: '記事', life: '人生', about: 'について', contact: 'お問い合わせ', changelog: '更新履歴', search: '検索', searchPlaceholder: '記事を検索…' },
+  hero: {
+    badge: 'AI研究 · エンジニアリング · 生活',
+    title: '王童語',
+    subtitle: 'ARKRAYのソフトウェアエンジニアです。医療機器の測定アルゴリズムとGUIを書いています。エンジニアリング、AI、日常のメモを残しています。',
+    ctaFeatured: '注目記事を読む',
+    ctaAbout: 'プロフィール',
+  },
+  home: {
+    featured: '注目の記事',
+    latest: '最新の記事',
+    viewAll: 'すべての記事を見る',
+    lanes: {
+      research: { title: 'AI 研究', description: '信頼できる AI の実験、論文、考察メモ。' },
+      engineering: { title: 'エンジニアリング', description: '医療機器のアルゴリズム、GUI開発、仕事の記録。' },
+      life: { title: '生活', description: '日常の記録、節目、日本での出来事。' },
+    },
+  },
   articles: { title: 'すべての記事', subtitle: (n) => `デザイン、開発などを横断する ${n} 本の記事。`, all: 'すべて', empty: 'このカテゴリにはまだ記事がありません。' },
   postDetail: { back: '← 記事一覧に戻る', notFound: '記事が見つかりません' },
-  about: { role: 'AI 研究者 · JAIST 修士課程学生', bio1: 'こんにちは、王童語（Wang Tongyu）です。JAIST の修士課程で、信頼できる AI・知識表現・記述論理学習について研究しています。', bio2: 'このブログでは研究ノート、エンジニアリングの学び、日々の記録を書いています。すべて Notion で執筆し、自動的にここへ同期されます。', bio3: '研究以外の時間は、個人プロジェクトをいじったり、新しい場所を探索したりしています。', recentWriting: '最近の記事', viewAll: 'すべての記事を見る →' },
+  about: {
+    role: 'ソフトウェアエンジニア · ARKRAY',
+    bio1: '王童語です。ARKRAYで医療機器の測定アルゴリズムとGUI開発をしています。',
+    bio2: 'つくっていることやAIの試行錯誤、たまに日常のことを書いています。',
+    bio3: '仕事以外は個人プロジェクトや新しい場所を巡るのが好きです。',
+    recentWriting: '最近の記事',
+    viewAll: 'すべての記事を見る →',
+  },
   contact: { title: 'お問い合わせ', subtitle: '質問、コラボレーションのアイデア、またはただのご挨拶でも、ぜひご連絡ください。', email: 'メール', responseTime: '返信時間', responseTimeValue: '通常 2〜3 営業日以内', openTo: '受け付けていること', openToValue: '研究に関する議論、共同研究のご相談、読者からの質問。', send: 'メールを送る', newsletterTitle: 'ニュースレターを購読', newsletterDesc: '新着記事をメールでお届けします。スパムなし、いつでも解除できます。', emailPlaceholder: 'you@example.com', subscribe: '購読する', subscribed: 'ご購読ありがとうございます！', invalidEmail: '有効なメールアドレスを入力してください。' },
-  footer: { tagline: 'AI 研究、エンジニアリング、日々の生活についての記録。', navigation: 'ナビゲーション', follow: 'フォロー', copyright: '© 2026 Wang Tongyu. All rights reserved.' },
+  footer: {
+    tagline: 'AI 研究、エンジニアリング、日々の生活についての記録。',
+    navigation: 'ナビゲーション',
+    follow: 'フォロー',
+    copyright: '© 2026 Wang Tongyu. All rights reserved.',
+    nowLabel: 'いま',
+    nowText: '個人ブログ v2 をいじってる',
+  },
   notFound: { title: 'ページが見つかりません', desc: 'お探しのページは存在しないか、移動されました。', goHome: 'ホームへ戻る' },
   search: { noResults: '結果が見つかりませんでした。' },
   life: { title: '私の人生', subtitle: '瞬間、マイルストーン、思い出のタイムライン。', views: { impact: 'インパクト', normal: '通常' }, entryCount: (n) => `${n} 件`, expand: '続きを読む', collapse: '閉じる' },
   diary: { empty: 'まだエントリがありません。' },
+  changelog: {
+    title: '更新履歴',
+    subtitle: 'サイトのバージョンと各リリースの変更内容をタイムラインで記録しています。',
+    latest: '最新',
+    versionLabel: 'バージョン',
+    changeTypes: { added: '追加', changed: '変更', fixed: '修正', removed: '削除' },
+  },
   readMore: '記事を読む →',
   minRead: (n) => `${n} 分で読めます`,
   theme: { toggle: 'テーマを切り替え' },
@@ -85,9 +209,9 @@ const ja: Translations = {
 export const localeTranslations: Record<Locale, Translations> = { en, zh, ja };
 
 export const localeFontFamily: Record<Locale, string> = {
-  en: 'system-ui, sans-serif',
-  zh: '"Noto Sans SC", system-ui, sans-serif',
-  ja: '"Noto Sans JP", system-ui, sans-serif',
+  en: 'var(--font-body), system-ui, sans-serif',
+  zh: 'var(--font-body), "Noto Sans SC", system-ui, sans-serif',
+  ja: 'var(--font-body), "Noto Sans JP", system-ui, sans-serif',
 };
 
 /** Reading typeface for long-form content (see <MarkdownContent>): Source Serif 4 (Latin) paired

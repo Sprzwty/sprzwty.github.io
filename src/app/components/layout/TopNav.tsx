@@ -1,10 +1,13 @@
 import { Link, useLocation } from 'react-router';
-import { PenLine, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { SearchBar } from './SearchBar';
 import { ModeToggle } from './ModeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useI18n } from '../../context/i18n';
+import { cn } from '../ui/utils';
+
+const PROFILE_SRC = '/assets/profile.webp';
 
 export function TopNav() {
   const { pathname } = useLocation();
@@ -22,58 +25,54 @@ export function TopNav() {
   const isActive = (to: string) =>
     to === '/' ? pathname === '/' : pathname.startsWith(to);
 
+  const linkClass = (to: string) =>
+    cn(
+      'px-3 py-2 rounded-md text-sm transition-colors hover:bg-accent',
+      isActive(to) ? 'text-foreground font-medium' : 'text-muted-foreground font-normal'
+    );
+
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-2">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 shrink-0">
-          <PenLine className="size-4 sm:size-5" style={{ color: 'var(--primary)' }} />
-          <span
-            style={{ color: 'var(--foreground)', fontWeight: 'var(--font-weight-medium)' }}
-            className="text-sm sm:text-base"
-          >
+        <Link to="/" className="flex items-center gap-2.5 shrink-0">
+          <img
+            src={PROFILE_SRC}
+            alt=""
+            className="size-7 sm:size-8 rounded-full object-cover ring-1 ring-border"
+            width={32}
+            height={32}
+          />
+          <span className="text-sm sm:text-base text-foreground font-medium">
             Wang Tongyu
           </span>
         </Link>
 
-        {/* Desktop nav links */}
         <nav className="hidden md:flex items-center gap-0.5">
           {navLinks.map(({ label, to }) => (
-            <Link
-              key={to}
-              to={to}
-              className="px-3 py-2 rounded-md text-sm transition-colors hover:bg-accent"
-              style={{
-                color: isActive(to) ? 'var(--foreground)' : 'var(--muted-foreground)',
-                fontWeight: isActive(to) ? 'var(--font-weight-medium)' : 'var(--font-weight-normal)',
-              }}
-            >
+            <Link key={to} to={to} className={linkClass(to)}>
               {label}
             </Link>
           ))}
         </nav>
 
-        {/* Right-side controls */}
         <div className="flex items-center gap-1">
           <SearchBar />
           <ModeToggle />
           <div className="hidden sm:flex">
             <LanguageSwitcher />
           </div>
-          {/* Mobile hamburger */}
           <button
             className="md:hidden p-2 rounded-md hover:bg-accent transition-colors"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
           >
             {mobileOpen
-              ? <X className="size-5" style={{ color: 'var(--foreground)' }} />
-              : <Menu className="size-5" style={{ color: 'var(--foreground)' }} />}
+              ? <X className="size-5 text-foreground" />
+              : <Menu className="size-5 text-foreground" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile drawer */}
       {mobileOpen && (
         <div className="md:hidden border-t border-border bg-background px-4 py-3 flex flex-col gap-1">
           {navLinks.map(({ label, to }) => (
@@ -81,11 +80,7 @@ export function TopNav() {
               key={to}
               to={to}
               onClick={() => setMobileOpen(false)}
-              className="px-3 py-2.5 rounded-md text-sm transition-colors hover:bg-accent"
-              style={{
-                color: isActive(to) ? 'var(--foreground)' : 'var(--muted-foreground)',
-                fontWeight: isActive(to) ? 'var(--font-weight-medium)' : 'var(--font-weight-normal)',
-              }}
+              className={cn(linkClass(to), 'py-2.5')}
             >
               {label}
             </Link>

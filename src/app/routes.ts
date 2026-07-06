@@ -6,6 +6,7 @@ import { PostDetailPage } from './pages/PostDetailPage';
 import { LifePage } from './pages/LifePage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { ChangelogPage } from './pages/ChangelogPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export const router = createHashRouter([
@@ -19,6 +20,7 @@ export const router = createHashRouter([
       { path: 'life', Component: LifePage },
       { path: 'about', Component: AboutPage },
       { path: 'contact', Component: ContactPage },
+      { path: 'changelog', Component: ChangelogPage },
       { path: '*', Component: NotFoundPage },
     ],
   },

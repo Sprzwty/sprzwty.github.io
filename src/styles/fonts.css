@@ -1,6 +1,9 @@
 /*
+ * Display + body fonts load from index.html (Fraunces + Inter).
  * CJK webfonts (Noto Sans SC / JP) are loaded dynamically at runtime by the
- * I18nProvider (src/app/context/i18n.tsx) only when the user selects a Chinese
- * or Japanese locale — this avoids downloading large font files for visitors
- * who only read English. The English default uses the system font stack.
+ * I18nProvider only when the user selects a Chinese or Japanese locale.
  */
+:root {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
