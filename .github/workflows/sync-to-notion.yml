@@ -1,0 +1,48 @@
+name: Sync to Notion
+
+# Push notion-sync/**/*.md → blog Notion database (reverse of sync:posts).
+# Safe to re-run: creates new pages or updates existing ones matched by Title.
+on:
+  push:
+    branches: [master]
+    paths:
+      - "notion-sync/**"
+      - "scripts/sync-to-notion.mjs"
+      - ".github/workflows/sync-to-notion.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-to-notion
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync notion-sync to Notion blog
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_BLOG_DATABASE_ID: ${{ secrets.NOTION_BLOG_DATABASE_ID }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_BLOG_DATABASE_ID" ]; then
+            echo "NOTION_TOKEN or NOTION_BLOG_DATABASE_ID not configured; skipping."
+            exit 0
+          fi
+          npm run sync:to-notion

@@ -89,6 +89,26 @@ This is the English version of the post.
 
 `.github/workflows/deploy.yml` 每 6 小时自动跑一次：拉取两个数据库 → 若数据文件有变化则提交 → `npm run build` → 部署到 `gh-pages`。也可以在 GitHub 的 Actions 标签页手动触发（`workflow_dispatch`），不用等 6 小时。
 
+## 反向同步：本地 Markdown → Notion 博客
+
+除了直接在 Notion 里写文章，你也可以在仓库的 `notion-sync/` 目录用 Markdown 写作，再同步到博客数据库：
+
+| | 方向 | 脚本 | Workflow |
+|---|---|---|---|
+| **Notion → 网站** | 拉取 | `npm run sync:posts` | `deploy.yml` |
+| **notion-sync → Notion** | 推送 | `npm run sync:to-notion` | `sync-to-notion.yml` |
+
+### 怎么用
+
+1. 在 `notion-sync/` 下任意子目录新建 `.md`（可复制 `notion-sync/_template.md`）
+2. 在 YAML front matter 里填写 `title`（必填）及 `category`、`tags`、`publish` 等
+3. 正文用 Markdown 书写
+4. Push 到 `master` 后，`sync-to-notion.yml` 自动运行；也可在 Actions 里手动触发 **Sync to Notion**
+
+按 `Title` 匹配：已存在则更新正文和属性，不存在则新建。`publish: false` 的页面会写入 Notion 但不会出现在网站上（等 `deploy.yml` 下次拉取时仍会被跳过）。
+
+详见 `notion-sync/README.md`。
+
 ## 本地开发时手动同步
 
 ```powershell
@@ -97,6 +117,7 @@ $env:NOTION_DIARY_DATABASE_ID = "..."
 $env:NOTION_BLOG_DATABASE_ID = "..."
 
 npm run sync          # 等价于 sync:diary + sync:posts
+npm run sync:to-notion  # notion-sync/ → Notion 博客数据库
 npm run dev
 ```
 

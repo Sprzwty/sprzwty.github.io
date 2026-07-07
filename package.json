@@ -13,6 +13,7 @@
     "preview": "vite preview",
     "sync:diary": "node scripts/fetch-notion-diary.mjs",
     "sync:posts": "node scripts/fetch-notion-posts.mjs",
+    "sync:to-notion": "node scripts/sync-to-notion.mjs",
     "sync": "npm run sync:diary && npm run sync:posts",
     "migrate:legacy": "node scripts/migrate-legacy-posts-to-notion.mjs"
   },
