@@ -19,6 +19,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import { Client } from "@notionhq/client";
+import { markdownToBlocks } from "@tryfabric/martian";
 import { formatDateOnly } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
