@@ -29,6 +29,36 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    id: "notion-396e2eb1-2d4d-81a4-8eb4-ebdf2fd52267",
+    slug: "can-llm-speak-description-language-three-levels",
+    title: {
+      en: "Can LLM Speak Description Language? — Three Levels",
+      zh: "LLM 能否说描述语言？— 三层研究框架",
+    },
+    excerpt: {
+      en: "Parse, generate, and reason — a three-level framework for evaluating LLM formal language ability.",
+      zh: "读懂、生成、推理 — 评测 LLM 形式语言能力的三个层次。",
+    },
+    body: {
+      en: "## 研究标题\n\n\n**Can large language model speak description language?**\n\n\n## 核心问题分解\n\n\n「会说」描述语言可拆成三个层次，由浅到深：\n\n\n| 层次              | 能力                     | 评测方式                           | 通过标准（草案）      |\n| --------------- | ---------------------- | ------------------------------ | ------------- |\n| **L1 Parse**    | 读懂 Manchester/DL，解释或转写 | NL → 解释；Manchester → DL 记号     | 语义一致          |\n| **L2 Generate** | 按意图生成合法描述语言            | NL/competency question → axiom | 语法正确 + 语义忠实   |\n| **L3 Reason**   | 在描述逻辑层面做推理             | 给定 TBox/ABox，回答 subsumption 等  | 与 reasoner 一致 |\n\n\n## 假设（待 refine）\n\n- H1: LLM 在 L1 上明显强于 L3\n- H2: Manchester 表面语法正确率 ≠ 逻辑语义正确率\n- H3: Reasoner-in-the-loop 可显著提升 L2/L3\n\n## 与知识库的关系\n\n- L1/L2 依赖语法层多语法对照表作为 gold\n- L3 依赖四大推理任务 + HermiT/ELK 等作为 oracle\n\n## TODO\n\n- [ ] 正式写进 proposal 的 RQ 表述\n- [ ] 选定 baseline 模型与 benchmark\n- [ ] 定义各层 metric 计算公式",
+    },
+    category: "Research",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-07",
+    readTimeMin: 1,
+    featured: false,
+  },
+  {
     id: "notion-396e2eb1-2d4d-8140-9378-d724b7579679",
     slug: "manchester-syntax-cheat-sheet",
     title: {
