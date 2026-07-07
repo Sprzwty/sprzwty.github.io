@@ -29,6 +29,66 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    id: "notion-396e2eb1-2d4d-8140-9378-d724b7579679",
+    slug: "manchester-syntax-cheat-sheet",
+    title: {
+      en: "Manchester Syntax Cheat Sheet",
+      zh: "Manchester Syntax 速查",
+    },
+    excerpt: {
+      en: "OWL 2 human-readable syntax keywords mapped to description logic constructors.",
+      zh: "OWL 2 面向人类的类表达式语法，与描述逻辑构造子对照速查。",
+    },
+    body: {
+      en: "## 一句话定义\n\n> \n>\n> Manchester Syntax 是 OWL 2 面向人类的类/属性表达式写法，用英文关键词（`some`, `only`, `and`, `or`, `not` 等）对应 DL 构造子。\n>\n>\n\n## 为什么与研究相关\n\n\n论文问的是 LLM 能否「说」描述语言 — Manchester 是最自然的 **human-facing description language**，是评测 LLM 形式语言能力的首选表面语法。\n\n\n## 关键词对照（速查表）\n\n\n| Manchester                    | DL 直觉  | 示例                                  |\n| ----------------------------- | ------ | ----------------------------------- |\n| `some`                        | ∃ 存在限制 | `hasChild some Doctor`              |\n| `only`                        | ∀ 全称限制 | `hasChild only Person`              |\n| `and`                         | ⊓ 交集   | `Doctor and (hasChild some Person)` |\n| `or`                          | ⊔ 并集   | `Doctor or Lawyer`                  |\n| `not`                         | ¬ 否定   | `not Doctor`                        |\n| `min`, `max`, `exactly`       | 数量限制   | `hasChild min 2 Person`             |\n| `SubClassOf`                  | ⊑      | `Dog SubClassOf Animal`             |\n| `EquivalentTo`                | ≡      | `Dog EquivalentTo Canine`           |\n| `DisjointWith`                | 不相交    | `Cat DisjointWith Dog`              |\n| `Transitive`, `Functional`, … | 角色特性   | `hasPart Transitive`                |\n\n\n## 完整示例\n\n\n```plain text\nPrefix: : <http://example.org/kr#>\n\nClass: Doctor\n    EquivalentTo: Person and (hasDegree some MedicalDegree)\n\nClass: Parent\n    EquivalentTo: Person and (hasChild some Person)\n\nClass: DoctorParent\n    EquivalentTo: Doctor and Parent\n```\n\n\n## LLM 常见错误模式（待实验填充）\n\n- [ ] 混淆 `some` 与 `only`\n- [ ] 括号/优先级错误\n- [ ] 将 `SubClassOf` 与 `EquivalentTo` 混用\n- [ ] 生成合法 Manchester 但语义与 NL 意图不符\n\n## TODO\n\n- [ ] 补全全部 Manchester 关键词\n- [ ] 与 Functional-Style 逐条对照\n- [ ] 导出为 LLM 评测 gold CSV\n\n## 参考文献\n\n- W3C OWL 2 Manchester Syntax\n- Baader et al., _The Description Logic Handbook_",
+    },
+    category: "Research",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-07",
+    readTimeMin: 2,
+    featured: false,
+  },
+  {
+    id: "notion-396e2eb1-2d4d-81ca-b5c8-fb99ea7632bd",
+    slug: "kr-knowledge-base-index",
+    title: {
+      en: "KR Knowledge Base — Index",
+      zh: "KR 知识库总览",
+    },
+    excerpt: {
+      en: "Map of content for knowledge representation research: DL, Manchester Syntax, KG, and LLM bridging.",
+      zh: "知识表示研究知识库索引：描述逻辑、Manchester 语法、知识图谱与 LLM 桥接。",
+    },
+    body: {
+      en: "# KR Knowledge Base\n\n\nPersonal knowledge base for graduate research on **Knowledge Representation**, centered on the thesis:\n\n> \n>\n> **Can large language model speak description language?**\n>\n>\n\n## Scope\n\n- Description Logic (DL), Manchester Syntax, OWL / Semantic Web\n- Knowledge Graphs\n- LLM × symbolic KR bridging (generation, parsing, verification)\n\n# KR Knowledge Base — Map of Content\n\n\n**Research narrative:** Syntax layer (what DL \"looks like\") → Can LLM speak it? → How to verify → Thesis evidence.\n\n\n## Domain indexes\n\n\n| Domain            | MOC                       |\n| ----------------- | ------------------------- |\n| Description Logic | [MOC — Description Logic] |\n| Syntax layer      | [MOC — Syntax Layer]      |\n| LLM × KR bridge   | [MOC — LLM × KR Bridge]   |\n| Thesis            | [MOC — Thesis]            |\n| Glossary          | [MOC — Glossary]          |\n\n\n## MVP — 25 entries (priority order)\n\n\n### Batch 1 — Syntax core (weeks 1–2)\n\n- [ ] DL 家族总览 (ALC → SROIQ)\n- [ ] TBox / ABox / RBox\n- [ ] DL 模型论语义与开放世界假设\n- [x] Manchester Syntax 速查 _(seed)_\n- [ ] 存在限制 (existential restriction)\n- [ ] 全称限制 (universal restriction)\n- [ ] 数量限制 (cardinality restriction)\n- [ ] 否定与不相交\n- [ ] 角色特性 (transitive, inverse, functional)\n- [ ] DL / Manchester / Functional 互转规则总表\n\n### Batch 2 — Reasoning & OWL (weeks 3–4)\n\n- [ ] 四大推理任务\n- [ ] Tableau 算法直觉\n- [ ] OWL 2 profiles (EL / QL / RL)\n- [ ] Protégé + HermiT 实操\n- [ ] OWL API / owlready2 验证 pipeline\n\n### Batch 3 — LLM × KR (weeks 5–6)\n\n- [ ] LLM 结构化形式化输出综述\n- [ ] NL → OWL axiom 工作地图\n- [ ] Axiom verbalization 相关工作\n- [ ] LLM 逻辑推理 benchmark 综述\n- [ ] 评测指标：语法 / 逻辑等价 / 推理一致性\n- [ ] Neuro-symbolic 验证回路\n\n### Batch 4 — Thesis (ongoing)\n\n- [x] RQ：LLM speak DL 三层定义 _(seed)_\n- [ ] 实验设计 v1\n- [ ] 术语表（核心 30）\n- [ ] Related Work 概念图谱\n\n## Status legend\n\n- `seed` — placeholder, structure only\n- `draft` — content started, needs review\n- `evergreen` — stable reference note",
+    },
+    category: "Research",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-07",
+    readTimeMin: 2,
+    featured: true,
+  },
+  {
     id: "notion-391e2eb1-2d4d-80f7-9cb6-db7e187ace17",
     slug: "dame-moji-how-one-0x5c-byte-wrecks-your-code",
     title: {
