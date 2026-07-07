@@ -19,7 +19,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import { Client } from "@notionhq/client";
-import { markdownToBlocks } from "@tryfabric/martian";
+import { formatDateOnly } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -109,7 +109,9 @@ function parsePost(filePath) {
       title,
       titleZh: data.title_zh ? String(data.title_zh) : undefined,
       titleJa: data.title_ja ? String(data.title_ja) : undefined,
-      date: data.date ? String(data.date).slice(0, 10) : new Date().toISOString().slice(0, 10),
+      date: formatDateOnly(
+        data.date instanceof Date ? data.date.toISOString() : data.date
+      ),
       category: data.category ? String(data.category) : "Uncategorized",
       tags: toArray(data.tags).map(String),
       subtitle: data.subtitle ? String(data.subtitle) : undefined,
