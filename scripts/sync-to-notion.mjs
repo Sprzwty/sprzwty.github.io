@@ -20,7 +20,7 @@ import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import { Client } from "@notionhq/client";
 import { markdownToBlocks } from "@tryfabric/martian";
-import { formatDateOnly, mapTitlesToNotionFields } from "./lib/notion-helpers.mjs";
+import { formatDateOnly, mapTitlesToNotionFields, mapSubtitlesToNotionFields } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -32,13 +32,13 @@ const DATABASE_ID = process.env.NOTION_BLOG_DATABASE_ID;
 
 const PROPERTIES = {
   title: "Title",
-  titleZh: "Title (ZH)",
+  titleEn: "Title (EN)",
   titleJa: "Title (JA)",
   date: "Date",
   category: "Category",
   tags: "Tags",
   subtitle: "Subtitle",
-  subtitleZh: "Subtitle (ZH)",
+  subtitleEn: "Subtitle (EN)",
   subtitleJa: "Subtitle (JA)",
   pin: "Pin",
   publish: "Publish",
@@ -103,12 +103,14 @@ function parsePost(filePath) {
     return { rel, skip: true, reason: "missing title_zh or title in front matter" };
   }
 
+  const subtitles = mapSubtitlesToNotionFields(data);
+
   return {
     rel,
     skip: false,
     meta: {
       title: titles.title,
-      titleZh: titles.titleZh,
+      titleEn: titles.titleEn,
       titleJa: titles.titleJa,
       matchTitles: titles.matchTitles,
       date: formatDateOnly(
@@ -116,9 +118,9 @@ function parsePost(filePath) {
       ),
       category: data.category ? String(data.category) : "Uncategorized",
       tags: toArray(data.tags).map(String),
-      subtitle: data.subtitle ? String(data.subtitle) : undefined,
-      subtitleZh: data.subtitle_zh ? String(data.subtitle_zh) : undefined,
-      subtitleJa: data.subtitle_ja ? String(data.subtitle_ja) : undefined,
+      subtitle: subtitles.subtitle,
+      subtitleEn: subtitles.subtitleEn,
+      subtitleJa: subtitles.subtitleJa,
       pin: data.pin === true,
       publish: data.publish !== false,
     },
@@ -141,13 +143,13 @@ function chunk(items, size) {
 function buildProperties(meta) {
   const {
     title,
-    titleZh,
+    titleEn,
     titleJa,
     date,
     category,
     tags,
     subtitle,
-    subtitleZh,
+    subtitleEn,
     subtitleJa,
     pin,
     publish,
@@ -159,8 +161,8 @@ function buildProperties(meta) {
     [PROPERTIES.pin]: { checkbox: pin === true },
   };
 
-  if (titleZh) {
-    properties[PROPERTIES.titleZh] = { rich_text: [{ text: { content: titleZh } }] };
+  if (titleEn) {
+    properties[PROPERTIES.titleEn] = { rich_text: [{ text: { content: titleEn } }] };
   }
   if (titleJa) {
     properties[PROPERTIES.titleJa] = { rich_text: [{ text: { content: titleJa } }] };
@@ -179,9 +181,9 @@ function buildProperties(meta) {
       rich_text: [{ text: { content: subtitle.slice(0, 2000) } }],
     };
   }
-  if (subtitleZh) {
-    properties[PROPERTIES.subtitleZh] = {
-      rich_text: [{ text: { content: subtitleZh.slice(0, 2000) } }],
+  if (subtitleEn) {
+    properties[PROPERTIES.subtitleEn] = {
+      rich_text: [{ text: { content: subtitleEn.slice(0, 2000) } }],
     };
   }
   if (subtitleJa) {
@@ -273,7 +275,7 @@ async function syncFile(filePath) {
 
   console.log(`\n${rel}`);
   console.log(`  notion title: ${meta.title}`);
-  console.log(`  title (EN): ${meta.titleZh ?? "(none)"}`);
+  console.log(`  title (EN): ${meta.titleEn ?? "(none)"}`);
   console.log(`  title (JA): ${meta.titleJa ?? "(none)"}`);
   console.log(`  category: ${meta.category} | tags: ${meta.tags.join(", ") || "(none)"}`);
   console.log(`  publish: ${meta.publish} | pin: ${meta.pin}`);

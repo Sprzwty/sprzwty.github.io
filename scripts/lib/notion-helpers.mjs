@@ -208,35 +208,27 @@ export function buildLocalizedText(base, zh, ja) {
   return result;
 }
 
-/** True when the string contains CJK characters (Chinese / Japanese). */
-export function hasCjk(text) {
-  return /[\u3000-\u9fff\uf900-\ufaff]/.test(text || "");
-}
-
 /**
  * Build a LocalizedText title from Notion blog properties.
- * Chinese-primary (default): Title = 中文, Title (ZH) = English.
- * Legacy English-primary: Title = English, Title (ZH) = 中文 — still supported.
+ * Title = 中文, Title (EN) = English, Title (JA) = Japanese.
  */
-export function buildLocalizedTitleFromNotion(primary, secondary, ja) {
-  const secondaryCjk = secondary ? hasCjk(secondary) : false;
-  const primaryCjk = hasCjk(primary);
-
-  if (primaryCjk && secondary && !secondaryCjk) {
-    const result = { en: secondary, zh: primary };
-    if (ja) result.ja = ja;
-    return result;
+export function buildLocalizedTitleFromNotion(notionTitle, notionTitleEn, notionTitleJa) {
+  const result = {
+    en: notionTitleEn || notionTitle,
+    zh: notionTitle,
+  };
+  if (notionTitleJa) {
+    result.ja = notionTitleJa;
   }
-
-  return buildLocalizedText(primary, secondary, ja);
+  return result;
 }
 
 /**
  * Map YAML front matter → Notion Title fields (Chinese-primary).
- * title_zh → Notion Title; title → Title (ZH) when both are set.
+ * title_zh → Title; title / title_en → Title (EN) when both are set.
  */
 export function mapTitlesToNotionFields(data) {
-  const titleEn = data.title ? String(data.title).trim() : "";
+  const titleEn = (data.title_en || data.title) ? String(data.title_en || data.title).trim() : "";
   const titleZh = data.title_zh ? String(data.title_zh).trim() : "";
   const titleJa = data.title_ja ? String(data.title_ja).trim() : "";
 
@@ -247,9 +239,31 @@ export function mapTitlesToNotionFields(data) {
 
   return {
     title: notionTitle,
-    titleZh: titleZh && titleEn ? titleEn : undefined,
+    titleEn: titleZh && titleEn ? titleEn : undefined,
     titleJa: titleJa || undefined,
     matchTitles: [...new Set([notionTitle, titleEn].filter(Boolean))],
+  };
+}
+
+/**
+ * Map YAML front matter → Notion Subtitle fields (Chinese-primary).
+ * subtitle_zh → Subtitle; subtitle / subtitle_en → Subtitle (EN) when both are set.
+ */
+export function mapSubtitlesToNotionFields(data) {
+  const subtitleEn = (data.subtitle_en || data.subtitle)
+    ? String(data.subtitle_en || data.subtitle).trim()
+    : "";
+  const subtitleZh = data.subtitle_zh ? String(data.subtitle_zh).trim() : "";
+  const subtitleJa = data.subtitle_ja ? String(data.subtitle_ja).trim() : "";
+
+  if (!subtitleZh && !subtitleEn && !subtitleJa) {
+    return {};
+  }
+
+  return {
+    subtitle: subtitleZh || subtitleEn || undefined,
+    subtitleEn: subtitleZh && subtitleEn ? subtitleEn : undefined,
+    subtitleJa: subtitleJa || undefined,
   };
 }
 

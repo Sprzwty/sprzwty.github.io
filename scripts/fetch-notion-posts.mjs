@@ -7,13 +7,9 @@
  *   NOTION_BLOG_DATABASE_ID   — blog database id
  *
  * Notion properties (simplified — see docs/NOTION_SYNC.md):
- *   Title (title, required) — 中文主标题（默认）; Title (ZH) 存英文标题（双语时）;
- *   Title (JA) 存日文标题。
+ *   Title (title, required) — 中文主标题; Title (EN) 英文标题; Title (JA) 日文标题.
  *   Category (select, optional — defaults to "Uncategorized"), Tags (multi_select, optional),
- *   Subtitle (rich_text, optional — used as excerpt if set), Pin (checkbox, optional — maps to `featured`),
- *   Publish (checkbox, optional — unchecked pages are skipped; missing property = always published).
- *   Title (ZH) / Title (JA), Subtitle (ZH) / Subtitle (JA) (rich_text, optional) — non-English
- *   title/excerpt overrides; fall back to the English value when left blank.
+ *   Subtitle (rich_text, optional — 中文摘要), Subtitle (EN/JA), Pin, Publish.
  *
  * Slug, excerpt, cover image, and read time are all auto-derived when not explicitly set,
  * so writing a new post only ever requires a Title and a body. To provide the body in more
@@ -50,13 +46,13 @@ const DATABASE_ID = process.env.NOTION_BLOG_DATABASE_ID;
 
 const PROPERTIES = {
   title: "Title",
-  titleZh: "Title (ZH)",
+  titleEn: "Title (EN)",
   titleJa: "Title (JA)",
   date: "Date",
   category: "Category",
   tags: "Tags",
   subtitle: "Subtitle",
-  subtitleZh: "Subtitle (ZH)",
+  subtitleEn: "Subtitle (EN)",
   subtitleJa: "Subtitle (JA)",
   pin: "Pin",
   publish: "Publish",
@@ -91,8 +87,8 @@ function shouldPublish(props) {
   return readProperty(props, PROPERTIES.publish) === true;
 }
 
-/** Per-language excerpt: an explicit Subtitle override wins, otherwise auto-derived from that language's body section. */
-function buildLocalizedExcerpt(body, subtitleEn, subtitleZh, subtitleJa) {
+/** Per-language excerpt: Subtitle (中文) / Subtitle (EN) / Subtitle (JA), else auto from body. */
+function buildLocalizedExcerpt(body, subtitleZh, subtitleEn, subtitleJa) {
   const excerpt = {};
   if (subtitleEn) excerpt.en = subtitleEn;
   else if (body.en) excerpt.en = excerptFromMarkdown(body.en);
@@ -100,20 +96,20 @@ function buildLocalizedExcerpt(body, subtitleEn, subtitleZh, subtitleJa) {
   else if (body.zh) excerpt.zh = excerptFromMarkdown(body.zh);
   if (subtitleJa) excerpt.ja = subtitleJa;
   else if (body.ja) excerpt.ja = excerptFromMarkdown(body.ja);
-  if (!excerpt.en) excerpt.en = "";
+  if (!excerpt.en) excerpt.en = excerpt.zh || excerpt.ja || "";
   return excerpt;
 }
 
 async function buildPost(page) {
   const props = page.properties;
   const notionTitle = readProperty(props, PROPERTIES.title) || "Untitled";
-  const titleSecondary = readProperty(props, PROPERTIES.titleZh);
+  const titleEn = readProperty(props, PROPERTIES.titleEn);
   const titleJa = readProperty(props, PROPERTIES.titleJa);
-  const title = buildLocalizedTitleFromNotion(notionTitle, titleSecondary, titleJa);
+  const title = buildLocalizedTitleFromNotion(notionTitle, titleEn, titleJa);
   const dateRaw = readProperty(props, PROPERTIES.date) || page.created_time;
   const category = readProperty(props, PROPERTIES.category) || "Uncategorized";
-  const subtitle = readProperty(props, PROPERTIES.subtitle);
-  const subtitleZh = readProperty(props, PROPERTIES.subtitleZh);
+  const subtitleZh = readProperty(props, PROPERTIES.subtitle);
+  const subtitleEn = readProperty(props, PROPERTIES.subtitleEn);
   const subtitleJa = readProperty(props, PROPERTIES.subtitleJa);
   const pin = readProperty(props, PROPERTIES.pin) === true;
   const rawBody = (await pageToMarkdown(n2m, page.id)) || "";
@@ -124,7 +120,7 @@ async function buildPost(page) {
     id: `notion-${page.id}`,
     slug: slugify(title.en || title.zh || notionTitle),
     title,
-    excerpt: buildLocalizedExcerpt(body, subtitle, subtitleZh, subtitleJa),
+    excerpt: buildLocalizedExcerpt(body, subtitleZh, subtitleEn, subtitleJa),
     body,
     category,
     thumbnailUrl: cover || FALLBACK_THUMBNAIL,

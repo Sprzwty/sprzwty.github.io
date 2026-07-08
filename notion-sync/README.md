@@ -16,12 +16,14 @@
 | 字段 | 必填 | 说明 |
 |------|------|------|
 | `title_zh` | ✅* | Notion `Title`（中文主标题） |
-| `title` | 否 | 英文标题 → Notion `Title (ZH)`（双语时填写） |
+| `title` / `title_en` | 否 | 英文标题 → Notion `Title (EN)` |
 | `title_ja` | 否 | Notion `Title (JA)` |
 | `date` | 否 | `YYYY-MM-DD`，默认今天 |
 | `category` | 否 | Notion `Category`，默认 `Uncategorized` |
 | `tags` | 否 | 字符串数组 → Notion `Tags` |
-| `subtitle` / `subtitle_zh` / `subtitle_ja` | 否 | 摘要 |
+| `subtitle_zh` | 否 | 中文摘要 → Notion `Subtitle` |
+| `subtitle` / `subtitle_en` | 否 | 英文摘要 → Notion `Subtitle (EN)` |
+| `subtitle_ja` | 否 | Notion `Subtitle (JA)` |
 | `publish` | 否 | 默认 `true`；`false` = 不同步到网站 |
 | `pin` | 否 | 首页精选 |
 | `sync` | 否 | 默认 `true`；`false` = 跳过同步 |

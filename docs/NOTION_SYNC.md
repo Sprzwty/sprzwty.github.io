@@ -17,20 +17,20 @@
 
 | 属性 | 类型 | 必填 | 说明 |
 |---|---|---|---|
-| `Title` | Title | ✅ | **中文主标题**（Notion 列表默认显示）；纯英文文章也可只填此项 |
-| `Title (ZH)` | Text | 否 | **英文标题**（双语文章时填写；字段名沿用 Notion 列名） |
-| `Title (JA)` | Text | 否 | 日文标题，不填则中文界面显示 `Title` |
+| `Title` | Title | ✅ | **中文主标题**（Notion 列表默认显示） |
+| `Title (EN)` | Text | 否 | **英文标题**（双语文章时填写） |
+| `Title (JA)` | Text | 否 | 日文标题 |
 | `Date` | Date | 否 | 不填则用页面创建时间 |
 | `Category` | Select | 否 | 自由文本，不再是固定枚举；不填日记默认 `Diary`，文章默认 `Uncategorized` |
 | `Tags` | Multi-select | 否 | 仅博客数据库使用（当前网站尚未展示，可先记录备用） |
-| `Subtitle` | Text | 否 | 仅博客数据库；作为摘要，不填则自动取正文前 ~160 字 |
-| `Subtitle (ZH)` / `Subtitle (JA)` | Text | 否 | 仅博客数据库；中/日文摘要覆盖，不填则自动取对应语言正文前 ~160 字 |
+| `Subtitle` | Text | 否 | 仅博客数据库；**中文摘要**，不填则自动取正文前 ~160 字 |
+| `Subtitle (EN)` / `Subtitle (JA)` | Text | 否 | 仅博客数据库；英文/日文摘要，不填则自动取对应语言正文前 ~160 字 |
 | `Pin` | Checkbox | 否 | 仅博客数据库；对应首页「精选文章」(`featured`) |
 | `Publish` | Checkbox | 否 | 不勾选则跳过同步；不建这个属性等同于「全部发布」 |
 
 **自动生成，无需手填：**
 
-- **Slug**：由 `Title` 自动 slugify。
+- **Slug**：由 `Title (EN)`（或 `Title`）自动 slugify。
 - **摘要（excerpt）**：`Subtitle` 留空时，自动取正文前 ~160 字（去除 Markdown 语法）。
 - **封面图**：直接用 Notion 页面自带的 Cover（页面左上角「添加封面」），不需要额外的图片属性。
 - **阅读时长**：按正文字数估算（中日文按字符、英文按单词）。
@@ -40,7 +40,7 @@
 
 ## 正文怎么写三语（可选）
 
-标题/摘要可以用上面表格里的 `(ZH)` / `(JA)` 属性直接填；但正文（日记内容 / 文章正文）是页面里的普通 Notion 块，没法用「属性」拆成三份，所以用一个**页面里的分隔标记**来做：
+标题/摘要可以用上面表格里的 `(EN)` / `(JA)` 属性直接填；但正文（日记内容 / 文章正文）是页面里的普通 Notion 块，没法用「属性」拆成三份，所以用一个**页面里的分隔标记**来做：
 
 在正文里另起一段，段落文字**逐字**写成下面几种（前后不要有别的字符）：
 
@@ -101,7 +101,7 @@ This is the English version of the post.
 ### 怎么用
 
 1. 在 `notion-sync/` 下任意子目录新建 `.md`（可复制 `notion-sync/_template.md`）
-2. 在 YAML front matter 里填写 `title`（必填）及 `category`、`tags`、`publish` 等
+2. 在 YAML front matter 里填写 `title_zh`（及可选的 `title` 英文）和 `category`、`tags`、`publish` 等
 3. 正文用 Markdown 书写
 4. Push 到 `master` 后，`sync-to-notion.yml` 自动运行；也可在 Actions 里手动触发 **Sync to Notion**
 

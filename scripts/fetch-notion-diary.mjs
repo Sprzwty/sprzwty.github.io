@@ -8,7 +8,7 @@
  *
  * Notion properties expected (same convention as the old Jekyll sync):
  *   Title (title), Date (date), Category (select), Publish (checkbox, optional).
- *   Title (ZH), Title (JA) (rich_text, optional) — non-English titles; falls back to Title.
+ *   Title (EN), Title (JA) (rich_text, optional) — 英文/日文标题；Title 为中文主标题。
  * The full page body is converted to Markdown and rendered by <MarkdownContent>. To provide
  * the entry in more than one language, tag sections in the page body with their own paragraph
  * reading exactly `---LANG:EN---` / `---LANG:ZH---` / `---LANG:JA---` — see docs/NOTION_SYNC.md.
@@ -29,7 +29,7 @@ import {
   toTs,
   createNotionToMd,
   splitLocalizedMarkdown,
-  buildLocalizedText,
+  buildLocalizedTitleFromNotion,
 } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -41,7 +41,7 @@ const DATABASE_ID = process.env.NOTION_DIARY_DATABASE_ID || process.env.NOTION_D
 
 const PROPERTIES = {
   title: "Title",
-  titleZh: "Title (ZH)",
+  titleEn: "Title (EN)",
   titleJa: "Title (JA)",
   date: "Date",
   category: "Category",
@@ -65,8 +65,8 @@ function shouldPublish(props) {
 
 async function buildEntry(page) {
   const props = page.properties;
-  const title = readProperty(props, PROPERTIES.title) || "Untitled";
-  const titleZh = readProperty(props, PROPERTIES.titleZh);
+  const notionTitle = readProperty(props, PROPERTIES.title) || "Untitled";
+  const titleEn = readProperty(props, PROPERTIES.titleEn);
   const titleJa = readProperty(props, PROPERTIES.titleJa);
   const dateRaw = readProperty(props, PROPERTIES.date) || page.created_time;
   const [year, month, day] = formatDateOnly(dateRaw).split("-").map(Number);
@@ -79,7 +79,7 @@ async function buildEntry(page) {
     year,
     month,
     day,
-    title: buildLocalizedText(title, titleZh, titleJa),
+    title: buildLocalizedTitleFromNotion(notionTitle, titleEn, titleJa),
     description: splitLocalizedMarkdown(rawBody),
     category,
     imageUrl,
