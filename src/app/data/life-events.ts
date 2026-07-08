@@ -25,6 +25,7 @@ export const lifeEvents: LifeEvent[] = [
     day: 4,
     title: {
       en: "2026-07-04 雨下一整天",
+      zh: "2026-07-04 雨下一整天",
     },
     description: {
       en: "This is the English version of the post.",
@@ -40,6 +41,7 @@ export const lifeEvents: LifeEvent[] = [
     day: 3,
     title: {
       en: "2026-07-03 梅雨季的限定闷晴天",
+      zh: "2026-07-03 梅雨季的限定闷晴天",
     },
     description: {
       en: "English version of this post is not available currently.",
@@ -55,6 +57,7 @@ export const lifeEvents: LifeEvent[] = [
     day: 2,
     title: {
       en: "2026-07-02 潮潮的雨转晒晒的晴",
+      zh: "2026-07-02 潮潮的雨转晒晒的晴",
     },
     description: {
       en: "Today, while scrolling through Instagram, I came across an English word: **susurration**. The moment I understood what it meant, I couldn’t help but smile.\n\n\n**Susurration** _(noun)_\n\n\nA soft, whispering, rustling, or murmuring sound—especially one made by wind, leaves, water, or a crowd speaking quietly.\n\n\nI think this was the first English word I’d encountered that felt genuinely onomatopoeic. Much like many Chinese words, it vividly captures a particular sound. In Chinese, one of its closest equivalents would probably be _xīxī-sūsū_ (窸窸窣窣)—the gentle rustling of leaves, fabric, or footsteps.\n\n\nIt felt like a small coincidence that I discovered this word while resting between sets during chest day at the gym. Most of the English I deal with every day consists of technical terms for work or conversations with AI. Stumbling upon such a charming and expressive word in my free time somehow eased the fatigue that comes from using English professionally every day.\n\n\nWhen I got home in the evening, there was still some tomato beef stew waiting in the fridge. But I decided to give myself a break for one night and went out for ramen with a colleague instead. We ended up at ラーメン大栄. As for what makes the place special, I’ll save that story for another day.\n\n\nI have work again tomorrow, so it’s time to get a good night’s rest.",
@@ -69,8 +72,8 @@ export const lifeEvents: LifeEvent[] = [
     month: 7,
     day: 1,
     title: {
-      en: "The New Site Is Finally Here!",
-      zh: "新界面终于来啦！",
+      en: "新界面终于来啦！",
+      zh: "The New Site Is Finally Here!",
       ja: "ついに新しいサイトが公開されました！",
     },
     description: {
@@ -86,6 +89,7 @@ export const lifeEvents: LifeEvent[] = [
     day: 9,
     title: {
       en: "2026-01-09 大阴天但是准备迎接三连休的氛围太浓了所以下午转晴了",
+      zh: "2026-01-09 大阴天但是准备迎接三连休的氛围太浓了所以下午转晴了",
     },
     description: {
       en: "It was a Friday at work. I grabbed a cup of coffee in the morning and started my shift, but there was nothing to do.",
@@ -101,6 +105,7 @@ export const lifeEvents: LifeEvent[] = [
     day: 8,
     title: {
       en: "2026.01.08 温暖大晴天但是得上班所以心情并没有那么晴",
+      zh: "2026.01.08 温暖大晴天但是得上班所以心情并没有那么晴",
     },
     description: {
       en: "先补充一下上电车之前的细节。由于日本高市早苗首相关于“台湾有事”相关的言论导致的政治局势紧张使得我的机票也被迫改签到了全年最后一个工作日的下午。所以最后一天我第一次主动请了人生第一次带薪休假。那天早上每天为公司社寮所准备的定例早餐的料理人“寮父”由于身体不适没来给我们做早餐。这一点公司的政策还是很好的，如果寮父缺席的情况下我们就可以自己去便利店买一份不超过合400日元的早餐（时价18人民币）。出门两分钟走到温暖的便利店，本来只想买一个和之前一样的鸡蛋金枪鱼三明治再加一杯咖啡。但想到自己冰箱中还有三个没吃掉的鸡蛋，便在便利店买了一杯咖啡，买了一份妈妈最爱吃的溏心蛋，准备连同先前准备好的生沾面面条一起带回国。回到宿舍，把三个没吃掉的鸡蛋放到煎锅里做了一份煎蛋早餐🍳。把早餐的发票拍了照片放回宿舍拎上早已收拾好的箱子便出发去坐电车了。\n\n\n日本的冬天并不像北京一样，哪里都光秃秃的。12月月底京都街头的枫树枝头还带着一些秋日红叶的影子，而山茶花早已盛开在大街小巷，为寒冷的冬日增添了不少浪漫。雪白的花瓣，重瓣的花型开得甚是精致，不由得给它拍了一张照片。\n\n\n![image](/notion-images/390e2eb1-2d4d-8027-9480-c2dfcb9a5afb.jpg)\n\n\n拍完照片刚要继续前行之时，脑中突然浮现出一个声音。是我妹悄悄和我说想吃一个治一郎布丁的声音。我一度认为想要买到这个布丁带回国，就需要我拖着箱子走到大阪站，在那边买好，自己包装好后前往机场才可以。复杂的保存条件和遥远的路程让我们跟我说了句“太麻烦就算了吧”。本来我没当回事儿，但一想到我挺不容易才能回个国，而且这个补丁的味道我也认为值得带回国，便开始思考这个事儿怎么办。遂打开地图查看路线。没想到在我坐的京阪电车沿线的特急站「枚方市」就有一家这个店。\n\n\n在枚方市下车后，这个店虽然还没开门，但它所在的商业设施里面的书店和超市早已开门迎客。虽说是工作日，但里面的人流量却并不少，大家忙忙碌碌的都在为了过年置办各种礼品。\n\n\n为了等布丁店开门，我拖着箱子就去了B1层的life超市。",
@@ -114,6 +119,7 @@ export const lifeEvents: LifeEvent[] = [
     day: 7,
     title: {
       en: "2026.01.07 阴阴阴好像要下雨但是没带伞不过因为开会加了点班就错过了雨的完蛋工作日",
+      zh: "2026.01.07 阴阴阴好像要下雨但是没带伞不过因为开会加了点班就错过了雨的完蛋工作日",
     },
     description: {
       en: "> **Preface:** Today marks day one of this writing project. Making this kind of effort actually took real resolve. The AI era has made me feel like I no longer have the powerful command of language I had back in secondary school. When I chat with friends, they often seem confused by what I say or write. When words can no longer speak straight from the heart, we lose our most powerful means of engaging with the world. We can no longer hide a needle in silk floss, nor speak plainly and boldly. We can neither openly repair the plank road nor secretly march on Chencang. The ability to express oneself in language is, in my view, the single most essential skill an adult should possess, and also the one most people lack. So practicing my own writing, which is really practicing my ability to express myself, has become critically important. The eight-hundred-character essays I once looked down on have turned out to be the best way to redeem the writing ability I let wither away in the age of AI.\n\n### The Air of the New Year, and the Discomfort of Going Home — Before Departure\n\n\nBack in September of last year, I talked things over with my family and booked a flight home for the Lunar New Year. The moment the ticket was locked in, looking at that \"perfect itinerary\" leaving at nine at night and landing at one in the morning, I felt a quiet thrill. Sure, I had just gone home in May of that same year, right after finishing new-hire training at my new company, and on top of that our whole family had spent ten days traveling around Tokyo and its surroundings during the hottest stretch of Obon. So it hadn't really been that long since I had last seen my family. But my body wasn't being honest about it. After making it through a long, drawn-out autumn foliage season, one thought sat alone in my mind: I want to go home, and soon. Looking forward to the food back home, longing for a reunion with my family, hoping to raise a glass with old friends, I finally reached the day of departure.\n\n\nThe instability in China-Japan policy had triggered a wave of flight cancellations, and it eventually caught up with me too. From the day I booked the ticket to the day before I actually made it back, the flight was changed three separate times. In the end I had no choice but to take a day of paid leave. After all the reshuffling, my itinerary flipped from \"leave early, come back late\" to \"leave late, come back early,\" a trip that meant flying home in the afternoon and heading back to Japan in the morning. On the day of the flight, even though departure was set for dusk, I could not sit still by dawn. I picked up my suitcase and stepped out. As the saying goes, one's heart flies home like an arrow, and I think I was living, breathing proof of that phrase in that moment. The road home felt weightless. Only a single mid-sized white suitcase kept me company. It was already stuffed with little gifts for family and friends back home, and yet I still felt like something was missing. The thought \"maybe I should pick up a little more\" kept circling in my head. Carrying that feeling, I boarded the train to Kansai Airport as early as nine in the morning. _(To be continued tomorrow.)_",
