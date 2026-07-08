@@ -17,9 +17,9 @@
 
 | 属性 | 类型 | 必填 | 说明 |
 |---|---|---|---|
-| `Title` | Title | ✅ | 标题（英文或你的主语言，作为 fallback） |
-| `Title (ZH)` | Text | 否 | 中文标题，不填则显示 `Title` |
-| `Title (JA)` | Text | 否 | 日文标题，不填则显示 `Title` |
+| `Title` | Title | ✅ | **中文主标题**（Notion 列表默认显示）；纯英文文章也可只填此项 |
+| `Title (ZH)` | Text | 否 | **英文标题**（双语文章时填写；字段名沿用 Notion 列名） |
+| `Title (JA)` | Text | 否 | 日文标题，不填则中文界面显示 `Title` |
 | `Date` | Date | 否 | 不填则用页面创建时间 |
 | `Category` | Select | 否 | 自由文本，不再是固定枚举；不填日记默认 `Diary`，文章默认 `Uncategorized` |
 | `Tags` | Multi-select | 否 | 仅博客数据库使用（当前网站尚未展示，可先记录备用） |

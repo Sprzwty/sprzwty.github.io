@@ -7,7 +7,8 @@
  *   NOTION_BLOG_DATABASE_ID   — blog database id
  *
  * Notion properties (simplified — see docs/NOTION_SYNC.md):
- *   Title (title, required), Date (date, optional — defaults to created time),
+ *   Title (title, required) — 中文主标题（默认）; Title (ZH) 存英文标题（双语时）;
+ *   Title (JA) 存日文标题。
  *   Category (select, optional — defaults to "Uncategorized"), Tags (multi_select, optional),
  *   Subtitle (rich_text, optional — used as excerpt if set), Pin (checkbox, optional — maps to `featured`),
  *   Publish (checkbox, optional — unchecked pages are skipped; missing property = always published).
@@ -37,7 +38,7 @@ import {
   toTs,
   createNotionToMd,
   splitLocalizedMarkdown,
-  buildLocalizedText,
+  buildLocalizedTitleFromNotion,
 } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -105,9 +106,10 @@ function buildLocalizedExcerpt(body, subtitleEn, subtitleZh, subtitleJa) {
 
 async function buildPost(page) {
   const props = page.properties;
-  const title = readProperty(props, PROPERTIES.title) || "Untitled";
-  const titleZh = readProperty(props, PROPERTIES.titleZh);
+  const notionTitle = readProperty(props, PROPERTIES.title) || "Untitled";
+  const titleSecondary = readProperty(props, PROPERTIES.titleZh);
   const titleJa = readProperty(props, PROPERTIES.titleJa);
+  const title = buildLocalizedTitleFromNotion(notionTitle, titleSecondary, titleJa);
   const dateRaw = readProperty(props, PROPERTIES.date) || page.created_time;
   const category = readProperty(props, PROPERTIES.category) || "Uncategorized";
   const subtitle = readProperty(props, PROPERTIES.subtitle);
@@ -120,8 +122,8 @@ async function buildPost(page) {
 
   return {
     id: `notion-${page.id}`,
-    slug: slugify(title),
-    title: buildLocalizedText(title, titleZh, titleJa),
+    slug: slugify(title.en || title.zh || notionTitle),
+    title,
     excerpt: buildLocalizedExcerpt(body, subtitle, subtitleZh, subtitleJa),
     body,
     category,

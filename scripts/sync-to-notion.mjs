@@ -20,7 +20,7 @@ import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import { Client } from "@notionhq/client";
 import { markdownToBlocks } from "@tryfabric/martian";
-import { formatDateOnly } from "./lib/notion-helpers.mjs";
+import { formatDateOnly, mapTitlesToNotionFields } from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -98,18 +98,19 @@ function parsePost(filePath) {
     return { rel, skip: true, reason: "sync: false" };
   }
 
-  const title = data.title ? String(data.title).trim() : "";
-  if (!title) {
-    return { rel, skip: true, reason: "missing title in front matter" };
+  const titles = mapTitlesToNotionFields(data);
+  if (!titles) {
+    return { rel, skip: true, reason: "missing title_zh or title in front matter" };
   }
 
   return {
     rel,
     skip: false,
     meta: {
-      title,
-      titleZh: data.title_zh ? String(data.title_zh) : undefined,
-      titleJa: data.title_ja ? String(data.title_ja) : undefined,
+      title: titles.title,
+      titleZh: titles.titleZh,
+      titleJa: titles.titleJa,
+      matchTitles: titles.matchTitles,
       date: formatDateOnly(
         data.date instanceof Date ? data.date.toISOString() : data.date
       ),
@@ -192,12 +193,17 @@ function buildProperties(meta) {
   return properties;
 }
 
-async function findPageByTitle(title) {
-  const response = await notion.databases.query({
-    database_id: DATABASE_ID,
-    filter: { property: PROPERTIES.title, title: { equals: title } },
-  });
-  return response.results[0] ?? null;
+async function findPageForPost(matchTitles) {
+  for (const candidate of matchTitles) {
+    const response = await notion.databases.query({
+      database_id: DATABASE_ID,
+      filter: { property: PROPERTIES.title, title: { equals: candidate } },
+    });
+    if (response.results[0]) {
+      return response.results[0];
+    }
+  }
+  return null;
 }
 
 async function listAllBlockIds(blockId) {
@@ -266,8 +272,9 @@ async function syncFile(filePath) {
   const blocks = markdownToBlocks(markdown, { notionLimits: { truncate: true } });
 
   console.log(`\n${rel}`);
-  console.log(`  title: ${meta.title}`);
-  console.log(`  title (ZH): ${meta.titleZh ?? "(none)"}`);
+  console.log(`  notion title: ${meta.title}`);
+  console.log(`  title (EN): ${meta.titleZh ?? "(none)"}`);
+  console.log(`  title (JA): ${meta.titleJa ?? "(none)"}`);
   console.log(`  category: ${meta.category} | tags: ${meta.tags.join(", ") || "(none)"}`);
   console.log(`  publish: ${meta.publish} | pin: ${meta.pin}`);
   console.log(`  blocks: ${blocks.length}`);
@@ -276,7 +283,7 @@ async function syncFile(filePath) {
     return "dry-run";
   }
 
-  const existing = await findPageByTitle(meta.title);
+  const existing = await findPageForPost(meta.matchTitles);
   if (existing) {
     await updatePage(existing.id, meta, blocks);
     console.log(`  updated ✓  id=${existing.id}`);

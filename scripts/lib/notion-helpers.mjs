@@ -208,6 +208,51 @@ export function buildLocalizedText(base, zh, ja) {
   return result;
 }
 
+/** True when the string contains CJK characters (Chinese / Japanese). */
+export function hasCjk(text) {
+  return /[\u3000-\u9fff\uf900-\ufaff]/.test(text || "");
+}
+
+/**
+ * Build a LocalizedText title from Notion blog properties.
+ * Chinese-primary (default): Title = 中文, Title (ZH) = English.
+ * Legacy English-primary: Title = English, Title (ZH) = 中文 — still supported.
+ */
+export function buildLocalizedTitleFromNotion(primary, secondary, ja) {
+  const secondaryCjk = secondary ? hasCjk(secondary) : false;
+  const primaryCjk = hasCjk(primary);
+
+  if (primaryCjk && secondary && !secondaryCjk) {
+    const result = { en: secondary, zh: primary };
+    if (ja) result.ja = ja;
+    return result;
+  }
+
+  return buildLocalizedText(primary, secondary, ja);
+}
+
+/**
+ * Map YAML front matter → Notion Title fields (Chinese-primary).
+ * title_zh → Notion Title; title → Title (ZH) when both are set.
+ */
+export function mapTitlesToNotionFields(data) {
+  const titleEn = data.title ? String(data.title).trim() : "";
+  const titleZh = data.title_zh ? String(data.title_zh).trim() : "";
+  const titleJa = data.title_ja ? String(data.title_ja).trim() : "";
+
+  const notionTitle = titleZh || titleEn;
+  if (!notionTitle) {
+    return null;
+  }
+
+  return {
+    title: notionTitle,
+    titleZh: titleZh && titleEn ? titleEn : undefined,
+    titleJa: titleJa || undefined,
+    matchTitles: [...new Set([notionTitle, titleEn].filter(Boolean))],
+  };
+}
+
 /** Rough reading-time estimate (~200 words/min for English; ~400 chars/min for CJK). */
 export function estimateReadTimeMin(markdown) {
   const cjkChars = (markdown.match(/[\u3000-\u9fff\uf900-\ufaff]/g) || []).length;
