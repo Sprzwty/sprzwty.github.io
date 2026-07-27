@@ -20,7 +20,12 @@ import { fileURLToPath } from "url";
 import matter from "gray-matter";
 import { Client } from "@notionhq/client";
 import { markdownToBlocks } from "@tryfabric/martian";
-import { formatDateOnly, mapTitlesToNotionFields, mapSubtitlesToNotionFields } from "./lib/notion-helpers.mjs";
+import {
+  formatDateOnly,
+  mapTitlesToNotionFields,
+  mapSubtitlesToNotionFields,
+  withNotionRetry,
+} from "./lib/notion-helpers.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -197,10 +202,14 @@ function buildProperties(meta) {
 
 async function findPageForPost(matchTitles) {
   for (const candidate of matchTitles) {
-    const response = await notion.databases.query({
-      database_id: DATABASE_ID,
-      filter: { property: PROPERTIES.title, title: { equals: candidate } },
-    });
+    const response = await withNotionRetry(
+      () =>
+        notion.databases.query({
+          database_id: DATABASE_ID,
+          filter: { property: PROPERTIES.title, title: { equals: candidate } },
+        }),
+      { label: `databases.query title="${candidate}"` }
+    );
     if (response.results[0]) {
       return response.results[0];
     }
@@ -213,10 +222,14 @@ async function listAllBlockIds(blockId) {
   let cursor;
 
   do {
-    const response = await notion.blocks.children.list({
-      block_id: blockId,
-      start_cursor: cursor,
-    });
+    const response = await withNotionRetry(
+      () =>
+        notion.blocks.children.list({
+          block_id: blockId,
+          start_cursor: cursor,
+        }),
+      { label: "blocks.children.list" }
+    );
     ids.push(...response.results.map((block) => block.id));
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
@@ -228,7 +241,10 @@ async function replacePageContent(pageId, blocks) {
   const existingIds = await listAllBlockIds(pageId);
 
   for (const blockId of existingIds) {
-    await notion.blocks.update({ block_id: blockId, archived: true });
+    await withNotionRetry(
+      () => notion.blocks.update({ block_id: blockId, archived: true }),
+      { label: "blocks.update (archive)" }
+    );
   }
 
   for (const blockChunk of chunk(blocks, 100)) {
@@ -253,10 +269,14 @@ async function createPage(meta, blocks) {
 }
 
 async function updatePage(pageId, meta, blocks) {
-  await notion.pages.update({
-    page_id: pageId,
-    properties: buildProperties(meta),
-  });
+  await withNotionRetry(
+    () =>
+      notion.pages.update({
+        page_id: pageId,
+        properties: buildProperties(meta),
+      }),
+    { label: "pages.update" }
+  );
   await replacePageContent(pageId, blocks);
 }
 

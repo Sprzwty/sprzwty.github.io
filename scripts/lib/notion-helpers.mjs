@@ -14,6 +14,136 @@ const CONTENT_TYPE_EXT = {
   "image/svg+xml": "svg",
 };
 
+/** Transient Notion / network failures that are safe to retry. */
+const RETRYABLE_NOTION_CODES = new Set([
+  "rate_limited",
+  "conflict_error",
+  "internal_server_error",
+  "service_unavailable",
+  "notionhq_client_request_timeout",
+]);
+
+const RETRYABLE_NETWORK_CODES = new Set([
+  "ECONNRESET",
+  "ETIMEDOUT",
+  "ECONNREFUSED",
+  "ENOTFOUND",
+  "EAI_AGAIN",
+  "EPIPE",
+  "EHOSTUNREACH",
+  "UND_ERR_CONNECT_TIMEOUT",
+  "UND_ERR_SOCKET",
+]);
+
+/**
+ * True for Notion 429/5xx and common transport failures (empty FetchError, TLS blips).
+ * @notionhq/client v2 does not retry these; CI schedules hit them occasionally.
+ */
+export function isRetryableNotionError(error) {
+  if (!error || typeof error !== "object") {
+    return false;
+  }
+
+  if (typeof error.code === "string") {
+    if (RETRYABLE_NOTION_CODES.has(error.code) || RETRYABLE_NETWORK_CODES.has(error.code)) {
+      return true;
+    }
+  }
+
+  if (
+    typeof error.status === "number"
+    && (error.status === 429 || error.status === 500 || error.status === 502
+      || error.status === 503 || error.status === 504)
+  ) {
+    return true;
+  }
+
+  // node-fetch FetchError: type "system", often with an empty message
+  if (error.type === "system" || error.name === "FetchError") {
+    return true;
+  }
+
+  if (error.errno != null || typeof error.syscall === "string") {
+    return true;
+  }
+
+  return false;
+}
+
+function readRetryAfterMs(error) {
+  const headers = error?.headers;
+  if (!headers) {
+    return undefined;
+  }
+
+  let raw;
+  if (typeof headers.get === "function") {
+    raw = headers.get("retry-after");
+  } else if (typeof headers === "object") {
+    const value = headers["retry-after"] ?? headers["Retry-After"];
+    raw = Array.isArray(value) ? value[0] : value;
+  }
+
+  if (raw === undefined || raw === null || raw === "") {
+    return undefined;
+  }
+
+  const seconds = Number(raw);
+  if (!Number.isFinite(seconds) || seconds < 0) {
+    return undefined;
+  }
+
+  return Math.round(seconds * 1000);
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * Retry a Notion API call with exponential back-off (+ jitter).
+ * Honors Retry-After when present (rate limits).
+ */
+export async function withNotionRetry(
+  fn,
+  {
+    maxAttempts = 5,
+    initialDelayMs = 1000,
+    maxDelayMs = 30000,
+    label = "notion request",
+  } = {}
+) {
+  let lastError;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error;
+
+      if (!isRetryableNotionError(error) || attempt >= maxAttempts) {
+        throw error;
+      }
+
+      const retryAfterMs = readRetryAfterMs(error);
+      const expoMs = Math.min(maxDelayMs, initialDelayMs * 2 ** (attempt - 1));
+      const jitterMs = Math.round(expoMs * (0.7 + Math.random() * 0.6));
+      const delayMs = retryAfterMs !== undefined
+        ? Math.min(maxDelayMs, Math.max(retryAfterMs, jitterMs))
+        : jitterMs;
+
+      const code = error.code || error.name || error.type || "error";
+      const detail = error.message || "(no message)";
+      console.warn(
+        `  ⚠ ${label} failed (${code}: ${detail}); retry ${attempt}/${maxAttempts - 1} in ${delayMs}ms`
+      );
+      await sleep(delayMs);
+    }
+  }
+
+  throw lastError;
+}
+
 function extensionFromUrl(url) {
   const match = url.split("?")[0].match(/\.(\w{3,4})$/);
   return match ? match[1].toLowerCase() : undefined;
@@ -116,10 +246,14 @@ export async function fetchAllPages(notion, databaseId) {
   let cursor;
 
   do {
-    const response = await notion.databases.query({
-      database_id: databaseId,
-      start_cursor: cursor,
-    });
+    const response = await withNotionRetry(
+      () =>
+        notion.databases.query({
+          database_id: databaseId,
+          start_cursor: cursor,
+        }),
+      { label: "databases.query" }
+    );
     pages.push(...response.results);
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
