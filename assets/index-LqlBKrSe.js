@@ -710,51 +710,7 @@ The instability in China-Japan policy had triggered a wave of flight cancellatio
 
 - [ ] 正式写进 proposal 的 RQ 表述
 - [ ] 选定 baseline 模型与 benchmark
-- [ ] 定义各层 metric 计算公式`},category:"Research",thumbnailUrl:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",author:{name:"Wang Tongyu",avatarUrl:"/assets/profile.webp",initials:"WT",bio:{en:"JAIST master's student researching trustworthy AI and knowledge representation.",zh:"JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",ja:"JAIST の修士課程学生。信頼できる AI と知識表現を研究。"}},publishedAt:"2026-07-07",readTimeMin:1,featured:!1},{id:"notion-396e2eb1-2d4d-8140-9378-d724b7579679",slug:"manchester-syntax-cheat-sheet",title:{en:"Manchester Syntax Cheat Sheet",zh:"Manchester Syntax 速查"},excerpt:{en:"OWL 2 human-readable syntax keywords mapped to description logic constructors.",zh:"OWL 2 面向人类的类表达式语法，与描述逻辑构造子对照速查。"},body:{en:"## 一句话定义\n\n> \n>\n> Manchester Syntax 是 OWL 2 面向人类的类/属性表达式写法，用英文关键词（`some`, `only`, `and`, `or`, `not` 等）对应 DL 构造子。\n>\n>\n\n## 为什么与研究相关\n\n\n论文问的是 LLM 能否「说」描述语言 — Manchester 是最自然的 **human-facing description language**，是评测 LLM 形式语言能力的首选表面语法。\n\n\n## 关键词对照（速查表）\n\n\n| Manchester                    | DL 直觉  | 示例                                  |\n| ----------------------------- | ------ | ----------------------------------- |\n| `some`                        | ∃ 存在限制 | `hasChild some Doctor`              |\n| `only`                        | ∀ 全称限制 | `hasChild only Person`              |\n| `and`                         | ⊓ 交集   | `Doctor and (hasChild some Person)` |\n| `or`                          | ⊔ 并集   | `Doctor or Lawyer`                  |\n| `not`                         | ¬ 否定   | `not Doctor`                        |\n| `min`, `max`, `exactly`       | 数量限制   | `hasChild min 2 Person`             |\n| `SubClassOf`                  | ⊑      | `Dog SubClassOf Animal`             |\n| `EquivalentTo`                | ≡      | `Dog EquivalentTo Canine`           |\n| `DisjointWith`                | 不相交    | `Cat DisjointWith Dog`              |\n| `Transitive`, `Functional`, … | 角色特性   | `hasPart Transitive`                |\n\n\n## 完整示例\n\n\n```plain text\nPrefix: : <http://example.org/kr#>\n\nClass: Doctor\n    EquivalentTo: Person and (hasDegree some MedicalDegree)\n\nClass: Parent\n    EquivalentTo: Person and (hasChild some Person)\n\nClass: DoctorParent\n    EquivalentTo: Doctor and Parent\n```\n\n\n## LLM 常见错误模式（待实验填充）\n\n- [ ] 混淆 `some` 与 `only`\n- [ ] 括号/优先级错误\n- [ ] 将 `SubClassOf` 与 `EquivalentTo` 混用\n- [ ] 生成合法 Manchester 但语义与 NL 意图不符\n\n## TODO\n\n- [ ] 补全全部 Manchester 关键词\n- [ ] 与 Functional-Style 逐条对照\n- [ ] 导出为 LLM 评测 gold CSV\n\n## 参考文献\n\n- W3C OWL 2 Manchester Syntax\n- Baader et al., _The Description Logic Handbook_"},category:"Research",thumbnailUrl:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",author:{name:"Wang Tongyu",avatarUrl:"/assets/profile.webp",initials:"WT",bio:{en:"JAIST master's student researching trustworthy AI and knowledge representation.",zh:"JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",ja:"JAIST の修士課程学生。信頼できる AI と知識表現を研究。"}},publishedAt:"2026-07-07",readTimeMin:2,featured:!1},{id:"notion-396e2eb1-2d4d-81ca-b5c8-fb99ea7632bd",slug:"kr-knowledge-base-index",title:{en:"KR Knowledge Base — Index",zh:"KR 知识库总览"},excerpt:{en:"Map of content for knowledge representation research: DL, Manchester Syntax, KG, and LLM bridging.",zh:"知识表示研究知识库索引：描述逻辑、Manchester 语法、知识图谱与 LLM 桥接。"},body:{en:`# KR Knowledge Base
-
-
-Personal knowledge base for graduate research on **Knowledge Representation**, centered on the thesis:
-
-> 
->
-> **Can large language model speak description language?**
->
->
-
-## Scope
-
-- Description Logic (DL), Manchester Syntax, OWL / Semantic Web
-- Knowledge Graphs
-- LLM × symbolic KR bridging (generation, parsing, verification)
-
-# KR Knowledge Base — Map of Content
-
-
-**Research narrative:** Syntax layer (what DL "looks like") → Can LLM speak it? → How to verify → Thesis evidence.
-
-
-## Domain indexes
-
-
-| Domain            | MOC                       |
-| ----------------- | ------------------------- |
-| Description Logic | [MOC — Description Logic] |
-| Syntax layer      | [MOC — Syntax Layer]      |
-| LLM × KR bridge   | [MOC — LLM × KR Bridge]   |
-| Thesis            | [MOC — Thesis]            |
-| Glossary          | [MOC — Glossary]          |
-
-
-## MVP — 25 entries (priority order)
-
-
-### Batch 1 — Syntax core (weeks 1–2)
-
-- [ ] DL 家族总览 (ALC → SROIQ)
-- [ ] TBox / ABox / RBox
-- [ ] DL 模型论语义与开放世界假设
-- [x] Manchester Syntax 速查 _(seed)_
-- [ ] 存在限制 (existential restriction)
+- [ ] 定义各层 metric 计算公式`},category:"Research",thumbnailUrl:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",author:{name:"Wang Tongyu",avatarUrl:"/assets/profile.webp",initials:"WT",bio:{en:"JAIST master's student researching trustworthy AI and knowledge representation.",zh:"JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",ja:"JAIST の修士課程学生。信頼できる AI と知識表現を研究。"}},publishedAt:"2026-07-07",readTimeMin:1,featured:!1},{id:"notion-396e2eb1-2d4d-8140-9378-d724b7579679",slug:"manchester-syntax-cheat-sheet",title:{en:"Manchester Syntax Cheat Sheet",zh:"Manchester Syntax 速查"},excerpt:{en:"OWL 2 human-readable syntax keywords mapped to description logic constructors.",zh:"OWL 2 面向人类的类表达式语法，与描述逻辑构造子对照速查。"},body:{en:"## 一句话定义\n\n> \n>\n> Manchester Syntax 是 OWL 2 面向人类的类/属性表达式写法，用英文关键词（`some`, `only`, `and`, `or`, `not` 等）对应 DL 构造子。\n>\n>\n\n## 为什么与研究相关\n\n\n论文问的是 LLM 能否「说」描述语言 — Manchester 是最自然的 **human-facing description language**，是评测 LLM 形式语言能力的首选表面语法。\n\n\n## 关键词对照（速查表）\n\n\n| Manchester                    | DL 直觉  | 示例                                  |\n| ----------------------------- | ------ | ----------------------------------- |\n| `some`                        | ∃ 存在限制 | `hasChild some Doctor`              |\n| `only`                        | ∀ 全称限制 | `hasChild only Person`              |\n| `and`                         | ⊓ 交集   | `Doctor and (hasChild some Person)` |\n| `or`                          | ⊔ 并集   | `Doctor or Lawyer`                  |\n| `not`                         | ¬ 否定   | `not Doctor`                        |\n| `min`, `max`, `exactly`       | 数量限制   | `hasChild min 2 Person`             |\n| `SubClassOf`                  | ⊑      | `Dog SubClassOf Animal`             |\n| `EquivalentTo`                | ≡      | `Dog EquivalentTo Canine`           |\n| `DisjointWith`                | 不相交    | `Cat DisjointWith Dog`              |\n| `Transitive`, `Functional`, … | 角色特性   | `hasPart Transitive`                |\n\n\n## 完整示例\n\n\n```plain text\nPrefix: : <http://example.org/kr#>\n\nClass: Doctor\n    EquivalentTo: Person and (hasDegree some MedicalDegree)\n\nClass: Parent\n    EquivalentTo: Person and (hasChild some Person)\n\nClass: DoctorParent\n    EquivalentTo: Doctor and Parent\n```\n\n\n## LLM 常见错误模式（待实验填充）\n\n- [ ] 混淆 `some` 与 `only`\n- [ ] 括号/优先级错误\n- [ ] 将 `SubClassOf` 与 `EquivalentTo` 混用\n- [ ] 生成合法 Manchester 但语义与 NL 意图不符\n\n## TODO\n\n- [ ] 补全全部 Manchester 关键词\n- [ ] 与 Functional-Style 逐条对照\n- [ ] 导出为 LLM 评测 gold CSV\n\n## 参考文献\n\n- W3C OWL 2 Manchester Syntax\n- Baader et al., _The Description Logic Handbook_"},category:"Research",thumbnailUrl:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",author:{name:"Wang Tongyu",avatarUrl:"/assets/profile.webp",initials:"WT",bio:{en:"JAIST master's student researching trustworthy AI and knowledge representation.",zh:"JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",ja:"JAIST の修士課程学生。信頼できる AI と知識表現を研究。"}},publishedAt:"2026-07-07",readTimeMin:2,featured:!1},{id:"notion-396e2eb1-2d4d-81ca-b5c8-fb99ea7632bd",slug:"kr-knowledge-base-index",title:{en:"KR Knowledge Base — Index",zh:"KR 知识库总览"},excerpt:{en:"Map of content for knowledge representation research: DL, Manchester Syntax, KG, and LLM bridging.",zh:"知识表示研究知识库索引：描述逻辑、Manchester 语法、知识图谱与 LLM 桥接。"},body:{en:`- [ ] 存在限制 (existential restriction)
 - [ ] 全称限制 (universal restriction)
 - [ ] 数量限制 (cardinality restriction)
 - [ ] 否定与不相交
@@ -789,7 +745,7 @@ Personal knowledge base for graduate research on **Knowledge Representation**, c
 
 - \`seed\` — placeholder, structure only
 - \`draft\` — content started, needs review
-- \`evergreen\` — stable reference note`},category:"Research",thumbnailUrl:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",author:{name:"Wang Tongyu",avatarUrl:"/assets/profile.webp",initials:"WT",bio:{en:"JAIST master's student researching trustworthy AI and knowledge representation.",zh:"JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",ja:"JAIST の修士課程学生。信頼できる AI と知識表現を研究。"}},publishedAt:"2026-07-07",readTimeMin:2,featured:!0},{id:"notion-391e2eb1-2d4d-80f7-9cb6-db7e187ace17",slug:"dame-moji-how-one-0x5c-byte-wrecks-your-code",title:{en:"Dame-moji: How One 0x5C Byte Wrecks Your Code",zh:"ダメ文字：缅怀被 0x5C 耽误的时间",ja:"ダメ文字：たった1バイトの 0x5C が起こす惨劇"},excerpt:{en:"Dame moji: How One 0x5C Byte Wrecks Your Code TL;DR : The kanji 能 is 0x94 0x5C in Shift JIS. That second byte, 0x5C , is the ASCII backslash \\ . The character i…",zh:"ダメ文字：缅怀被 0x5C 耽误的时间 结论先行 ：像 能 这样的汉字，在 Shift JIS 里是 0x94 0x5C ，第二字节 0x5C 就是 ASCII 的反斜杠 \\ 。它本身不是注释符，但 隐藏的反斜杠会劫持字符串和注释 。 为什么会中招 Shift JIS 是变长编码，双字节字符的第二字节可能落在 ASCI…",ja:"ダメ文字：たった1バイトの 0x5C が起こす惨劇 結論 ： 能 はShift JISで 0x94 0x5C 。2バイト目の 0x5C はASCIIの \\ （バックスラッシュ）そのもの。文字自体はコメント記号ではないが、 内部の \\ が文字列とコメントを乗っ取る のが「ダメ文字」問題。 原因 Shift JISは可変長…"},body:{en:`# Dame-moji: How One 0x5C Byte Wrecks Your Code
+- \`evergreen\` — stable reference note`},category:"Research",thumbnailUrl:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",author:{name:"Wang Tongyu",avatarUrl:"/assets/profile.webp",initials:"WT",bio:{en:"JAIST master's student researching trustworthy AI and knowledge representation.",zh:"JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",ja:"JAIST の修士課程学生。信頼できる AI と知識表現を研究。"}},publishedAt:"2026-07-07",readTimeMin:1,featured:!0},{id:"notion-391e2eb1-2d4d-80f7-9cb6-db7e187ace17",slug:"dame-moji-how-one-0x5c-byte-wrecks-your-code",title:{en:"Dame-moji: How One 0x5C Byte Wrecks Your Code",zh:"ダメ文字：缅怀被 0x5C 耽误的时间",ja:"ダメ文字：たった1バイトの 0x5C が起こす惨劇"},excerpt:{en:"Dame moji: How One 0x5C Byte Wrecks Your Code TL;DR : The kanji 能 is 0x94 0x5C in Shift JIS. That second byte, 0x5C , is the ASCII backslash \\ . The character i…",zh:"ダメ文字：缅怀被 0x5C 耽误的时间 结论先行 ：像 能 这样的汉字，在 Shift JIS 里是 0x94 0x5C ，第二字节 0x5C 就是 ASCII 的反斜杠 \\ 。它本身不是注释符，但 隐藏的反斜杠会劫持字符串和注释 。 为什么会中招 Shift JIS 是变长编码，双字节字符的第二字节可能落在 ASCI…",ja:"ダメ文字：たった1バイトの 0x5C が起こす惨劇 結論 ： 能 はShift JISで 0x94 0x5C 。2バイト目の 0x5C はASCIIの \\ （バックスラッシュ）そのもの。文字自体はコメント記号ではないが、 内部の \\ が文字列とコメントを乗っ取る のが「ダメ文字」問題。 原因 Shift JISは可変長…"},body:{en:`# Dame-moji: How One 0x5C Byte Wrecks Your Code
 
 
 **TL;DR**: The kanji \`能\` is \`0x94 0x5C\` in Shift-JIS. That second byte, \`0x5C\`, is the ASCII backslash \`\\\`. The character isn't a comment marker, but the **hidden backslash hijacks strings and comments**.
