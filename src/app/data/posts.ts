@@ -100,7 +100,7 @@ export const posts: Post[] = [
       zh: "知识表示研究知识库索引：描述逻辑、Manchester 语法、知识图谱与 LLM 桥接。",
     },
     body: {
-      en: "- [ ] LLM 结构化形式化输出综述\n- [ ] NL → OWL axiom 工作地图\n- [ ] Axiom verbalization 相关工作\n- [ ] LLM 逻辑推理 benchmark 综述\n- [ ] 评测指标：语法 / 逻辑等价 / 推理一致性\n- [ ] Neuro-symbolic 验证回路\n\n### Batch 4 — Thesis (ongoing)\n\n- [x] RQ：LLM speak DL 三层定义 _(seed)_\n- [ ] 实验设计 v1\n- [ ] 术语表（核心 30）\n- [ ] Related Work 概念图谱\n\n## Status legend\n\n- `seed` — placeholder, structure only\n- `draft` — content started, needs review\n- `evergreen` — stable reference note",
+      en: "# KR Knowledge Base\n\n\nPersonal knowledge base for graduate research on **Knowledge Representation**, centered on the thesis:\n\n> \n>\n> **Can large language model speak description language?**\n>\n>\n\n## Scope\n\n- Description Logic (DL), Manchester Syntax, OWL / Semantic Web\n- Knowledge Graphs\n- LLM × symbolic KR bridging (generation, parsing, verification)\n\n# KR Knowledge Base — Map of Content\n\n\n**Research narrative:** Syntax layer (what DL \"looks like\") → Can LLM speak it? → How to verify → Thesis evidence.\n\n\n## Domain indexes\n\n\n| Domain            | MOC                       |\n| ----------------- | ------------------------- |\n| Description Logic | [MOC — Description Logic] |\n| Syntax layer      | [MOC — Syntax Layer]      |\n| LLM × KR bridge   | [MOC — LLM × KR Bridge]   |\n| Thesis            | [MOC — Thesis]            |\n| Glossary          | [MOC — Glossary]          |\n\n\n## MVP — 25 entries (priority order)\n\n\n### Batch 1 — Syntax core (weeks 1–2)\n\n- [ ] DL 家族总览 (ALC → SROIQ)\n- [ ] TBox / ABox / RBox\n- [ ] DL 模型论语义与开放世界假设\n- [x] Manchester Syntax 速查 _(seed)_\n- [ ] 存在限制 (existential restriction)\n- [ ] 全称限制 (universal restriction)\n- [ ] 数量限制 (cardinality restriction)\n- [ ] 否定与不相交\n- [ ] 角色特性 (transitive, inverse, functional)\n- [ ] DL / Manchester / Functional 互转规则总表\n\n### Batch 2 — Reasoning & OWL (weeks 3–4)\n\n- [ ] 四大推理任务\n- [ ] Tableau 算法直觉\n- [ ] OWL 2 profiles (EL / QL / RL)\n- [ ] Protégé + HermiT 实操\n- [ ] OWL API / owlready2 验证 pipeline\n\n### Batch 3 — LLM × KR (weeks 5–6)\n\n- [ ] LLM 结构化形式化输出综述\n- [ ] NL → OWL axiom 工作地图\n- [ ] Axiom verbalization 相关工作\n- [ ] LLM 逻辑推理 benchmark 综述\n- [ ] 评测指标：语法 / 逻辑等价 / 推理一致性\n- [ ] Neuro-symbolic 验证回路\n\n### Batch 4 — Thesis (ongoing)\n\n- [x] RQ：LLM speak DL 三层定义 _(seed)_\n- [ ] 实验设计 v1\n- [ ] 术语表（核心 30）\n- [ ] Related Work 概念图谱\n\n## Status legend\n\n- `seed` — placeholder, structure only\n- `draft` — content started, needs review\n- `evergreen` — stable reference note",
     },
     category: "Research",
     thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
@@ -115,7 +115,7 @@ export const posts: Post[] = [
       },
     },
     publishedAt: "2026-07-07",
-    readTimeMin: 1,
+    readTimeMin: 2,
     featured: true,
   },
   {
