@@ -27,7 +27,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # ≥ 22.18: scripts/sync-fitness.mjs imports TypeScript via built-in type stripping
+          node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
@@ -51,12 +52,26 @@ jobs:
             npm run sync:posts
           fi
 
+      - name: Sync fitness data from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_FITNESS_IMPORT_DATABASE_ID: ${{ secrets.NOTION_FITNESS_IMPORT_DATABASE_ID }}
+          NOTION_FITNESS_WORKOUT_DATABASE_ID: ${{ secrets.NOTION_FITNESS_WORKOUT_DATABASE_ID }}
+          FITNESS_PASSWORD: ${{ secrets.FITNESS_PASSWORD }}
+          FITNESS_TIME_ZONE: ${{ vars.FITNESS_TIME_ZONE }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_FITNESS_IMPORT_DATABASE_ID" ] || [ -z "$FITNESS_PASSWORD" ]; then
+            echo "Fitness sync not configured; skipping."
+            exit 0
+          fi
+          npm run sync:fitness
+
       - name: Commit synced content
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          mkdir -p public/notion-images
-          git add src/app/data/life-events.ts src/app/data/posts.ts public/notion-images
+          mkdir -p public/notion-images public/fitness
+          git add src/app/data/life-events.ts src/app/data/posts.ts public/notion-images public/fitness
           if git diff --staged --quiet; then
             echo "No content changes from Notion."
           else

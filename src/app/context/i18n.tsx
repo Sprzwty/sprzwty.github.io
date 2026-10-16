@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { fitnessEn, fitnessJa, fitnessZh, type FitnessTranslations } from './fitness-i18n';
 
 export type Locale = 'en' | 'zh' | 'ja';
 
@@ -23,6 +24,7 @@ export interface Translations {
   search: { noResults: string };
   life: { title: string; subtitle: string; views: { impact: string; normal: string }; entryCount: (n: number) => string; expand: string; collapse: string };
   diary: { empty: string };
+  fitness: FitnessTranslations;
   readMore: string;
   minRead: (n: number) => string;
   theme: { toggle: string };
@@ -41,6 +43,7 @@ const en: Translations = {
   search: { noResults: 'No results found.' },
   life: { title: 'My Life', subtitle: 'A timeline of moments, milestones, and memories.', views: { impact: 'Impact', normal: 'Normal' }, entryCount: (n) => `${n} ${n === 1 ? 'entry' : 'entries'}`, expand: 'Read more', collapse: 'Show less' },
   diary: { empty: 'No entries yet.' },
+  fitness: fitnessEn,
   readMore: 'Read Article →',
   minRead: (n) => `${n} min read`,
   theme: { toggle: 'Toggle theme' },
@@ -59,6 +62,7 @@ const zh: Translations = {
   search: { noResults: '未找到相关结果。' },
   life: { title: '我的生活', subtitle: '记录时光里的每一个片刻与里程碑。', views: { impact: '大图', normal: '时间轴' }, entryCount: (n) => `${n} 篇`, expand: '展开全文', collapse: '收起' },
   diary: { empty: '暂无日记条目。' },
+  fitness: fitnessZh,
   readMore: '阅读全文 →',
   minRead: (n) => `${n} 分钟阅读`,
   theme: { toggle: '切换主题' },
@@ -77,6 +81,7 @@ const ja: Translations = {
   search: { noResults: '結果が見つかりませんでした。' },
   life: { title: '私の人生', subtitle: '瞬間、マイルストーン、思い出のタイムライン。', views: { impact: 'インパクト', normal: '通常' }, entryCount: (n) => `${n} 件`, expand: '続きを読む', collapse: '閉じる' },
   diary: { empty: 'まだエントリがありません。' },
+  fitness: fitnessJa,
   readMore: '記事を読む →',
   minRead: (n) => `${n} 分で読めます`,
   theme: { toggle: 'テーマを切り替え' },
@@ -113,7 +118,7 @@ export const localeReadingLetterSpacing: Record<Locale, string> = {
   ja: '0.05em',
 };
 
-const LOCALE_HTML_LANG: Record<Locale, string> = { en: 'en', zh: 'zh-CN', ja: 'ja' };
+export const LOCALE_HTML_LANG: Record<Locale, string> = { en: 'en', zh: 'zh-CN', ja: 'ja' };
 
 const CJK_FONT_HREF: Record<Locale, string | null> = {
   en: null,

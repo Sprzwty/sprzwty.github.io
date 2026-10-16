@@ -9,5 +9,11 @@ node_modules/
 dist/
 .vite/
 
+# Local scratch (not part of the site)
+_local/
+
+# Raw fitness exports — only the encrypted public/fitness/data.enc.json is committed
+*.xlsx
+
 # NOTE: package-lock.json is intentionally NOT ignored.
 # Committing the lockfile ensures reproducible CI builds.

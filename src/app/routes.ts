@@ -19,6 +19,8 @@ export const router = createHashRouter([
       { path: 'life', Component: LifePage },
       { path: 'about', Component: AboutPage },
       { path: 'contact', Component: ContactPage },
+      // Unlisted and code-split: keeps the fitness bundle out of the public pages.
+      { path: 'fitness', lazy: () => import('./pages/FitnessPage').then((m) => ({ Component: m.FitnessPage })) },
       { path: '*', Component: NotFoundPage },
     ],
   },

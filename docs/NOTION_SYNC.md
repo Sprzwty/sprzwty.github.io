@@ -109,6 +109,32 @@ This is the English version of the post.
 
 详见 `notion-sync/README.md`。
 
+## 健身数据（私密，`#/fitness`）
+
+健身页面不在导航里，数据加密后才进仓库：同步脚本用 `FITNESS_PASSWORD` 加密成 `public/fitness/data.enc.json`，浏览器输入同一个密码才能解密。原始 xlsx 不进仓库。
+
+| 数据库 | 用途 |
+|---|---|
+| **Fitness Imports** | 上传入口：新建一行，`File` 里附上 Motra 导出的 `.xlsx`。同步后自动勾选 `Imported`，`Result` 写入新增条数 |
+| **Workouts** | 只读镜像：每次训练一行（日期、类型、时长、千卡、组数、总重量、部位、强度），正文是每组明细表。缺失的会自动补齐 |
+
+导入按「开始时间 + 标题」去重，所以每次直接上传 Motra 的完整导出即可。
+
+### 一次性设置
+
+1. 给父页面连接集成（`···` → `Connections`），然后建库：
+   ```powershell
+   $env:NOTION_TOKEN = "secret_xxx"
+   $env:NOTION_FITNESS_PARENT_PAGE_ID = "<页面 ID>"
+   npm run setup:fitness-notion   # 输出两个数据库 ID
+   ```
+2. GitHub 仓库 → Settings → Secrets and variables → Actions：
+   - Secrets：`NOTION_FITNESS_IMPORT_DATABASE_ID`、`NOTION_FITNESS_WORKOUT_DATABASE_ID`、`FITNESS_PASSWORD`（网页解锁密码）
+   - Variables（可选）：`FITNESS_TIME_ZONE`，导出时间所在时区（如 `Asia/Tokyo`），用于 Notion 里的日期
+3. 之后在 `Fitness Imports` 上传 xlsx，等定时同步或手动运行 **Sync Notion & Deploy**。
+
+改密码：更新 `FITNESS_PASSWORD` 后，删除仓库里的 `public/fitness/data.enc.json`，并取消 `Fitness Imports` 里所有行的 `Imported` 勾选，下次同步会用新密码重建。
+
 ## 本地开发时手动同步
 
 ```powershell
