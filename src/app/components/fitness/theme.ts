@@ -30,6 +30,11 @@ export function formatVolume(kg: number): string {
   return kg >= TONNE_KG ? `${(kg / TONNE_KG).toFixed(1)} t` : `${Math.round(kg)} kg`;
 }
 
+/** Always kilograms, including values above one tonne. */
+export function formatKilograms(kg: number): string {
+  return `${Math.round(kg).toLocaleString()} kg`;
+}
+
 export function dateFormatter(locale: Locale, options: Intl.DateTimeFormatOptions): Intl.DateTimeFormat {
   return new Intl.DateTimeFormat(LOCALE_HTML_LANG[locale], options);
 }

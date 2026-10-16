@@ -3,16 +3,17 @@ import type { Workout } from '../../lib/fitness/motra';
 import { exerciseName, listSeparator, muscleName } from '../../lib/fitness/names';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
 import { HrBar } from './HrBar';
-import { formatDuration, formatVolume } from './theme';
+import { formatDuration, formatKilograms, formatVolume } from './theme';
 
-export function WorkoutDetail({ workout }: { workout: Workout }) {
+export function WorkoutDetail({ workout, volumeInKg = false }: { workout: Workout; volumeInKg?: boolean }) {
   const { t, locale } = useI18n();
   const c = t.fitness.columns;
   const f = t.fitness.fields;
+  const volume = volumeInKg ? formatKilograms(workout.volumeKg) : formatVolume(workout.volumeKg);
   const facts = [
     [f.duration, formatDuration(workout.durationSec)],
     [f.calories, workout.calories.toLocaleString()],
-    ...(workout.sets.length > 0 ? [[f.sets, String(workout.sets.length)], [f.volume, formatVolume(workout.volumeKg)]] : []),
+    ...(workout.sets.length > 0 ? [[f.sets, String(workout.sets.length)], [f.volume, volume]] : []),
     ...(workout.effort !== null ? [[f.effort, `${workout.effort}/10`]] : []),
   ];
 

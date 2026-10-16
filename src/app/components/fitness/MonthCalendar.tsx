@@ -10,7 +10,7 @@ import { Button } from '../ui/button';
 import { Chips, toggleInSet } from './Chips';
 import { HrBar } from './HrBar';
 import { WorkoutDetail } from './WorkoutDetail';
-import { ACTIVITY_COLORS, dateFormatter, formatDuration, formatVolume } from './theme';
+import { ACTIVITY_COLORS, dateFormatter, formatDuration, formatKilograms } from './theme';
 
 const ALL_FIELDS: CalendarField[] = ['title', 'duration', 'calories', 'sets', 'volume', 'muscles', 'hr', 'effort'];
 const DEFAULT_FIELDS: CalendarField[] = ['title', 'duration', 'calories', 'sets', 'volume', 'muscles'];
@@ -29,7 +29,7 @@ function CellWorkout({ w, fields }: { w: Workout; fields: ReadonlySet<CalendarFi
     show('duration') && formatDuration(w.durationSec),
     show('calories') && `${w.calories} ${t.fitness.units.kcal}`,
     show('sets') && w.sets.length > 0 && `${w.sets.length} ${t.fitness.units.sets}`,
-    show('volume') && w.volumeKg > 0 && formatVolume(w.volumeKg),
+    show('volume') && w.volumeKg > 0 && formatKilograms(w.volumeKg),
     show('effort') && w.effort !== null && `${t.fitness.fields.effort} ${w.effort}`,
   ].filter(Boolean);
   const muscles = show('muscles') ? workoutMuscles(w).slice(0, MAX_MUSCLES_IN_CELL).map((m) => muscleAbbr(m, locale)) : [];
@@ -162,7 +162,7 @@ export function MonthCalendar({ workouts }: { workouts: Workout[] }) {
               <span className="tabular-nums" style={{ color: 'var(--muted-foreground)' }}>{w.start.slice(11, 16)}</span>
               <span className="font-medium" style={{ color: 'var(--foreground)' }}>{w.title}</span>
             </div>
-            <WorkoutDetail workout={w} />
+            <WorkoutDetail workout={w} volumeInKg />
           </div>
         ))}
       </div>
