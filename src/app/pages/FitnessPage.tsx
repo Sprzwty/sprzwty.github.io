@@ -21,6 +21,7 @@ import { mergeWorkouts, type Workout } from '../lib/fitness/motra';
 import { inPeriod, periodOf, type Period } from '../lib/fitness/period';
 import { addDays, dayKey, formatDay, parseDay } from '../lib/fitness/stats';
 import { useDocumentTitle } from '../lib/useDocumentTitle';
+import '../../styles/fitness.css';
 
 type Load = { state: 'loading' } | { state: 'error'; message: string } | { state: 'ready'; payload: EncryptedPayload | null };
 

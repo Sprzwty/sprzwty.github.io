@@ -1,18 +1,21 @@
 import { LOCALE_HTML_LANG, type Locale } from '../../context/i18n';
 import type { ActivityType } from '../../lib/fitness/motra';
 
-/** Muted, low-saturation palette that reads on both light and dark backgrounds. */
+/** Per-theme values live in src/styles/fitness.css (separate light and dark palettes). */
 export const ACTIVITY_COLORS: Record<ActivityType, string> = {
-  strength: '#7f95b5',
-  stairs: '#8fb3a0',
-  walk: '#cdb48a',
-  run: '#c79486',
-  hike: '#a896b8',
-  ride: '#86aeb3',
+  strength: 'var(--fitness-strength)',
+  stairs: 'var(--fitness-stairs)',
+  walk: 'var(--fitness-walk)',
+  run: 'var(--fitness-run)',
+  hike: 'var(--fitness-hike)',
+  ride: 'var(--fitness-ride)',
 };
 
-/** Recovery → max, desaturated. */
-export const HR_ZONE_COLORS = ['#a7adb6', '#8fabc6', '#93b8a0', '#d2ae82', '#c98e8e'];
+/** Recovery → max. */
+export const HR_ZONE_COLORS = [1, 2, 3, 4, 5].map((z) => `var(--fitness-hr-${z})`);
+
+/** Background tint strength for coloured chips; stronger in dark mode. */
+export const TINT = 'var(--fitness-tint)';
 
 export const HEATMAP_COLOR = ACTIVITY_COLORS.stairs;
 export const LINE_COLOR = 'var(--muted-foreground)';

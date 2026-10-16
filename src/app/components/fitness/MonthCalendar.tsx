@@ -10,7 +10,7 @@ import { Button } from '../ui/button';
 import { Chips, toggleInSet } from './Chips';
 import { HrBar } from './HrBar';
 import { WorkoutDetail } from './WorkoutDetail';
-import { ACTIVITY_COLORS, dateFormatter, formatDuration, formatKilograms } from './theme';
+import { ACTIVITY_COLORS, TINT, dateFormatter, formatDuration, formatKilograms } from './theme';
 
 const ALL_FIELDS: CalendarField[] = ['title', 'duration', 'calories', 'sets', 'volume', 'muscles', 'hr', 'effort'];
 const DEFAULT_FIELDS: CalendarField[] = ['title', 'duration', 'calories', 'sets', 'volume', 'muscles'];
@@ -37,7 +37,7 @@ function CellWorkout({ w, fields }: { w: Workout; fields: ReadonlySet<CalendarFi
   return (
     <div
       className="rounded-md px-1.5 py-1 text-[11px] leading-snug text-left flex flex-col gap-0.5"
-      style={{ background: `color-mix(in srgb, ${ACTIVITY_COLORS[w.type]} 18%, transparent)`, borderLeft: `3px solid ${ACTIVITY_COLORS[w.type]}` }}
+      style={{ background: `color-mix(in srgb, ${ACTIVITY_COLORS[w.type]} ${TINT}, transparent)`, borderLeft: `3px solid ${ACTIVITY_COLORS[w.type]}` }}
     >
       {show('title') && <span className="font-medium" style={{ color: 'var(--foreground)' }}>{t.fitness.activity[w.type]}</span>}
       {muscles.length > 0 && <span style={{ color: 'var(--foreground)' }}>{muscles.join('·')}</span>}

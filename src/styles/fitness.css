@@ -1,0 +1,31 @@
+/* Fitness dashboard palette. Light: deeper muted tones for contrast on white.
+   Dark: lighter, softer pastels so colours don't turn muddy on near-black. */
+:root {
+  --fitness-strength: #5f7aa3;
+  --fitness-stairs: #6a9a80;
+  --fitness-walk: #b39257;
+  --fitness-run: #b5705f;
+  --fitness-hike: #8a72a6;
+  --fitness-ride: #5a9097;
+  --fitness-hr-1: #9ca3ad;
+  --fitness-hr-2: #6f93b8;
+  --fitness-hr-3: #6fa383;
+  --fitness-hr-4: #c4914f;
+  --fitness-hr-5: #b86b6b;
+  --fitness-tint: 14%;
+}
+
+.dark {
+  --fitness-strength: #9db4d8;
+  --fitness-stairs: #a3cdb4;
+  --fitness-walk: #e3c996;
+  --fitness-run: #e2a697;
+  --fitness-hike: #c2add8;
+  --fitness-ride: #9ccbd0;
+  --fitness-hr-1: #b4bac3;
+  --fitness-hr-2: #9fbfdf;
+  --fitness-hr-3: #a6d0b4;
+  --fitness-hr-4: #e6c08f;
+  --fitness-hr-5: #e0a3a3;
+  --fitness-tint: 20%;
+}

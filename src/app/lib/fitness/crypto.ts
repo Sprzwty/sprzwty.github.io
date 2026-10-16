@@ -26,16 +26,18 @@ function toBase64(bytes: Uint8Array): string {
   return btoa(bin);
 }
 
-function fromBase64(b64: string): Uint8Array {
+type Bytes = Uint8Array<ArrayBuffer>;
+
+function fromBase64(b64: string): Bytes {
   return Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
 }
 
-async function transform(bytes: Uint8Array, stream: CompressionStream | DecompressionStream): Promise<Uint8Array> {
+async function transform(bytes: Bytes, stream: CompressionStream | DecompressionStream): Promise<Bytes> {
   const out = new Blob([bytes]).stream().pipeThrough(stream);
   return new Uint8Array(await new Response(out).arrayBuffer());
 }
 
-async function deriveKey(password: string, salt: Uint8Array, iterations: number): Promise<CryptoKey> {
+async function deriveKey(password: string, salt: Bytes, iterations: number): Promise<CryptoKey> {
   const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']);
   return crypto.subtle.deriveKey(
     { name: 'PBKDF2', hash: 'SHA-256', salt, iterations },
