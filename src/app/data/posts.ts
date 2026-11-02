@@ -275,36 +275,6 @@ export const posts: Post[] = [
     featured: false,
   },
   {
-    id: "notion-390e2eb1-2d4d-81c0-8646-d594f0523f23",
-    slug: "2023-06-28-i226课程相关",
-    title: {
-      en: "2023.06.28-I226课程相关",
-      zh: "2023.06.28-I226课程相关",
-    },
-    excerpt: {
-      en: "网络层 扩展的以太网 一、物理层拓展以太网 冲突域 ==冲突域（Collision Domain）==是一种物理分段，是指网络中一个站点发出的帧会与其他站点发出的帧产生碰撞或冲突的那部分网络。这些站点之间存在介质争用现象。 广播域 ==广播域==指接收同样广播消息的节点的集合，如：在该集合中的任何一个节点传输一个广播帧…",
-      zh: "I226 note",
-    },
-    body: {
-      en: "## 网络层\n\n\n### 扩展的以太网\n\n\n一、物理层拓展以太网\n\n\n### 冲突域\n\n> \n>\n> ==冲突域（Collision Domain）==是一种物理分段，是指网络中一个站点发出的帧会与其他站点发出的帧产生碰撞或冲突的那部分网络。这些站点之间存在介质争用现象。\n>\n>\n\n### 广播域\n\n> \n>\n> ==广播域==指接收同样广播消息的节点的集合，如：在该集合中的任何一个节点传输一个广播帧，则所有其他能收到这个帧的节点都被认为是该广播帧的一部分\n>\n>\n\n### 用集线器扩展以太网\n\n\n==优点==\n\n\n①、使原来属于不同碰撞域的以太网上的计算机能够进行跨碰撞域的通信。\n\n\n②、扩大了以太网覆盖的地理范围。\n\n\n==缺点==\n\n\n①、碰撞域增大了，但总的吞吐量并未提高。\n\n\n②、如果不同的碰撞域使用不同的数据率，那么就不能用集线器将它们互连起来。",
-    },
-    category: "Curricular",
-    thumbnailUrl: "https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a",
-    author: {
-      name: "Wang Tongyu",
-      avatarUrl: "/assets/profile.webp",
-      initials: "WT",
-      bio: {
-        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
-        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
-        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
-      },
-    },
-    publishedAt: "2023-06-28",
-    readTimeMin: 1,
-    featured: false,
-  },
-  {
     id: "notion-390e2eb1-2d4d-81b5-9153-e1a7579c01b8",
     slug: "2022-10-21-贰拾肆岁生日",
     title: {
