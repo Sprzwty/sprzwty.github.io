@@ -29,6 +29,65 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    id: "notion-41ee2eb1-2d4d-80b4-801c-c3b79439c1ba",
+    slug: "意外重拾十数年前的友情-磨磨唧唧编辑ing",
+    title: {
+      en: "意外重拾十数年前的友情（磨磨唧唧编辑ing",
+      zh: "意外重拾十数年前的友情（磨磨唧唧编辑ing",
+    },
+    excerpt: {
+      en: "那年我们15岁，初中。 说实话当时的事情已经有很多想不起来了。随着不断地长大记忆愈发模糊，除了某几件微不足道但又令人印象深刻的事儿意外，基本上是想不起来的。初中毕业的时候妈妈曾经语重心长的说： 把你同学的名字写在照片背面，时间长了以后拿起来还能知道这些人都叫什么。 当时我不足以为然，心想着“怎么可能我不记得他们叫什么了…",
+      zh: "在十多年前就毕业了之后就再也没说过话的同学，十数年之后重新认识是什么样的感觉",
+    },
+    body: {
+      en: "## 那年我们15岁，初中。\n\n\n说实话当时的事情已经有很多想不起来了。随着不断地长大记忆愈发模糊，除了某几件微不足道但又令人印象深刻的事儿意外，基本上是想不起来的。初中毕业的时候妈妈曾经语重心长的说：\n\n> 把你同学的名字写在照片背面，时间长了以后拿起来还能知道这些人都叫什么。\n\n当时我不足以为然，心想着“怎么可能我不记得他们叫什么了呢开玩笑呢”，就当作耳旁风吹过去了。现在，工作两年，按照世间一般的规律来看，算是年轻人。虽然没那么年轻了，已经年轻到头了吧。但是照片上的某些面孔的名字，已经想破脑袋也想不出来了。\n\n\n说来也巧，我是一个比较心细的人，玩儿的好的玩伴大多生日都记得比较清楚。所以趁着每年的新年和彼此的生日，和一些好朋友在上了高中之后还算是保持了一段时间的联系。但是因为当时班里人也多，加上初中要靠成绩选拔初三的实验班，林林总总和四十多人当过同学。除了大学时代基于某些巧合重新开始聊天并且已经聊成闺蜜（我单方面这么觉得）的G以外，基本上算是都断联了。\n\n\n## 现在我们28岁，工作。\n\n\n过去了13年，每个人都走了比当时的经历几乎远上了一倍的路。这条路的角度，远比我们人生的前半部分要大得多的多。曾经班里的小胖子变成了肌肉男参加了健美比赛，曾经一起在放学路上大声哈哈哈的好哥们儿变成了职场精英创办了自己的公司，曾经一起上下学在地铁里面偷吃糖葫芦的通学搭子已经生了小孩成为了父母。每个人都过上了自己儿时想象过的或者是未曾设想过的生活。\n\n\n好说了这么多也该说到主题了。11月4号突然想到这一天是M同学的生日，就在一个对我来说稀疏平常的暖阳午后，在微信发了一条生日祝福。\n\n\n> 💡 下面我们称呼M同学叫Eden吧，我觉得ta很适合这个名字。\n\n\n本以为这条生日祝福也会像是我这些年送出去的那些生日祝福一样，要么石沉大海，要么换来几句简单的客套，互不干扰现在的生活。但是这句话就好像是一个印子一样，微弱但有力的唤醒了已经沉睡了十来年的友情。\n\n> E: “我刚开完会☹️”  \n> T: “我也刚开完一会儿还要继续开，过生日都开大会真的辛苦了🍐🎼”  \n> E: “世另我了”  \n> T: “毕业已经十多年了真的太快了”  \n> E: “真的！你们聚过会吗！”\n\n就是这么简单的几句普普通通的对话，把这段尘封已久的友情重新敲开了一道裂隙，让阳光洒了进去。\n\n\n重新开始聊天之后意外有一种说不上来的神奇的感觉。因为真的毕业之后再也没见过了所以脑子里是对方初中的样子，但是 聊的话题确实是现在这个年龄才会涉及到的话题。Eden和我说ta在打拳的时候我是真的在脑子里楞了一下的。因为我实在是没法用当时Eden在我脑子里留下的样子去硬套出来ta打拳的样子。\n\n\n（2026.11.20 待续）",
+    },
+    category: "Experience",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-11-19",
+    readTimeMin: 3,
+    featured: false,
+  },
+  {
+    id: "notion-40ce2eb1-2d4d-8028-b334-cd5c36cf7706",
+    slug: "蛋白质到底怎么选-学习中",
+    title: {
+      en: "蛋白质到底怎么选（学习中）",
+      zh: "蛋白质到底怎么选（学习中）",
+    },
+    excerpt: {
+      en: "乳清蛋白？大豆蛋白？ 乳清蛋白（Whey Protein）吸收更快，刺激肌肉合成能力更强；大豆蛋白（Soy Protein）吸收稍慢，但依然属于优质蛋白。 关于这两个蛋白质的主要区别是下面这几点： 1. 吸收速度有所不同：乳清蛋白氨基酸浓度峰值在60 90分钟之内，属于快速蛋白，而大豆分离蛋白是中速蛋白，氨基酸浓度在9…",
+    },
+    body: {
+      en: "# 乳清蛋白？大豆蛋白？\n\n> 乳清蛋白（Whey Protein）吸收更快，刺激肌肉合成能力更强；大豆蛋白（Soy Protein）吸收稍慢，但依然属于优质蛋白。\n\n关于这两个蛋白质的主要区别是下面这几点：\n\n1. 吸收速度有所不同：乳清蛋白氨基酸浓度峰值在60-90分钟之内，属于快速蛋白，而大豆分离蛋白是中速蛋白，氨基酸浓度在90-180分钟\n2. 肌肉增长效果也不尽相同。两者亮氨酸（Leucine）含量不同，亮氨酸是启动肌肉蛋白合成（MPS）的重要氨基酸。每25g乳清蛋白的亮氨酸大概在2.7 - 2.8g，而大豆蛋白是2.0g，所以增肌效果和运动恢复效果都是乳清蛋白好。\n3. 吸收率不同。吸收率通过PDCAAS和DIAAS这两个指标进行评价，两者的思路都是**“氨基酸评分 × 消化率”。**其中PDCAAS（Protein Digestibility-Corrected Amino Acid Score，蛋白质消化率校正氨基酸评分）标准较老，数值有上限为1.0，无法反映高吸收率的食物之间的差距。而DIAAS**（Digestible Indispensable Amino Acid Score，可消化必需氨基酸评分）**则可以反应高吸收蛋白之间的差异。但由于DIAAS的真回肠消化率数据不全，现在基本用作学术研究和行业评价，所以<u>**PDCAAS仍为法规**</u><u>_**主流**_</u>。主要差异如下表所示，具体食物距离如下图所示\n\n    | **蛋白质**    | **PDCAAS** | **DIAAS（%）** | **限制性氨基酸** |\n    | ---------- | ---------- | ------------ | ---------- |\n    | 全乳蛋白 / 酪蛋白 | 1.00       | ~115～120     | —          |\n    | 乳清分离蛋白     | 1.00       | ~105～110     | —          |\n    | 鸡蛋         | 1.00       | ~110         | —          |\n    | 牛肉         | ~0.92～1.00 | ~110         | —          |\n    | 大豆分离蛋白     | 1.00       | ~90          | 含硫氨基酸      |\n    | 豌豆蛋白       | ~0.89      | ~80～90       | 含硫氨基酸      |\n    | 鹰嘴豆（熟）     | ~0.78      | ~80          | 含硫氨基酸      |\n    | 燕麦         | ~0.57      | ~55～65       | 赖氨酸        |\n    | 大米         | ~0.55      | ~55～60       | 赖氨酸        |\n    | 小麦面筋       | ~0.25～0.4  | ~40～45       | 赖氨酸        |\n\n\n    ![image](/notion-images/40ce2eb1-2d4d-8000-8acf-fc598f745ff2.png)\n\n4.",
+    },
+    category: "Fitness",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-11-02",
+    readTimeMin: 2,
+    featured: false,
+  },
+  {
     id: "notion-396e2eb1-2d4d-81a4-8eb4-ebdf2fd52267",
     slug: "can-llm-speak-description-language-three-levels",
     title: {
@@ -41,6 +100,126 @@ export const posts: Post[] = [
     },
     body: {
       en: "## 研究标题\n\n\n**Can large language model speak description language?**\n\n\n## 核心问题分解\n\n\n「会说」描述语言可拆成三个层次，由浅到深：\n\n\n| 层次              | 能力                     | 评测方式                           | 通过标准（草案）      |\n| --------------- | ---------------------- | ------------------------------ | ------------- |\n| **L1 Parse**    | 读懂 Manchester/DL，解释或转写 | NL → 解释；Manchester → DL 记号     | 语义一致          |\n| **L2 Generate** | 按意图生成合法描述语言            | NL/competency question → axiom | 语法正确 + 语义忠实   |\n| **L3 Reason**   | 在描述逻辑层面做推理             | 给定 TBox/ABox，回答 subsumption 等  | 与 reasoner 一致 |\n\n\n## 假设（待 refine）\n\n- H1: LLM 在 L1 上明显强于 L3\n- H2: Manchester 表面语法正确率 ≠ 逻辑语义正确率\n- H3: Reasoner-in-the-loop 可显著提升 L2/L3\n\n## 与知识库的关系\n\n- L1/L2 依赖语法层多语法对照表作为 gold\n- L3 依赖四大推理任务 + HermiT/ELK 等作为 oracle\n\n## TODO\n\n- [ ] 正式写进 proposal 的 RQ 表述\n- [ ] 选定 baseline 模型与 benchmark\n- [ ] 定义各层 metric 计算公式",
+    },
+    category: "Research",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-07",
+    readTimeMin: 1,
+    featured: false,
+  },
+  {
+    id: "notion-396e2eb1-2d4d-8168-b097-f02fe14c0b7c",
+    slug: "moc-syntax-layer",
+    title: {
+      en: "MOC — Syntax Layer",
+      zh: "MOC — 语法层",
+    },
+    excerpt: {
+      en: "Manchester, Functional-Style, and serialization topics.",
+      zh: "Manchester、Functional-Style 与序列化主题索引。",
+    },
+    body: {
+      en: "# Syntax layer — learning order\n\n\n**Thesis relevance:** LLMs must parse/generate _description language_ — this domain defines what that language is.\n\n1. Manchester Syntax 速查\n2. 存在限制 (existential restriction)\n3. 全称限制 (universal restriction)\n4. 数量限制 (cardinality restriction)\n5. 否定与不相交\n6. 角色特性 (transitive, inverse, functional)\n7. DL / Manchester / Functional 互转规则总表\n\n## Serializations\n\n- Functional-Style Syntax\n- OWL/XML, RDF/XML, Turtle\n- SPARQL / SWRL / SHACL",
+    },
+    category: "Research",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-07",
+    readTimeMin: 1,
+    featured: false,
+  },
+  {
+    id: "notion-396e2eb1-2d4d-8138-ab7a-c105b0827b9b",
+    slug: "moc-llm-kr-bridge",
+    title: {
+      en: "MOC — LLM × KR Bridge",
+      zh: "MOC — LLM 与知识表示桥接",
+    },
+    excerpt: {
+      en: "Research core: NL↔DL, benchmarks, neuro-symbolic verification.",
+      zh: "研究核心：自然语言与描述逻辑互转、评测与神经符号验证。",
+    },
+    body: {
+      en: "# LLM × KR bridge — research core\n\n\n## Narrative\n\n1. **Speak** — Can LLM generate/parse Manchester & DL?\n2. **Correct** — Syntactic vs semantic fidelity\n3. **Verify** — Reasoner-in-the-loop\n\n## Topics\n\n\n### NL ↔ DL\n\n- NL → OWL axiom 工作地图\n- Axiom verbalization 相关工作\n\n### LLM capabilities\n\n- LLM 结构化形式化输出综述\n- LLM 逻辑推理 benchmark 综述\n\n### Evaluation\n\n- 实验设计 v1\n- Related Work 概念图谱",
+    },
+    category: "Research",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-07",
+    readTimeMin: 1,
+    featured: false,
+  },
+  {
+    id: "notion-396e2eb1-2d4d-8198-90f3-c4da4b1d8382",
+    slug: "moc-glossary",
+    title: {
+      en: "MOC — Glossary",
+      zh: "MOC — 术语表",
+    },
+    excerpt: {
+      en: "Core KR terminology cards.",
+      zh: "KR 核心术语卡片索引。",
+    },
+    body: {
+      en: "# Glossary — core terms (planned)\n\n\nSuggested starters:\n\n- Description Logic\n- TBox / ABox / RBox\n- Open World Assumption\n- Subsumption\n- Manchester Syntax\n- Knowledge Graph vs Ontology",
+    },
+    category: "Research",
+    thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
+    author: {
+      name: "Wang Tongyu",
+      avatarUrl: "/assets/profile.webp",
+      initials: "WT",
+      bio: {
+        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
+        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
+        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
+      },
+    },
+    publishedAt: "2026-07-07",
+    readTimeMin: 1,
+    featured: false,
+  },
+  {
+    id: "notion-396e2eb1-2d4d-81c5-9d6a-e2e3f0fca312",
+    slug: "moc-description-logic",
+    title: {
+      en: "MOC — Description Logic",
+      zh: "MOC — 描述逻辑",
+    },
+    excerpt: {
+      en: "Learning order for description logic topics.",
+      zh: "描述逻辑主题学习顺序索引。",
+    },
+    body: {
+      en: "# Description Logic — learning order\n\n1. DL 家族总览 (ALC → SROIQ)\n2. TBox / ABox / RBox\n3. DL 模型论语义与开放世界假设\n4. Constructors → see MOC — Syntax Layer\n5. 四大推理任务\n6. Tableau 算法直觉\n\n## Related domains\n\n- MOC — Syntax Layer\n- MOC — Semantic Web (planned)",
     },
     category: "Research",
     thumbnailUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
@@ -303,66 +482,6 @@ export const posts: Post[] = [
     publishedAt: "2022-10-21",
     readTimeMin: 6,
     featured: true,
-  },
-  {
-    id: "notion-390e2eb1-2d4d-81a9-babf-efc21002dc95",
-    slug: "jaist面试经验",
-    title: {
-      en: "Jaist面试经验",
-      zh: "Jaist面试经验",
-    },
-    excerpt: {
-      en: "2022 10 15 Jaist备考经验总结 需要准备的东西 提前准备好两种颜色的粗头马克笔（面试过程中写在A4纸上给老师解释用），自己准备了一个muji的亚克力纸板夹，为了可以在镜头前写字✍️ 面试流程 面试考官人数：3人，50 60岁，教授🧑‍🏫 面试形式：线上面试，使用webex软件💻 第零部分：先进入准备…",
-      zh: "Experience sharing of JAIST Entrance Exam",
-    },
-    body: {
-      en: "## 2022-10-15 Jaist备考经验总结\n\n\n### 需要准备的东西\n\n\n提前准备好两种颜色的粗头马克笔（面试过程中写在A4纸上给老师解释用），自己准备了一个muji的亚克力纸板夹，为了可以在镜头前写字✍️\n\n\n### 面试流程\n\n\n面试考官人数：3人，50-60岁，教授🧑‍🏫\n\n\n面试形式：线上面试，使用webex软件💻\n\n\n第零部分：先进入准备房间，有考试接待官检查考试环境并确认考试的注意事项与考号等信息。确认完毕后等待考试开始。\n\n\n第一部分【7min】：先陈述自己的Slide，时间很严格限制7分钟，在6分钟的时候有老师提醒还剩1分钟。整个过程老师中途不会打断。\n\n\n第二部分【23min】：三位教授的自由提问。基本上每个教授都是轮番提问的。\n\n\n### 面试问题\n\n1. 发表相关的问题三位面试官依次提出\n    1. 这里需要注意教授会针对slide的内容提出自己的想法，整体提问流程会非常长，他们自己会有对你这个东西的想法提出，所以一定要听清楚。听不清楚就直接要求再来一遍。\n    2. 教授提出的问题如果直接说不明白可以通过在准备好的白纸上通过画图的方式进行解释。\n    3. 教授会询问可行性的相关问题并对可行性给出自己的意见。\n    4. 创新点相关的问题比较多，一定要弄清楚自己的研究计划中的创新点在哪里。\n    5. 你的研究和你的意向教授现在的研究的共同点在哪里。\n    6. 请你说明你的研究中XXX是什么意思，XXX是怎么定义的？\n    7. 你这个研究可以解决什么样子的问题，未来可以在那里应用？》\n    8. 你为什么选择这个作为你的研究对象？\n    9. 。。。\n2. 询问与专业相关的问题，包括EntrySheet中提到的大学中最擅长的三门课之一，需要提前复习一下基本概念。\n3. 询问最想在Jaist修哪门课程？（这个问题我因为没有提前了解所以没有回答出来）\n4. 用英语描述一下你的研究是什么？\n5. 。。。\n\n总计10余个问题，23分钟全部耗尽。\n\n\n### 面试氛围\n\n\n面试官不会故意抛出刁钻的问题进行提问，基本上全部的提问都是围绕着所发表的研究和提出的小论文的。\n\n\n### 后记\n\n\n面试结束之后会直接让你退出房间，你点结束会议的一刹那面试就完成了。。\n\n\n### 自我反省\n\n1. 对于自己的PPT的时间掌握不好，应该整体节奏再加快一点。（最后的总结差一条没说的时候面试官提醒时间到）\n2. 没有提前仔细了解学校的课程设置，导致这个问题没有回答上来。以后的种种面试需要避免这个问题。\n3. 国外的面试需要尽可能准备好当地语言与英语的双语发言稿，以备不时之需。（临场发挥真的很紧张）\n4. 7分钟的发表除去目录页应该把时间控制在8-9页的量比较合适，本次内容量为10页，稍显局促。\n5. 所提交的小论文的覆盖面没有slide全面（小论文于面试前15天和出愿材料一并提出）\n6. 小论文中没有标出引用参考文献，今后提出的书类文件要全部写明参考文件。\n7. 继续反省，后续更新\n\n### P.s.\n\n\n希望我的面试能让教授觉得过得去，让我可以合格！！！\n\n\n## --------------------------\n\n\n## 2022.10.31更新\n\n\n### 北陆先端科学技术大学院大学（JAIST）令和5年4月第二次入试合格💮",
-    },
-    category: "Experience",
-    thumbnailUrl: "https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a",
-    author: {
-      name: "Wang Tongyu",
-      avatarUrl: "/assets/profile.webp",
-      initials: "WT",
-      bio: {
-        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
-        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
-        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
-      },
-    },
-    publishedAt: "2022-10-17",
-    readTimeMin: 3,
-    featured: false,
-  },
-  {
-    id: "notion-390e2eb1-2d4d-81a6-a569-d4708059496e",
-    slug: "midterm-revising-of-i226",
-    title: {
-      en: "Midterm revising of I226",
-      zh: "Midterm revising of I226",
-    },
-    excerpt: {
-      en: "Quiz 01 1. 通信の形態(unicast, multicast, broadcast, anycast)について、各々どのようなものか説明してください。 unicast: 一対一の形で、特定の相手に伝送 multicast: 特定の論理的にグループのメンバー全体に伝送 broadcast: 放送の形で、(物理的…",
-      zh: "I226 Mid",
-    },
-    body: {
-      en: "## Quiz-01\n\n\n### 1. 通信の形態(unicast, multicast, broadcast, anycast)について、各々どのようなものか説明してください。\n\n- **unicast:**　一対一の形で、特定の相手に伝送\n- **multicast:**　特定の論理的にグループのメンバー全体に伝送\n- **broadcast:**　放送の形で、(物理的に)届く範囲すべてに伝送\n- **anycast:**　特定のグループのメンバーのうちどれかに伝送\n\n### 2. 全二重通信、半二重通信、単方向通信について例をあげて説明してください。\n\n- 単方向通信: 一方向にのみデータを伝送\n- 全二重通信: 双方向に同時データ伝送が可能\n- 半二重通信: 双方向にデータ伝送可能であるが同時には一方向のみ\n\n### 3. LANでよく使われるトポロジを3つあげ、各々の性質を説明してください。\n\n- バス：物全てのコンピュータが一本の通信路（バス）に接続されます。バス型トポロジは比較的簡単に実装でき、コストも低いです。バスに問題が生じると全体に被害が及ぶ。回線容量を分け合うことになる。\n- リング：隣のノードとの接続を順次繰り返して輪をつくる，他のノードを経由して通信が行われる，一ケ所でも切れるとリングが成り立たなくなり、被害が全体に及ぶ，ノードの付け外しの際にはリングが切れる。\n- スター：集線装置(ハブ)にノードを接続，ハブが壊れると全体に被害が及ぶが、線が切れても該 当するノードだけの問題で済む。ノードの付け外しはハブの許す限り自由，回線容量がどうなるかは集線装置次第。\n- ツリー：集線装置(ハブ, コンセントレータ)にノードを接続し、ハブ を上位のハブに接続。スター同士の接続と考えることも可能だが、上下関係がある、スターと類似した性質だが、枝単位で運命共同体なのと、トラフィックの集約が起る。\n\n### 完全結合、バス型、スター型、リング型の各トポロジについて、nノードを接続するのに必要なリンクの数を示して下さい。\n\n\n### 4.交換という概念を簡単に説明してください。\n\n\n### 5.回線交換とパケット交換について説明してください。\n\n\n### 6. 回線交換でコネクションレスな例、およびパケット交換でコネクションオリエンテッドな例をあげてください。\n\n\n### 7. LAN, WAN, MANといった分類の基準を述べて下さい。\n\n\n### 8.OSI参照モデルが明確にした重要な概念に、サービス、インタフェース、プロトコルがあります。これらを説明し、その関係を図示して下さい。\n\n\n### ・プロトコルスタックとは何ですか? また、カプセル化という概念はプロトコルスタックでどのように用いられますか?\n\n\n### ・OSI参照モデルの各層の名前と役割を簡単にあげてください。\n\n\n### ・実際のコンピュータネットワークでは5層のモデルがよく使われます。この5層モデルについて、各層の名称、各層で取り扱うデータの単位、各層で利用するアドレス、各層の役割をあげてください。\n\n\n### ・OSI参照モデルにおけるサービスプリミティブについて図を用いて説明してください。\n\n\n## Quiz-02\n\n\n### ・サンプリング定理とは何か説明してください。\n\n\n### ・ノイズのある伝送路の最大伝送速度の理論的上限は、信号対雑音比がR、伝送路の帯域がBのとき、どのような式であらわされましたか? また、この式からわかることを説明してください。\n\n\n### ・3KHzの帯域を有する電話回線で信号対雑音比30dBのとき、最大伝送速度の上限はどれくらいになりますか?\n\n\n### ・ベースバンド伝送方式とブロードバンド伝送方式の違いはどこにありましたか。また、各々の特徴について説明して下さい。\n\n\n### ・変調とは何でしたか。例を3つ挙げて説明して下さい。\n\n\n### ・1シンボル当たりnビットの情報を持つbボーの伝送システムで、転送速度をbit/Secであらわすといくつになりますか?\n\n\n### ・多重化とは何でしたか。また、複数の例を挙げ、各々について説明してください。\n\n\n### ・マンチェスタ符号の特徴を、RZ符号およびNRZ符号と比較して述べてください。\n\n\n### ・同軸ケーブルとより対線を比較して特徴をあげてください。\n\n\n### ・光ファイバにはシングルモードファイバと呼ばれるものとマルチモードファイバと呼ばれるものがあります。各々の原理と特徴を説明してください。\n\n\n### ・衛星通信の特徴を挙げてください。\n\n\n## Quiz-03\n\n\n### 1. データリンク層の役割を3つ以上挙げ、それぞれについて説明してください。\n\n\n### 2. ビット列からフレームを形成するためにはどのような方法がありましたか。例を挙げて説明してください。\n\n\n### 3. データリンク層プロトコル(規格)の例を挙げてください。\n\n\n### 4. IEEE802.3とIEEE802.5のメディアアクセス方式の違いを説明し、特徴を挙げてください。\n\n\n### 5. IEEE802.3において、最小フレーム長はどのように決定されたのでしょうか? 具体的な数値を挙げて説明してください。\n\n\n### 6. データリンク層アドレスがどのように使われるかについて説明してください。\n\n\n## Quiz-04\n\n\n### ・ネットワーク層の役割を説明してください。\n\n\n### ・ネットワーク層アドレスとデータリンク層アドレスの違いを説明してください。\n\n\n### ・IPv4アドレスの表記方法について説明してください。どのような標記が使われ、また、数値の範囲はどのようになりますか?\n\n\n### ・IPv4アドレスにおけるクラスとサブネットという概念について各々説明してください。\n\n\n### ・ルーティングテーブルについて、簡単なネットワーク例を挙げて説明してください。\n\n\n### ・ARPおよびRARPの役割について説明してください。\n\n\n## Quiz-05\n\n\n### ・ルーター、ブリッジ、リピーターについて、役割や特徴について述べてください。また、各々、プロトコルスタックのどの層の装置と考えることができるでしょうか?\n\n\n### ・ブリッジの動作について説明してください。具体的なネットワーク例をあげ、フォワーディングテーブルがどのように変化するかについても言及してください。\n\n\n### ・ルーターの動作をフレームが入ってきてからフレームを送信するまで順を追って説明してください。\n\n\n### ・複数のルーターをまたがってIPパケットが転送される様子を順を追って説明してください。このとき、特にMACアドレスに注意して説明してください。\n\n\n### ・IPプロトコルのデフォルトルートという概念について説明し、これがどのような効果をもたらすのか説明してください。\n\n\n### ・\"SampleNet\"の図を使い、以下の問いに答えて下さい\n\n1. 同一のネットワークアドレスを有する範囲を示し、各々アドレスを設定して\n\nください。\n\n1. 図中のブロードキャストドメインとコンテンションドメインを示して下さい。\n2. 各々のルーターについて、1.でつけたアドレスを用いて経路表を作成してください。\n\n但し、ポートは若い番号のついているものから順に1,2,...,nとしてください。\n\n1. host Aではダイナミックルーティングを行なうプログラムが動いており、経\n\n路表を作成しているとした場合、どのような表ができているでしょうか。3.同様\nに示して下さい。\n\n1. この構成のネットワークをルーターを使わず、ブリッジだけで構成すること\n\nは可能でしょうか? 問題があれば、それを解決するための方法を示して下さい。\nまた、ルーターを使った場合との違いを説明してください。\n\n\n## Quiz-06\n\n\n### 1. トランスポート層の役割を説明してください。\n\n\n### 2. TCPとUDPがアプリケーション層に提供するサービスの違いについて述べてください。\n\n\n### 3. コネクションのある通信を実現するためには、どのような仕組みが必要となりますか。\n\n\n### 4. コネクションの確立や解放が直感的に思われるほど容易ではないのはなぜですか? 例を挙げて説明してください。\n\n\n### 5. 3-way hand shakeについて説明してください。\n\n\n### 6. エンドツーエンドのフロー制御と輻輳制御の違いについて説明してください。\n\n\n### 7. TCPにおけるフロー制御および輻輳制御の方法について具体的に説明してください。\n\n\n### 8. TCPにおけるスループットを決める要因について説明してください。\n\n\n### 9. UDPの特徴と、UDPを利用したアプリケーション例をあげ、具体的なヘッダの構造を示してください。",
-    },
-    category: "test",
-    thumbnailUrl: "https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a",
-    author: {
-      name: "Wang Tongyu",
-      avatarUrl: "/assets/profile.webp",
-      initials: "WT",
-      bio: {
-        en: "JAIST master's student researching trustworthy AI and knowledge representation.",
-        zh: "JAIST 硕士研究生，研究方向为可信赖人工智能与知识表示。",
-        ja: "JAIST の修士課程学生。信頼できる AI と知識表現を研究。",
-      },
-    },
-    publishedAt: "2022-06-30",
-    readTimeMin: 8,
-    featured: false,
   },
   {
     id: "notion-390e2eb1-2d4d-8117-943b-c2c5509ea59f",
