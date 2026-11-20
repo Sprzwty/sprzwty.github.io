@@ -6,6 +6,7 @@ export interface FitnessTranslations {
   title: string;
   subtitle: string;
   lockedDesc: string;
+  username: string;
   password: string;
   unlock: string;
   unlocking: string;
@@ -35,6 +36,7 @@ export const fitnessEn: FitnessTranslations = {
   title: 'Fitness',
   subtitle: 'Private workout log, exported from Motra.',
   lockedDesc: 'This page is password protected. The data is encrypted and only decrypted in your browser.',
+  username: 'Username',
   password: 'Password',
   unlock: 'Unlock',
   unlocking: 'Decrypting…',
@@ -69,6 +71,7 @@ export const fitnessZh: FitnessTranslations = {
   title: '健身',
   subtitle: '私人训练记录，数据来自 Motra 导出。',
   lockedDesc: '此页面需要密码。数据已加密，仅在你的浏览器中解密。',
+  username: '用户名',
   password: '密码',
   unlock: '解锁',
   unlocking: '解密中…',
@@ -103,6 +106,7 @@ export const fitnessJa: FitnessTranslations = {
   title: 'フィットネス',
   subtitle: 'Motra からエクスポートした個人のトレーニング記録。',
   lockedDesc: 'このページはパスワードで保護されています。データは暗号化され、ブラウザ内でのみ復号されます。',
+  username: 'ユーザー名',
   password: 'パスワード',
   unlock: 'ロック解除',
   unlocking: '復号中…',
