@@ -66,6 +66,18 @@ jobs:
           fi
           npm run sync:fitness
 
+      - name: Sync health checkups from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_HEALTH_DATABASE_ID: ${{ secrets.NOTION_HEALTH_DATABASE_ID }}
+          FITNESS_PASSWORD: ${{ secrets.FITNESS_PASSWORD }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_HEALTH_DATABASE_ID" ] || [ -z "$FITNESS_PASSWORD" ]; then
+            echo "Health sync not configured; skipping."
+            exit 0
+          fi
+          npm run sync:health
+
       - name: Commit synced content
         run: |
           git config user.name "github-actions[bot]"

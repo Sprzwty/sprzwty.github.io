@@ -16,6 +16,9 @@
     "sync:to-notion": "node scripts/sync-to-notion.mjs",
     "sync:fitness": "node scripts/sync-fitness.mjs",
     "setup:fitness-notion": "node scripts/setup-fitness-notion.mjs",
+    "sync:health": "node scripts/sync-health.mjs",
+    "setup:health-notion": "node scripts/setup-health-notion.mjs",
+    "import:health": "node scripts/import-health-report.mjs",
     "sync": "npm run sync:diary && npm run sync:posts",
     "migrate:legacy": "node scripts/migrate-legacy-posts-to-notion.mjs"
   },

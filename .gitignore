@@ -12,8 +12,9 @@ dist/
 # Local scratch (not part of the site)
 _local/
 
-# Raw fitness exports — only the encrypted public/fitness/data.enc.json is committed
+# Raw fitness exports and checkup reports — only the encrypted public/fitness/*.enc.json is committed
 *.xlsx
+*.pdf
 
 # NOTE: package-lock.json is intentionally NOT ignored.
 # Committing the lockfile ensures reproducible CI builds.
