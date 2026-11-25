@@ -23,6 +23,9 @@ export function HealthTrend({ series, reports, onUnitChange }: { series: ItemSer
         high: m.high,
         color: healthValueColor(m),
         original: m.converted ? `${m.row.value} ${m.row.unit}`.trim() : null,
+        range: m.converted
+          ? (m.convertedRange ? `${m.convertedRange} ${series.unit}`.trim() : '')
+          : `${m.row.range} ${m.row.unit}`.trim(),
       };
     });
 
@@ -36,15 +39,15 @@ export function HealthTrend({ series, reports, onUnitChange }: { series: ItemSer
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex items-center gap-2 text-sm font-medium" style={{ color: 'var(--foreground)' }}>
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium" style={{ color: 'var(--foreground)' }}>
         {itemName(series, locale)}
         <UnitSwitch series={series} onChange={onUnitChange} />
       </div>
-      <ChartContainer config={config} className="aspect-auto h-64 w-full">
-        <LineChart data={points} margin={{ left: -8, right: 16, top: 8 }}>
+      <ChartContainer config={config} className="aspect-auto h-56 sm:h-64 w-full">
+        <LineChart data={points} margin={{ left: 0, right: 16, top: 8 }}>
           <CartesianGrid vertical={false} />
           <XAxis dataKey="date" tickLine={false} axisLine={false} />
-          <YAxis tickLine={false} axisLine={false} width={48} domain={['auto', 'auto']} />
+          <YAxis tickLine={false} axisLine={false} width={56} domain={['auto', 'auto']} />
           {(latest.low !== null || latest.high !== null) && (
             <ReferenceArea
               y1={latest.low ?? undefined}
@@ -65,6 +68,7 @@ export function HealthTrend({ series, reports, onUnitChange }: { series: ItemSer
                       <span className="font-mono font-medium tabular-nums" style={{ color: p.color }}>{value}</span>
                     </div>
                     {p.original && <span className="text-muted-foreground">{h.original}: {p.original}</span>}
+                    {p.range && <span className="text-muted-foreground">{h.range}: {p.range}</span>}
                   </div>
                 )}
               />

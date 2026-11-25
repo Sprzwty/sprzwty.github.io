@@ -1,18 +1,22 @@
 import { Fragment, useMemo, useState } from 'react';
 import { useI18n } from '../../context/i18n';
 import { HEALTH_CATEGORIES, type HealthCategory } from '../../lib/health/catalog';
-import { formatValue, type HealthReport, type ItemSeries, type Measurement } from '../../lib/health/model';
-import { HEALTH_VALUE_COLORS, dateFormatter, healthValueColor } from '../fitness/theme';
+import type { HealthReport, ItemSeries } from '../../lib/health/model';
+import { HEALTH_VALUE_COLORS, dateFormatter } from '../fitness/theme';
 import { Checkbox } from '../ui/checkbox';
 import { Label } from '../ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
 import { itemName } from './names';
 import { UnitSwitch } from './UnitSwitch';
+import { ValueCell } from './ValueCell';
 
 const ALL = 'all';
 const UNIFIED = 'unified';
 const MIN_SHARED_REPORTS = 2;
+
+/** The item column stays put while the report columns scroll underneath it. */
+const STICKY_ITEM = 'sticky left-0 z-10 bg-card shadow-[inset_-1px_0_0_var(--border)]';
 
 interface Props {
   /** Newest first. */
@@ -50,27 +54,11 @@ export function HealthCompare({ reports, series, selected, onSelect, unitsFrom, 
     return null;
   };
 
-  const cell = (s: ItemSeries, m: Measurement | undefined, index: number) => {
+  const cell = (s: ItemSeries, report: HealthReport, index: number) => {
+    const m = s.byReport.get(report.id);
     if (!m) return <span style={{ color: 'var(--muted-foreground)' }}>—</span>;
     const prev = m.value !== null ? previousValue(s, index) : null;
-    const delta = prev !== null && m.value !== null ? m.value - prev : null;
-    const tip = [
-      m.converted ? `${h.original}: ${m.row.value} ${m.row.unit}` : '',
-      m.row.range ? `${h.range}: ${m.row.range}${m.row.unit ? ` ${m.row.unit}` : ''}` : '',
-      m.flag ? h.flags[m.flag] : '',
-    ].filter(Boolean).join('\n');
-    return (
-      <span title={tip || undefined} className="inline-flex items-baseline gap-1.5">
-        <span style={{ color: healthValueColor(m), fontWeight: m.flag ? 600 : undefined }}>
-          {m.display}{m.flag === 'H' ? ' ↑' : m.flag === 'L' ? ' ↓' : m.flag === 'A' ? ' *' : ''}
-        </span>
-        {delta !== null && delta !== 0 && (
-          <span className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
-            {delta > 0 ? '+' : '−'}{formatValue(Math.abs(delta))}
-          </span>
-        )}
-      </span>
-    );
+    return <ValueCell series={s} m={m} report={report} delta={prev !== null && m.value !== null ? m.value - prev : null} />;
   };
 
   return (
@@ -83,21 +71,23 @@ export function HealthCompare({ reports, series, selected, onSelect, unitsFrom, 
             {present.map((c) => <SelectItem key={c} value={c}>{h.categories[c]}</SelectItem>)}
           </SelectContent>
         </Select>
-        <div className="flex items-center gap-2">
-          <Checkbox id="health-flagged" checked={flaggedOnly} onCheckedChange={(v) => setFlaggedOnly(v === true)} />
-          <Label htmlFor="health-flagged">{h.flaggedOnly}</Label>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <div className="flex items-center gap-2">
+            <Checkbox id="health-flagged" checked={flaggedOnly} onCheckedChange={(v) => setFlaggedOnly(v === true)} />
+            <Label htmlFor="health-flagged">{h.flaggedOnly}</Label>
+          </div>
+          {reports.length >= MIN_SHARED_REPORTS && (
+            <div className="flex items-center gap-2">
+              <Checkbox id="health-shared" checked={sharedOnly} onCheckedChange={(v) => setSharedOnly(v === true)} />
+              <Label htmlFor="health-shared">{h.sharedOnly}</Label>
+            </div>
+          )}
         </div>
         {reports.length >= MIN_SHARED_REPORTS && (
-          <div className="flex items-center gap-2">
-            <Checkbox id="health-shared" checked={sharedOnly} onCheckedChange={(v) => setSharedOnly(v === true)} />
-            <Label htmlFor="health-shared">{h.sharedOnly}</Label>
-          </div>
-        )}
-        {reports.length >= MIN_SHARED_REPORTS && (
-          <div className="flex items-center gap-2 sm:ml-auto">
+          <div className="flex items-center gap-2 sm:ml-auto min-w-0">
             <Label htmlFor="health-units" className="shrink-0">{h.units.label}</Label>
             <Select value={unitsFrom ?? UNIFIED} onValueChange={(v) => onUnitsFromChange(v === UNIFIED ? null : v)}>
-              <SelectTrigger id="health-units" className="sm:w-auto"><SelectValue /></SelectTrigger>
+              <SelectTrigger id="health-units" className="min-w-0 flex-1 sm:flex-none sm:w-auto"><SelectValue /></SelectTrigger>
               <SelectContent>
                 <SelectItem value={UNIFIED}>{h.units.unified}</SelectItem>
                 {reports.map((r) => (
@@ -116,55 +106,56 @@ export function HealthCompare({ reports, series, selected, onSelect, unitsFrom, 
             {h.legend[k]}
           </span>
         ))}
-        <span>{h.legend.hint}</span>
+        <span className="basis-full sm:basis-auto">{h.legend.hint}</span>
       </div>
 
       {rows.length === 0 ? (
         <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>{h.empty}</p>
       ) : (
-        <div className="overflow-x-auto">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="min-w-44">{h.item}</TableHead>
-                {reports.map((r) => (
-                  <TableHead key={r.id} className="min-w-32">
-                    <div className="tabular-nums">{fmtDate(r.date)}</div>
-                    <div className="text-xs font-normal truncate max-w-48" style={{ color: 'var(--muted-foreground)' }}>{r.facility}</div>
-                  </TableHead>
-                ))}
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {rows.map((s, i) => (
-                <Fragment key={s.key}>
-                  {(i === 0 || rows[i - 1].category !== s.category) && (
-                    <TableRow className="hover:bg-transparent">
-                      <TableCell colSpan={reports.length + 1} className="pt-4 text-xs font-medium" style={{ color: 'var(--muted-foreground)' }}>
-                        {h.categories[s.category]}
-                      </TableCell>
-                    </TableRow>
-                  )}
-                  <TableRow
-                    onClick={() => onSelect(s.key)}
-                    className="cursor-pointer"
-                    data-state={selected === s.key ? 'selected' : undefined}
-                  >
-                    <TableCell>
-                      <div className="flex items-center gap-1.5">
-                        <span style={{ color: 'var(--foreground)' }}>{itemName(s, locale)}</span>
-                        <UnitSwitch series={s} onChange={(target) => onItemUnitChange(s.key, target)} />
-                      </div>
-                    </TableCell>
-                    {reports.map((r, index) => (
-                      <TableCell key={r.id} className="tabular-nums whitespace-normal max-w-64">{cell(s, s.byReport.get(r.id), index)}</TableCell>
-                    ))}
-                  </TableRow>
-                </Fragment>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className={`${STICKY_ITEM} w-24 min-w-24 sm:w-auto sm:min-w-44`}>{h.item}</TableHead>
+              {reports.map((r) => (
+                <TableHead key={r.id} className="min-w-24 sm:min-w-32">
+                  <div className="tabular-nums">{fmtDate(r.date)}</div>
+                  <div className="text-xs font-normal truncate max-w-28 sm:max-w-48" style={{ color: 'var(--muted-foreground)' }}>{r.facility}</div>
+                </TableHead>
               ))}
-            </TableBody>
-          </Table>
-        </div>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {rows.map((s, i) => (
+              <Fragment key={s.key}>
+                {(i === 0 || rows[i - 1].category !== s.category) && (
+                  <TableRow className="hover:bg-transparent">
+                    <TableCell colSpan={reports.length + 1} className="pt-4 text-xs font-medium" style={{ color: 'var(--muted-foreground)' }}>
+                      <span className="sticky left-2">{h.categories[s.category]}</span>
+                    </TableCell>
+                  </TableRow>
+                )}
+                <TableRow className="group" data-state={selected === s.key ? 'selected' : undefined}>
+                  <TableCell className={`${STICKY_ITEM} whitespace-normal group-hover:bg-muted group-data-[state=selected]:bg-muted`}>
+                    <div className="flex flex-col items-start gap-0.5 sm:flex-row sm:items-center sm:gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => onSelect(s.key)}
+                        className="text-left text-sm cursor-pointer rounded hover:underline focus-visible:outline-2 focus-visible:outline-ring"
+                        style={{ color: 'var(--foreground)' }}
+                      >
+                        {itemName(s, locale)}
+                      </button>
+                      <UnitSwitch series={s} onChange={(target) => onItemUnitChange(s.key, target)} />
+                    </div>
+                  </TableCell>
+                  {reports.map((r, index) => (
+                    <TableCell key={r.id} className="tabular-nums whitespace-normal max-w-40 sm:max-w-64">{cell(s, r, index)}</TableCell>
+                  ))}
+                </TableRow>
+              </Fragment>
+            ))}
+          </TableBody>
+        </Table>
       )}
     </div>
   );

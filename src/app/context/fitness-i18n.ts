@@ -16,6 +16,8 @@ export interface HealthTranslations {
   empty: string;
   original: string;
   range: string;
+  convertedRange: string;
+  details: { value: string };
   openInNotion: string;
   trendHint: string;
   notNumeric: string;
@@ -107,13 +109,15 @@ export const fitnessEn: FitnessTranslations = {
     empty: 'No matching items.',
     original: 'Original',
     range: 'Reference',
+    convertedRange: 'Reference, converted',
+    details: { value: 'Value' },
     openInNotion: 'Open in Notion',
     trendHint: 'Click an item in the table to see its trend.',
     notNumeric: 'This item has no numeric values to chart.',
     flags: { H: 'High', L: 'Low', A: 'Abnormal' },
     flaggedCount: (n) => `${n} flagged`,
     units: { label: 'Units', unified: 'Unified units', report: (name) => `Units of ${name}` },
-    legend: { original: 'As reported', converted: 'Converted', flagged: 'Flagged', convertedFlagged: 'Flagged, converted', hint: 'Hover a value for the original value and reference range.' },
+    legend: { original: 'As reported', converted: 'Converted', flagged: 'Flagged', convertedFlagged: 'Flagged, converted', hint: 'Tap a value for the original value and reference range.' },
   },
 };
 
@@ -167,13 +171,15 @@ export const fitnessZh: FitnessTranslations = {
     empty: '没有符合条件的项目。',
     original: '原始值',
     range: '参考范围',
+    convertedRange: '换算后参考范围',
+    details: { value: '数值' },
     openInNotion: '在 Notion 中打开',
     trendHint: '点击表格中的项目查看趋势。',
     notNumeric: '该项目没有数值，无法绘制趋势。',
     flags: { H: '偏高', L: '偏低', A: '异常' },
     flaggedCount: (n) => `${n} 项异常`,
     units: { label: '显示单位', unified: '统一单位', report: (name) => `按 ${name} 的单位` },
-    legend: { original: '原单位数值', converted: '换算值', flagged: '异常', convertedFlagged: '换算后的异常', hint: '悬停数值可查看原始值与参考范围。' },
+    legend: { original: '原单位数值', converted: '换算值', flagged: '异常', convertedFlagged: '换算后的异常', hint: '点按数值可查看原始值与参考范围。' },
   },
 };
 
@@ -227,12 +233,14 @@ export const fitnessJa: FitnessTranslations = {
     empty: '該当する項目はありません。',
     original: '元の値',
     range: '基準値',
+    convertedRange: '換算後の基準値',
+    details: { value: '値' },
     openInNotion: 'Notion で開く',
     trendHint: '表の項目をクリックすると推移を表示します。',
     notNumeric: 'この項目には数値がないため、グラフを表示できません。',
     flags: { H: '高値', L: '低値', A: '異常' },
     flaggedCount: (n) => `${n} 項目`,
     units: { label: '表示単位', unified: '統一単位', report: (name) => `${name} の単位` },
-    legend: { original: '元の単位の値', converted: '換算値', flagged: '要注意', convertedFlagged: '要注意（換算値）', hint: '値にカーソルを合わせると元の値と基準値を表示します。' },
+    legend: { original: '元の単位の値', converted: '換算値', flagged: '要注意', convertedFlagged: '要注意（換算値）', hint: '値をタップすると元の値と基準値を表示します。' },
   },
 };

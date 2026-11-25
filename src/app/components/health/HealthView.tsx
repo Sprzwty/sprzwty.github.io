@@ -58,7 +58,7 @@ export function HealthView({ reports: unsorted }: { reports: HealthReport[] }) {
 
   const stats = [
     { label: h.stats.reports, value: String(reports.length) },
-    { label: h.stats.latest, value: fmtDate(latest.date) },
+    { label: h.stats.latest, value: latest.date },
     { label: h.stats.flagged, value: String(flaggedIn(series, latest.id)) },
     { label: h.stats.items, value: String(series.length) },
   ];
@@ -67,8 +67,8 @@ export function HealthView({ reports: unsorted }: { reports: HealthReport[] }) {
     <div className="flex flex-col gap-6">
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {stats.map((it) => (
-          <div key={it.label} className="rounded-xl border bg-card px-4 py-3">
-            <div className="text-2xl font-medium tabular-nums" style={{ color: 'var(--foreground)' }}>{it.value}</div>
+          <div key={it.label} className="rounded-xl border bg-card px-3 py-3 sm:px-4">
+            <div className="text-xl sm:text-2xl font-medium tabular-nums" style={{ color: 'var(--foreground)' }}>{it.value}</div>
             <div className="text-xs mt-1" style={{ color: 'var(--muted-foreground)' }}>{it.label}</div>
           </div>
         ))}
@@ -77,7 +77,7 @@ export function HealthView({ reports: unsorted }: { reports: HealthReport[] }) {
       <Section title={h.sections.reports}>
         <div className="grid gap-3 md:grid-cols-2">
           {reports.map((r) => (
-            <div key={r.id} className="rounded-lg border px-4 py-3 flex flex-col gap-1.5">
+            <div key={r.id} className="rounded-lg border px-3 py-3 sm:px-4 flex flex-col gap-1.5">
               <div className="flex items-baseline justify-between gap-2">
                 <span className="font-medium tabular-nums" style={{ color: 'var(--foreground)' }}>{fmtDate(r.date)}</span>
                 <span className="text-xs" style={{ color: 'var(--muted-foreground)' }}>{h.flaggedCount(flaggedIn(series, r.id))}</span>

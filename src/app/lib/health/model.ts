@@ -39,6 +39,8 @@ export interface Measurement {
   converted: boolean;
   low: number | null;
   high: number | null;
+  /** Reference range written in the display unit, only when the value was converted. */
+  convertedRange: string | null;
   flag: HealthFlag | null;
 }
 
@@ -128,6 +130,14 @@ export function formatValue(v: number): string {
   return String(Number(v.toFixed(digits)));
 }
 
+/** "3.9–6.1", "< 131", "≥ 40": the converted bounds with the open/closed ends of the original range. */
+function formatRange(r: Range, low: number | null, high: number | null): string {
+  if (low !== null && high !== null) return `${formatValue(low)}–${formatValue(high)}`;
+  if (high !== null) return `${r.highOpen ? '<' : '≤'} ${formatValue(high)}`;
+  if (low !== null) return `${r.lowOpen ? '>' : '≥'} ${formatValue(low)}`;
+  return '';
+}
+
 /** "10^12/l" → "10¹²/L", "umol/l" → "μmol/L". */
 export function unitLabel(unit: string): string {
   return nfkc(unit)
@@ -160,13 +170,18 @@ export function measure(row: HealthResultRow, target = ''): Measurement {
   if (flag === null && raw !== null && range) flag = rangeFlag(raw, range);
   if (flag === null && raw === null && row.range && isNegative(row.range) && !isNegative(row.value)) flag = 'A';
 
+  const low = comparable && range?.low != null ? toDisplay(range.low) : null;
+  const high = comparable && range?.high != null ? toDisplay(range.high) : null;
+  const converted = value !== null && !same;
+
   return {
     row,
     value,
-    display: value !== null && !same ? formatValue(value) : row.value,
-    converted: value !== null && !same,
-    low: comparable && range?.low != null ? toDisplay(range.low) : null,
-    high: comparable && range?.high != null ? toDisplay(range.high) : null,
+    display: value !== null && converted ? formatValue(value) : row.value,
+    converted,
+    low,
+    high,
+    convertedRange: converted && range ? formatRange(range, low, high) : null,
     flag,
   };
 }
