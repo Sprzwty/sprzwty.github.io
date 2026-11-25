@@ -1,9 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Lock } from 'lucide-react';
 import { useI18n } from '../../context/i18n';
-import { WrongPasswordError, type EncryptedPayload } from '../../lib/fitness/crypto';
-import { decryptDataset } from '../../lib/fitness/dataset';
-import type { Workout } from '../../lib/fitness/motra';
+import { WrongPasswordError } from '../../lib/fitness/crypto';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
@@ -11,7 +9,8 @@ import { Label } from '../ui/label';
 // Stable login id so the OS password manager can store this gate as a username+password pair.
 const FITNESS_USERNAME = 'fitness';
 
-export function PasswordGate({ payload, onUnlock }: { payload: EncryptedPayload; onUnlock: (workouts: Workout[]) => void }) {
+/** `onUnlock` decrypts with the password and throws WrongPasswordError when it does not match. */
+export function PasswordGate({ onUnlock }: { onUnlock: (password: string) => Promise<void> }) {
   const { t } = useI18n();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -23,7 +22,7 @@ export function PasswordGate({ payload, onUnlock }: { payload: EncryptedPayload;
     setError(null);
     setBusy(true);
     try {
-      onUnlock((await decryptDataset(payload, password)).workouts);
+      await onUnlock(password);
     } catch (err) {
       setError(err instanceof WrongPasswordError ? t.fitness.wrongPassword : String(err));
     } finally {

@@ -1,6 +1,29 @@
 import type { ActivityType } from '../lib/fitness/motra';
+import type { HealthCategory } from '../lib/health/catalog';
+import type { HealthFlag } from '../lib/health/model';
 
 export type CalendarField = 'title' | 'duration' | 'calories' | 'sets' | 'volume' | 'muscles' | 'hr' | 'effort';
+
+export interface HealthTranslations {
+  noData: string;
+  stats: { reports: string; latest: string; flagged: string; items: string };
+  sections: { reports: string; compare: string; trend: string };
+  categories: Record<HealthCategory, string>;
+  allCategories: string;
+  flaggedOnly: string;
+  sharedOnly: string;
+  item: string;
+  empty: string;
+  original: string;
+  range: string;
+  openInNotion: string;
+  trendHint: string;
+  notNumeric: string;
+  flags: Record<HealthFlag, string>;
+  flaggedCount: (n: number) => string;
+  units: { label: string; unified: string; report: (name: string) => string };
+  legend: { original: string; converted: string; flagged: string; convertedFlagged: string; hint: string };
+}
 
 export interface FitnessTranslations {
   title: string;
@@ -30,11 +53,13 @@ export interface FitnessTranslations {
   log: { all: string; search: string; allMuscles: string; empty: string; count: (n: number) => string };
   pager: { prev: string; next: string };
   columns: { exercise: string; weight: string; reps: string; time: string; rest: string; muscles: string };
+  views: { workouts: string; health: string };
+  health: HealthTranslations;
 }
 
 export const fitnessEn: FitnessTranslations = {
   title: 'Fitness',
-  subtitle: 'Private workout log, exported from Motra.',
+  subtitle: 'Private workout log and health checkup records.',
   lockedDesc: 'This page is password protected. The data is encrypted and only decrypted in your browser.',
   username: 'Username',
   password: 'Password',
@@ -65,11 +90,36 @@ export const fitnessEn: FitnessTranslations = {
   log: { all: 'All', search: 'Search title or exercise…', allMuscles: 'All muscles', empty: 'No matching workouts.', count: (n) => `${n} workouts` },
   pager: { prev: 'Previous', next: 'Next' },
   columns: { exercise: 'Exercise', weight: 'kg', reps: 'Reps', time: 'Time', rest: 'Rest', muscles: 'Muscles' },
+  views: { workouts: 'Workouts', health: 'Checkups' },
+  health: {
+    noData: 'No checkup reports published yet. Add a row to the Notion "Health Checkups" database; the next deploy will publish it.',
+    stats: { reports: 'Reports', latest: 'Latest checkup', flagged: 'Flagged in latest', items: 'Items tracked' },
+    sections: { reports: 'Reports', compare: 'Comparison', trend: 'Trend' },
+    categories: {
+      body: 'Body measurements', circulation: 'Blood pressure & heart', sensory: 'Vision & hearing', blood: 'Complete blood count',
+      liver: 'Liver function', lipid: 'Lipids', glucose: 'Glucose metabolism', kidney: 'Kidney & uric acid',
+      urine: 'Urinalysis', imaging: 'Imaging', exam: 'Physical exam', other: 'Other',
+    },
+    allCategories: 'All categories',
+    flaggedOnly: 'Flagged only',
+    sharedOnly: 'In 2+ reports',
+    item: 'Item',
+    empty: 'No matching items.',
+    original: 'Original',
+    range: 'Reference',
+    openInNotion: 'Open in Notion',
+    trendHint: 'Click an item in the table to see its trend.',
+    notNumeric: 'This item has no numeric values to chart.',
+    flags: { H: 'High', L: 'Low', A: 'Abnormal' },
+    flaggedCount: (n) => `${n} flagged`,
+    units: { label: 'Units', unified: 'Unified units', report: (name) => `Units of ${name}` },
+    legend: { original: 'As reported', converted: 'Converted', flagged: 'Flagged', convertedFlagged: 'Flagged, converted', hint: 'Hover a value for the original value and reference range.' },
+  },
 };
 
 export const fitnessZh: FitnessTranslations = {
   title: '健身',
-  subtitle: '私人训练记录，数据来自 Motra 导出。',
+  subtitle: '私人训练与体检记录。',
   lockedDesc: '此页面需要密码。数据已加密，仅在你的浏览器中解密。',
   username: '用户名',
   password: '密码',
@@ -100,11 +150,36 @@ export const fitnessZh: FitnessTranslations = {
   log: { all: '全部', search: '搜索标题或动作…', allMuscles: '全部部位', empty: '没有符合条件的训练。', count: (n) => `共 ${n} 次训练` },
   pager: { prev: '上一页', next: '下一页' },
   columns: { exercise: '动作', weight: 'kg', reps: '次数', time: '时长', rest: '休息', muscles: '部位' },
+  views: { workouts: '训练', health: '体检' },
+  health: {
+    noData: '尚未发布体检报告。在 Notion 的「Health Checkups」数据库新建一行，下次部署时会自动发布。',
+    stats: { reports: '体检次数', latest: '最近一次', flagged: '最近异常项', items: '跟踪项目' },
+    sections: { reports: '报告', compare: '对比', trend: '趋势' },
+    categories: {
+      body: '身体测量', circulation: '血压与心脏', sensory: '视力与听力', blood: '血常规',
+      liver: '肝功能', lipid: '血脂', glucose: '糖代谢', kidney: '肾功能与尿酸',
+      urine: '尿常规', imaging: '影像检查', exam: '诊察与问诊', other: '其他',
+    },
+    allCategories: '全部类别',
+    flaggedOnly: '只看异常',
+    sharedOnly: '至少 2 次',
+    item: '项目',
+    empty: '没有符合条件的项目。',
+    original: '原始值',
+    range: '参考范围',
+    openInNotion: '在 Notion 中打开',
+    trendHint: '点击表格中的项目查看趋势。',
+    notNumeric: '该项目没有数值，无法绘制趋势。',
+    flags: { H: '偏高', L: '偏低', A: '异常' },
+    flaggedCount: (n) => `${n} 项异常`,
+    units: { label: '显示单位', unified: '统一单位', report: (name) => `按 ${name} 的单位` },
+    legend: { original: '原单位数值', converted: '换算值', flagged: '异常', convertedFlagged: '换算后的异常', hint: '悬停数值可查看原始值与参考范围。' },
+  },
 };
 
 export const fitnessJa: FitnessTranslations = {
   title: 'フィットネス',
-  subtitle: 'Motra からエクスポートした個人のトレーニング記録。',
+  subtitle: '個人のトレーニングと健康診断の記録。',
   lockedDesc: 'このページはパスワードで保護されています。データは暗号化され、ブラウザ内でのみ復号されます。',
   username: 'ユーザー名',
   password: 'パスワード',
@@ -135,4 +210,29 @@ export const fitnessJa: FitnessTranslations = {
   log: { all: 'すべて', search: 'タイトルや種目で検索…', allMuscles: 'すべての部位', empty: '該当するワークアウトはありません。', count: (n) => `${n} 件` },
   pager: { prev: '前へ', next: '次へ' },
   columns: { exercise: '種目', weight: 'kg', reps: '回数', time: '時間', rest: '休憩', muscles: '部位' },
+  views: { workouts: 'トレーニング', health: '健康診断' },
+  health: {
+    noData: 'まだ健診結果がありません。Notion の「Health Checkups」データベースに行を追加すると、次回のデプロイで公開されます。',
+    stats: { reports: '受診回数', latest: '前回の受診', flagged: '前回の要注意項目', items: '記録項目' },
+    sections: { reports: '結果', compare: '比較', trend: '推移' },
+    categories: {
+      body: '身体計測', circulation: '血圧・心臓', sensory: '視力・聴力', blood: '血液一般',
+      liver: '肝機能', lipid: '脂質', glucose: '糖代謝', kidney: '腎機能・尿酸',
+      urine: '尿検査', imaging: '画像検査', exam: '診察・問診', other: 'その他',
+    },
+    allCategories: 'すべての分類',
+    flaggedOnly: '要注意のみ',
+    sharedOnly: '2 回以上',
+    item: '項目',
+    empty: '該当する項目はありません。',
+    original: '元の値',
+    range: '基準値',
+    openInNotion: 'Notion で開く',
+    trendHint: '表の項目をクリックすると推移を表示します。',
+    notNumeric: 'この項目には数値がないため、グラフを表示できません。',
+    flags: { H: '高値', L: '低値', A: '異常' },
+    flaggedCount: (n) => `${n} 項目`,
+    units: { label: '表示単位', unified: '統一単位', report: (name) => `${name} の単位` },
+    legend: { original: '元の単位の値', converted: '換算値', flagged: '要注意', convertedFlagged: '要注意（換算値）', hint: '値にカーソルを合わせると元の値と基準値を表示します。' },
+  },
 };

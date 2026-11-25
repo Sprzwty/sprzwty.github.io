@@ -13,6 +13,9 @@
   --fitness-hr-4: #c4914f;
   --fitness-hr-5: #b86b6b;
   --fitness-tint: 14%;
+  --health-converted: #2f7d8c;
+  --health-flag: #b5583f;
+  --health-flag-converted: #a8457a;
 }
 
 .dark {
@@ -28,4 +31,7 @@
   --fitness-hr-4: #e6c08f;
   --fitness-hr-5: #e0a3a3;
   --fitness-tint: 20%;
+  --health-converted: #82c6d2;
+  --health-flag: #eda08a;
+  --health-flag-converted: #e89cc6;
 }

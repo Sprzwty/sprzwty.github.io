@@ -12,8 +12,8 @@ export interface FitnessDataset {
 const DATA_PUBLIC_PATH = 'fitness/data.enc.json';
 
 /** Returns null when no dataset has been published yet. */
-export async function fetchEncryptedDataset(): Promise<EncryptedPayload | null> {
-  const res = await fetch(`${import.meta.env.BASE_URL}${DATA_PUBLIC_PATH}`, { cache: 'no-cache' });
+export async function fetchEncryptedDataset(publicPath: string = DATA_PUBLIC_PATH): Promise<EncryptedPayload | null> {
+  const res = await fetch(`${import.meta.env.BASE_URL}${publicPath}`, { cache: 'no-cache' });
   if (!res.ok) return null;
   try {
     // The Vite dev server answers unknown paths with index.html (200), so a parse failure also means "absent".

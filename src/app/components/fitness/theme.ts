@@ -1,5 +1,6 @@
 import { LOCALE_HTML_LANG, type Locale } from '../../context/i18n';
 import type { ActivityType } from '../../lib/fitness/motra';
+import type { HealthFlag } from '../../lib/health/model';
 
 /** Per-theme values live in src/styles/fitness.css (separate light and dark palettes). */
 export const ACTIVITY_COLORS: Record<ActivityType, string> = {
@@ -16,6 +17,19 @@ export const HR_ZONE_COLORS = [1, 2, 3, 4, 5].map((z) => `var(--fitness-hr-${z})
 
 /** Background tint strength for coloured chips; stronger in dark mode. */
 export const TINT = 'var(--fitness-tint)';
+
+/** Checkup values: unit-converted values get a calm tint; flagged ones (H/L/A alike) a warning colour with its own converted variant. */
+export const HEALTH_VALUE_COLORS = {
+  original: 'var(--foreground)',
+  converted: 'var(--health-converted)',
+  flagged: 'var(--health-flag)',
+  convertedFlagged: 'var(--health-flag-converted)',
+};
+
+export function healthValueColor({ flag, converted }: { flag: HealthFlag | null; converted: boolean }): string {
+  if (flag) return converted ? HEALTH_VALUE_COLORS.convertedFlagged : HEALTH_VALUE_COLORS.flagged;
+  return converted ? HEALTH_VALUE_COLORS.converted : HEALTH_VALUE_COLORS.original;
+}
 
 export const HEATMAP_COLOR = ACTIVITY_COLORS.stairs;
 export const LINE_COLOR = 'var(--muted-foreground)';
