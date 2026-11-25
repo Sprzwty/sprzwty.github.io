@@ -133,7 +133,55 @@ This is the English version of the post.
    - Variables（可选）：`FITNESS_TIME_ZONE`，导出时间所在时区（如 `Asia/Tokyo`），用于 Notion 里的日期
 3. 之后在 `Fitness Imports` 上传 xlsx，等定时同步或手动运行 **Sync Notion & Deploy**。
 
-改密码：更新 `FITNESS_PASSWORD` 后，删除仓库里的 `public/fitness/data.enc.json`，并取消 `Fitness Imports` 里所有行的 `Imported` 勾选，下次同步会用新密码重建。
+改密码：更新 `FITNESS_PASSWORD` 后，删除仓库里的 `public/fitness/data.enc.json`，并取消 `Fitness Imports` 里所有行的 `Imported` 勾选，下次同步会用新密码重建。体检数据每次都从 Notion 全量重建，无需额外操作。
+
+## 体检数据（私密，`#/fitness` →「体检」）
+
+和健身数据共用 `FITNESS_PASSWORD`：同步脚本把 **Health Checkups** 数据库加密成 `public/fitness/health.enc.json`。PDF 只留在 Notion，不进仓库。
+
+每次体检一行：
+
+| 属性 | 内容 |
+|---|---|
+| `Name` | 课程名，如「定期健康診断」 |
+| `Date` | 体检日期 |
+| `Facility` | 体检机构 |
+| `Summary` | 总检结论 |
+| `Report` | 原始 PDF（可选） |
+
+页面正文放一个带表头的表格，一项一行：
+
+| Key | Item | Value | Unit | Range | Flag |
+|---|---|---|---|---|---|
+| `ldl` | 低密度脂蛋白胆固醇 | 2.33 | mmol/L | <3.4 | |
+| `u_blood` | 尿潜血 | （±） | | （－） | * |
+
+- `Key`：标准项目 ID，见 `src/app/lib/health/catalog.ts`。不同机构、不同语言的同一项目用同一个 Key 才能对比。目录里没有的 Key 也能用，会显示在「其他」里，以 `Item` 为名称；之后把它加进目录即可获得三语名称、分类和单位换算。
+- `Value`：数值或文字（阴性、（－）、異常なし…）。
+- `Unit`：照抄报告。目录里登记过换算的单位会自动换算成统一单位（如 mmol/L → mg/dL），网页悬停可看原始值。
+- `Range`：照抄参考范围，支持 `3.9-6.1`、`18.5～24.9`、`130未満`、`30以下`、`40以上`、`<3.4`。据此自动判断偏高/偏低。
+- `Flag`：可选，报告自己的判定。`↑`/`H` 偏高，`↓`/`L` 偏低，其他任意字符（如 `*`）为异常。
+
+### 一次性设置
+
+```powershell
+$env:NOTION_TOKEN = "secret_xxx"
+$env:NOTION_FITNESS_PARENT_PAGE_ID = "<页面 ID>"
+npm run setup:health-notion   # 输出 NOTION_HEALTH_DATABASE_ID
+```
+
+再把 `NOTION_HEALTH_DATABASE_ID` 加到 GitHub Secrets。
+
+### 添加新报告
+
+直接在 Notion 里新建一行并填写表格；或者先把 PDF 转录成 JSON（格式见 `scripts/import-health-report.mjs`，放在 `_local/` 下不要提交），再导入：
+
+```powershell
+$env:NOTION_HEALTH_DATABASE_ID = "..."
+npm run import:health -- _local/health/2026-11-15.json --pdf "C:\path\report.pdf"
+```
+
+同一个 `Date` + `Name` 不会重复创建。
 
 ## 本地开发时手动同步
 
