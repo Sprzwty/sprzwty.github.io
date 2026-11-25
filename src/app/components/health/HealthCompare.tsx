@@ -8,6 +8,7 @@ import { Label } from '../ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
 import { itemName } from './names';
+import { UnitSwitch } from './UnitSwitch';
 
 const ALL = 'all';
 const UNIFIED = 'unified';
@@ -21,11 +22,13 @@ interface Props {
   onSelect: (key: string) => void;
   /** Report whose units are shown; null = unified units. */
   unitsFrom: string | null;
+  /** Also clears per-item choices. */
   onUnitsFromChange: (reportId: string | null) => void;
+  onItemUnitChange: (key: string, target: string) => void;
 }
 
 /** Item × report matrix, newest report first, with the change against the previous report that has the item. */
-export function HealthCompare({ reports, series, selected, onSelect, unitsFrom, onUnitsFromChange }: Props) {
+export function HealthCompare({ reports, series, selected, onSelect, unitsFrom, onUnitsFromChange, onItemUnitChange }: Props) {
   const { t, locale } = useI18n();
   const h = t.fitness.health;
   const [category, setCategory] = useState<HealthCategory | typeof ALL>(ALL);
@@ -148,8 +151,10 @@ export function HealthCompare({ reports, series, selected, onSelect, unitsFrom, 
                     data-state={selected === s.key ? 'selected' : undefined}
                   >
                     <TableCell>
-                      <span style={{ color: 'var(--foreground)' }}>{itemName(s, locale)}</span>
-                      {s.unit && <span className="text-xs ml-1.5" style={{ color: 'var(--muted-foreground)' }}>{s.unit}</span>}
+                      <div className="flex items-center gap-1.5">
+                        <span style={{ color: 'var(--foreground)' }}>{itemName(s, locale)}</span>
+                        <UnitSwitch series={s} onChange={(target) => onItemUnitChange(s.key, target)} />
+                      </div>
                     </TableCell>
                     {reports.map((r, index) => (
                       <TableCell key={r.id} className="tabular-nums whitespace-normal max-w-64">{cell(s, s.byReport.get(r.id), index)}</TableCell>

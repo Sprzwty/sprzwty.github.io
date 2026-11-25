@@ -42,10 +42,21 @@ export interface Measurement {
   flag: HealthFlag | null;
 }
 
+/** `target` is a normalised unit; '' is the item's own unit. */
+export interface UnitOption {
+  target: string;
+  label: string;
+}
+
 export interface ItemSeries {
   key: string;
   category: HealthCategory;
+  /** Label of the unit the values are shown in. */
   unit: string;
+  /** Normalised unit the values are shown in. */
+  target: string;
+  /** Units the item can be shown in; more than one means it can be switched. */
+  options: UnitOption[];
   /** Item name as written on the most recent report; used when the key is not in the catalog. */
   fallbackName: string;
   byReport: Map<string, Measurement>;
@@ -166,7 +177,7 @@ export function sortReports(reports: HealthReport[]): HealthReport[] {
 }
 
 /** The unit `report` uses for an item, if it differs from the item's unit and is convertible. */
-function unitIn(report: HealthReport | undefined, key: string): { target: string; label: string } | null {
+function unitIn(report: HealthReport | undefined, key: string): UnitOption | null {
   const def = HEALTH_ITEMS[key];
   const row = report?.results.find((r) => r.key === key);
   if (!def || !row) return null;
@@ -175,24 +186,45 @@ function unitIn(report: HealthReport | undefined, key: string): { target: string
   return { target: unit, label: unitLabel(row.unit) };
 }
 
+/** Units chosen by the user: `from` is a report id (bulk), `items` overrides it per item key with a unit target. */
+export interface UnitPrefs {
+  from: string | null;
+  items: Record<string, string>;
+}
+
+/** The item's own unit first, then every other convertible unit some report uses for it. */
+function unitOptions(reports: HealthReport[], key: string): UnitOption[] {
+  const def = HEALTH_ITEMS[key];
+  if (!def) return [];
+  const options: UnitOption[] = [{ target: '', label: def.unit }];
+  for (const report of reports) {
+    const own = unitIn(report, key);
+    if (own && !options.some((o) => o.target === own.target)) options.push(own);
+  }
+  return options;
+}
+
 /**
  * One series per item key across all reports, in catalog order (unknown keys last, by first appearance).
- * With `unitsFrom` (a report id), items are shown in the unit that report uses where convertible.
+ * Each item is shown in `prefs.items[key]` if it is still a valid unit, else in the unit of the report
+ * `prefs.from` where convertible, else in the item's own unit.
  */
-export function buildSeries(reports: HealthReport[], unitsFrom: string | null = null): ItemSeries[] {
-  const unitSource = reports.find((r) => r.id === unitsFrom);
-  const series = new Map<string, ItemSeries & { target: string }>();
+export function buildSeries(reports: HealthReport[], prefs: UnitPrefs = { from: null, items: {} }): ItemSeries[] {
+  const unitSource = reports.find((r) => r.id === prefs.from);
+  const series = new Map<string, ItemSeries>();
   for (const report of sortReports(reports)) {
     for (const row of report.results) {
       let s = series.get(row.key);
       if (!s) {
         const def = HEALTH_ITEMS[row.key];
-        const own = unitIn(unitSource, row.key);
+        const options = unitOptions(reports, row.key);
+        const chosen = options.find((o) => o.target === prefs.items[row.key]) ?? unitIn(unitSource, row.key) ?? options[0];
         s = {
           key: row.key,
           category: def?.category ?? 'other',
-          unit: own?.label ?? (def ? def.unit : row.unit),
-          target: own?.target ?? '',
+          unit: chosen?.label ?? row.unit,
+          target: chosen?.target ?? '',
+          options,
           fallbackName: row.item || row.key,
           byReport: new Map(),
         };

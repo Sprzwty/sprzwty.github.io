@@ -1,11 +1,27 @@
 import { useMemo, useRef, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { useI18n } from '../../context/i18n';
-import { buildSeries, sortReports, type HealthReport, type ItemSeries } from '../../lib/health/model';
+import { buildSeries, sortReports, type HealthReport, type ItemSeries, type UnitPrefs } from '../../lib/health/model';
 import { Section } from '../fitness/Section';
 import { dateFormatter } from '../fitness/theme';
 import { HealthCompare } from './HealthCompare';
 import { HealthTrend } from './HealthTrend';
+
+const UNITS_STORAGE_KEY = 'fitness.health.units';
+
+/** Stored choices may be stale; buildSeries ignores units that no longer exist. */
+function loadPrefs(): UnitPrefs {
+  try {
+    const stored = JSON.parse(localStorage.getItem(UNITS_STORAGE_KEY) ?? 'null');
+    if (stored && typeof stored === 'object') {
+      return {
+        from: typeof stored.from === 'string' ? stored.from : null,
+        items: stored.items && typeof stored.items === 'object' ? stored.items : {},
+      };
+    }
+  } catch { /* unreadable: start from defaults */ }
+  return { from: null, items: {} };
+}
 
 function flaggedIn(series: ItemSeries[], reportId: string): number {
   return series.filter((s) => s.byReport.get(reportId)?.flag).length;
@@ -19,8 +35,15 @@ export function HealthView({ reports: unsorted }: { reports: HealthReport[] }) {
   const { t, locale } = useI18n();
   const h = t.fitness.health;
   const reports = useMemo(() => sortReports(unsorted), [unsorted]);
-  const [unitsFrom, setUnitsFrom] = useState<string | null>(null);
-  const series = useMemo(() => buildSeries(unsorted, unitsFrom), [unsorted, unitsFrom]);
+  const [prefs, setPrefs] = useState<UnitPrefs>(loadPrefs);
+  const updatePrefs = (next: UnitPrefs) => {
+    setPrefs(next);
+    try {
+      localStorage.setItem(UNITS_STORAGE_KEY, JSON.stringify(next));
+    } catch { /* storage unavailable: the choice just lasts for this visit */ }
+  };
+  const setItemUnit = (key: string, target: string) => updatePrefs({ ...prefs, items: { ...prefs.items, [key]: target } });
+  const series = useMemo(() => buildSeries(unsorted, prefs), [unsorted, prefs]);
   const [picked, setPicked] = useState<string | null>(null);
   const trendRef = useRef<HTMLDivElement>(null);
   const select = (key: string) => {
@@ -73,7 +96,7 @@ export function HealthView({ reports: unsorted }: { reports: HealthReport[] }) {
 
       <div ref={trendRef} className="scroll-mt-4">
         <Section title={h.sections.trend}>
-          {selected && <HealthTrend series={selected} reports={reports} />}
+          {selected && <HealthTrend series={selected} reports={reports} onUnitChange={(target) => setItemUnit(selected.key, target)} />}
           <p className="text-xs mt-2" style={{ color: 'var(--muted-foreground)' }}>{h.trendHint}</p>
         </Section>
       </div>
@@ -84,8 +107,9 @@ export function HealthView({ reports: unsorted }: { reports: HealthReport[] }) {
           series={series}
           selected={selected?.key ?? null}
           onSelect={select}
-          unitsFrom={unitsFrom}
-          onUnitsFromChange={setUnitsFrom}
+          unitsFrom={reports.some((r) => r.id === prefs.from) ? prefs.from : null}
+          onUnitsFromChange={(from) => updatePrefs({ from, items: {} })}
+          onItemUnitChange={setItemUnit}
         />
       </Section>
     </div>

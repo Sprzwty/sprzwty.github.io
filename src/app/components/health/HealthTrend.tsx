@@ -4,9 +4,10 @@ import { formatValue, type HealthReport, type ItemSeries } from '../../lib/healt
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from '../ui/chart';
 import { ACTIVITY_COLORS, HEALTH_VALUE_COLORS, healthValueColor } from '../fitness/theme';
 import { itemName } from './names';
+import { UnitSwitch } from './UnitSwitch';
 
 /** One numeric item over time; the shaded band is the reference range of the most recent report. */
-export function HealthTrend({ series, reports }: { series: ItemSeries; reports: HealthReport[] }) {
+export function HealthTrend({ series, reports, onUnitChange }: { series: ItemSeries; reports: HealthReport[]; onUnitChange: (target: string) => void }) {
   const { t, locale } = useI18n();
   const h = t.fitness.health;
   const points = [...reports]
@@ -35,7 +36,10 @@ export function HealthTrend({ series, reports }: { series: ItemSeries; reports: 
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="text-sm font-medium" style={{ color: 'var(--foreground)' }}>{label}</div>
+      <div className="flex items-center gap-2 text-sm font-medium" style={{ color: 'var(--foreground)' }}>
+        {itemName(series, locale)}
+        <UnitSwitch series={series} onChange={onUnitChange} />
+      </div>
       <ChartContainer config={config} className="aspect-auto h-64 w-full">
         <LineChart data={points} margin={{ left: -8, right: 16, top: 8 }}>
           <CartesianGrid vertical={false} />

@@ -63,8 +63,8 @@ export const HEALTH_ITEMS: Record<string, HealthItemDef> = {
   pulse: def('circulation', 'bpm', ['Heart rate', '心率', '脈拍'], PER_MINUTE),
   ecg: def('circulation', '', ['ECG', '心电图', '心電図']),
 
-  vision_r: def('sensory', '', ['Vision, right (uncorrected)', '裸眼视力（右）', '裸眼視力（右）'], { '5分记录': fivePoint }),
-  vision_l: def('sensory', '', ['Vision, left (uncorrected)', '裸眼视力（左）', '裸眼視力（左）'], { '5分记录': fivePoint }),
+  vision_r: def('sensory', '小数', ['Vision, right (uncorrected)', '裸眼视力（右）', '裸眼視力（右）'], { '5分记录': fivePoint }),
+  vision_l: def('sensory', '小数', ['Vision, left (uncorrected)', '裸眼视力（左）', '裸眼視力（左）'], { '5分记录': fivePoint }),
   color_vision: def('sensory', '', ['Color vision', '色觉', '色覚']),
   hearing: def('sensory', '', ['Hearing', '听力', '聴力']),
   hearing_1000: def('sensory', '', ['Hearing 1000 Hz (R/L)', '听力 1000 Hz（右/左）', '聴力 1000Hz（右/左）']),
